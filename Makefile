@@ -1,7 +1,7 @@
 # Board & hardware
 BOARD        ?= minhnhat@100.67.251.37
 BOARD_REPO   ?= rk3588
-BOARD_IMAGES ?= data/sfchd_5class/processed/images/test
+BOARD_IMAGES ?= data/ppe5/processed/images/test
 DEVICE       ?= 100.67.251.37:5555
 CORE_MASK    ?= AUTO
 
@@ -24,23 +24,23 @@ DEMO_TAG        = $(if $(filter rknn,$(DEMO_BACKEND)),rknn_$(PREC),$(DEMO_BACKEN
 DEMO_BOARD_ARGS = $(if $(filter rknn,$(DEMO_BACKEND)),--board $(BOARD) --board-repo $(BOARD_REPO))
 
 # Environment and setup
-.PHONY: help sync check
+.PHONY: help sync check docs
 help:
 	@echo "Usage: make <target> [OPTIONS]"
 	@echo ""
 	@echo "Phases (Guide section 8; skip finished steps, end with make tables):"
-	@echo "  make phase2 DATASET=<ds>               - train baselines (seed 42) + crosscheck"
+	@echo "  make phase2 DATASET=<ds>               - train baselines (seed 0) + crosscheck"
 	@echo "  make phase3 DATASET=<ds>               - export FP16/INT8, complexity, evaluate ONNX/RKNN"
 	@echo "  make phase4 DATASET=<ds>               - tier 1, tier 2, CPU, throughput, GPU reference (needs LOCK)"
-	@echo "  make phase10 DATASET=<ds> [MODELS=a,b] - seeds 43, 44 for key models (default yolov8n_baseline)"
 	@echo ""
 	@echo "Environment & Setup:"
 	@echo "  make sync                              - uv sync (install/update .venv)"
 	@echo "  make check                             - verify torch/cuda/numpy/rknn import OK in .venv"
+	@echo "  make docs [PORT=8000]                  - build docs/ (lint + sphinx -W) and serve it at http://localhost:PORT"
 	@echo ""
 	@echo "Training & Evaluation:"
-	@echo "  make train CONFIG=<path> [SEED=<n>]    - train + protocol v1 eval + leaderboard, e.g. CONFIG=ai/automation/configs/sfchd_5class_yolov8n_baseline.yaml SEED=43"
-	@echo "  make evaluate RUN=<id> BACKEND=pt|onnx|rknn [PREC=fp16|int8]"
+	@echo "  make train CONFIG=<path> [SEED=<n>]    - train + protocol v1 eval + leaderboard, e.g. CONFIG=ai/automation/configs/ppe5_yolov8n_baseline.yaml SEED=1"
+	@echo "  make evaluate RUN=<id> BACKEND=pt|onnx|rknn [PREC=fp16|int8|int8h5]"
 	@echo "                                         - protocol v1 AI Quality (rknn runs on the board via DEVICE)"
 	@echo "  make golden-test                       - evaluator must reproduce ai/automation/golden/evaluator_v1.json"
 	@echo "  make golden-update                     - rewrite the golden file (only when the protocol version changes)"
@@ -48,11 +48,11 @@ help:
 	@echo "  make crosscheck [WEIGHTS=<pt>]         - evaluator vs Ultralytics model.val() on the same weights"
 	@echo ""
 	@echo "Model Export & Tier 1 Benchmark:"
-	@echo "  make export-npu RUN=<id> PREC=fp16|int8 - export to RKNN + FP32 ONNX, build log -> runs/<id>/logs/export_<prec>_*.log"
+	@echo "  make export-npu RUN=<id> PREC=fp16|int8|int8h5 - export to RKNN (int8h5 = hybrid INT8, float16 box-decode tail, calibration of CALIB_FROM) + FP32 ONNX, build log -> runs/<id>/logs/export_<prec>_*.log"
 	@echo "  make complexity RUN=<id>                - Params/GFLOPs/MACs/file sizes -> runs/<id>/complexity.json"
 	@echo "  make bench-gpu RUN=<id>                 - PC GPU reference latency (Table H) -> runs/<id>/bench/gpu_pt_fp32.json"
 	@echo "  make tables DATASET=<name>              - build all tables from result files -> results/<name>/ (exit 1 on inconsistency)"
-	@echo "  make benchmark-npu RUN=<id> PREC=<p> [CORE_MASK=AUTO]"
+	@echo "  make benchmark-npu RUN=<id> PREC=<p> [CORE_MASK=AUTO] [SESSION=<n>] [SKIP_MEMORY=1]"
 	@echo "                                          - tier 1: eval_perf/eval_memory from the PC"
 	@echo ""
 	@echo "Board Operations & Tier 2 Benchmark:"
@@ -64,6 +64,8 @@ help:
 	@echo "                                          - tier 2 on the board CPU with ONNX Runtime (FP32)"
 	@echo "  make bench-board-throughput RUN=<id> PREC=<p> CORE_MASKS=CORE_0,CORE_1,CORE_2"
 	@echo "                                          - multi-context throughput"
+	@echo "  make bench-camera RUN=<id> PREC=<p> [DURATION=60] [CAMERA_CORE_MASK=CORE_0] [TRACK=1] [SAVE=1] [VIDEO=1] [STABLE=1 [MAX_MINUTES=120]]"
+	@echo "                                          - live OV13855 pipeline on the board (ai/board/camera.py), pinned to cores 4-7"
 	@echo ""
 	@echo "Demo (videos and images, outputs under data/demo/outputs/):"
 	@echo "  make demo-video RUN=<id> SRC=<video> [BACKEND=pt|onnx|rknn] [PREC=fp16|int8]"
@@ -75,9 +77,10 @@ help:
 	@echo "                                          - BACKEND=rknn needs make board-sync first (copies ai/board/detect_video.py, detect_images.py)"
 	@echo ""
 	@echo "Data & Utilities:"
-	@echo "  make leaderboard DATASET=<name>        - print a dataset's leaderboard, e.g. DATASET=sfchd_5class"
+	@echo "  make compare-train-sets                - compare ppe5/ppe5_plus/ppe4/ppe2286 on common test sets -> results/train_set_comparison.md"
+	@echo "  make leaderboard DATASET=<name>        - print a dataset's leaderboard, e.g. DATASET=ppe5"
 	@echo "  make tail RUN=<run_id>                 - tail -f a training run's results.csv"
-	@echo "  make prepare-data DATASET=<name>       - regenerate data/<name>/processed/ from raw/, e.g. DATASET=sfchd"
+	@echo "  make prepare-data DATASET=<name>       - regenerate data/<name>/processed/ from raw/, e.g. DATASET=ppe5"
 	@echo "  make archive [DATASET=<name>] [OUT=<path>]"
 	@echo "                                          - archive untracked weights and datasets to zip"
 	@echo "  make restore [ARCHIVE=<path>]"    
@@ -90,6 +93,10 @@ sync:
 
 check:
 	.venv/bin/python -c "import torch, numpy; print('torch', torch.__version__, 'cuda:', torch.cuda.is_available()); print('numpy', numpy.__version__); from rknn.api import RKNN; print('rknn.api.RKNN OK')"
+
+docs:
+	$(MAKE) -C docs check
+	python3 -m http.server -d docs/_build/html $(or $(PORT),8000)
 
 # Training and evaluation
 .PHONY: train evaluate golden-test golden-update crosscheck test-parsers
@@ -116,7 +123,7 @@ crosscheck:
 # Model export and tier 1 benchmark
 .PHONY: export-npu complexity tables benchmark-npu bench-gpu
 export-npu:
-	RKNN_LOG_LEVEL=3 $(LOGTEE) $(RUN_DIR)/logs/export_$(PREC) -- .venv/bin/python -m ai.automation.export_npu $(RUN) --quantize $(if $(filter fp16,$(PREC)),16,8)
+	RKNN_LOG_LEVEL=3 $(LOGTEE) $(RUN_DIR)/logs/export_$(PREC) -- .venv/bin/python -m ai.automation.export_npu $(RUN) --quantize $(if $(filter fp16,$(PREC)),16,8)$(if $(filter int8h5,$(PREC)), --recipe h5 --calib-from $(or $(CALIB_FROM),ppe5_yolov8n_baseline_100ep_s0))$(if $(and $(filter int8,$(PREC)),$(CALIB_FROM)), --calib-from $(CALIB_FROM))
 
 complexity:
 	$(LOGTEE) $(RUN_DIR)/logs/complexity -- .venv/bin/python -m ai.automation.complexity $(RUN)
@@ -128,10 +135,10 @@ bench-gpu:
 	$(LOGTEE) $(RUN_DIR)/logs/bench_gpu -- .venv/bin/python -m ai.automation.bench_gpu $(RUN)
 
 benchmark-npu:
-	$(LOGTEE) $(RUN_DIR)/logs/tier1_$(PREC)_$(CORE_MASK) -- .venv/bin/python -m ai.automation.benchmark_npu $(RUN) $(DEVICE) --precision $(PREC) --core-mask $(CORE_MASK)
+	$(LOGTEE) $(RUN_DIR)/logs/tier1_$(PREC)_$(CORE_MASK)$(if $(SESSION),_sess$(SESSION)) -- .venv/bin/python -m ai.automation.benchmark_npu $(RUN) $(DEVICE) --precision $(PREC) --core-mask $(CORE_MASK) $(if $(SESSION),--session $(SESSION)) $(if $(SKIP_MEMORY),--skip-memory)
 
 # Board operations and tier 2 benchmark
-.PHONY: board-sync board-setup board-check bench-board bench-board-cpu bench-board-throughput phase2 phase3 phase4 phase10
+.PHONY: board-sync board-setup board-check bench-board bench-board-cpu bench-board-throughput bench-camera phase2 phase3 phase4
 board-sync:
 	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/ai/board $(BOARD_REPO)/$(BOARD_IMAGES)'
 	rsync -a --delete --exclude __pycache__ ai/board/ $(BOARD):$(BOARD_REPO)/ai/board/
@@ -142,8 +149,8 @@ board-check:
 	.venv/bin/python -m ai.automation.board_check $(BOARD) $(DEVICE) $(if $(LOCK),--require-lock)
 
 # Whole phases of Guide section 8 (skip finished steps, stop at the first error, end with make tables)
-phase2 phase3 phase4 phase10:
-	.venv/bin/python -m ai.automation.pipeline $@ --dataset $(DATASET) $(if $(MODELS),--models $(MODELS))
+phase2 phase3 phase4:
+	.venv/bin/python -m ai.automation.pipeline $@ --dataset $(DATASET)
 
 board-setup:
 	ssh $(BOARD) 'cd $(BOARD_REPO) && bash ai/board/setup_board.sh'
@@ -165,6 +172,18 @@ bench-board-throughput:
 	$(LOGTEE) $(RUN_DIR)/logs/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench_throughput --model $(RUN_DIR)/weights/rknn_$(PREC) --images $(BOARD_IMAGES) --core-masks $(CORE_MASKS) --out $(RUN_DIR)/bench/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)).json $(BOARD_PROV)'
 	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)).json $(RUN_DIR)/bench/
 
+# Live camera pipeline (Phase 9 harness). Needs make board-sync first. Pinned to the A76 cores: unpinned, cv2 preprocess was 3.3x slower.
+bench-camera:
+	$(eval CAMERA_OUT := camera_$(shell date +%F).json)
+	$(eval CAMERA_IMG := camera_$(shell date +%F)_images)
+	$(eval CAMERA_VID := camera_$(shell date +%F).mp4)
+	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/$(RUN_DIR)/weights $(BOARD_REPO)/$(RUN_DIR)/bench'
+	rsync -a --relative $(RUN_DIR)/weights/./rknn_$(PREC)/*.rknn $(RUN_DIR)/weights/./rknn_$(PREC)/metadata.yaml $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/weights/
+	$(LOGTEE) $(RUN_DIR)/logs/camera_$(PREC) -- ssh $(BOARD) 'cd $(BOARD_REPO) && taskset -c 4-7 .venv-board/bin/python -m ai.board.camera --model $(RUN_DIR)/weights/rknn_$(PREC) --core-mask $(or $(CAMERA_CORE_MASK),CORE_0) $(if $(STABLE),--until-stable --max-minutes $(or $(MAX_MINUTES),120),--duration-s $(or $(DURATION),60)) $(if $(TRACK),--track) $(if $(SAVE),--save-dir $(RUN_DIR)/bench/$(CAMERA_IMG)) $(if $(VIDEO),--save-video $(RUN_DIR)/bench/$(CAMERA_VID)) --out $(RUN_DIR)/bench/$(CAMERA_OUT) $(BOARD_PROV)'
+	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_OUT) $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_OUT:.json=.rows.jsonl) $(RUN_DIR)/bench/
+	$(if $(SAVE),rsync -a $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_IMG)/ $(RUN_DIR)/bench/$(CAMERA_IMG)/)
+	$(if $(VIDEO),scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_VID) $(RUN_DIR)/bench/)
+
 # Demo video/image toolkit
 .PHONY: demo-video demo-images demo-compare
 demo-video:
@@ -185,7 +204,10 @@ demo-compare:
 	$(LOGTEE) data/demo/outputs/logs/demo_compare -- .venv/bin/python scripts/demo/$(DEMO_KIND)/compare.py $(A) $(B) $(if $(OUT),$(DEMO_OUTFLAG) $(OUT))
 
 # Data and utilities
-.PHONY: leaderboard tail prepare-data archive restore clean
+.PHONY: compare-train-sets leaderboard tail prepare-data archive restore clean
+compare-train-sets:
+	.venv/bin/python -m ai.automation.compare_train_sets
+
 leaderboard:
 	cat ai/automation/leaderboards/$(DATASET).csv
 

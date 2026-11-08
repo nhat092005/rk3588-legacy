@@ -5,9 +5,11 @@ Protective Equipment) detection, targeting the Rockchip RK3588 NPU (6 TOPS).
 Covers dataset preparation, YOLOv8/YOLOv11 training, INT8/FP16 quantization
 via RKNN-Toolkit2, and real multi-core latency benchmarking on the board.
 
-Current scope: 5 classes (`person`, `helmet`, `head`, `safety_clothes`,
-`self_clothes`), primary datasets `sfchd_5class` / `sfchd_shel5k`. Class
-mapping details: `data/CLASS_MAPPING.md`.
+Current scope: 5 classes (`Helmet`, `NoHelmet`, `NoVest`, `Vest`, `Person`),
+primary dataset `css` (Roboflow Construction Site Safety v28), secondary
+`ppe2286` (Huang and Cheng 2025, 4 classes without `Person`). Both are in
+`data/<name>/raw/` and documented in `data/<name>/DATA_CARD.md`; the 5-class
+`processed/` split is not built yet.
 
 ## Quickstart
 
@@ -22,22 +24,19 @@ Prerequisites:
 make sync
 make check
 
-# 2. Train baseline (seed 42) + crosscheck evaluator
-make phase2 DATASET=sfchd_5class
+# 2. Train baseline (seed 0) + crosscheck evaluator
+make phase2 DATASET=ppe5
 
 # 3. Export FP16/INT8, measure complexity, evaluate on ONNX/RKNN
-make phase3 DATASET=sfchd_5class
+make phase3 DATASET=ppe5
 
 # 4. Tier 1 (PC) + tier 2 (board) benchmark — needs protocol LOCK and a
 #    board that has already been set up
-make phase4 DATASET=sfchd_5class
+make phase4 DATASET=ppe5
 
 # 5. Aggregate result tables
-make tables DATASET=sfchd_5class
+make tables DATASET=ppe5
 ```
-
-`phase10` reruns seeds 43/44 for the final key models, once the phases above
-are stable.
 
 ## Full command reference
 
@@ -54,6 +53,6 @@ of sync when the Makefile changes.
 
 - Training configs: `ai/automation/configs/*.yaml`
 - Per-run results & weights: `ai/automation/runs/<run_id>/`
-- Full runbook (Phase 0-10, evaluation protocol, result tables A-M):
-  `docs/PPE_RK3588S_Research_Master_Guide.md`
-- Paper notes / synthesis: `docs/_notes/`, `docs/outputs/`
+- Documentation site sources (git submodule `docs/`, repo `rk3588-docs`): start at `docs/guide.rst`
+- Runbook and Phase 0-10: `docs/quy-trinh/`; evaluation protocol and result tables A-M: `docs/thi-nghiem/`
+- Papers (one page per paper, PDFs in `docs/_assets/pdf/papers/`): `docs/bai-bao/`

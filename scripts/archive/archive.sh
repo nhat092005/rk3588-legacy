@@ -17,7 +17,7 @@ Description:
   Preserves relative directory structures and symlinks.
 
 Options:
-  -d, --dataset <name>   Archive only a specific dataset (e.g. sh17, sfchd, css)
+  -d, --dataset <name>   Archive only a specific dataset (e.g. css, ppe2286, ppe5)
                          and its corresponding run weights.
   -h, --help             Show this help message.
 

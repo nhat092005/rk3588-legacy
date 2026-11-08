@@ -27,6 +27,9 @@ RUNS_DIR = REPO_ROOT / "ai" / "automation" / "runs"
 OUTPUTS_DIR = REPO_ROOT / "data" / "demo" / "outputs"
 DET_CONF = 0.1
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".jfif"}
+# The violation classes (NoHelmet 1, NoVest 2) get dark colors: their default Ultralytics colors are near white or
+# light yellow, which hides the white label text. Other class ids keep the Ultralytics palette.
+VIOLATION_COLORS_BGR = {1: (30, 30, 220), 2: (0, 110, 240)}
 
 
 def sh(cmd: list[str]) -> None:
@@ -139,7 +142,7 @@ def draw(frame: np.ndarray, boxes: np.ndarray, cls: np.ndarray, labels: list[str
     """Draw boxes with a filled label background, in place. One fixed color per class id."""
     for box, c, label in zip(boxes, cls, labels):
         x1, y1, x2, y2 = box.astype(int)
-        color = colors(int(c), bgr=True)
+        color = VIOLATION_COLORS_BGR.get(int(c)) or colors(int(c), bgr=True)
         cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
         (tw, th), baseline = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
         cv2.rectangle(frame, (x1, y1 - th - baseline - 4), (x1 + tw + 4, y1), color, -1)

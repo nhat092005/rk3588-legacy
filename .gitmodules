@@ -1,3 +1,6 @@
 [submodule "3rdparty/rknn-toolkit2"]
 	path = 3rdparty/rknn-toolkit2
 	url = https://github.com/airockchip/rknn-toolkit2.git
+[submodule "docs"]
+	path = docs
+	url = git@github.com:nhat092005/rk3588-docs.git

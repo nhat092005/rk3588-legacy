@@ -1,5 +1,3 @@
-docs/_notes/
-docs/outputs/
 data/**
 !data/*/
 !data/*/DATA_CARD.md
@@ -16,3 +14,6 @@ tmp/
 
 CLAUDE.md
 .venv-board/
+GLOSSARY.md
+
+3rdparty/

@@ -12,7 +12,7 @@ import yaml
 from ai.core.backends import UltralyticsBackend
 from ai.core.evaluator import EVAL_SETS_BY_DATASET
 from ai.core.evaluator import evaluate as evaluate_v1
-from ai.core.provenance import file_sha256
+from ai.core.provenance import file_sha256, git_dirty
 from ai.core.trainer import TrainConfig, evaluate, train
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -67,14 +67,15 @@ def append_leaderboard(dataset: str, row: dict) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("config", type=Path)
-    parser.add_argument("--seed", type=int, help="overrides the config seed, e.g. 42, 43, 44")
+    parser.add_argument("--seed", type=int, help="overrides the config seed, e.g. 0")
     parser.add_argument("--print-run-id", action="store_true", help="print the run_id and exit (used by the Makefile for log paths)")
     args = parser.parse_args()
 
     cfg = yaml.safe_load(args.config.read_text())
     if args.seed is not None:
         cfg["seed"] = args.seed
-    model_weights = importlib.import_module(f"ai.models.{cfg['model']}").WEIGHTS
+    model_module = importlib.import_module(f"ai.models.{cfg['model']}")
+    model_weights = model_module.WEIGHTS
 
     # No date: the same config + seed always maps to the same run, so make phase2 can skip finished runs
     run_id = f"{cfg['dataset']}_{cfg['model']}_{cfg['epochs']}ep_s{cfg['seed']}"
@@ -94,13 +95,12 @@ def main() -> None:
         seed=cfg["seed"],
         device=cfg.get("device", "0"),
         optimizer=cfg.get("optimizer", "auto"),
-        lr0=cfg.get("lr0", 0.01),
-        momentum=cfg.get("momentum", 0.937),
-        warmup_bias_lr=cfg.get("warmup_bias_lr", 0.1),
         project=str(RUNS_DIR),
         run_name=run_id,
+        pretrained=getattr(model_module, "PRETRAINED", None),
     )
 
+    dirty_at_start = git_dirty()  # snapshot now: training runs for hours on the code loaded at this point
     model = train(train_cfg)
     run_dir = RUNS_DIR / run_id
 
@@ -117,6 +117,7 @@ def main() -> None:
 
     (run_dir / "config.yaml").write_text(yaml.safe_dump(cfg, sort_keys=False))  # seed as actually used
     (run_dir / "git_commit.txt").write_text(git_commit() + "\n")
+    (run_dir / "git_dirty.txt").write_text(f"{str(dirty_at_start).lower()}\n")
 
     # Leaderboard numbers come from the protocol v1 evaluator, not from model.val() above
     # (model.val() uses rect=True for .pt files; its output is kept only for the plots).
@@ -145,7 +146,7 @@ def main() -> None:
                 "recall": result["recall"],
                 "map50": result["map50"],
                 "map50_95": result["map50_95"],
-                # empty cell = class has no ground truth in this eval set (SHEL5K has no clothes labels)
+                # empty cell = class has no ground truth in this eval set (e.g. a class absent from the eval set)
                 **{f"ap50_95_{c}": result["per_class"].get(c, {}).get("ap50_95", "") for c in result["classes"]},
                 "dataset_fingerprint": result["dataset_fingerprint"][:12],
                 "git_commit": result["git_commit"][:7],

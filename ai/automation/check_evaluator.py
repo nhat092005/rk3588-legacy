@@ -21,7 +21,7 @@ from ai.core.provenance import provenance
 
 GOLDEN_PATH = Path(__file__).resolve().parent / "golden" / f"evaluator_{PROTOCOL_VERSION}.json"
 GOLDEN_WEIGHTS = "yolov8n.pt"
-GOLDEN_EVAL_SET = "sfchd_test"
+GOLDEN_EVAL_SET = "css_test"
 GOLDEN_DEVICE = "cpu"  # CPU kernels are deterministic; GPU results may differ in the 4th decimal between machines
 TOLERANCE = 5e-4  # max |difference| allowed on any metric
 CROSSCHECK_TOLERANCE = 1e-3

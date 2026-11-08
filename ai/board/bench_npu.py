@@ -36,7 +36,7 @@ def load_model(model_dir: Path, core_mask: str) -> tuple[RKNNLite, bool]:
         raise RuntimeError("load_rknn failed")
     if rknn.init_runtime(core_mask=CORE_MASK[core_mask]) != 0:
         raise RuntimeError("init_runtime failed")
-    return rknn, meta.get("args", {}).get("quantize") == 8
+    return rknn, meta.get("args", {}).get("quantize") == 8 and not meta.get("split_head")  # split-head models output pixel boxes, no division by the input size
 
 
 def main() -> None:

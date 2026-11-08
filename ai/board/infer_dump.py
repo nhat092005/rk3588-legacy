@@ -7,13 +7,16 @@ each input's md5, checked by the PC evaluator. Called by evaluate.py --backend r
 import argparse
 import hashlib
 import json
+import time
 from pathlib import Path
 
 import cv2
 import numpy as np
+import yaml
 
 from ai.board.bench_npu import load_model
 from ai.board.common import add_provenance_args, preprocess, provenance
+from ai.board.split_decode import decode_split
 
 EVAL_CONF = 0.001  # must equal ai/core/evaluator.py CONF (checked on the PC)
 
@@ -28,11 +31,19 @@ def main() -> None:
 
     images = [Path(p) for p in args.list.read_text().split()]
     rknn, normalized = load_model(args.model, "AUTO")
+    split = bool(yaml.safe_load((args.model / "metadata.yaml").read_text()).get("split_head"))  # two raw outputs, decode on the CPU
+    decode_s = []
     names, md5s, counts, idx, vals = [], [], [], [], []
     shape = None
     for path in images:
         inp, _ = preprocess(cv2.imread(str(path)))
-        out = np.asarray(rknn.inference(inputs=[inp])[0], dtype=np.float32)[0]  # (4 + nc, anchors)
+        if split:
+            raw = rknn.inference(inputs=[inp])
+            t0 = time.perf_counter()
+            out = decode_split(np.asarray(raw[0], dtype=np.float32), np.asarray(raw[1], dtype=np.float32))[0]
+            decode_s.append(time.perf_counter() - t0)
+        else:
+            out = np.asarray(rknn.inference(inputs=[inp])[0], dtype=np.float32)[0]  # (4 + nc, anchors)
         shape = out.shape
         keep = np.flatnonzero(out[4:].max(0) > EVAL_CONF)
         names.append(path.name)
@@ -47,7 +58,8 @@ def main() -> None:
     np.savez(args.out, names=np.array(names), md5=np.array(md5s), counts=np.array(counts),
              idx=np.concatenate(idx), vals=np.concatenate(vals), shape=np.array(shape))
     meta = {**provenance(args, next(args.model.glob("*.rknn"))), "normalized_boxes": normalized,
-            "eval_conf": EVAL_CONF, "n_images": len(names), "kept_anchors": int(sum(counts)), "sdk_version": str(sdk_version)}
+            "eval_conf": EVAL_CONF, "n_images": len(names), "kept_anchors": int(sum(counts)), "sdk_version": str(sdk_version),
+            "split_head": split, "decode_ms_median": round(1000 * float(np.median(decode_s)), 3) if decode_s else None}
     args.out.with_suffix(".json").write_text(json.dumps(meta, indent=2) + "\n")
     print(f"Done: {args.out} ({len(names)} images, {sum(counts)} anchors kept)")
 

@@ -24,23 +24,23 @@ def sh(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True)
 
 
-def board_dump(run_dir: Path, precision: str, eval_set: str, board: str, board_repo: str) -> Path:
+def board_dump(run_dir: Path, precision: str, eval_set: str, board: str, board_repo: str, suffix: str = "") -> Path:
     """Copy model + eval-set images to the board, run infer_dump there, copy the dump back."""
-    rknn_dir = run_dir / "weights" / f"rknn_{precision}"
+    rknn_dir = run_dir / "weights" / f"rknn_{precision}{suffix}"
     rel_run = run_dir.relative_to(REPO_ROOT)
     loader, _ = build_eval_loader(eval_set)
     images = [str(Path(p).relative_to(REPO_ROOT)) for p in loader.dataset.im_files]
-    remote_dump = f"{rel_run}/weights/npu_dump_{precision}_{eval_set}.npz"
-    local_dump = run_dir / "weights" / f"npu_dump_{precision}_{eval_set}.npz"
+    remote_dump = f"{rel_run}/weights/npu_dump_{precision}{suffix}_{eval_set}.npz"
+    local_dump = run_dir / "weights" / f"npu_dump_{precision}{suffix}_{eval_set}.npz"
     with tempfile.TemporaryDirectory() as tmp:
         lst = Path(tmp) / f"{eval_set}.txt"
         lst.write_text("\n".join(images) + "\n")
         sh(["ssh", board, f"mkdir -p {board_repo}/{rel_run}/weights"])
         sh(["rsync", "-aL", f"--files-from={lst}", str(REPO_ROOT), f"{board}:{board_repo}/"])  # images (skips unchanged)
-        sh(["rsync", "-a", f"{rknn_dir}/", f"{board}:{board_repo}/{rel_run}/weights/rknn_{precision}/"])
+        sh(["rsync", "-a", f"{rknn_dir}/", f"{board}:{board_repo}/{rel_run}/weights/rknn_{precision}{suffix}/"])
         sh(["scp", "-q", str(lst), f"{board}:{board_repo}/{rel_run}/weights/{lst.name}"])
     sh(["ssh", board, f"cd {board_repo} && .venv-board/bin/python -m ai.board.infer_dump "
-        f"--model {rel_run}/weights/rknn_{precision} --list {rel_run}/weights/{eval_set}.txt --out {remote_dump} "
+        f"--model {rel_run}/weights/rknn_{precision}{suffix} --list {rel_run}/weights/{eval_set}.txt --out {remote_dump} "
         f"--run-id {run_dir.name} --git-commit {git_commit()} --git-dirty {str(git_dirty()).lower()}"])
     sh(["scp", "-q", f"{board}:{board_repo}/{remote_dump}", f"{board}:{board_repo}/{remote_dump[:-4]}.json", str(local_dump.parent)])
     return local_dump
@@ -50,11 +50,13 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("run_id")
     parser.add_argument("--backend", choices=["pt", "onnx", "rknn"], required=True)
-    parser.add_argument("--precision", choices=["fp16", "int8"], help="rknn only")
+    parser.add_argument("--precision", choices=["fp16", "int8", "int8h5"], help="rknn only (int8h5: hybrid INT8, float16 box-decode tail)")
     parser.add_argument("--board", default="minhnhat@100.67.251.37", help="rknn only: ssh target")
     parser.add_argument("--board-repo", default="rk3588", help="rknn only: repo path on the board")
     parser.add_argument("--device", default="0", help="pt only: CUDA index or cpu")
     parser.add_argument("--eval-set", choices=list(EVAL_SETS), help="default: every eval set of the run's dataset")
+    parser.add_argument("--reuse-dump", action="store_true", help="rknn only: score the local npu_dump of a previous board run again, no board access")
+    parser.add_argument("--variant", default="", help="rknn only: quantization recipe name, evaluates weights/rknn_<precision>_<variant> and writes eval/rknn_<precision>_<variant>_<set>.json")
     args = parser.parse_args()
 
     run_dir = RUNS_DIR / args.run_id
@@ -80,17 +82,18 @@ def main() -> None:
 
     if not args.precision:
         parser.error("--backend rknn needs --precision")
-    rknn_dir = run_dir / "weights" / f"rknn_{args.precision}"
+    suffix = f"_{args.variant}" if args.variant else ""
+    rknn_dir = run_dir / "weights" / f"rknn_{args.precision}{suffix}"
     rknn_path = next(rknn_dir.glob("*.rknn"))
     for eval_set in eval_sets:
-        dump = board_dump(run_dir, args.precision, eval_set, args.board, args.board_repo)
+        dump = run_dir / "weights" / f"npu_dump_{args.precision}{suffix}_{eval_set}.npz" if args.reuse_dump else board_dump(run_dir, args.precision, eval_set, args.board, args.board_repo, suffix)
         backend = RknnDumpBackend(dump, rknn_dir, CONF)
         if backend.meta["model_sha256"] != file_sha256(rknn_path):
             raise ValueError("model on the board differs from the local .rknn")
         result = evaluate(backend, eval_set)
         if backend.rows:
             raise ValueError(f"{len(backend.rows)} board images were not evaluated")
-        save(result, f"rknn_{args.precision}", eval_set, rknn_path,
+        save(result, f"rknn_{args.precision}{suffix}", eval_set, rknn_path,
              {"backend": "rknnlite-on-board", "sdk_version": backend.meta["sdk_version"],
               "board_dump": {k: backend.meta[k] for k in ("created_at", "kept_anchors", "normalized_boxes")}})
 

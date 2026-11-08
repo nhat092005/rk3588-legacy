@@ -27,6 +27,9 @@ SUMMARY_TIME_RE = re.compile(r"^Total Time\(us\):\s*([\d.]+)", re.M)
 # perf_debug=True: "Total Operator Elapsed Per Frame Time(us): 20663"
 LAYERS_TIME_RE = re.compile(r"^Total Operator Elapsed Per Frame Time\(us\):\s*([\d.]+)", re.M)
 # "CPU Current Frequency List:\n    - 1800000\n ..." (printed because fix_freq=True)
+# per-layer row: MacUsage "2.33/0.00/0.00" (blank for non-Conv), WorkLoad "100.0%/0.0%/0.0%" followed by RW(KB)
+MAC_RE = re.compile(r"\d+\.\d+/\d+\.\d+/\d+\.\d+")
+WORKLOAD_RE = re.compile(r"\d+\.\d%/\d+\.\d%/\d+\.\d%")
 FREQ_RE = re.compile(r"^(CPU|NPU|DDR) Current Frequency List:\n((?:\s+- \d+\n?)+)", re.M)
 
 
@@ -71,10 +74,14 @@ def parse_layers(text: str) -> list[dict]:
         cycles = next((p for p in parts if re.fullmatch(r"\d+/\d+/\d+", p)), None)
         time_idx = parts.index(cycles) + 1 if cycles else None
         ddr, npu, total = (int(x) for x in cycles.split("/")) if cycles else (None, None, None)
+        workload = next((p for p in parts if WORKLOAD_RE.fullmatch(p)), None)
         rows.append({
             "id": int(parts[0]), "op": parts[1], "dtype": parts[2], "target": parts[3],
             "ddr_cycles": ddr, "npu_cycles": npu, "total_cycles": total,
             "time_us": int(parts[time_idx]) if time_idx else None,
+            "mac_usage": next((p for p in parts if MAC_RE.fullmatch(p)), None),
+            "workload": workload,
+            "rw_kb": int(parts[parts.index(workload) + 1]) if workload else None,
             "name": parts[-1],
         })
     return rows
@@ -94,17 +101,30 @@ def measure_latency(rknn: RKNN, repeats: int = PERF_REPEATS) -> dict:
     }
 
 
-def measure_layers(rknn: RKNN) -> tuple[dict, str]:
-    """Session 2 (perf_debug=True): per-layer table; its total is debug-mode time, not the latency."""
-    text = str(rknn.eval_perf(is_print=False, fix_freq=True))
-    rows = parse_layers(text)
-    m = LAYERS_TIME_RE.search(text)
+def measure_layers(rknn: RKNN, repeats: int = PERF_REPEATS) -> tuple[dict, str]:
+    """Session 2 (perf_debug=True): per-layer table from `repeats` eval_perf calls.
+
+    time_us of a row is the median over the calls (time_us_all keeps every call). debug_total_us is debug-mode
+    time, not the latency. Returns the summary and the raw text of the first call.
+    """
+    texts = [str(rknn.eval_perf(is_print=False, fix_freq=True)) for _ in range(repeats)]
+    tables = [parse_layers(t) for t in texts]
+    rows = tables[0]
+    for t in tables[1:]:
+        if [(r["id"], r["op"], r["name"]) for r in t] != [(r["id"], r["op"], r["name"]) for r in rows]:
+            raise RuntimeError("layer table differs between eval_perf calls of one session")
+    for i, row in enumerate(rows):
+        row["time_us_all"] = [t[i]["time_us"] for t in tables]
+        row["time_us"] = statistics.median(row["time_us_all"])
+    totals = [float(m.group(1)) if (m := LAYERS_TIME_RE.search(t)) else None for t in texts]
     return {
-        "debug_total_us": float(m.group(1)) if m else None,
+        "debug_total_us": statistics.median(totals) if None not in totals else None,
+        "debug_total_us_all": totals,
+        "repeats": repeats,
         "n_layers": len(rows),
         "cpu_ops": sorted({r["op"] for r in rows if r["target"] == "CPU"} - {"InputOperator", "OutputOperator"}),
         "layers": rows,
-    }, text
+    }, texts[0]
 
 
 def measure_memory(rknn: RKNN) -> dict:

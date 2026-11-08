@@ -1,0 +1,14 @@
+X3 rule, written 2026-10-31T03:59:39+07:00 before any X3 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).
+Question (U5 of tmp/2026-10-31_latency-unknowns-tracker.md): the eval_perf path (E2e) and the C API path (E2d) differ by -1.20 to +0.29 ms per cell. eval_perf calls come about 0.22 s apart, C API runs back to back. Does pacing the C API runs 0.22 s apart move its times toward the eval_perf times? Timing only, no mechanism claim.
+Setup: C API (rknn_perf_bench, CORE_0, zero UINT8 input), irqbalance stopped, frequencies locked, no tracing. gap_ms argument of rknn_perf_bench: 0 (back to back) or 220 (sleep 220 ms after every run). Cells (app CPU / NPU interrupt CPU) are the six E2e cells: a4i4, a0i0, a4i0, a0i4, a1i0, a1i4. For each cell a block pair of 300 timed runs each after 50 warm-up runs: in half 1 gap 0 then gap 220, in half 2 (cells in reversed order) gap 220 then gap 0, so 24 blocks. A run plus 220 ms of sleep gives a cycle of about 240 ms, close to the 0.21 to 0.23 s between eval_perf calls. 20 s rest between pairs.
+Per cell (mean of the two block medians): B = median at gap 0, G = median at gap 220, E = eval_perf median of the same cell in E2e, R = E2d median of the same cell (reference only).
+Statements allowed (need all four blocks of a cell realized: app on its pinned CPU in at least 99 percent of runs, at least 99 percent of irq 36 interrupts on the target CPU):
+  Comparability with E2e (measured hours earlier): a cell is judged only if |B - R| <= 0.25 ms (the in-run back-to-back time still matches E2d), otherwise it is 'không so được (lệch theo thời gian)'. X1, X2, X3 and E2e ran with NPU and DDR governors reading userspace, E2d with performance (same frequencies), so B against R also carries that difference.
+  Among comparable cells, only cells with |E - B| >= 0.25 ms are judged. f = (G - B) / (E - B).
+  If 0.5 <= f <= 1.5 for every judged cell: 'nhịp gọi 220 ms đưa thời gian C API về gần thời gian eval_perf ở mọi ô được xét'.
+  If |f| <= 0.25 for every judged cell: 'nhịp gọi 220 ms không giải thích chênh lệch giữa hai đường'.
+  Otherwise: 'chưa kết luận', and list f per cell.
+  0.25 ms, 0.5, 1.5 and 0.25 are new numbers chosen for this rule, not user approved.
+Descriptive only: B against R (in-run back to back against E2d), slow, mid and fast shares at gap 220, the cell (1, 0) slow share at gap 220.
+Not allowed: any statement on why pacing changes the time, about clusters or clock.
+Budget: experiment 1 of at most 2 for U5.

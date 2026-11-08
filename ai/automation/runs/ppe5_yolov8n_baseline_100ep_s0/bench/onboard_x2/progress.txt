@@ -1,0 +1,41 @@
+npu irqs: 36
+37
+38 ; irqbalance was: active ; trace_clock was local ; buffer_kb was 7
+04:53:08 state: kernel 6.1.99-rockchip-rk3588 ; up 5 hours, 14 minutes ; rknn_server pid '10380' ; adbd pid '11257'
+04:53:08 frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;
+04:53:08 md5: 9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench 
+04:53:08 buffer_size_kb read back: 32771
+04:53:08 block 1 cond a4i4 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000 
+04:53:15 block 1 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:53:35 block 2 cond a4i0 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000 
+04:53:43 block 2 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:54:03 block 3 cond a4i0s pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=10000000 policy4=performance/2256000 
+04:54:10 block 3 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=10000000 policy4=performance/2256000  overrun_delta: 0
+04:54:30 block 4 cond a1i4 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000 
+04:54:38 block 4 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:54:58 block 5 cond a1i4s pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=01000000 policy4=performance/2256000 
+04:55:05 block 5 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=01000000 policy4=performance/2256000  overrun_delta: 0
+04:55:25 block 6 cond a4i4f pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=userspace/1800000 
+04:55:32 block 6 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=userspace/1800000  overrun_delta: 0
+04:55:52 block 7 cond a1i0 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000 
+04:56:01 block 7 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:56:21 block 8 cond a1i0s pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=11000000 policy4=performance/2256000 
+04:56:29 block 8 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=11000000 policy4=performance/2256000  overrun_delta: 0
+04:56:49 block 9 cond a1i0s pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=11000000 policy4=performance/2256000 
+04:56:56 block 9 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=11000000 policy4=performance/2256000  overrun_delta: 0
+04:57:16 block 10 cond a1i0 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000 
+04:57:25 block 10 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:57:45 block 11 cond a4i4f pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=userspace/1800000 
+04:57:52 block 11 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=userspace/1800000  overrun_delta: 0
+04:58:12 block 12 cond a1i4s pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=01000000 policy4=performance/2256000 
+04:58:20 block 12 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=01000000 policy4=performance/2256000  overrun_delta: 0
+04:58:40 block 13 cond a1i4 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000 
+04:58:47 block 13 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+04:59:08 block 14 cond a4i0s pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=10000000 policy4=performance/2256000 
+04:59:14 block 14 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=10000000 policy4=performance/2256000  overrun_delta: 0
+04:59:34 block 15 cond a4i0 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000 
+04:59:42 block 15 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+05:00:02 block 16 cond a4i4 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000 
+05:00:09 block 16 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  idle_disable=00000000 policy4=performance/2256000  overrun_delta: 0
+05:00:29 restored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  idle_disable=00000000 policy4=performance/2256000  trace_clock=[local] global counter uptime perf mono mono_raw boot tai buffer_kb=7 events_enable=0
+05:00:29 irqbalance now: active

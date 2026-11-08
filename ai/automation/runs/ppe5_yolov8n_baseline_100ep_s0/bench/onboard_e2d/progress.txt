@@ -1,0 +1,98 @@
+npu irqs: 36
+37
+38 ; irqbalance was: active
+state: kernel 6.1.99-rockchip-rk3588 ; up 1 hour, 21 minutes ; rknn_server pid '10380' ; adbd pid '11257' ; adb port 5555 listeners 1
+policy0: performance 1800000 kHz
+policy4: performance 2256000 kHz
+policy6: performance 2304000 kHz
+npu: performance 1000000000 Hz
+ddr: performance 2112000000 Hz
+9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn
+d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench
+saved irq 36 affinity 0-7
+saved irq 37 affinity 0-7
+saved irq 38 affinity 0-7
+irqbalance now: inactive
+blocks: 40
+block 1 cond A 01:00:37 pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 1 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 2 cond a0i0 01:01:19 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 2 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 3 cond a1i0 01:01:58 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 3 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 4 cond a2i0 01:02:41 pin='taskset -c 2' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 4 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 5 cond a3i0 01:03:24 pin='taskset -c 3' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 5 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 6 cond a4i0 01:04:06 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 6 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 7 cond a5i0 01:04:46 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 7 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 8 cond a6i0 01:05:24 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 8 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 9 cond a7i0 01:06:04 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 9 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 10 cond a0i4 01:06:43 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 10 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 11 cond a1i4 01:07:23 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 11 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 12 cond a2i4 01:08:03 pin='taskset -c 2' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 12 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 13 cond a3i4 01:08:43 pin='taskset -c 3' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 13 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 14 cond a4i4 01:09:24 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 14 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 15 cond a5i4 01:10:01 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 15 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 16 cond a6i4 01:10:38 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 16 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 17 cond a7i4 01:11:16 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 17 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 18 cond a5i5 01:11:53 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+block 18 post readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+block 19 cond a6i6 01:12:30 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+block 19 post readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+block 20 cond a7i7 01:13:08 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+block 20 post readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+block 21 cond a7i7 01:13:45 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+block 21 post readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+block 22 cond a6i6 01:14:22 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+block 22 post readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+block 23 cond a5i5 01:15:00 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+block 23 post readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+block 24 cond a7i4 01:15:37 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 24 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 25 cond a6i4 01:16:14 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 25 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 26 cond a5i4 01:16:52 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 26 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 27 cond a4i4 01:17:29 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 27 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 28 cond a3i4 01:18:06 pin='taskset -c 3' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 28 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 29 cond a2i4 01:18:47 pin='taskset -c 2' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 29 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 30 cond a1i4 01:19:27 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 30 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 31 cond a0i4 01:20:07 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 31 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 32 cond a7i0 01:20:47 pin='taskset -c 7' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 32 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 33 cond a6i0 01:21:26 pin='taskset -c 6' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 33 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 34 cond a5i0 01:22:06 pin='taskset -c 5' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 34 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 35 cond a4i0 01:22:46 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 35 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 36 cond a3i0 01:23:25 pin='taskset -c 3' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 36 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 37 cond a2i0 01:24:08 pin='taskset -c 2' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 37 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 38 cond a1i0 01:24:51 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 38 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 39 cond a0i0 01:25:33 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 39 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 40 cond A 01:26:13 pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 40 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+restored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  idle_state1_disable=0
+irqbalance now: active ; readback after restart: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 

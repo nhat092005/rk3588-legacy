@@ -1,0 +1,6 @@
+05:14:41 int8 session 1 -> onboard_x8/int8
+05:15:35 fp16 session 1 -> onboard_x8/fp16
+05:16:29 int8 session 2 -> onboard_x8/int8
+05:17:25 fp16 session 2 -> onboard_x8/fp16
+05:18:17 int8 session 3 -> onboard_x8/int8
+05:19:11 fp16 session 3 -> onboard_x8/fp16

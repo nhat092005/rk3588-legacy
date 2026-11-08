@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.7346,
+  "recall": 0.676,
+  "map50": 0.6915,
+  "map50_95": 0.3618,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.6082,
+      "recall": 0.7622,
+      "ap50": 0.7156,
+      "ap50_95": 0.3188,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.6944,
+      "recall": 0.4878,
+      "ap50": 0.4427,
+      "ap50_95": 0.2434,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.8164,
+      "recall": 0.7,
+      "ap50": 0.74,
+      "ap50_95": 0.3836,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.839,
+      "recall": 0.7692,
+      "ap50": 0.8494,
+      "ap50_95": 0.4808,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.715,
+      "recall": 0.6609,
+      "ap50": 0.7097,
+      "ap50_95": 0.3823,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_relu_200ep_s0",
+  "model_file": "weights/rknn_int8/best-rk3588.rknn",
+  "model_sha256": "6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T17:46:12",
+    "kept_anchors": 12443,
+    "normalized_boxes": true
+  }
+}

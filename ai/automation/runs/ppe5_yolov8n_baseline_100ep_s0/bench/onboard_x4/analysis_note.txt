@@ -1,0 +1,4 @@
+Analysis note, written 2026-10-31T05:02:53+07:00, after the X4 data was analysed once.
+Change: ai/automation/analyze_x4.py first checked only that the sessions of a setting were realized, not the reference sessions (CORE_0 for the mask comparison, verbose False for the log comparison). rule.txt already says 'A statement that uses an unrealized session reads chưa kết luận (P2 không thực hiện đúng)'. The code was changed to require the reference sessions too.
+Effect: U19 (log level) went from 'không phân biệt được' to 'chưa kết luận (P2 không thực hiện đúng)', because log session verbose False round 2 had one helper log line (epoch 1793397315) with 10 threads and 1 thread not on CPU4. U16 and U22 did not change (their reference sessions were all realized). No threshold and no other rule changed.
+Limit of the P2 check: the helper samples the thread affinity once per second, so a violation shorter than about 1 s may not be seen. One such transient was caught here.

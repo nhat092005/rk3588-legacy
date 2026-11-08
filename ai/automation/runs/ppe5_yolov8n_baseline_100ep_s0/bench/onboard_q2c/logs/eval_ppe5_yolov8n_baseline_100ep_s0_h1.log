@@ -1,0 +1,36 @@
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2146.9±717.9 MB/s, size: 45.7 KB)
+[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test.cache... 82 images, 22 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 82/82 28.7Mit/s 0.0s
++ ssh minhnhat@192.168.137.49 mkdir -p rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights
++ rsync -aL --files-from=/tmp/tmpk8g7lj8w/css_test.txt /home/nhat/workspace/prjs/rk3588 minhnhat@192.168.137.49:rk3588/
++ rsync -a /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1/ minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1/
++ scp -q /tmp/tmpk8g7lj8w/css_test.txt minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/css_test.txt
++ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.infer_dump --model ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1 --list ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/css_test.txt --out ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_css_test.npz --run-id ppe5_yolov8n_baseline_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
+W rknn-toolkit-lite2 version: 2.3.2
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+Done: ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_css_test.npz (82 images, 11257 anchors kept)
+I RKNN: [19:38:01.543] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [19:38:01.543] RKNN Driver Information, version: 0.9.8
+I RKNN: [19:38:01.544] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [19:38:01.554] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
++ scp -q minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_css_test.npz minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_css_test.json /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3882.2±1072.6 MB/s, size: 48.7 KB)
+[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test.cache... 82 images, 22 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 82/82 19.1Mit/s 0.0s
+/home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_h1_css_test.json: mAP50-95 0.3683
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 4711.4±1641.7 MB/s, size: 90.0 KB)
+[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test_ext.cache... 180 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 180/180 68.6Mit/s 0.0s
++ ssh minhnhat@192.168.137.49 mkdir -p rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights
++ rsync -aL --files-from=/tmp/tmpjc99vaqb/ppe2286_ext.txt /home/nhat/workspace/prjs/rk3588 minhnhat@192.168.137.49:rk3588/
++ rsync -a /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1/ minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1/
++ scp -q /tmp/tmpjc99vaqb/ppe2286_ext.txt minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/ppe2286_ext.txt
++ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.infer_dump --model ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h1 --list ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/ppe2286_ext.txt --out ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_ppe2286_ext.npz --run-id ppe5_yolov8n_baseline_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
+W rknn-toolkit-lite2 version: 2.3.2
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+Done: ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_ppe2286_ext.npz (180 images, 21690 anchors kept)
+I RKNN: [19:38:08.581] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [19:38:08.581] RKNN Driver Information, version: 0.9.8
+I RKNN: [19:38:08.581] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [19:38:08.591] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
++ scp -q minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_ppe2286_ext.npz minhnhat@192.168.137.49:rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/npu_dump_int8_h1_ppe2286_ext.json /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 6518.1±3264.0 MB/s, size: 426.5 KB)
+[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test_ext.cache... 180 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 180/180 62.9Mit/s 0.0s
+/home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_h1_ppe2286_ext.json: mAP50-95 0.2315

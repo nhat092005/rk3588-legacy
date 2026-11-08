@@ -1,0 +1,14 @@
+05:24:38 block 1 s4i4 init_runtime 1.05 s, 500 calls
+05:27:24 block 2 s5i4 init_runtime 1.06 s, 500 calls
+05:29:58 block 3 s6i4 init_runtime 0.95 s, 500 calls
+05:32:32 block 4 s7i4 init_runtime 0.97 s, 500 calls
+05:35:00 block 5 s5i5 init_runtime 1.05 s, 500 calls
+05:37:28 block 6 s6i6 init_runtime 1.01 s, 500 calls
+05:39:53 block 7 s7i7 init_runtime 0.94 s, 500 calls
+05:42:17 block 8 s7i7 init_runtime 0.99 s, 500 calls
+05:44:42 block 9 s6i6 init_runtime 1.02 s, 500 calls
+05:47:11 block 10 s5i5 init_runtime 0.97 s, 500 calls
+05:49:44 block 11 s7i4 init_runtime 0.98 s, 500 calls
+05:52:15 block 12 s6i4 init_runtime 1.03 s, 500 calls
+05:54:41 block 13 s5i4 init_runtime 0.90 s, 500 calls
+05:57:05 block 14 s4i4 init_runtime 1.13 s, 500 calls

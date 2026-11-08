@@ -1,0 +1,4 @@
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 96.0±53.1 MB/s, size: 53.5 KB)
+[K[34m[1mtrain: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/train.cache... 2605 images, 70 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 2605/2605 910.5Mit/s 0.0s
+{'epoch': 1, 'mean_loss': 2.58955199696535, 'batches': 326, 'seconds': 96.2}
+{'epoch': 2, 'mean_loss': 2.591323783061256, 'batches': 326, 'seconds': 93.2}

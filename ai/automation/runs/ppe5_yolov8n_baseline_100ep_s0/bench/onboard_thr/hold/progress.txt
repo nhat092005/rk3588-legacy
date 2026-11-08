@@ -1,0 +1,3 @@
+12:51:40 state: kernel 6.1.99-rockchip-rk3588 ; up 13 hours, 12 minutes ; irqbalance was active ; saved: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;
+12:51:40 pinned: irq 36 smp=4 effective=4 irq 37 smp=5 effective=5 irq 38 smp=6 effective=6  irqbalance inactive
+13:05:03 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active

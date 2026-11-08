@@ -1,0 +1,12 @@
+16:10:06 silu int8h5 CORE_0 session 1
+16:10:59 silu int8_split CORE_0 session 1
+16:11:52 silu int8_qat CORE_0 session 1
+16:12:45 silu int8h5 CORE_0_1_2 session 1
+16:13:38 silu int8_split CORE_0_1_2 session 1
+16:14:31 silu int8_qat CORE_0_1_2 session 1
+16:15:25 silu int8h5 CORE_0 session 2
+16:16:18 silu int8_split CORE_0 session 2
+16:17:15 silu int8_qat CORE_0 session 2
+16:18:08 silu int8h5 CORE_0_1_2 session 2
+16:19:01 silu int8_split CORE_0_1_2 session 2
+16:19:55 silu int8_qat CORE_0_1_2 session 2

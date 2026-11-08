@@ -1,0 +1,9 @@
+start ppe5_yolov8n_relu_200ep_s0 19:52:48
+ok ppe5_yolov8n_relu_200ep_s0 19:54:53
+start ppe5_yolov8n_leakyrelu_100ep_s0 19:54:53
+ok ppe5_yolov8n_leakyrelu_100ep_s0 19:57:00
+start ppe5_yolov8n_relu6_100ep_s0 19:57:00
+ok ppe5_yolov8n_relu6_100ep_s0 19:59:04
+start ppe5_yolov8n_baseline_200ep_s0 19:59:04
+ok ppe5_yolov8n_baseline_200ep_s0 20:01:36
+ALL_DONE

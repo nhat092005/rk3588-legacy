@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "ppe2286_ext",
+  "dataset": "ppe5",
+  "split": "test_ext",
+  "n_images": 180,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "68ad8ef4e58d55d2d70c792977550b5e38d63674f0209178402024f1f1fe2495",
+  "precision": 0.6318,
+  "recall": 0.5953,
+  "map50": 0.5747,
+  "map50_95": 0.2639,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.7396,
+      "recall": 0.7065,
+      "ap50": 0.59,
+      "ap50_95": 0.0985,
+      "instances": 184
+    },
+    "NoHelmet": {
+      "precision": 0.1228,
+      "recall": 0.1094,
+      "ap50": 0.0222,
+      "ap50_95": 0.0053,
+      "instances": 64
+    },
+    "NoVest": {
+      "precision": 0.6516,
+      "recall": 0.6538,
+      "ap50": 0.6341,
+      "ap50_95": 0.3112,
+      "instances": 104
+    },
+    "Vest": {
+      "precision": 0.8005,
+      "recall": 0.6687,
+      "ap50": 0.7661,
+      "ap50_95": 0.4202,
+      "instances": 144
+    },
+    "Person": {
+      "precision": 0.8446,
+      "recall": 0.8381,
+      "ap50": 0.8613,
+      "ap50_95": 0.4844,
+      "instances": 247
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_200ep_s0",
+  "model_file": "weights/rknn_fp16/best-rk3588.rknn",
+  "model_sha256": "702f7e254be39629faa8a64999f3c4daf2794c1405d488f3ae6d882a2cda8199",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T18:59:06",
+    "kept_anchors": 45703,
+    "normalized_boxes": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+ "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+ "recipe": "h6",
+ "config": {
+  "mean_values": [
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "std_values": [
+   [
+    255,
+    255,
+    255
+   ]
+  ],
+  "target_platform": "rk3588"
+ },
+ "onnx_sha256": "8ffa6eb2701dd0c5bc0f0b07f7dafb22f314730c48fec81b38388534255c8daf",
+ "dataset_md5": "f06ca6f74cbce2ede4835bd5de70f52d",
+ "float16_layers": [
+  "/Div_output_0-rs",
+  "/model/model.22/Add_1_output_0-rs",
+  "/model/model.22/Add_2_output_0-rs",
+  "/model/model.22/Concat_2_output_0-rs",
+  "/model/model.22/Div_1_output_0-rs",
+  "/model/model.22/Slice_1_output_0-rs",
+  "/model/model.22/Slice_output_0-rs",
+  "/model/model.22/Sub_1_output_0-rs",
+  "/model/model.22/Sub_output_0-rs",
+  "/model/model.22/cv2.0/cv2.0.0/act/Mul_output_0",
+  "/model/model.22/cv2.0/cv2.0.0/conv/Conv_output_0",
+  "/model/model.22/cv2.0/cv2.0.1/act/Mul_output_0",
+  "/model/model.22/cv2.0/cv2.0.1/conv/Conv_output_0",
+  "/model/model.22/cv2.0/cv2.0.2/Conv_output_0",
+  "/model/model.22/cv2.1/cv2.1.0/act/Mul_output_0",
+  "/model/model.22/cv2.1/cv2.1.0/conv/Conv_output_0",
+  "/model/model.22/cv2.1/cv2.1.1/act/Mul_output_0",
+  "/model/model.22/cv2.1/cv2.1.1/conv/Conv_output_0",
+  "/model/model.22/cv2.1/cv2.1.2/Conv_output_0",
+  "/model/model.22/cv2.2/cv2.2.0/act/Mul_output_0",
+  "/model/model.22/cv2.2/cv2.2.0/conv/Conv_output_0",
+  "/model/model.22/cv2.2/cv2.2.1/act/Mul_output_0",
+  "/model/model.22/cv2.2/cv2.2.1/conv/Conv_output_0",
+  "/model/model.22/cv2.2/cv2.2.2/Conv_output_0",
+  "/model/model.22/dfl/Reshape_1_output_0_rs",
+  "/model/model.22/dfl/Reshape_output_0",
+  "/model/model.22/dfl/Softmax_output_0_sw",
+  "/model/model.22/dfl/Transpose_output_0_sw",
+  "output0-rs",
+  "output0_int8"
+ ],
+ "layer_table": null
+}

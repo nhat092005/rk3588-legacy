@@ -1,0 +1,154 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-11-01T18:12:51",
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "tier": 2,
+  "protocol_version": "v1",
+  "model_file": "ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_split/best-rk3588.rknn",
+  "model_sha256": "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b",
+  "runtime": "rknnlite, threads",
+  "model": "ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_split",
+  "mode": "threads",
+  "contexts": 1,
+  "core_masks": [
+    "CORE_0"
+  ],
+  "cached_images": 82,
+  "frames": 1238,
+  "warmup_per_context": 20,
+  "measured_at": "2026-11-01T18:12:51.754464",
+  "system": {
+    "kernel": "6.1.99-rockchip-rk3588",
+    "os": "Orange Pi 1.2.4 Jammy",
+    "python": "3.10.12",
+    "ram_total_mib": 3916,
+    "cpu_count": 8
+  },
+  "frequency_before": {
+    "policy0": {
+      "governor": "performance",
+      "cur_khz": "1800000"
+    },
+    "policy4": {
+      "governor": "performance",
+      "cur_khz": "2256000"
+    },
+    "policy6": {
+      "governor": "performance",
+      "cur_khz": "2304000"
+    },
+    "npu": {
+      "governor": "userspace",
+      "cur_hz": "1000000000"
+    },
+    "ddr": {
+      "governor": "userspace",
+      "cur_hz": "2112000000"
+    },
+    "locked": true
+  },
+  "frequency_after": {
+    "policy0": {
+      "governor": "performance",
+      "cur_khz": "1800000"
+    },
+    "policy4": {
+      "governor": "performance",
+      "cur_khz": "2256000"
+    },
+    "policy6": {
+      "governor": "performance",
+      "cur_khz": "2304000"
+    },
+    "npu": {
+      "governor": "userspace",
+      "cur_hz": "1000000000"
+    },
+    "ddr": {
+      "governor": "userspace",
+      "cur_hz": "2112000000"
+    },
+    "locked": true
+  },
+  "wall_time_s": 29.435,
+  "throughput_fps": 42.06,
+  "t_pre_ms": {
+    "mean": 0.292,
+    "p50": 0.29,
+    "p95": 0.312,
+    "std": 0.039,
+    "n": 1238
+  },
+  "t_npu_ms": {
+    "mean": 14.415,
+    "p50": 14.304,
+    "p95": 15.421,
+    "std": 0.557,
+    "n": 1238
+  },
+  "t_post_ms": {
+    "mean": 9.059,
+    "p50": 8.936,
+    "p95": 10.071,
+    "std": 0.549,
+    "n": 1238
+  },
+  "frames_per_context": [
+    1238
+  ],
+  "rss_mib": {
+    "start": 49.76953125,
+    "frames_loaded": 148.53515625,
+    "after_context_1": 169.54296875
+  },
+  "irq_delta_per_cpu": {
+    "36": [
+      0,
+      0,
+      0,
+      0,
+      74222,
+      0,
+      0,
+      0
+    ],
+    "37": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "38": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "resource": {
+    "peak_rss_mib": 319.1,
+    "avg_process_cpu_pct": 53.6,
+    "avg_system_cpu_pct": 7.2,
+    "thermal_zone": "thermal_zone6",
+    "temp_start_c": 47.2,
+    "temp_end_c": 50.8,
+    "temp_max_c": 50.8,
+    "duration_s": 30.4,
+    "samples": 301
+  },
+  "affinity_process": [
+    4,
+    5,
+    6,
+    7
+  ]
+}

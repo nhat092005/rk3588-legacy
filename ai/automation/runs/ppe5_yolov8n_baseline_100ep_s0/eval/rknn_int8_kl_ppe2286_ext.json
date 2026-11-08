@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "ppe2286_ext",
+  "dataset": "ppe5",
+  "split": "test_ext",
+  "n_images": 180,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "68ad8ef4e58d55d2d70c792977550b5e38d63674f0209178402024f1f1fe2495",
+  "precision": 0.5282,
+  "recall": 0.5613,
+  "map50": 0.5201,
+  "map50_95": 0.2293,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.5117,
+      "recall": 0.6087,
+      "ap50": 0.4131,
+      "ap50_95": 0.0742,
+      "instances": 184
+    },
+    "NoHelmet": {
+      "precision": 0.0161,
+      "recall": 0.0156,
+      "ap50": 0.0116,
+      "ap50_95": 0.0037,
+      "instances": 64
+    },
+    "NoVest": {
+      "precision": 0.6226,
+      "recall": 0.5552,
+      "ap50": 0.5767,
+      "ap50_95": 0.2418,
+      "instances": 104
+    },
+    "Vest": {
+      "precision": 0.7812,
+      "recall": 0.7778,
+      "ap50": 0.7939,
+      "ap50_95": 0.4143,
+      "instances": 144
+    },
+    "Person": {
+      "precision": 0.7092,
+      "recall": 0.8491,
+      "ap50": 0.8049,
+      "ap50_95": 0.4123,
+      "instances": 247
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "model_file": "weights/rknn_int8_kl/best-rk3588.rknn",
+  "model_sha256": "602a96db8f1b6a810e08ac27a8ac0f91a9b6eb96db6ab35b8cd3fe96f6af9eae",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T19:35:02",
+    "kept_anchors": 21722,
+    "normalized_boxes": true
+  }
+}

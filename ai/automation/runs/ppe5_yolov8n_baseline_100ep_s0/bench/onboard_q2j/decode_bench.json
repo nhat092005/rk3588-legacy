@@ -1,0 +1,32 @@
+{
+  "n": 200,
+  "median_ms": 8.02,
+  "p95_ms": 8.246,
+  "min_ms": 7.88,
+  "frequency": {
+    "policy0": {
+      "governor": "performance",
+      "cur_khz": "1800000"
+    },
+    "policy4": {
+      "governor": "performance",
+      "cur_khz": "2256000"
+    },
+    "policy6": {
+      "governor": "performance",
+      "cur_khz": "2304000"
+    },
+    "npu": {
+      "governor": "userspace",
+      "cur_hz": "1000000000"
+    },
+    "ddr": {
+      "governor": "userspace",
+      "cur_hz": "2112000000"
+    },
+    "locked": true
+  },
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "git_commit": "x",
+  "git_dirty": true
+}

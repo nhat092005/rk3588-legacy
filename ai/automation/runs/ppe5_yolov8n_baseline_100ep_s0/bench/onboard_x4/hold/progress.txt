@@ -1,0 +1,21 @@
+05:25:13 state: kernel 6.1.99-rockchip-rk3588 ; up 5 hours, 46 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;
+05:26:26 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:27:23 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:28:19 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:29:15 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:30:09 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:31:05 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:31:59 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:32:52 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:33:47 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:34:42 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:35:37 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:36:33 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:37:27 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:38:20 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:39:13 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:40:07 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:41:01 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:41:58 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 
+05:42:52 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+05:58:27 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active

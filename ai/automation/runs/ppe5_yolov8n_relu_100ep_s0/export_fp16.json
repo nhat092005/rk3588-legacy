@@ -1,0 +1,19 @@
+{
+  "run_id": "ppe5_yolov8n_relu_100ep_s0",
+  "precision": "fp16",
+  "export_tier": "baseline_native_api",
+  "rknn_path": "weights/rknn_fp16/best-rk3588.rknn",
+  "rknn_size_mb": 7.571,
+  "rknn_sha256": "8b3839305d44054f4157282ef5badaf0d9ec34bd7e5763d17c6abdc8c1cc2319",
+  "onnx_path": "weights/best.onnx",
+  "onnx_size_mb": 11.685,
+  "onnx_sha256": "5b87f88a23944f8db18b768e26ba00ddb0072b131c2f338e8ad89d0bf684ca67",
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-10-31T12:07:34",
+  "ultralytics_version": "8.4.154",
+  "rknn_toolkit2_version": "2.3.2",
+  "onnx_version": "1.18.0",
+  "onnxslim_version": "0.1.96",
+  "calibration": null
+}

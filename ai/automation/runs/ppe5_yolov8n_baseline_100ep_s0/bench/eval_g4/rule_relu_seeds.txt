@@ -1,0 +1,9 @@
+ReLU seed spread rule (addendum to rule.txt), written 2026-10-31T13:08:11+07:00 before any result of ReLU seeds 1 and 2 exists. Not from a source. Not reviewed by the user. Scope: user approval of 2026-10-31 (option 1: train ReLU seeds 1 and 2 to describe the ReLU seed spread). The 1.0 pp threshold and gate G4 are unchanged: gate C stays ReLU seed 0 against SiLU seed 0, label 'Loại' is not re-decided here.
+Runs: ppe5_yolov8n_relu_100ep_s1 and _s2 (same config as seed 0, make train SEED=n, init from yolov8n.pt like seed 0). INT8 export with the calibration list of baseline seed 0 (export_npu.py --calib-from, identity md5 as in rule.txt), FP16 export, then the same evaluations as rule.txt (RKNNLite INT8 and FP16 on the board, FP32 PyTorch, css_test and ppe2286_ext).
+Statements (css_test, INT8, FP16, FP32, columns AP50-95, AP NoHelmet, AP Vest, in pp):
+R-1 ReLU spread over seeds 0, 1, 2: minimum, maximum, range, sample standard deviation (ddof 1).
+R-2 mean over three seeds of ReLU minus mean over three seeds of SiLU (SiLU seeds 0, 1, 2 of rule.txt), per column. The difference is 'lớn hơn nhiễu seed' when its absolute value is larger than the larger of the two ranges (SiLU and ReLU) of that column, otherwise 'trong nhiễu seed'. Description only, three seeds do not support a test.
+R-3 whether the seed 0 difference of gate C (ReLU seed 0 minus SiLU seed 0) lies inside the larger of the two ranges, per column. Description only.
+R-4 the number of ReLU seeds (out of 3) whose INT8 css_test passes gate C against the SiLU seed of the same number (seed n against seed n), as description. It does not change the label of gate C.
+Limit: three seeds, one dataset split of 82 images, ReLU initialised from SiLU weights.
+Budget: experiment 1. No re-run unless the script aborts.

@@ -1,0 +1,2 @@
+img1.raw <- data/ppe5/processed/images/test/-4405-_png_jpg.rf.82b5c10b2acd1cfaa24259ada8e599fe.jpg
+img2.raw <- data/ppe5/processed/images/test/000005_jpg.rf.96e9379ccae638140c4a90fc4b700a2b.jpg

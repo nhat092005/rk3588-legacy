@@ -1,0 +1,8 @@
+X9 rule, written 2026-10-31T04:06:26+07:00 before any X9 data exists. Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).
+Question (U4): in E2 block 2, 89 percent of the NPU interrupts stayed on CPU0 although the affinity had been set to CPU4, with irqbalance running. Does irqbalance rewrite the NPU interrupt affinity while the NPU is busy?
+Setup: E2 condition B repeated with irqbalance ACTIVE (as in E2): NPU interrupts 36, 37, 38 set to CPU4, app pinned to CPU4, C API (rknn_perf_bench, CORE_0, zero input), 3 trials of 3000 back-to-back runs (about 60 s each), 30 s rest. During each trial a reader logs smp_affinity_list and effective_affinity_list of the three lines every second. /proc/interrupts before and after each trial. Restore saved affinity on exit, irqbalance left as it was (active).
+Statements:
+  If in at least one trial any logged smp_affinity_list or effective_affinity_list of line 36 differs from 4: 'irqbalance đổi affinity ngắt NPU trong lúc chạy (đã quan sát ở N/3 lần)', and report the CPU share of interrupts per trial. U4 label: ĐO.
+  If no change is logged in all 3 trials and at least 99 percent of the interrupts are on CPU4 in all 3: 'không quan sát thấy irqbalance đổi affinity trong 3 lần 60 giây'. U4 label: CHƯA BIẾT (the E2 block 2 event is not reproduced).
+  Otherwise: 'chưa kết luận', U4 CHƯA BIẾT.
+Budget: experiment 1 for U4.

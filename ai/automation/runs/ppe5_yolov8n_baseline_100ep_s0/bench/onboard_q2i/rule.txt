@@ -1,0 +1,9 @@
+int8h5 latency rule (V-4 of onboard_q2c/rule_int8h5.txt), written 2026-10-31T23:01:44+07:00 before any latency data of the exported int8h5 files exists. Not from a source. Not reviewed by the user. Condition of V-4: the sha256 of the exported int8h5 file differs from the build_recipe h5 file (80be7f5d against 9658075e for SiLU seed 0), so the latency of onboard_q2h is not reused. Same statements, approved numbers (5 percent, 2 session gap rule, 50 percent cycles) and protocol P2 (not approved as the main protocol) as onboard_q2h/rule.txt, with precision int8h5 in place of the variant h5.
+Models (sha256 of the files): 
+  ppe5_yolov8n_baseline_100ep_s0 rknn_int8 a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd
+  ppe5_yolov8n_baseline_100ep_s0 rknn_int8h5 80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938
+  ppe5_yolov8n_relu_100ep_s0 rknn_int8 c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f
+  ppe5_yolov8n_relu_100ep_s0 rknn_int8h5 c487d1168585166979e81d9ff33c1588d962fe4c0d70e2e407f09b39dddcf05c
+Design: one interleaved run under P2, 16 sessions, for mask in CORE_0, CORE_0_1_2: silu-int8, silu-int8h5, relu-int8, relu-int8h5, the same order in both rounds, 45 s rest, benchmark_npu.py (--precision int8 or int8h5). Realization, cost, B and A statements exactly as in onboard_q2h/rule.txt (cost = median of the two session medians of int8h5 minus that of int8, 'đổi latency' when larger than the larger session gap, 'đáng kể' at 5 percent or more, A from the CORE_0_1_2 sessions with the cycles asserted equal to the sum of the export build table in runs/<run>/logs/export_int8h5_*.log). CPU ops and dtype counts from that log.
+Limits: one run, two sessions per condition, one seed per model, P2 not approved.
+Budget: experiment 1. Experiment 2 only if a condition was not realized.

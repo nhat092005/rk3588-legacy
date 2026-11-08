@@ -1,0 +1,24 @@
+E2e rule, written 2026-10-31T00:43:11+07:00 before any E2e data exists. Final: do not edit after the run starts. Not from a source.
+Approved by the user on 2026-10-31: the thresholds 0.05, 0.20, 0.95 (kept from E2d, applied to the new quantity eval_perf time), the uniform-offset exception with 1.25 ms (new number), 7 conditions x 2 blocks x 500 samples, the six cells below, and the root helper process on the board.
+Board work done before this rule, no latency value recorded: (1) timing pilot over the LAN, bench/extra_tier1_lan_timing.txt (init_runtime 1.5 s, eval_perf 0.21 to 0.23 s per call); (2) interrupt count probe: 1 eval_perf call adds 63 interrupts on irq 36, 5 calls add 315, so one eval_perf is one inference (k = 1.000); (3) runtime check: /usr/lib/librknnrt.so and /usr/lib64/librknnrt.so have the same md5 a37ee1d5d664c79836bf6e35b7ef6289, rknn_server maps /usr/lib/librknnrt.so, rknn_server 2.3.2 and rknnrt 2.3.2 (429f97ae6b@2025-04-09T09:09:27), the same as the C bench line.
+Question 1: on the eval_perf path (PC Toolkit2 -> rknn_server on the board), do the position cells give the same results as on the C API path (E2d)? Question 2: how far apart are eval_perf and rknn_run times for the same cell (descriptive). Position only, no mechanism.
+Setup: irqbalance stopped, rknn_server pinned with taskset -a -p, NPU interrupts 36, 37, 38 set to the target CPU, each block is a new session (load_rknn, init_runtime with core_mask CORE_0, eval_perf with fix_freq True), 50 warm-up calls then 500 timed calls, calls about 0.22 s apart, 20 s rest between blocks.
+Conditions (rknn_server CPU, interrupt CPU): A (no pin, default interrupts), s4i4, s0i0, s4i0, s0i4, s1i0, s1i4. Order: half 1 is the list A, s4i4, s0i0, s4i0, s0i4, s1i0, s1i4. Half 2 is the reverse. 14 blocks.
+Mẫu: 'Total Time(us)' của một lần eval_perf, đổi sang ms. Một lần eval_perf là một lần suy luận (k = 1.000 theo đếm ngắt trước khi viết quy tắc). Mức chậm: từ 20.0 ms trở lên. Mức nhanh: dưới 17.0 ms. Cùng ngưỡng E2, E2b, E2c, E2d. Các ngưỡng này lấy từ đường C API và áp lên một đại lượng mới là thời gian eval_perf.
+Luồng bận: trong mỗi khối, luồng rknn_server có thời gian CPU tăng nhiều nhất giữa đầu và cuối khối.
+Khối thực hiện đúng: mọi luồng rknn_server có Cpus_allowed_list bằng CPU đã ghim ở cả hai lần đọc (A được miễn), luồng bận có psr cuối khối đúng CPU đó, và ít nhất 99% ngắt NPU rơi vào CPU đích (A: CPU0). Khối không thực hiện đúng bị loại và được báo.
+Kết quả chính theo ô, chỉ từ khối thực hiện đúng và cần cả hai khối, nếu không là 'chưa kết luận (khối không thực hiện đúng)'.
+  'mất mức chậm' khi tỉ lệ mức chậm không quá 0.05 ở cả hai khối.
+  'còn mức chậm' khi tỉ lệ mức chậm từ 0.20 trở lên ở cả hai khối.
+  'lẫn lộn' trong các trường hợp còn lại.
+Kết quả nhanh theo ô: 'đạt mức nhanh' khi tỉ lệ mức nhanh từ 0.95 trở lên ở cả hai khối, ngược lại 'không đạt mức nhanh'.
+Ngưỡng 0.05, 0.20, 0.95 giữ từ E2d.
+Không có kiểm tra hợp lệ chặn kết quả. Ô (4, 4) là một trong sáu ô so sánh, không phải điều kiện. Điều kiện A chỉ để mô tả.
+So sánh với E2d: với mỗi ô trong sáu ô, so kết quả chính và kết quả nhanh với cùng ô ở E2d (đường C API) và báo 'cùng kết quả' hoặc 'khác'.
+  Ngoại lệ đặt trước cho lệch mức đồng đều: nếu hiệu của trung vị theo khối (eval_perf trừ C API, cùng ô, trung bình hai khối mỗi bên) có cùng dấu ở cả sáu ô và mỗi hiệu lớn hơn 1.25 ms (một nửa khoảng cách 2.5 ms giữa các mức), báo 'không so được (lệch mức đồng đều)' thay vì 'khác', vì ngưỡng 17.0 và 20.0 ms lấy từ đường C API. Con số 1.25 ms là mới và do người viết quy tắc chọn.
+Phát biểu cho phép, chỉ nói vị trí, không nói cơ chế hay nguyên nhân, và không viết thành hiệu ứng của cụm CPU hay xung nhịp (CPU0 đến 3 chạy 1.8 GHz, CPU4 đến 5 chạy 2.256 GHz, CPU6 đến 7 chạy 2.304 GHz).
+  Nếu cả sáu ô 'cùng kết quả' thì được viết 'trong sáu ô đã thử, đường eval_perf cho cùng kết quả vị trí với đường C API'. Nếu có ô khác thì liệt kê các ô khác, không giải thích. Nếu áp dụng ngoại lệ lệch mức thì chỉ viết 'không so được' và báo mô tả.
+Mô tả, không phải kết quả: trung vị, độ lệch chuẩn, tỉ lệ ba mức theo khối, hiệu trung vị eval_perf trừ C API cho từng ô, và điều kiện A.
+Không ghép khối.
+Mỗi ô hai khối kề nhau theo thời gian, một board, một lần khởi động. Các lần gọi cách nhau khoảng 0.22 giây nên không so trực tiếp với đường chạy liên tiếp của C API về thời gian nghỉ của CPU.
+Ngoài phạm vi: cơ chế, lý do một vị trí chậm, ảnh hưởng của cụm CPU hay xung nhịp, mối liên hệ giữa 'Total Time(us)' và thời gian rknn_run, mô hình khác, FP16, CORE_0_1_2.

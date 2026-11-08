@@ -1,0 +1,10 @@
+10380 1556 886 6 rknn_server
+10393 311 1843 6 send_process
+10394 8 70 6 recv_process
+10395 132 2328 6 listener
+10396 27 374 6 RKNNMsgThread
+10397 21 8 5 rknn_server
+10398 22 6 5 rknn_server
+10399 19 10 5 rknn_server
+10400 22 8 5 rknn_server
+683425 0 0 6 dispatcher:6

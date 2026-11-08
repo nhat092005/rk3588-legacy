@@ -1,0 +1,15 @@
+npu irqs: 36
+37
+38
+saved irq 36 affinity 0-7
+saved irq 37 affinity 0-7
+saved irq 38 affinity 0-7
+block 1 cond A 04:26:37 pin='' state1_disable=0 irq_aff=0-7 0-7 0-7 
+block 2 cond B 04:27:18 pin='taskset -c 4' state1_disable=0 irq_aff=4 4 4 
+block 3 cond C 04:27:57 pin='taskset -c 0' state1_disable=0 irq_aff=0 0 0 
+block 4 cond D 04:28:38 pin='' state1_disable=1 irq_aff=0-7 0-7 0-7 
+block 5 cond D 04:29:16 pin='' state1_disable=1 irq_aff=0-7 0-7 0-7 
+block 6 cond C 04:29:54 pin='taskset -c 0' state1_disable=0 irq_aff=0 0 0 
+block 7 cond B 04:30:34 pin='taskset -c 4' state1_disable=0 irq_aff=4 4 4 
+block 8 cond A 04:31:12 pin='' state1_disable=0 irq_aff=0-7 0-7 0-7 
+restored: 0-7 0-7 0-7  idle_state1_disable=0

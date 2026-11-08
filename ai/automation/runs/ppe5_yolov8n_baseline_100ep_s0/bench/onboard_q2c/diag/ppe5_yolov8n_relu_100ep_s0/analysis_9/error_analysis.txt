@@ -1,0 +1,194 @@
+# simulator_error: calculate the output error of each layer of the simulator (compared to the 'golden' value).
+#              entire: output error of each layer between 'golden' and 'simulator', these errors will accumulate layer by layer.
+#              single: single-layer output error between 'golden' and 'simulator', can better reflect the single-layer accuracy of the simulator.
+
+layer_name                                                           simulator_error                    
+                                                                 entire              single             
+                                                              cos      euc        cos      euc          
+----------------------------------------------------------------------------------------------------
+[Input] images                                              1.00000 | 0.0       1.00000 | 0.0           
+[exDataConvert] images_int8                                 1.00000 | 3.9709    1.00000 | 3.9709        
+[Conv] /model/model.0/conv/Conv_output_0                    
+[Relu] /model/model.0/act/Relu_output_0                     0.99943 | 132.30    0.99943 | 132.30        
+[Conv] /model/model.1/conv/Conv_output_0                    
+[Relu] /model/model.1/act/Relu_output_0                     0.99784 | 283.18    0.99825 | 254.48        
+[Conv] /model/model.2/cv1/conv/Conv_output_0                
+[Relu] /model/model.2/cv1/act/Relu_output_0                 0.99627 | 162.45    0.99896 | 85.934        
+[Split] /model/model.2/Split_output_0                       0.99649 | 122.54    0.99984 | 26.183        
+[Split] /model/model.2/Split_output_1                       0.99579 | 108.58    0.99956 | 34.691        
+[Conv] /model/model.2/m.0/cv1/conv/Conv_output_0            
+[Relu] /model/model.2/m.0/cv1/act/Relu_output_0             0.99245 | 209.50    0.99931 | 63.633        
+[Conv] /model/model.2/m.0/cv2/conv/Conv_output_0            
+[Relu] /model/model.2/m.0/cv2/act/Relu_output_0             0.99270 | 212.09    0.99982 | 33.142        
+[Add] /model/model.2/m.0/Add_output_0                       0.99549 | 243.06    0.99984 | 46.090        
+[Concat] /model/model.2/Concat_output_0                     0.99566 | 296.35    0.99981 | 63.376        
+[Conv] /model/model.2/cv2/conv/Conv_output_0                
+[Relu] /model/model.2/cv2/act/Relu_output_0                 0.99397 | 136.82    0.99956 | 37.260        
+[Conv] /model/model.3/conv/Conv_output_0                    
+[Relu] /model/model.3/act/Relu_output_0                     0.99415 | 72.347    0.99989 | 10.217        
+[Conv] /model/model.4/cv1/conv/Conv_output_0                
+[Relu] /model/model.4/cv1/act/Relu_output_0                 0.99107 | 81.164    0.99982 | 11.455        
+[Split] /model/model.4/Split_output_0                       0.98521 | 70.413    0.99993 | 4.8410        
+[Split] /model/model.4/Split_output_1                       0.99593 | 40.521    0.99988 | 6.9676        
+[Conv] /model/model.4/m.0/cv1/conv/Conv_output_0            
+[Relu] /model/model.4/m.0/cv1/act/Relu_output_0             0.99001 | 37.442    0.99984 | 4.6982        
+[Conv] /model/model.4/m.0/cv2/conv/Conv_output_0            
+[Relu] /model/model.4/m.0/cv2/act/Relu_output_0             0.99120 | 50.244    0.99992 | 4.6937        
+[Add] /model/model.4/m.0/Add_output_0                       0.99608 | 62.293    0.99997 | 5.9159        
+[Conv] /model/model.4/m.1/cv1/conv/Conv_output_0            
+[Relu] /model/model.4/m.1/cv1/act/Relu_output_0             0.98344 | 23.725    0.99975 | 2.9680        
+[Conv] /model/model.4/m.1/cv2/conv/Conv_output_0            
+[Relu] /model/model.4/m.1/cv2/act/Relu_output_0             0.99317 | 67.837    0.99992 | 7.3720        
+[Add] /model/model.4/m.1/Add_output_0                       0.99690 | 88.495    0.99996 | 10.277        
+[Concat] /model/model.4/Concat_output_0                     0.99567 | 135.75    0.99995 | 15.187        
+[Conv] /model/model.4/cv2/conv/Conv_output_0                
+[Relu] /model/model.4/cv2/act/Relu_output_0                 0.98747 | 65.215    0.99974 | 9.3078        
+[Conv] /model/model.5/conv/Conv_output_0                    
+[Relu] /model/model.5/act/Relu_output_0                     0.98821 | 47.118    0.99983 | 5.5594        
+[Conv] /model/model.6/cv1/conv/Conv_output_0                
+[Relu] /model/model.6/cv1/act/Relu_output_0                 0.98180 | 66.406    0.99974 | 7.7447        
+[Split] /model/model.6/Split_output_0                       0.97684 | 60.113    0.99994 | 3.0086        
+[Split] /model/model.6/Split_output_1                       0.99076 | 28.272    0.99981 | 4.0628        
+[Conv] /model/model.6/m.0/cv1/conv/Conv_output_0            
+[Relu] /model/model.6/m.0/cv1/act/Relu_output_0             0.98450 | 26.557    0.99980 | 3.0170        
+[Conv] /model/model.6/m.0/cv2/conv/Conv_output_0            
+[Relu] /model/model.6/m.0/cv2/act/Relu_output_0             0.98648 | 30.645    0.99982 | 3.5488        
+[Add] /model/model.6/m.0/Add_output_0                       0.99207 | 40.517    0.99982 | 6.0749        
+[Conv] /model/model.6/m.1/cv1/conv/Conv_output_0            
+[Relu] /model/model.6/m.1/cv1/act/Relu_output_0             0.98533 | 20.130    0.99970 | 2.8670        
+[Conv] /model/model.6/m.1/cv2/conv/Conv_output_0            
+[Relu] /model/model.6/m.1/cv2/act/Relu_output_0             0.98926 | 53.347    0.99982 | 7.0064        
+[Add] /model/model.6/m.1/Add_output_0                       0.99336 | 67.062    0.99984 | 10.511        
+[Concat] /model/model.6/Concat_output_0                     0.99054 | 103.19    0.99983 | 13.784        
+[Conv] /model/model.6/cv2/conv/Conv_output_0                
+[Relu] /model/model.6/cv2/act/Relu_output_0                 0.98109 | 44.042    0.99965 | 6.0072        
+[Conv] /model/model.7/conv/Conv_output_0                    
+[Relu] /model/model.7/act/Relu_output_0                     0.97799 | 33.749    0.99987 | 2.6230        
+[Conv] /model/model.8/cv1/conv/Conv_output_0                
+[Relu] /model/model.8/cv1/act/Relu_output_0                 0.97888 | 48.600    0.99986 | 3.8756        
+[Split] /model/model.8/Split_output_0                       0.97925 | 44.913    0.99995 | 2.2708        
+[Split] /model/model.8/Split_output_1                       0.97628 | 18.625    0.99968 | 2.1666        
+[Conv] /model/model.8/m.0/cv1/conv/Conv_output_0            
+[Relu] /model/model.8/m.0/cv1/act/Relu_output_0             0.97362 | 30.290    0.99979 | 2.6819        
+[Conv] /model/model.8/m.0/cv2/conv/Conv_output_0            
+[Relu] /model/model.8/m.0/cv2/act/Relu_output_0             0.97646 | 62.117    0.99982 | 5.3904        
+[Add] /model/model.8/m.0/Add_output_0                       0.97857 | 64.821    0.99975 | 6.9184        
+[Concat] /model/model.8/Concat_output_0                     0.97863 | 81.123    0.99981 | 7.5896        
+[Conv] /model/model.8/cv2/conv/Conv_output_0                
+[Relu] /model/model.8/cv2/act/Relu_output_0                 0.97190 | 45.599    0.99974 | 4.3804        
+[Conv] /model/model.9/cv1/conv/Conv_output_0                
+[Relu] /model/model.9/cv1/act/Relu_output_0                 0.99252 | 51.978    0.99997 | 3.5290        
+[MaxPool] /model/model.9/m/MaxPool_output_0                 0.99783 | 43.582    0.99999 | 2.3798        
+[MaxPool] /model/model.9/m_1/MaxPool_output_0               0.99845 | 42.260    1.00000 | 2.3654        
+[MaxPool] /model/model.9/m_2/MaxPool_output_0               0.99869 | 42.019    1.00000 | 2.3840        
+[Concat] /model/model.9/Concat_output_0                     0.99782 | 90.292    0.99999 | 4.7132        
+[Conv] /model/model.9/cv2/conv/Conv_output_0                
+[Relu] /model/model.9/cv2/act/Relu_output_0                 0.97578 | 20.062    0.99967 | 2.3620        
+[Resize] /model/model.10/Resize_output_0                    0.97578 | 40.125    0.99993 | 2.2491        
+[Concat] /model/model.11/Concat_output_0                    0.97893 | 59.649    0.99982 | 5.4682        
+[Conv] /model/model.12/cv1/conv/Conv_output_0               
+[Relu] /model/model.12/cv1/act/Relu_output_0                0.98271 | 54.102    0.99979 | 5.9122        
+[Split] /model/model.12/Split_output_0                      0.97671 | 41.371    0.99991 | 2.5951        
+[Split] /model/model.12/Split_output_1                      0.98728 | 34.905    0.99989 | 3.2173        
+[Conv] /model/model.12/m.0/cv1/conv/Conv_output_0           
+[Relu] /model/model.12/m.0/cv1/act/Relu_output_0            0.97486 | 23.107    0.99980 | 2.0835        
+[Conv] /model/model.12/m.0/cv2/conv/Conv_output_0           
+[Relu] /model/model.12/m.0/cv2/act/Relu_output_0            0.98585 | 36.238    0.99979 | 4.4293        
+[Concat] /model/model.12/Concat_output_0                    0.98371 | 65.338    0.99981 | 7.1133        
+[Conv] /model/model.12/cv2/conv/Conv_output_0               
+[Relu] /model/model.12/cv2/act/Relu_output_0                0.98111 | 43.280    0.99973 | 5.2188        
+[Resize] /model/model.13/Resize_output_0                    0.98110 | 86.560    0.99989 | 6.5890        
+[Concat] /model/model.14/Concat_output_0                    0.98398 | 108.57    0.99982 | 11.215        
+[Conv] /model/model.15/cv1/conv/Conv_output_0               
+[Relu] /model/model.15/cv1/act/Relu_output_0                0.99381 | 56.422    0.99992 | 6.5146        
+[Split] /model/model.15/Split_output_0                      0.99124 | 43.581    0.99992 | 4.1598        
+[Split] /model/model.15/Split_output_1                      0.99566 | 35.983    0.99998 | 2.6520        
+[Conv] /model/model.15/m.0/cv1/conv/Conv_output_0           
+[Relu] /model/model.15/m.0/cv1/act/Relu_output_0            0.98947 | 26.106    0.99979 | 3.8042        
+[Conv] /model/model.15/m.0/cv2/conv/Conv_output_0           
+[Relu] /model/model.15/m.0/cv2/act/Relu_output_0            0.99394 | 45.990    0.99984 | 7.4567        
+[Concat] /model/model.15/Concat_output_0                    0.99374 | 73.438    0.99985 | 11.222        
+[Conv] /model/model.15/cv2/conv/Conv_output_0               
+[Relu] /model/model.15/cv2/act/Relu_output_0                0.99318 | 54.029    0.99972 | 10.732        
+[Conv] /model/model.16/conv/Conv_output_0                   
+[Relu] /model/model.16/act/Relu_output_0                    0.98491 | 29.553    0.99970 | 4.1272        
+[Concat] /model/model.17/Concat_output_0                    0.98237 | 52.591    0.99972 | 6.5887        
+[Conv] /model/model.18/cv1/conv/Conv_output_0               
+[Relu] /model/model.18/cv1/act/Relu_output_0                0.97693 | 53.394    0.99958 | 7.2225        
+[Split] /model/model.18/Split_output_0                      0.96080 | 38.313    0.99953 | 4.2116        
+[Split] /model/model.18/Split_output_1                      0.98380 | 37.354    0.99985 | 3.5651        
+[Conv] /model/model.18/m.0/cv1/conv/Conv_output_0           
+[Relu] /model/model.18/m.0/cv1/act/Relu_output_0            0.98340 | 18.718    0.99977 | 2.2241        
+[Conv] /model/model.18/m.0/cv2/conv/Conv_output_0           
+[Relu] /model/model.18/m.0/cv2/act/Relu_output_0            0.98454 | 46.610    0.99974 | 6.0546        
+[Concat] /model/model.18/Concat_output_0                    0.98082 | 71.203    0.99971 | 8.8599        
+[Conv] /model/model.18/cv2/conv/Conv_output_0               
+[Relu] /model/model.18/cv2/act/Relu_output_0                0.98509 | 35.731    0.99968 | 5.2143        
+[Conv] /model/model.19/conv/Conv_output_0                   
+[Relu] /model/model.19/act/Relu_output_0                    0.97519 | 17.821    0.99963 | 2.1732        
+[Concat] /model/model.20/Concat_output_0                    0.97546 | 26.866    0.99971 | 2.9128        
+[Conv] /model/model.21/cv1/conv/Conv_output_0               
+[Relu] /model/model.21/cv1/act/Relu_output_0                0.97802 | 30.296    0.99931 | 5.3767        
+[Split] /model/model.21/Split_output_0                      0.96828 | 22.855    0.99921 | 3.5932        
+[Split] /model/model.21/Split_output_1                      0.98418 | 20.014    0.99950 | 3.5789        
+[Conv] /model/model.21/m.0/cv1/conv/Conv_output_0           
+[Relu] /model/model.21/m.0/cv1/act/Relu_output_0            0.97848 | 15.745    0.99942 | 2.5833        
+[Conv] /model/model.21/m.0/cv2/conv/Conv_output_0           
+[Relu] /model/model.21/m.0/cv2/act/Relu_output_0            0.97952 | 30.408    0.99967 | 3.9026        
+[Concat] /model/model.21/Concat_output_0                    0.97865 | 43.064    0.99944 | 7.0274        
+[Conv] /model/model.21/cv2/conv/Conv_output_0               
+[Relu] /model/model.21/cv2/act/Relu_output_0                0.97250 | 23.391    0.99945 | 3.3337        
+[Conv] /model/model.22/cv2.2/cv2.2.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.2/cv2.2.0/act/Relu_output_0      0.98576 | 24.690    0.99989 | 2.2218        
+[Conv] /model/model.22/cv2.2/cv2.2.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.2/cv2.2.1/act/Relu_output_0      0.98823 | 64.813    0.99991 | 5.7921        
+[Conv] /model/model.22/cv2.2/cv2.2.2/Conv_output_0          0.99389 | 69.115    0.99993 | 7.5938        
+[Reshape] /model/model.22/Reshape_2_output_0                0.99389 | 69.115    0.99995 | 5.9246        
+[Conv] /model/model.22/cv3.2/cv3.2.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.2/cv3.2.0/act/Relu_output_0      0.98029 | 18.476    0.99977 | 1.9779        
+[Conv] /model/model.22/cv3.2/cv3.2.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.2/cv3.2.1/act/Relu_output_0      0.98080 | 31.161    0.99978 | 3.3237        
+[Conv] /model/model.22/cv3.2/cv3.2.2/Conv_output_0          0.98001 | 334.79    0.98062 | 334.59        
+[Reshape] /model/model.22/Reshape_5_output_0                0.98001 | 334.79    0.98062 | 334.59        
+[Conv] /model/model.22/cv2.1/cv2.1.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.1/cv2.1.0/act/Relu_output_0      0.98059 | 40.855    0.99970 | 5.0611        
+[Conv] /model/model.22/cv2.1/cv2.1.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.1/cv2.1.1/act/Relu_output_0      0.98602 | 116.89    0.99966 | 18.155        
+[Conv] /model/model.22/cv2.1/cv2.1.2/Conv_output_0          0.99181 | 161.70    0.99985 | 22.258        
+[Reshape] /model/model.22/Reshape_1_output_0                0.99181 | 161.70    0.99993 | 14.820        
+[Conv] /model/model.22/cv3.1/cv3.1.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.1/cv3.1.0/act/Relu_output_0      0.98022 | 43.999    0.99966 | 5.7361        
+[Conv] /model/model.22/cv3.1/cv3.1.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.1/cv3.1.1/act/Relu_output_0      0.98057 | 66.406    0.99976 | 7.3320        
+[Conv] /model/model.22/cv3.1/cv3.1.2/Conv_output_0          0.95954 | 817.30    0.95968 | 817.28        
+[Reshape] /model/model.22/Reshape_4_output_0                0.95954 | 817.30    0.95967 | 817.28        
+[Conv] /model/model.22/cv2.0/cv2.0.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.0/cv2.0.0/act/Relu_output_0      0.98490 | 54.278    0.99969 | 7.7480        
+[Conv] /model/model.22/cv2.0/cv2.0.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv2.0/cv2.0.1/act/Relu_output_0      0.98347 | 251.66    0.99975 | 31.008        
+[Conv] /model/model.22/cv2.0/cv2.0.2/Conv_output_0          0.99015 | 376.54    0.99984 | 45.592        
+[Concat] /model/model.22/Concat_output_0                    0.99056 | 416.08    0.99987 | 46.836        
+[Reshape] /model/model.22/dfl/Reshape_output_0              0.99056 | 416.08    0.99988 | 44.008        
+[exSoftmax13] /model/model.22/dfl/Transpose_output_0_sw     0.96998 | 24.641    0.99905 | 4.3809        
+[Conv] /model/model.22/dfl/Softmax_output_0_sw              0.99075 | 107.03    0.99997 | 6.0684        
+[Transpose] /model/model.22/dfl/Reshape_1_output_0_rs       0.99075 | 107.03    0.99999 | 3.0670        
+[Split] /model/model.22/Slice_output_0-rs                   0.99109 | 75.919    0.99999 | 2.1756        
+[Split] /model/model.22/Slice_1_output_0-rs                 0.99046 | 75.469    0.99998 | 3.0686        
+[Sub] /model/model.22/Sub_output_0-rs                       0.99988 | 76.898    1.00000 | 12.822        
+[Add] /model/model.22/Add_1_output_0-rs                     0.99991 | 76.740    1.00000 | 13.068        
+[Sub] /model/model.22/Sub_1_output_0-rs                     0.99355 | 123.59    0.99986 | 18.478        
+[Add] /model/model.22/Add_2_output_0-rs                     0.99996 | 94.697    1.00000 | 29.566        
+[Mul] /model/model.22/Div_1_output_0-rs                     0.99996 | 47.348    1.00000 | 11.681        
+[Concat] /model/model.22/Concat_2_output_0-rs               0.99971 | 132.89    1.00000 | 17.126        
+[Mul] /Div_output_0-rs                                      0.99955 | 2.3434    0.99999 | 0.3137        
+[Conv] /model/model.22/cv3.0/cv3.0.0/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.0/cv3.0.0/act/Relu_output_0      0.97307 | 100.41    0.99958 | 12.509        
+[Conv] /model/model.22/cv3.0/cv3.0.1/conv/Conv_output_0     
+[Relu] /model/model.22/cv3.0/cv3.0.1/act/Relu_output_0      0.97567 | 139.47    0.99978 | 13.164        
+[Conv] /model/model.22/cv3.0/cv3.0.2/Conv_output_0          0.98405 | 1562.0    0.98409 | 1562.0        
+[Concat] /model/model.22/Concat_1_output_0-rs               
+[Sigmoid] /model/model.22/Concat_1_output_0_sw              0.95204 | 1.2869    0.99998 | 0.0249        
+[Reshape] /model/model.22/Sigmoid_output_0_rs               0.95204 | 1.2869    0.99999 | 0.0202        
+[Concat] output0-rs                                         0.99941 | 2.6738    1.00000 | 0.2079        
+[Reshape] output0_int8                                      0.99941 | 2.6738    1.00000 | 0.2079        
+[exDataConvert] output0                                     0.99941 | 2.6738    1.00000 | 0.2079        

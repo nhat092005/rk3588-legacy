@@ -1,0 +1,7 @@
+start build ppe5_yolov8n_baseline_100ep_s0 h5 19:24:20
+ok ppe5_yolov8n_baseline_100ep_s0 h5 19:26:07
+start build ppe5_yolov8n_baseline_100ep_s0 h6 19:26:07
+ok ppe5_yolov8n_baseline_100ep_s0 h6 19:28:00
+start build ppe5_yolov8n_baseline_100ep_s0 c_all 19:28:00
+ok ppe5_yolov8n_baseline_100ep_s0 c_all 19:29:58
+ALL_DONE

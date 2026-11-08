@@ -1,0 +1,50 @@
+06:21:57 state: kernel 6.1.99-rockchip-rk3588 ; up 6 hours, 43 minutes ; rknn_server pid 10380 tasks 9 ; adbd pid 11257 ; port 5555 listeners 1
+06:21:57 librknnrt mapped by rknn_server: /usr/lib/librknnrt.so  ; md5 a37ee1d5d664c79836bf6e35b7ef6289 ; model md5 9285f251d6870ab67d60d79f16bade69
+06:21:57 frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;
+06:21:57 saved irq affinities: 36=0-7 37=0-7 38=0-7  ; irqbalance was active
+06:21:57 daemon ready
+06:22:05 block 1 cond s4i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 4  ; governors: performance performance performance userspace userspace 
+06:22:07 block 1 inited: tasks 10, allowed      10 4 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:24:38 block 1 end: allowed      10 4 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:24:59 block 2 cond s5i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 5  ; governors: performance performance performance userspace userspace 
+06:25:02 block 2 inited: tasks 10, allowed      10 5 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:27:23 block 2 end: allowed      10 5 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:27:44 block 3 cond s6i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 6  ; governors: performance performance performance userspace userspace 
+06:27:47 block 3 inited: tasks 10, allowed      10 6 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:29:58 block 3 end: allowed      10 6 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:30:19 block 4 cond s7i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 7  ; governors: performance performance performance userspace userspace 
+06:30:22 block 4 inited: tasks 10, allowed      10 7 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:32:32 block 4 end: allowed      10 7 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:32:52 block 5 cond s5i5 pid 10380 readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5  rknn_server tasks allowed:       9 5  ; governors: performance performance performance userspace userspace 
+06:32:55 block 5 inited: tasks 10, allowed      10 5 , readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+06:34:59 block 5 end: allowed      10 5 , readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+06:35:21 block 6 cond s6i6 pid 10380 readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6  rknn_server tasks allowed:       9 6  ; governors: performance performance performance userspace userspace 
+06:35:23 block 6 inited: tasks 10, allowed      10 6 , readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+06:37:28 block 6 end: allowed      10 6 , readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+06:37:49 block 7 cond s7i7 pid 10380 readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7  rknn_server tasks allowed:       9 7  ; governors: performance performance performance userspace userspace 
+06:37:51 block 7 inited: tasks 10, allowed      10 7 , readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+06:39:53 block 7 end: allowed      10 7 , readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+06:40:14 block 8 cond s7i7 pid 10380 readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7  rknn_server tasks allowed:       9 7  ; governors: performance performance performance userspace userspace 
+06:40:16 block 8 inited: tasks 10, allowed      10 7 , readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+06:42:16 block 8 end: allowed      10 7 , readback: irq 36 smp=7 effective=7 irq 37 smp=7 effective=7 irq 38 smp=7 effective=7 
+06:42:38 block 9 cond s6i6 pid 10380 readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6  rknn_server tasks allowed:       9 6  ; governors: performance performance performance userspace userspace 
+06:42:40 block 9 inited: tasks 10, allowed      10 6 , readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+06:44:41 block 9 end: allowed      10 6 , readback: irq 36 smp=6 effective=6 irq 37 smp=6 effective=6 irq 38 smp=6 effective=6 
+06:45:03 block 10 cond s5i5 pid 10380 readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5  rknn_server tasks allowed:       9 5  ; governors: performance performance performance userspace userspace 
+06:45:05 block 10 inited: tasks 10, allowed      10 5 , readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+06:47:10 block 10 end: allowed      10 5 , readback: irq 36 smp=5 effective=5 irq 37 smp=5 effective=5 irq 38 smp=5 effective=5 
+06:47:31 block 11 cond s7i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 7  ; governors: performance performance performance userspace userspace 
+06:47:34 block 11 inited: tasks 10, allowed      10 7 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:49:44 block 11 end: allowed      10 7 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:50:05 block 12 cond s6i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 6  ; governors: performance performance performance userspace userspace 
+06:50:07 block 12 inited: tasks 10, allowed      10 6 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:52:15 block 12 end: allowed      10 6 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:52:36 block 13 cond s5i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 5  ; governors: performance performance performance userspace userspace 
+06:52:38 block 13 inited: tasks 10, allowed      10 5 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:54:41 block 13 end: allowed      10 5 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:55:02 block 14 cond s4i4 pid 10380 readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  rknn_server tasks allowed:       9 4  ; governors: performance performance performance userspace userspace 
+06:55:04 block 14 inited: tasks 10, allowed      10 4 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:57:05 block 14 end: allowed      10 4 , readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+06:57:26 stop file seen
+06:57:26 exit: restored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server tasks allowed:       9 0-7 
+06:57:26 exit: irqbalance now active, irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 

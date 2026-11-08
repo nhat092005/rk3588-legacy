@@ -1,0 +1,16 @@
+/sys/devices/system/cpu/cpu0/cpuidle/state0 4046284 1498630511
+/sys/devices/system/cpu/cpu0/cpuidle/state1 3262506 17372237698
+/sys/devices/system/cpu/cpu1/cpuidle/state0 3160793 990070813
+/sys/devices/system/cpu/cpu1/cpuidle/state1 1360258 17925013251
+/sys/devices/system/cpu/cpu2/cpuidle/state0 1821991 543414810
+/sys/devices/system/cpu/cpu2/cpuidle/state1 1073998 18401837659
+/sys/devices/system/cpu/cpu3/cpuidle/state0 1668196 505163087
+/sys/devices/system/cpu/cpu3/cpuidle/state1 1125115 18444786191
+/sys/devices/system/cpu/cpu4/cpuidle/state0 7985846 16657784430
+/sys/devices/system/cpu/cpu4/cpuidle/state1 86694 2383640150
+/sys/devices/system/cpu/cpu5/cpuidle/state0 8929223 16613339624
+/sys/devices/system/cpu/cpu5/cpuidle/state1 65716 2395316736
+/sys/devices/system/cpu/cpu6/cpuidle/state0 7521295 16689772530
+/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097
+/sys/devices/system/cpu/cpu7/cpuidle/state0 5784183 16719841091
+/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986

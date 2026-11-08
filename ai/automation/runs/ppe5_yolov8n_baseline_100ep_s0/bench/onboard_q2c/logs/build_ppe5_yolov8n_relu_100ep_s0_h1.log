@@ -1,0 +1,718 @@
+D Save log info to: /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_relu_100ep_s0/weights/rknn_int8_h1/build.log
+/home/nhat/workspace/prjs/rk3588/.venv/lib/python3.12/site-packages/rknn/api/rknn.py:51: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  self.rknn_base = RKNNBase(cur_path, verbose)
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                           | 0/146 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████| 146/146 [00:00<00:00, 65817.75it/s]
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     reduce_reshape_op_around_concat: remove node = ['/model/model.22/Reshape', '/model/model.22/Concat'], add node = ['/model/model.22/Concat']
+D     fuse_reshape_transpose: remove node = ['/model/model.22/dfl/Transpose'], add node = ['/model/model.22/dfl/Transpose']
+D     replace_parallel_slice_by_split: remove node = ['/model/model.22/Slice', '/model/model.22/Slice_1'], add node = ['/model/model.22/Slice_2sp']
+D     reduce_reshape_op_around_concat: remove node = ['/model/model.22/Reshape_3', '/model/model.22/Concat_1'], add node = ['/model/model.22/Concat_1', '/model/model.22/Concat_1_output_0-rs']
+D     replace_parallel_slice_by_split: remove node = ['/Slice', '/Slice_1'], add node = ['/Slice_2sp']
+D     swap_transpose_softmax: remove node = ['/model/model.22/dfl/Transpose', '/model/model.22/dfl/Softmax'], add node = ['/model/model.22/dfl/Softmax', '/model/model.22/dfl/Transpose']
+D     swap_reshape_sigmoid: remove node = ['/model/model.22/Concat_1_output_0-rs', '/model/model.22/Sigmoid'], add node = ['/model/model.22/Sigmoid', '/model/model.22/Concat_1_output_0-rs']
+D     remove_concat_split: remove node = ['/model/model.22/Concat_3', '/Slice_2sp']
+D     swap_transpose_conv: remove node = ['/model/model.22/dfl/Transpose', '/model/model.22/dfl/conv/Conv'], add node = ['/model/model.22/dfl/conv/Conv', '/model/model.22/dfl/Transpose']
+D     fuse_transpose_reshape: remove node = ['/model/model.22/dfl/Transpose']
+D     convert_softmax_to_exsoftmax13: remove node = ['/model/model.22/dfl/Softmax'], add node = ['/model/model.22/dfl/Softmax']
+D     unsqueeze_to_4d_split: remove node = [], add node = ['/model/model.22/dfl/Reshape_1_output_0_rs', '/model/model.22/Slice_output_0-rs', '/model/model.22/Slice_1_output_0-rs']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model/model.22/Slice_output_0_rs', '/model/model.22/Sub_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model/model.22/Slice_1_output_0_rs', '/model/model.22/Add_1_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model/model.22/Sub_output_0_rs', '/model/model.22/Add_1_output_0_rs', '/model/model.22/Add_2_output_0-rs']
+D     convert_div_to_mul: remove node = ['/model/model.22/Div_1'], add node = ['/model/model.22/Div_1_2mul']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model/model.22/Add_1_output_0_rs#1', '/model/model.22/Sub_output_0_rs#1', '/model/model.22/Sub_1_output_0-rs']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/model/model.22/Div_1_output_0_rs', '/model/model.22/Sub_1_output_0_rs', '/model/model.22/Concat_2_output_0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model/model.22/Concat_2_output_0_rs', '/model/model.22/Mul_2_output_0-rs']
+D     convert_div_to_mul: remove node = ['/Div'], add node = ['/Div_2mul']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/Div_output_0_rs', '/model/model.22/Sigmoid_output_0_rs', 'output0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model/model.22/Add_2_output_0_rs', '/model/model.22/Div_1_output_0-rs']
+D     input_align_4D_mul: remove node = ['/model/model.22/Mul_2'], add node = ['/model/model.22/Mul_2']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model/model.22/Mul_2_output_0_rs', '/Div_output_0-rs']
+D     fuse_two_reshape: remove node = ['/model/model.22/dfl/Reshape_1']
+D     bypass_two_reshape: remove node = ['/model/model.22/Slice_output_0_rs', '/model/model.22/Slice_output_0-rs', '/model/model.22/Sub_output_0_rs#1', '/model/model.22/Sub_output_0_rs', '/model/model.22/Sub_output_0-rs', '/model/model.22/Slice_1_output_0_rs', '/model/model.22/Slice_1_output_0-rs', '/model/model.22/Add_1_output_0_rs#1', '/model/model.22/Add_1_output_0_rs', '/model/model.22/Add_1_output_0-rs', '/model/model.22/Add_2_output_0_rs', '/model/model.22/Add_2_output_0-rs', '/model/model.22/Div_1_output_0_rs', '/model/model.22/Div_1_output_0-rs', '/model/model.22/Concat_2_output_0_rs', '/model/model.22/Concat_2_output_0-rs', '/model/model.22/Mul_2_output_0_rs', '/model/model.22/Mul_2_output_0-rs', '/Div_output_0_rs', '/Div_output_0-rs']
+D     fuse_two_reshape: remove node = ['/model/model.22/Concat_1_output_0-rs']
+D     bypass_two_reshape: remove node = ['/model/model.22/Sub_1_output_0_rs', '/model/model.22/Sub_1_output_0-rs']
+D     fuse_two_mul: remove node = ['/model/model.22/Mul_2']
+D     convert_reshape_to_transpose: remove node = ['/model/model.22/dfl/Reshape_1_output_0_rs'], add node = ['/model/model.22/dfl/Reshape_1_output_0_rs']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+[1;33mW[0m [1;33mhybrid_quantization_step1: found outlier value, this may affect quantization accuracy
+                        const name                     abs_mean    abs_std     outlier value
+                        model.model.0.conv.weight      2.91        3.05        -22.085     [0m
+D sparse_weight ...
+D sparse_weight done.
+D 
+I GraphPreparing :   0%|                                                    | 0/174 [00:00<?, ?it/s]I GraphPreparing : 100%|███████████████████████████████████████| 174/174 [00:00<00:00, 21402.02it/s]
+I Quantizating 1/4:   0%|                                                   | 0/174 [00:00<?, ?it/s]I Quantizating 1/4:   1%|▏                                          | 1/174 [00:01<05:19,  1.85s/it]I Quantizating 1/4:   1%|▍                                          | 2/174 [00:02<03:16,  1.14s/it]I Quantizating 1/4:   2%|▋                                          | 3/174 [00:03<02:41,  1.06it/s]I Quantizating 1/4:   2%|▉                                          | 4/174 [00:03<01:58,  1.43it/s]I Quantizating 1/4:   3%|█▏                                         | 5/174 [00:03<01:44,  1.62it/s]I Quantizating 1/4:   3%|█▍                                         | 6/174 [00:04<01:27,  1.93it/s]I Quantizating 1/4:   4%|█▋                                         | 7/174 [00:04<01:16,  2.17it/s]I Quantizating 1/4:   5%|█▉                                         | 8/174 [00:04<01:09,  2.40it/s]I Quantizating 1/4:   5%|██▏                                        | 9/174 [00:05<00:55,  3.00it/s]I Quantizating 1/4:   6%|██▍                                       | 10/174 [00:05<00:53,  3.04it/s]I Quantizating 1/4:   6%|██▋                                       | 11/174 [00:05<00:44,  3.69it/s]I Quantizating 1/4:   7%|██▉                                       | 12/174 [00:05<00:39,  4.07it/s]I Quantizating 1/4:   7%|███▏                                      | 13/174 [00:06<00:55,  2.92it/s]I Quantizating 1/4:   8%|███▍                                      | 14/174 [00:06<01:01,  2.59it/s]I Quantizating 1/4:   9%|███▌                                      | 15/174 [00:07<00:58,  2.72it/s]I Quantizating 1/4:   9%|███▊                                      | 16/174 [00:07<00:59,  2.65it/s]I Quantizating 1/4:  10%|████                                      | 17/174 [00:07<00:47,  3.30it/s]I Quantizating 1/4:  10%|████▎                                     | 18/174 [00:07<00:44,  3.54it/s]I Quantizating 1/4:  11%|████▌                                     | 19/174 [00:08<00:37,  4.16it/s]I Quantizating 1/4:  11%|████▊                                     | 20/174 [00:08<00:32,  4.74it/s]I Quantizating 1/4:  12%|█████                                     | 21/174 [00:08<00:31,  4.88it/s]I Quantizating 1/4:  13%|█████▌                                    | 23/174 [00:08<00:25,  5.96it/s]I Quantizating 1/4:  14%|██████                                    | 25/174 [00:08<00:19,  7.59it/s]I Quantizating 1/4:  15%|██████▎                                   | 26/174 [00:09<00:21,  6.85it/s]I Quantizating 1/4:  16%|██████▊                                   | 28/174 [00:09<00:19,  7.34it/s]I Quantizating 1/4:  17%|███████▏                                  | 30/174 [00:09<00:16,  8.54it/s]I Quantizating 1/4:  18%|███████▍                                  | 31/174 [00:09<00:24,  5.94it/s]I Quantizating 1/4:  18%|███████▋                                  | 32/174 [00:10<00:27,  5.25it/s]I Quantizating 1/4:  19%|███████▉                                  | 33/174 [00:10<00:25,  5.59it/s]I Quantizating 1/4:  20%|████████▏                                 | 34/174 [00:10<00:27,  5.02it/s]I Quantizating 1/4:  21%|████████▋                                 | 36/174 [00:10<00:20,  6.59it/s]I Quantizating 1/4:  22%|█████████▏                                | 38/174 [00:10<00:15,  8.60it/s]I Quantizating 1/4:  23%|█████████▋                                | 40/174 [00:10<00:13,  9.85it/s]I Quantizating 1/4:  24%|██████████▏                               | 42/174 [00:11<00:12, 10.70it/s]I Quantizating 1/4:  25%|██████████▌                               | 44/174 [00:11<00:11, 11.12it/s]I Quantizating 1/4:  26%|███████████                               | 46/174 [00:11<00:10, 11.83it/s]I Quantizating 1/4:  28%|███████████▊                              | 49/174 [00:11<00:10, 12.29it/s]I Quantizating 1/4:  29%|████████████▎                             | 51/174 [00:11<00:10, 11.36it/s]I Quantizating 1/4:  30%|████████████▊                             | 53/174 [00:12<00:11, 10.59it/s]I Quantizating 1/4:  32%|█████████████▌                            | 56/174 [00:12<00:08, 13.80it/s]I Quantizating 1/4:  33%|██████████████                            | 58/174 [00:12<00:07, 14.55it/s]I Quantizating 1/4:  34%|██████████████▍                           | 60/174 [00:12<00:07, 15.10it/s]I Quantizating 1/4:  36%|███████████████▏                          | 63/174 [00:12<00:06, 16.72it/s]I Quantizating 1/4:  39%|████████████████▍                         | 68/174 [00:12<00:04, 23.54it/s]I Quantizating 1/4:  41%|█████████████████▏                        | 71/174 [00:12<00:05, 20.16it/s]I Quantizating 1/4:  43%|█████████████████▊                        | 74/174 [00:13<00:05, 17.52it/s]I Quantizating 1/4:  44%|██████████████████▎                       | 76/174 [00:13<00:07, 13.73it/s]I Quantizating 1/4:  45%|██████████████████▊                       | 78/174 [00:13<00:07, 12.95it/s]I Quantizating 1/4:  46%|███████████████████▎                      | 80/174 [00:13<00:07, 13.07it/s]I Quantizating 1/4:  47%|███████████████████▊                      | 82/174 [00:13<00:06, 13.98it/s]I Quantizating 1/4:  48%|████████████████████▎                     | 84/174 [00:13<00:07, 12.74it/s]I Quantizating 1/4:  49%|████████████████████▊                     | 86/174 [00:14<00:12,  7.15it/s]I Quantizating 1/4:  51%|█████████████████████▏                    | 88/174 [00:15<00:14,  5.93it/s]I Quantizating 1/4:  51%|█████████████████████▍                    | 89/174 [00:15<00:13,  6.13it/s]I Quantizating 1/4:  52%|█████████████████████▋                    | 90/174 [00:15<00:14,  5.94it/s]I Quantizating 1/4:  53%|██████████████████████▏                   | 92/174 [00:15<00:12,  6.66it/s]I Quantizating 1/4:  54%|██████████████████████▋                   | 94/174 [00:15<00:11,  6.75it/s]I Quantizating 1/4:  55%|██████████████████████▉                   | 95/174 [00:16<00:13,  5.95it/s]I Quantizating 1/4:  55%|███████████████████████▏                  | 96/174 [00:16<00:12,  6.19it/s]I Quantizating 1/4:  56%|███████████████████████▍                  | 97/174 [00:16<00:12,  6.33it/s]I Quantizating 1/4:  57%|███████████████████████▉                  | 99/174 [00:16<00:08,  8.66it/s]I Quantizating 1/4:  58%|███████████████████████▊                 | 101/174 [00:16<00:07,  9.28it/s]I Quantizating 1/4:  59%|████████████████████████▎                | 103/174 [00:16<00:07,  9.91it/s]I Quantizating 1/4:  60%|████████████████████████▋                | 105/174 [00:17<00:06, 10.91it/s]I Quantizating 1/4:  61%|█████████████████████████▏               | 107/174 [00:17<00:05, 12.35it/s]I Quantizating 1/4:  63%|█████████████████████████▋               | 109/174 [00:17<00:05, 11.91it/s]I Quantizating 1/4:  64%|██████████████████████████▏              | 111/174 [00:17<00:04, 13.03it/s]I Quantizating 1/4:  65%|██████████████████████████▋              | 113/174 [00:17<00:04, 14.03it/s]I Quantizating 1/4:  67%|███████████████████████████▎             | 116/174 [00:17<00:03, 16.12it/s]I Quantizating 1/4:  68%|███████████████████████████▊             | 118/174 [00:17<00:03, 16.51it/s]I Quantizating 1/4:  70%|████████████████████████████▌            | 121/174 [00:17<00:02, 18.25it/s]I Quantizating 1/4:  71%|████████████████████████████▉            | 123/174 [00:18<00:02, 17.61it/s]I Quantizating 1/4:  74%|██████████████████████████████▍          | 129/174 [00:18<00:01, 23.46it/s]I Quantizating 1/4:  78%|███████████████████████████████▊         | 135/174 [00:18<00:01, 22.80it/s]I Quantizating 1/4:  79%|████████████████████████████████▌        | 138/174 [00:18<00:01, 20.86it/s]I Quantizating 1/4:  81%|█████████████████████████████████▏       | 141/174 [00:19<00:02, 16.18it/s]I Quantizating 1/4:  82%|█████████████████████████████████▋       | 143/174 [00:19<00:02, 15.37it/s]I Quantizating 1/4:  84%|██████████████████████████████████▋      | 147/174 [00:19<00:02, 10.74it/s]I Quantizating 1/4:  86%|███████████████████████████████████      | 149/174 [00:20<00:03,  7.20it/s]I Quantizating 1/4:  87%|███████████████████████████████████▌     | 151/174 [00:20<00:03,  6.63it/s]I Quantizating 1/4:  87%|███████████████████████████████████▊     | 152/174 [00:21<00:03,  6.03it/s]I Quantizating 1/4:  88%|████████████████████████████████████     | 153/174 [00:21<00:03,  5.51it/s]I Quantizating 1/4:  89%|████████████████████████████████████▎    | 154/174 [00:21<00:03,  5.25it/s]I Quantizating 1/4:  94%|██████████████████████████████████████▋  | 164/174 [00:21<00:00, 17.00it/s]I Quantizating 1/4:  97%|███████████████████████████████████████▌ | 168/174 [00:22<00:00,  7.22it/s]I Quantizating 1/4: 100%|█████████████████████████████████████████| 174/174 [00:23<00:00,  7.55it/s]
+I Quantizating 2/4:   0%|                                                   | 0/174 [00:00<?, ?it/s]I Quantizating 2/4:   1%|▏                                          | 1/174 [00:01<03:29,  1.21s/it]I Quantizating 2/4:   1%|▍                                          | 2/174 [00:01<01:44,  1.65it/s]I Quantizating 2/4:   2%|▋                                          | 3/174 [00:01<01:25,  2.00it/s]I Quantizating 2/4:   3%|█▏                                         | 5/174 [00:02<00:48,  3.51it/s]I Quantizating 2/4:   4%|█▋                                         | 7/174 [00:02<00:33,  4.99it/s]I Quantizating 2/4:   5%|█▉                                         | 8/174 [00:02<00:32,  5.17it/s]I Quantizating 2/4:   6%|██▍                                       | 10/174 [00:02<00:25,  6.35it/s]I Quantizating 2/4:   7%|███▏                                      | 13/174 [00:02<00:19,  8.12it/s]I Quantizating 2/4:   8%|███▍                                      | 14/174 [00:03<00:20,  7.63it/s]I Quantizating 2/4:   9%|███▊                                      | 16/174 [00:03<00:23,  6.83it/s]I Quantizating 2/4:  10%|████▎                                     | 18/174 [00:03<00:18,  8.36it/s]I Quantizating 2/4:  12%|█████                                     | 21/174 [00:03<00:15, 10.13it/s]I Quantizating 2/4:  13%|█████▌                                    | 23/174 [00:03<00:13, 11.00it/s]I Quantizating 2/4:  15%|██████▎                                   | 26/174 [00:03<00:11, 13.04it/s]I Quantizating 2/4:  16%|██████▊                                   | 28/174 [00:04<00:11, 13.08it/s]I Quantizating 2/4:  18%|███████▍                                  | 31/174 [00:04<00:09, 14.75it/s]I Quantizating 2/4:  19%|███████▉                                  | 33/174 [00:04<00:10, 13.67it/s]I Quantizating 2/4:  20%|████████▍                                 | 35/174 [00:04<00:11, 12.26it/s]I Quantizating 2/4:  22%|█████████▍                                | 39/174 [00:04<00:08, 15.07it/s]I Quantizating 2/4:  24%|█████████▉                                | 41/174 [00:04<00:08, 15.93it/s]I Quantizating 2/4:  25%|██████████▌                               | 44/174 [00:05<00:07, 18.51it/s]I Quantizating 2/4:  26%|███████████                               | 46/174 [00:05<00:06, 18.58it/s]I Quantizating 2/4:  29%|████████████                              | 50/174 [00:05<00:05, 20.78it/s]I Quantizating 2/4:  30%|████████████▊                             | 53/174 [00:05<00:06, 18.70it/s]I Quantizating 2/4:  33%|█████████████▊                            | 57/174 [00:05<00:05, 21.34it/s]I Quantizating 2/4:  35%|██████████████▋                           | 61/174 [00:05<00:04, 25.39it/s]I Quantizating 2/4:  37%|███████████████▋                          | 65/174 [00:05<00:03, 28.68it/s]I Quantizating 2/4:  41%|█████████████████▏                        | 71/174 [00:06<00:03, 34.01it/s]I Quantizating 2/4:  43%|██████████████████                        | 75/174 [00:06<00:03, 25.91it/s]I Quantizating 2/4:  45%|██████████████████▊                       | 78/174 [00:06<00:03, 24.88it/s]I Quantizating 2/4:  47%|███████████████████▌                      | 81/174 [00:06<00:03, 25.50it/s]I Quantizating 2/4:  48%|████████████████████▎                     | 84/174 [00:06<00:03, 25.69it/s]I Quantizating 2/4:  50%|█████████████████████                     | 87/174 [00:07<00:05, 15.21it/s]I Quantizating 2/4:  52%|█████████████████████▋                    | 90/174 [00:07<00:05, 14.98it/s]I Quantizating 2/4:  53%|██████████████████████▏                   | 92/174 [00:07<00:05, 14.79it/s]I Quantizating 2/4:  55%|██████████████████████▉                   | 95/174 [00:07<00:05, 14.89it/s]I Quantizating 2/4:  56%|███████████████████████▍                  | 97/174 [00:07<00:05, 14.39it/s]I Quantizating 2/4:  57%|███████████████████████▌                 | 100/174 [00:07<00:04, 16.89it/s]I Quantizating 2/4:  59%|████████████████████████▎                | 103/174 [00:07<00:03, 18.38it/s]I Quantizating 2/4:  60%|████████████████████████▋                | 105/174 [00:08<00:03, 18.63it/s]I Quantizating 2/4:  62%|█████████████████████████▍               | 108/174 [00:08<00:03, 20.93it/s]I Quantizating 2/4:  64%|██████████████████████████▏              | 111/174 [00:08<00:02, 22.10it/s]I Quantizating 2/4:  67%|███████████████████████████▎             | 116/174 [00:08<00:02, 24.68it/s]I Quantizating 2/4:  69%|████████████████████████████▎            | 120/174 [00:08<00:01, 27.35it/s]I Quantizating 2/4:  71%|████████████████████████████▉            | 123/174 [00:08<00:02, 24.04it/s]I Quantizating 2/4:  74%|██████████████████████████████▍          | 129/174 [00:08<00:01, 29.66it/s]I Quantizating 2/4:  78%|███████████████████████████████▊         | 135/174 [00:09<00:01, 28.71it/s]I Quantizating 2/4:  79%|████████████████████████████████▌        | 138/174 [00:09<00:01, 28.46it/s]I Quantizating 2/4:  81%|█████████████████████████████████▏       | 141/174 [00:09<00:01, 23.17it/s]I Quantizating 2/4:  83%|█████████████████████████████████▉       | 144/174 [00:09<00:01, 24.03it/s]I Quantizating 2/4:  84%|██████████████████████████████████▋      | 147/174 [00:09<00:01, 15.26it/s]I Quantizating 2/4:  86%|███████████████████████████████████      | 149/174 [00:10<00:02, 10.36it/s]I Quantizating 2/4:  87%|███████████████████████████████████▌     | 151/174 [00:10<00:02, 11.09it/s]I Quantizating 2/4:  88%|████████████████████████████████████     | 153/174 [00:10<00:01, 11.75it/s]I Quantizating 2/4:  89%|████████████████████████████████████▌    | 155/174 [00:10<00:01, 12.85it/s]I Quantizating 2/4:  95%|██████████████████████████████████████▉  | 165/174 [00:11<00:00, 18.63it/s]I Quantizating 2/4:  96%|███████████████████████████████████████▎ | 167/174 [00:11<00:00, 12.74it/s]I Quantizating 2/4: 100%|█████████████████████████████████████████| 174/174 [00:11<00:00, 14.87it/s]
+I Quantizating 3/4:   0%|                                                   | 0/174 [00:00<?, ?it/s]I Quantizating 3/4:   1%|▏                                          | 1/174 [00:01<03:24,  1.18s/it]I Quantizating 3/4:   1%|▍                                          | 2/174 [00:01<01:42,  1.68it/s]I Quantizating 3/4:   2%|▋                                          | 3/174 [00:01<01:24,  2.01it/s]I Quantizating 3/4:   2%|▉                                          | 4/174 [00:01<00:58,  2.91it/s]I Quantizating 3/4:   3%|█▏                                         | 5/174 [00:01<00:45,  3.70it/s]I Quantizating 3/4:   4%|█▋                                         | 7/174 [00:02<00:30,  5.46it/s]I Quantizating 3/4:   5%|█▉                                         | 8/174 [00:02<00:29,  5.55it/s]I Quantizating 3/4:   6%|██▍                                       | 10/174 [00:02<00:24,  6.66it/s]I Quantizating 3/4:   7%|███▏                                      | 13/174 [00:02<00:19,  8.43it/s]I Quantizating 3/4:   8%|███▍                                      | 14/174 [00:03<00:20,  7.83it/s]I Quantizating 3/4:   9%|███▌                                      | 15/174 [00:03<00:19,  8.13it/s]I Quantizating 3/4:   9%|███▊                                      | 16/174 [00:03<00:23,  6.62it/s]I Quantizating 3/4:  10%|████▎                                     | 18/174 [00:03<00:18,  8.63it/s]I Quantizating 3/4:  12%|█████                                     | 21/174 [00:03<00:14, 10.76it/s]I Quantizating 3/4:  13%|█████▌                                    | 23/174 [00:03<00:13, 11.60it/s]I Quantizating 3/4:  15%|██████▎                                   | 26/174 [00:03<00:10, 13.51it/s]I Quantizating 3/4:  16%|██████▊                                   | 28/174 [00:04<00:10, 13.52it/s]I Quantizating 3/4:  18%|███████▍                                  | 31/174 [00:04<00:09, 15.23it/s]I Quantizating 3/4:  19%|███████▉                                  | 33/174 [00:04<00:10, 13.93it/s]I Quantizating 3/4:  20%|████████▍                                 | 35/174 [00:04<00:11, 12.24it/s]I Quantizating 3/4:  22%|█████████▍                                | 39/174 [00:04<00:08, 15.02it/s]I Quantizating 3/4:  24%|█████████▉                                | 41/174 [00:04<00:08, 15.87it/s]I Quantizating 3/4:  25%|██████████▌                               | 44/174 [00:05<00:07, 18.21it/s]I Quantizating 3/4:  26%|███████████                               | 46/174 [00:05<00:07, 18.22it/s]I Quantizating 3/4:  29%|████████████                              | 50/174 [00:05<00:06, 20.47it/s]I Quantizating 3/4:  30%|████████████▊                             | 53/174 [00:05<00:06, 18.54it/s]I Quantizating 3/4:  33%|█████████████▊                            | 57/174 [00:05<00:05, 21.20it/s]I Quantizating 3/4:  35%|██████████████▋                           | 61/174 [00:05<00:04, 25.26it/s]I Quantizating 3/4:  37%|███████████████▋                          | 65/174 [00:05<00:03, 28.59it/s]I Quantizating 3/4:  41%|█████████████████▏                        | 71/174 [00:06<00:03, 33.85it/s]I Quantizating 3/4:  43%|██████████████████                        | 75/174 [00:06<00:03, 26.03it/s]I Quantizating 3/4:  45%|██████████████████▊                       | 78/174 [00:06<00:03, 25.30it/s]I Quantizating 3/4:  47%|███████████████████▌                      | 81/174 [00:06<00:03, 25.77it/s]I Quantizating 3/4:  48%|████████████████████▎                     | 84/174 [00:06<00:03, 25.40it/s]I Quantizating 3/4:  50%|█████████████████████                     | 87/174 [00:07<00:05, 15.13it/s]I Quantizating 3/4:  52%|█████████████████████▋                    | 90/174 [00:07<00:05, 14.75it/s]I Quantizating 3/4:  53%|██████████████████████▏                   | 92/174 [00:07<00:05, 14.90it/s]I Quantizating 3/4:  55%|██████████████████████▉                   | 95/174 [00:07<00:05, 15.13it/s]I Quantizating 3/4:  56%|███████████████████████▍                  | 97/174 [00:07<00:05, 14.35it/s]I Quantizating 3/4:  57%|███████████████████████▌                 | 100/174 [00:07<00:04, 17.00it/s]I Quantizating 3/4:  59%|████████████████████████▎                | 103/174 [00:07<00:03, 18.78it/s]I Quantizating 3/4:  61%|████████████████████████▉                | 106/174 [00:08<00:03, 20.81it/s]I Quantizating 3/4:  63%|█████████████████████████▋               | 109/174 [00:08<00:02, 21.87it/s]I Quantizating 3/4:  64%|██████████████████████████▍              | 112/174 [00:08<00:02, 23.14it/s]I Quantizating 3/4:  67%|███████████████████████████▎             | 116/174 [00:08<00:02, 23.80it/s]I Quantizating 3/4:  69%|████████████████████████████▎            | 120/174 [00:08<00:02, 27.00it/s]I Quantizating 3/4:  71%|████████████████████████████▉            | 123/174 [00:08<00:02, 23.88it/s]I Quantizating 3/4:  74%|██████████████████████████████▍          | 129/174 [00:08<00:01, 29.64it/s]I Quantizating 3/4:  78%|███████████████████████████████▊         | 135/174 [00:09<00:01, 28.37it/s]I Quantizating 3/4:  79%|████████████████████████████████▌        | 138/174 [00:09<00:01, 28.14it/s]I Quantizating 3/4:  81%|█████████████████████████████████▏       | 141/174 [00:09<00:01, 22.95it/s]I Quantizating 3/4:  83%|█████████████████████████████████▉       | 144/174 [00:09<00:01, 23.86it/s]I Quantizating 3/4:  84%|██████████████████████████████████▋      | 147/174 [00:09<00:01, 15.19it/s]I Quantizating 3/4:  86%|███████████████████████████████████      | 149/174 [00:10<00:02, 10.33it/s]I Quantizating 3/4:  87%|███████████████████████████████████▌     | 151/174 [00:10<00:02, 11.11it/s]I Quantizating 3/4:  88%|████████████████████████████████████     | 153/174 [00:10<00:01, 11.89it/s]I Quantizating 3/4:  89%|████████████████████████████████████▌    | 155/174 [00:10<00:01, 13.02it/s]I Quantizating 3/4:  95%|██████████████████████████████████████▉  | 165/174 [00:11<00:00, 18.76it/s]I Quantizating 3/4:  96%|███████████████████████████████████████▎ | 167/174 [00:11<00:00, 12.77it/s]I Quantizating 3/4: 100%|█████████████████████████████████████████| 174/174 [00:11<00:00, 14.89it/s]
+I Quantizating 4/4:   0%|                                                   | 0/174 [00:00<?, ?it/s]I Quantizating 4/4:   1%|▏                                          | 1/174 [00:00<02:17,  1.25it/s]I Quantizating 4/4:   1%|▍                                          | 2/174 [00:00<01:10,  2.44it/s]I Quantizating 4/4:   2%|▋                                          | 3/174 [00:01<00:58,  2.94it/s]I Quantizating 4/4:   3%|█▏                                         | 5/174 [00:01<00:32,  5.16it/s]I Quantizating 4/4:   4%|█▋                                         | 7/174 [00:01<00:22,  7.40it/s]I Quantizating 4/4:   5%|██▏                                        | 9/174 [00:01<00:18,  9.03it/s]I Quantizating 4/4:   6%|██▋                                       | 11/174 [00:01<00:15, 10.21it/s]I Quantizating 4/4:   7%|███▏                                      | 13/174 [00:01<00:14, 11.16it/s]I Quantizating 4/4:   9%|███▌                                      | 15/174 [00:02<00:14, 11.20it/s]I Quantizating 4/4:  10%|████                                      | 17/174 [00:02<00:14, 10.87it/s]I Quantizating 4/4:  11%|████▊                                     | 20/174 [00:02<00:10, 14.50it/s]I Quantizating 4/4:  13%|█████▌                                    | 23/174 [00:02<00:09, 15.36it/s]I Quantizating 4/4:  15%|██████▎                                   | 26/174 [00:02<00:08, 18.21it/s]I Quantizating 4/4:  17%|███████                                   | 29/174 [00:02<00:07, 20.50it/s]I Quantizating 4/4:  18%|███████▋                                  | 32/174 [00:02<00:07, 19.49it/s]I Quantizating 4/4:  20%|████████▍                                 | 35/174 [00:03<00:07, 18.75it/s]I Quantizating 4/4:  22%|█████████▍                                | 39/174 [00:03<00:06, 22.32it/s]I Quantizating 4/4:  25%|██████████▌                               | 44/174 [00:03<00:05, 25.41it/s]I Quantizating 4/4:  28%|███████████▊                              | 49/174 [00:03<00:04, 29.64it/s]I Quantizating 4/4:  30%|████████████▊                             | 53/174 [00:03<00:04, 26.21it/s]I Quantizating 4/4:  33%|█████████████▊                            | 57/174 [00:03<00:04, 29.13it/s]I Quantizating 4/4:  36%|███████████████▏                          | 63/174 [00:03<00:03, 34.72it/s]I Quantizating 4/4:  41%|█████████████████▏                        | 71/174 [00:04<00:02, 45.10it/s]I Quantizating 4/4:  44%|██████████████████▎                       | 76/174 [00:04<00:02, 37.97it/s]I Quantizating 4/4:  47%|███████████████████▌                      | 81/174 [00:04<00:02, 35.83it/s]I Quantizating 4/4:  49%|████████████████████▌                     | 85/174 [00:04<00:02, 33.26it/s]I Quantizating 4/4:  51%|█████████████████████▍                    | 89/174 [00:04<00:03, 23.64it/s]I Quantizating 4/4:  53%|██████████████████████▏                   | 92/174 [00:05<00:03, 21.60it/s]I Quantizating 4/4:  55%|██████████████████████▉                   | 95/174 [00:05<00:03, 21.80it/s]I Quantizating 4/4:  56%|███████████████████████▋                  | 98/174 [00:05<00:03, 22.97it/s]I Quantizating 4/4:  59%|████████████████████████▎                | 103/174 [00:05<00:02, 25.44it/s]I Quantizating 4/4:  62%|█████████████████████████▍               | 108/174 [00:05<00:02, 27.95it/s]I Quantizating 4/4:  65%|██████████████████████████▋              | 113/174 [00:05<00:01, 31.01it/s]I Quantizating 4/4:  68%|███████████████████████████▊             | 118/174 [00:05<00:01, 32.52it/s]I Quantizating 4/4:  71%|████████████████████████████▉            | 123/174 [00:05<00:01, 34.56it/s]I Quantizating 4/4:  75%|██████████████████████████████▋          | 130/174 [00:06<00:01, 42.96it/s]I Quantizating 4/4:  78%|███████████████████████████████▊         | 135/174 [00:06<00:00, 39.34it/s]I Quantizating 4/4:  81%|█████████████████████████████████▏       | 141/174 [00:06<00:00, 34.17it/s]I Quantizating 4/4:  84%|██████████████████████████████████▋      | 147/174 [00:06<00:01, 26.00it/s]I Quantizating 4/4:  87%|███████████████████████████████████▌     | 151/174 [00:07<00:01, 19.02it/s]I Quantizating 4/4:  89%|████████████████████████████████████▎    | 154/174 [00:07<00:01, 18.93it/s]I Quantizating 4/4:  95%|██████████████████████████████████████▉  | 165/174 [00:07<00:00, 25.58it/s]I Quantizating 4/4:  97%|███████████████████████████████████████▌ | 168/174 [00:07<00:00, 19.95it/s]I Quantizating 4/4: 100%|█████████████████████████████████████████| 174/174 [00:07<00:00, 21.77it/s]
+D 
+D quant_optimizer ...
+D quant_optimizer results:
+D     adjust_tanh_sigmoid: ['/model/model.22/Sigmoid']
+D     adjust_concat_split: ['/model/model.22/Concat_1']
+D     adjust_relu: ['/model/model.22/cv3.0/cv3.0.1/act/Relu', '/model/model.22/cv3.0/cv3.0.0/act/Relu', '/model/model.22/cv2.0/cv2.0.1/act/Relu', '/model/model.22/cv2.0/cv2.0.0/act/Relu', '/model/model.22/cv3.1/cv3.1.1/act/Relu', '/model/model.22/cv3.1/cv3.1.0/act/Relu', '/model/model.22/cv2.1/cv2.1.1/act/Relu', '/model/model.22/cv2.1/cv2.1.0/act/Relu', '/model/model.22/cv3.2/cv3.2.1/act/Relu', '/model/model.22/cv3.2/cv3.2.0/act/Relu', '/model/model.22/cv2.2/cv2.2.1/act/Relu', '/model/model.22/cv2.2/cv2.2.0/act/Relu', '/model/model.21/cv2/act/Relu', '/model/model.21/m.0/cv2/act/Relu', '/model/model.21/m.0/cv1/act/Relu', '/model/model.21/cv1/act/Relu', '/model/model.19/act/Relu', '/model/model.18/cv2/act/Relu', '/model/model.18/m.0/cv2/act/Relu', '/model/model.18/m.0/cv1/act/Relu', '/model/model.18/cv1/act/Relu', '/model/model.16/act/Relu', '/model/model.15/cv2/act/Relu', '/model/model.15/m.0/cv2/act/Relu', '/model/model.15/m.0/cv1/act/Relu', '/model/model.15/cv1/act/Relu', '/model/model.12/cv2/act/Relu', '/model/model.12/m.0/cv2/act/Relu', '/model/model.12/m.0/cv1/act/Relu', '/model/model.12/cv1/act/Relu', '/model/model.9/cv2/act/Relu', '/model/model.9/cv1/act/Relu', '/model/model.8/cv2/act/Relu', '/model/model.8/m.0/cv2/act/Relu', '/model/model.8/m.0/cv1/act/Relu', '/model/model.8/cv1/act/Relu', '/model/model.7/act/Relu', '/model/model.6/cv2/act/Relu', '/model/model.6/m.1/cv2/act/Relu', '/model/model.6/m.1/cv1/act/Relu', '/model/model.6/m.0/cv2/act/Relu', '/model/model.6/m.0/cv1/act/Relu', '/model/model.6/cv1/act/Relu', '/model/model.5/act/Relu', '/model/model.4/cv2/act/Relu', '/model/model.4/m.1/cv2/act/Relu', '/model/model.4/m.1/cv1/act/Relu', '/model/model.4/m.0/cv2/act/Relu', '/model/model.4/m.0/cv1/act/Relu', '/model/model.4/cv1/act/Relu', '/model/model.3/act/Relu', '/model/model.2/cv2/act/Relu', '/model/model.2/m.0/cv2/act/Relu', '/model/model.2/m.0/cv1/act/Relu', '/model/model.2/cv1/act/Relu', '/model/model.1/act/Relu', '/model/model.0/act/Relu']
+D     adjust_no_change_node: ['/model/model.22/Reshape_4', '/model/model.22/Reshape_5']
+D quant_optimizer done.
+D 
+D Save log info to: /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_relu_100ep_s0/weights/rknn_int8_h1/build.log
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                           | 0/149 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████| 149/149 [00:00<00:00, 66533.73it/s]
+D fuse_ops ...
+D fuse_ops done.
+D 
+D quant_optimizer ...
+D quant_optimizer done.
+D 
+D quantized_algorithm is normal, skip re-quantization!
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default input dtype of 'images' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default output dtype of 'output0' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I RKNN: [18:39:15.379] compress = 0, conv_eltwise_activation_fuse = 1, global_fuse = 1, multi-core-model-mode = 7, output_optimize = 1, layout_match = 1, enable_argb_group = 0, op_group_sram_opt = 0, enable_flash_attention = 0, op_group_nbuf_opt = 0, safe_fuse = 0
+I RKNN: librknnc version: 2.3.2 (e045de294f@2025-04-07T19:48:25)
+D RKNN: [18:39:15.415] RKNN is invoked
+W RKNN: [18:39:15.561] Model initializer tensor data is empty, name: empty_placeholder_0
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.0/cv3.0.1/act/Relu_output_0__float16
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.0/cv3.0.2/Conv_output_0
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.1/cv3.1.1/act/Relu_output_0__float16
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.1/cv3.1.2/Conv_output_0
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.2/cv3.2.1/act/Relu_output_0__float16
+I RKNN: [18:39:15.564] Meet hybrid type, dtype: float16, tensor: /model/model.22/cv3.2/cv3.2.2/Conv_output_0
+D RKNN: [18:39:15.564] >>>>>> start: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [18:39:15.564] <<<<<<<< end: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [18:39:15.564] >>>>>> start: rknn::RKNNSetOpTargetPass
+D RKNN: [18:39:15.564] <<<<<<<< end: rknn::RKNNSetOpTargetPass
+D RKNN: [18:39:15.564] >>>>>> start: rknn::RKNNBindNorm
+D RKNN: [18:39:15.565] <<<<<<<< end: rknn::RKNNBindNorm
+D RKNN: [18:39:15.565] >>>>>> start: rknn::RKNNEliminateQATDataConvert
+D RKNN: [18:39:15.565] <<<<<<<< end: rknn::RKNNEliminateQATDataConvert
+D RKNN: [18:39:15.565] >>>>>> start: rknn::RKNNConvStrideFixPass
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNConvStrideFixPass
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNTileGroupConv
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNTileGroupConv
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNAddConvBias
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNAddConvBias
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNTileChannel
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNTileChannel
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNDuplicateWeightPass
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNDuplicateWeightPass
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNInitRNNConst
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNInitRNNConst
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNPerChannelPrep
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNPerChannelPrep
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNBnQuant
+D RKNN: [18:39:15.566] <<<<<<<< end: rknn::RKNNBnQuant
+D RKNN: [18:39:15.566] >>>>>> start: rknn::RKNNFuseOptimizerPass
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNFuseOptimizerPass
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNTurnAutoPad
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNTurnAutoPad
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNInitCastConst
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNInitCastConst
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNMultiSurfacePass
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNMultiSurfacePass
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [18:39:15.589] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [18:39:15.589] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [18:39:15.589] >>>>>> start: OpEmit
+W RKNN: [18:39:15.590] emitAB_BA_regtasks: channel overflow
+D RKNN: [18:39:15.590] <<<<<<<< end: OpEmit
+D RKNN: [18:39:15.590] >>>>>> start: rknn::RKNNAddFirstConv
+D RKNN: [18:39:15.590] <<<<<<<< end: rknn::RKNNAddFirstConv
+D RKNN: [18:39:15.590] >>>>>> start: rknn::RKNNTilingPass
+D RKNN: [18:39:15.591] <<<<<<<< end: rknn::RKNNTilingPass
+D RKNN: [18:39:15.591] >>>>>> start: rknn::RKNNLayoutMatchPass
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] BroadcastLayoutConnFactory: op(Mul:/Div_2mul) has undefined broadcast type, please check this op.
+W RKNN: [18:39:15.592] BroadcastLayoutConnFactory: op(Mul:/Div_2mul) has undefined broadcast type, please check this op.
+W RKNN: [18:39:15.592] BroadcastLayoutConnFactory: op(Mul:/Div_2mul) has undefined broadcast type, please check this op.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [18:39:15.592] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+D RKNN: [18:39:15.592] <<<<<<<< end: rknn::RKNNLayoutMatchPass
+D RKNN: [18:39:15.592] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [18:39:15.592] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [18:39:15.592] >>>>>> start: rknn::RKNNAllocateConvCachePass
+D RKNN: [18:39:15.592] <<<<<<<< end: rknn::RKNNAllocateConvCachePass
+D RKNN: [18:39:15.592] >>>>>> start: OpEmit
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.599] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.602] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.602] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.603] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.603] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.603] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.603] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.604] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.604] finish initComputeZoneMapByStepsVector
+D RKNN: [18:39:15.604] <<<<<<<< end: OpEmit
+D RKNN: [18:39:15.604] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [18:39:15.604] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [18:39:15.604] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [18:39:15.604] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [18:39:15.604] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [18:39:15.604] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [18:39:15.604] >>>>>> start: rknn::RKNNProfileAnalysisPass
+D RKNN: [18:39:15.604] <<<<<<<< end: rknn::RKNNProfileAnalysisPass
+D RKNN: [18:39:15.605] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [18:39:15.605] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [18:39:15.605] >>>>>> start: rknn::RKNNWeightTransposePass
+W RKNN: [18:39:15.605] Warning: Tensor onnx::Split_135 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.605] Warning: Tensor onnx::Split_135 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.606] Warning: Tensor onnx::Split_150 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.606] Warning: Tensor onnx::Split_150 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.608] Warning: Tensor onnx::Split_170 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.608] Warning: Tensor onnx::Split_170 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.615] Warning: Tensor onnx::Split_190 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.615] Warning: Tensor onnx::Split_190 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.623] Warning: Tensor /model/model.10/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.623] Warning: Tensor empty_placeholder_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/dfl/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/dfl/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_170_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_170_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.10/Constant_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor empty_placeholder_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_150_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_150_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_170_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_170_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_190_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor onnx::Split_190_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_3_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_3_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_3_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Constant_3_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Sigmoid_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor /model/model.22/Sigmoid_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor output0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [18:39:15.646] Warning: Tensor output0-rs_i1 need parameter qtype, type is set to float16 by default!
+D RKNN: [18:39:15.646] <<<<<<<< end: rknn::RKNNWeightTransposePass
+D RKNN: [18:39:15.646] >>>>>> start: rknn::RKNNCPUWeightTransposePass
+D RKNN: [18:39:15.646] <<<<<<<< end: rknn::RKNNCPUWeightTransposePass
+D RKNN: [18:39:15.646] >>>>>> start: rknn::RKNNModelBuildPass
+D RKNN: [18:39:15.677] <<<<<<<< end: rknn::RKNNModelBuildPass
+D RKNN: [18:39:15.678] >>>>>> start: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [18:39:15.692] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.692]                                                         Network Layer Information Table                                                      
+D RKNN: [18:39:15.692] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.692] ID   OpType             DataType Target InputShape                               OutputShape            Cycles(DDR/NPU/Total)    RW(KB)       FullName        
+D RKNN: [18:39:15.692] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.692] 0    InputOperator      INT8     CPU    \                                        (1,3,640,640)          0/0/0                    0            InputOperator:images
+D RKNN: [18:39:15.692] 1    ConvRelu           INT8     NPU    (1,3,640,640),(16,3,3,3),(16)            (1,16,320,320)         121323/921600/921600     1202         Conv:/model/model.0/conv/Conv
+D RKNN: [18:39:15.692] 2    ConvRelu           INT8     NPU    (1,16,320,320),(32,16,3,3),(32)          (1,32,160,160)         104104/230400/230400     1604         Conv:/model/model.1/conv/Conv
+D RKNN: [18:39:15.692] 3    ConvRelu           INT8     NPU    (1,32,160,160),(32,32,1,1),(32)          (1,32,160,160)         69320/102400/102400      801          Conv:/model/model.2/cv1/conv/Conv
+D RKNN: [18:39:15.692] 4    Split              INT8     NPU    (1,32,160,160),(2)                       (1,16,160,160),...     0/0/0                    800          Split:/model/model.2/Split
+D RKNN: [18:39:15.692] 5    ConvRelu           INT8     NPU    (1,16,160,160),(16,16,3,3),(16)          (1,16,160,160)         34741/230400/230400      402          Conv:/model/model.2/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 6    ConvReluAdd        INT8     NPU    (1,16,160,160),(16,16,3,3),(16),...      (1,16,160,160)         52058/230400/230400      802          Conv:/model/model.2/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 7    Concat             INT8     NPU    (1,16,160,160),(1,16,160,160),...        (1,48,160,160)         0/0/0                    1200         Concat:/model/model.2/Concat
+D RKNN: [18:39:15.692] 8    ConvRelu           INT8     NPU    (1,48,160,160),(32,48,1,1),(32)          (1,32,160,160)         86658/102400/102400      1201         Conv:/model/model.2/cv2/conv/Conv
+D RKNN: [18:39:15.692] 9    ConvRelu           INT8     NPU    (1,32,160,160),(64,32,3,3),(64)          (1,64,80,80)           52750/115200/115200      818          Conv:/model/model.3/conv/Conv
+D RKNN: [18:39:15.692] 10   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,1,1),(64)            (1,64,80,80)           34828/51200/51200        404          Conv:/model/model.4/cv1/conv/Conv
+D RKNN: [18:39:15.692] 11   Split              INT8     NPU    (1,64,80,80),(2)                         (1,32,80,80),...       0/0/0                    400          Split:/model/model.4/Split
+D RKNN: [18:39:15.692] 12   ConvRelu           INT8     NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           17717/57600/57600        209          Conv:/model/model.4/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 13   ConvReluAdd        INT8     NPU    (1,32,80,80),(32,32,3,3),(32),...        (1,32,80,80)           26375/57600/57600        409          Conv:/model/model.4/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 14   ConvRelu           INT8     NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           17717/57600/57600        209          Conv:/model/model.4/m.1/cv1/conv/Conv
+D RKNN: [18:39:15.692] 15   ConvReluAdd        INT8     NPU    (1,32,80,80),(32,32,3,3),(32),...        (1,32,80,80)           26375/57600/57600        409          Conv:/model/model.4/m.1/cv2/conv/Conv
+D RKNN: [18:39:15.692] 16   Concat             INT8     NPU    (1,32,80,80),(1,32,80,80),...            (1,128,80,80)          0/0/0                    800          Concat:/model/model.4/Concat
+D RKNN: [18:39:15.692] 17   ConvRelu           INT8     NPU    (1,128,80,80),(64,128,1,1),(64)          (1,64,80,80)           52317/51200/52317        808          Conv:/model/model.4/cv2/conv/Conv
+D RKNN: [18:39:15.692] 18   ConvRelu           INT8     NPU    (1,64,80,80),(128,64,3,3),(128)          (1,128,40,40)          29135/115200/115200      473          Conv:/model/model.5/conv/Conv
+D RKNN: [18:39:15.692] 19   ConvRelu           INT8     NPU    (1,128,40,40),(128,128,1,1),(128)        (1,128,40,40)          18053/25600/25600        217          Conv:/model/model.6/cv1/conv/Conv
+D RKNN: [18:39:15.692] 20   Split              INT8     NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    200          Split:/model/model.6/Split
+D RKNN: [18:39:15.692] 21   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.6/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 22   ConvReluAdd        INT8     NPU    (1,64,40,40),(64,64,3,3),(64),...        (1,64,40,40)           14568/57600/57600        236          Conv:/model/model.6/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 23   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.6/m.1/cv1/conv/Conv
+D RKNN: [18:39:15.692] 24   ConvReluAdd        INT8     NPU    (1,64,40,40),(64,64,3,3),(64),...        (1,64,40,40)           14568/57600/57600        236          Conv:/model/model.6/m.1/cv2/conv/Conv
+D RKNN: [18:39:15.692] 25   Concat             INT8     NPU    (1,64,40,40),(1,64,40,40),...            (1,256,40,40)          0/0/0                    400          Concat:/model/model.6/Concat
+D RKNN: [18:39:15.692] 26   ConvRelu           INT8     NPU    (1,256,40,40),(128,256,1,1),(128)        (1,128,40,40)          27404/51200/51200        433          Conv:/model/model.6/cv2/conv/Conv
+D RKNN: [18:39:15.692] 27   ConvRelu           INT8     NPU    (1,128,40,40),(256,128,3,3),(256)        (1,256,20,20)          25542/115200/115200      490          Conv:/model/model.7/conv/Conv
+D RKNN: [18:39:15.692] 28   ConvRelu           INT8     NPU    (1,256,20,20),(256,256,1,1),(256)        (1,256,20,20)          11516/25600/25600        166          Conv:/model/model.8/cv1/conv/Conv
+D RKNN: [18:39:15.692] 29   Split              INT8     NPU    (1,256,20,20),(2)                        (1,128,20,20),...      0/0/0                    100          Split:/model/model.8/Split
+D RKNN: [18:39:15.692] 30   ConvRelu           INT8     NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          10607/57600/57600        195          Conv:/model/model.8/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 31   ConvReluAdd        INT8     NPU    (1,128,20,20),(128,128,3,3),(128),...    (1,128,20,20)          12771/57600/57600        245          Conv:/model/model.8/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 32   Concat             INT8     NPU    (1,128,20,20),(1,128,20,20),...          (1,384,20,20)          0/0/0                    150          Concat:/model/model.8/Concat
+D RKNN: [18:39:15.692] 33   ConvRelu           INT8     NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          15066/38400/38400        248          Conv:/model/model.8/cv2/conv/Conv
+D RKNN: [18:39:15.692] 34   ConvRelu           INT8     NPU    (1,256,20,20),(128,256,1,1),(128)        (1,128,20,20)          7923/12800/12800         133          Conv:/model/model.9/cv1/conv/Conv
+D RKNN: [18:39:15.692] 35   MaxPool            INT8     NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    50           MaxPool:/model/model.9/m/MaxPool
+D RKNN: [18:39:15.692] 36   MaxPool            INT8     NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    50           MaxPool:/model/model.9/m_1/MaxPool
+D RKNN: [18:39:15.692] 37   MaxPool            INT8     NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    50           MaxPool:/model/model.9/m_2/MaxPool
+D RKNN: [18:39:15.692] 38   Concat             INT8     NPU    (1,128,20,20),(1,128,20,20),...          (1,512,20,20)          0/0/0                    200          Concat:/model/model.9/Concat
+D RKNN: [18:39:15.692] 39   ConvRelu           INT8     NPU    (1,512,20,20),(256,512,1,1),(256)        (1,256,20,20)          18616/51200/51200        330          Conv:/model/model.9/cv2/conv/Conv
+D RKNN: [18:39:15.692] 40   Resize             INT8     NPU    (1,256,20,20),(1),(4)                    (1,256,40,40)          0/0/0                    100          Resize:/model/model.10/Resize
+D RKNN: [18:39:15.692] 41   Concat             INT8     NPU    (1,256,40,40),(1,128,40,40)              (1,384,40,40)          0/0/0                    600          Concat:/model/model.11/Concat
+D RKNN: [18:39:15.692] 42   ConvRelu           INT8     NPU    (1,384,40,40),(128,384,1,1),(128)        (1,128,40,40)          36754/76800/76800        649          Conv:/model/model.12/cv1/conv/Conv
+D RKNN: [18:39:15.692] 43   Split              INT8     NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    200          Split:/model/model.12/Split
+D RKNN: [18:39:15.692] 44   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.12/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 45   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.12/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 46   Concat             INT8     NPU    (1,64,40,40),(1,64,40,40),...            (1,192,40,40)          0/0/0                    300          Concat:/model/model.12/Concat
+D RKNN: [18:39:15.692] 47   ConvRelu           INT8     NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          22728/38400/38400        325          Conv:/model/model.12/cv2/conv/Conv
+D RKNN: [18:39:15.692] 48   Resize             INT8     NPU    (1,128,40,40),(1),(4)                    (1,128,80,80)          0/0/0                    200          Resize:/model/model.13/Resize
+D RKNN: [18:39:15.692] 49   Concat             INT8     NPU    (1,128,80,80),(1,64,80,80)               (1,192,80,80)          0/0/0                    1200         Concat:/model/model.14/Concat
+D RKNN: [18:39:15.692] 50   ConvRelu           INT8     NPU    (1,192,80,80),(64,192,1,1),(64)          (1,64,80,80)           69807/76800/76800        1212         Conv:/model/model.15/cv1/conv/Conv
+D RKNN: [18:39:15.692] 51   Split              INT8     NPU    (1,64,80,80),(2)                         (1,32,80,80),...       0/0/0                    400          Split:/model/model.15/Split
+D RKNN: [18:39:15.692] 52   ConvRelu           INT8     NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           17717/57600/57600        209          Conv:/model/model.15/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 53   ConvRelu           INT8     NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           17717/57600/57600        209          Conv:/model/model.15/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 54   Concat             INT8     NPU    (1,32,80,80),(1,32,80,80),...            (1,96,80,80)           0/0/0                    600          Concat:/model/model.15/Concat
+D RKNN: [18:39:15.692] 55   ConvRelu           INT8     NPU    (1,96,80,80),(64,96,1,1),(64)            (1,64,80,80)           43573/51200/51200        606          Conv:/model/model.15/cv2/conv/Conv
+D RKNN: [18:39:15.692] 56   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,40,40)           23226/57600/57600        436          Conv:/model/model.16/conv/Conv
+D RKNN: [18:39:15.692] 57   Concat             INT8     NPU    (1,64,40,40),(1,128,40,40)               (1,192,40,40)          0/0/0                    300          Concat:/model/model.17/Concat
+D RKNN: [18:39:15.692] 58   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           36213/230400/230400      436          Conv:/model/model.22/cv2.0/cv2.0.0/conv/Conv
+D RKNN: [18:39:15.692] 59   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           36213/230400/230400      436          Conv:/model/model.22/cv3.0/cv3.0.0/conv/Conv
+D RKNN: [18:39:15.692] 60   ConvRelu           INT8     NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          22728/38400/38400        325          Conv:/model/model.18/cv1/conv/Conv
+D RKNN: [18:39:15.692] 61   Split              INT8     NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    200          Split:/model/model.18/Split
+D RKNN: [18:39:15.692] 62   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           36213/230400/230400      436          Conv:/model/model.22/cv2.0/cv2.0.1/conv/Conv
+D RKNN: [18:39:15.692] 63   Conv               INT8     NPU    (1,64,80,80),(64,64,1,1),(64)            (1,64,80,80)           34828/51200/51200        404          Conv:/model/model.22/cv2.0/cv2.0.2/Conv
+D RKNN: [18:39:15.692] 64   ConvRelu           INT8     NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           36213/230400/230400      436          Conv:/model/model.22/cv3.0/cv3.0.1/conv/Conv
+D RKNN: [18:39:15.692] 65   exDataConvert      INT8     NPU    (1,64,80,80)                             (1,64,80,80)           0/0/0                    400          exDataConvert:/model/model.22/cv3.0/cv3.0.1/act/Relu_output_0__cvt_int8_float16
+D RKNN: [18:39:15.692] 66   Conv               FLOAT16  NPU    (1,64,80,80),(5,64,1,1),(5)              (1,5,80,80)            38992/12800/38992        800          Conv:/model/model.22/cv3.0/cv3.0.2/Conv
+D RKNN: [18:39:15.692] 67   exDataConvert      FLOAT16  NPU    (1,5,80,80)                              (1,5,80,80)            0/0/0                    100          exDataConvert:/model/model.22/cv3.0/cv3.0.2/Conv_output_0__cvt_float16_int8
+D RKNN: [18:39:15.692] 68   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.18/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 69   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.18/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 70   Concat             INT8     NPU    (1,64,40,40),(1,64,40,40),...            (1,192,40,40)          0/0/0                    300          Concat:/model/model.18/Concat
+D RKNN: [18:39:15.692] 71   ConvRelu           INT8     NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          22728/38400/38400        325          Conv:/model/model.18/cv2/conv/Conv
+D RKNN: [18:39:15.692] 72   ConvRelu           INT8     NPU    (1,128,40,40),(128,128,3,3),(128)        (1,128,20,20)          17100/57600/57600        345          Conv:/model/model.19/conv/Conv
+D RKNN: [18:39:15.692] 73   Concat             INT8     NPU    (1,128,20,20),(1,256,20,20)              (1,384,20,20)          0/0/0                    150          Concat:/model/model.20/Concat
+D RKNN: [18:39:15.692] 74   ConvRelu           INT8     NPU    (1,128,40,40),(64,128,3,3),(64)          (1,64,40,40)           16126/115200/115200      272          Conv:/model/model.22/cv2.1/cv2.1.0/conv/Conv
+D RKNN: [18:39:15.692] 75   ConvRelu           INT8     NPU    (1,128,40,40),(64,128,3,3),(64)          (1,64,40,40)           16126/115200/115200      272          Conv:/model/model.22/cv3.1/cv3.1.0/conv/Conv
+D RKNN: [18:39:15.692] 76   ConvRelu           INT8     NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          15066/38400/38400        248          Conv:/model/model.21/cv1/conv/Conv
+D RKNN: [18:39:15.692] 77   Split              INT8     NPU    (1,256,20,20),(2)                        (1,128,20,20),...      0/0/0                    100          Split:/model/model.21/Split
+D RKNN: [18:39:15.692] 78   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.22/cv2.1/cv2.1.1/conv/Conv
+D RKNN: [18:39:15.692] 79   Conv               INT8     NPU    (1,64,40,40),(64,64,1,1),(64)            (1,64,40,40)           8853/12800/12800         104          Conv:/model/model.22/cv2.1/cv2.1.2/Conv
+D RKNN: [18:39:15.692] 80   ConvRelu           INT8     NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           10239/57600/57600        136          Conv:/model/model.22/cv3.1/cv3.1.1/conv/Conv
+D RKNN: [18:39:15.692] 81   exDataConvert      INT8     NPU    (1,64,40,40)                             (1,64,40,40)           0/0/0                    100          exDataConvert:/model/model.22/cv3.1/cv3.1.1/act/Relu_output_0__cvt_int8_float16
+D RKNN: [18:39:15.692] 82   Conv               FLOAT16  NPU    (1,64,40,40),(5,64,1,1),(5)              (1,5,40,40)            9771/3200/9771           200          Conv:/model/model.22/cv3.1/cv3.1.2/Conv
+D RKNN: [18:39:15.692] 83   exDataConvert      FLOAT16  NPU    (1,5,40,40)                              (1,5,40,40)            0/0/0                    25           exDataConvert:/model/model.22/cv3.1/cv3.1.2/Conv_output_0__cvt_float16_int8
+D RKNN: [18:39:15.692] 84   ConvRelu           INT8     NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          10607/57600/57600        195          Conv:/model/model.21/m.0/cv1/conv/Conv
+D RKNN: [18:39:15.692] 85   ConvRelu           INT8     NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          10607/57600/57600        195          Conv:/model/model.21/m.0/cv2/conv/Conv
+D RKNN: [18:39:15.692] 86   Concat             INT8     NPU    (1,128,20,20),(1,128,20,20),...          (1,384,20,20)          0/0/0                    150          Concat:/model/model.21/Concat
+D RKNN: [18:39:15.692] 87   ConvRelu           INT8     NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          15066/38400/38400        248          Conv:/model/model.21/cv2/conv/Conv
+D RKNN: [18:39:15.692] 88   ConvRelu           INT8     NPU    (1,256,20,20),(64,256,3,3),(64)          (1,64,20,20)           11667/57600/57600        244          Conv:/model/model.22/cv2.2/cv2.2.0/conv/Conv
+D RKNN: [18:39:15.692] 89   ConvRelu           INT8     NPU    (1,256,20,20),(64,256,3,3),(64)          (1,64,20,20)           11667/57600/57600        244          Conv:/model/model.22/cv3.2/cv3.2.0/conv/Conv
+D RKNN: [18:39:15.692] 90   ConvRelu           INT8     NPU    (1,64,20,20),(64,64,3,3),(64)            (1,64,20,20)           3745/14400/14400         61           Conv:/model/model.22/cv2.2/cv2.2.1/conv/Conv
+D RKNN: [18:39:15.692] 91   Conv               INT8     NPU    (1,64,20,20),(64,64,1,1),(64)            (1,64,20,20)           2360/3200/3200           29           Conv:/model/model.22/cv2.2/cv2.2.2/Conv
+D RKNN: [18:39:15.692] 92   ConvRelu           INT8     NPU    (1,64,20,20),(64,64,3,3),(64)            (1,64,20,20)           3745/14400/14400         61           Conv:/model/model.22/cv3.2/cv3.2.1/conv/Conv
+D RKNN: [18:39:15.692] 93   exDataConvert      INT8     NPU    (1,64,20,20)                             (1,64,20,20)           0/0/0                    25           exDataConvert:/model/model.22/cv3.2/cv3.2.1/act/Relu_output_0__cvt_int8_float16
+D RKNN: [18:39:15.692] 94   Conv               FLOAT16  NPU    (1,64,20,20),(5,64,1,1),(5)              (1,5,20,20)            2465/800/2465            50           Conv:/model/model.22/cv3.2/cv3.2.2/Conv
+D RKNN: [18:39:15.692] 95   exDataConvert      FLOAT16  NPU    (1,5,20,20)                              (1,5,20,20)            0/0/0                    6            exDataConvert:/model/model.22/cv3.2/cv3.2.2/Conv_output_0__cvt_float16_int8
+D RKNN: [18:39:15.692] 96   Reshape            INT8     NPU    (1,64,40,40),(4)                         (1,64,20,80)           0/0/0                    100          Reshape:/model/model.22/Reshape_1
+D RKNN: [18:39:15.692] 97   Reshape            INT8     NPU    (1,5,40,40),(4)                          (1,5,20,80)            0/0/0                    25           Reshape:/model/model.22/Reshape_4
+D RKNN: [18:39:15.692] 98   Reshape            INT8     NPU    (1,64,20,20),(4)                         (1,64,5,80)            0/0/0                    25           Reshape:/model/model.22/Reshape_2
+D RKNN: [18:39:15.692] 99   Concat             INT8     NPU    (1,64,80,80),(1,64,20,80),...            (1,64,105,80)          0/0/0                    525          Concat:/model/model.22/Concat
+D RKNN: [18:39:15.692] 100  Reshape            INT8     NPU    (1,64,105,80),(4)                        (4,16,1,8400)          0/0/0                    525          Reshape:/model/model.22/dfl/Reshape
+D RKNN: [18:39:15.692] 101  exSoftmax13        INT8     NPU    (4,16,1,8400),(1,16,1,1)                 (4,16,1,8400)          0/0/0                    525          exSoftmax13:/model/model.22/dfl/Softmax
+D RKNN: [18:39:15.692] 102  Conv               INT8     NPU    (4,16,1,8400),(1,16,1,1),(1)             (4,1,1,8400)           45463/134400/134400      525          Conv:/model/model.22/dfl/conv/Conv
+D RKNN: [18:39:15.692] 103  Transpose          INT8     CPU    (4,1,1,8400)                             (1,4,1,8400)           0/0/0                    525          Transpose:/model/model.22/dfl/Reshape_1_output_0_rs
+D RKNN: [18:39:15.692] 104  Split              INT8     NPU    (1,4,1,8400),(2)                         (1,2,1,8400),...       0/0/0                    131          Split:/model/model.22/Slice_2sp
+D RKNN: [18:39:15.692] 105  Sub                INT8     NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Sub:/model/model.22/Sub
+D RKNN: [18:39:15.692] 106  Add                INT8     NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Add:/model/model.22/Add_1
+D RKNN: [18:39:15.692] 107  Sub                INT8     NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Sub:/model/model.22/Sub_1
+D RKNN: [18:39:15.692] 108  Add                INT8     NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Add:/model/model.22/Add_2
+D RKNN: [18:39:15.692] 109  Mul                INT8     NPU    (1,2,1,8400),(1,1,1,1)                   (1,2,1,8400)           0/0/0                    131          Mul:/model/model.22/Div_1_2mul
+D RKNN: [18:39:15.692] 110  Concat             INT8     NPU    (1,2,1,8400),(1,2,1,8400),(4,32,1,1)     (1,4,1,8400)           0/0/0                    262          Concat:/model/model.22/Concat_2
+D RKNN: [18:39:15.692] 111  Mul                INT8     NPU    (1,4,1,8400),(1,1,1,8400)                (1,4,1,8400)           0/0/0                    262          Mul:/Div_2mul   
+D RKNN: [18:39:15.692] 112  Reshape            INT8     NPU    (1,5,20,20),(4)                          (1,5,5,80)             0/0/0                    6            Reshape:/model/model.22/Reshape_5
+D RKNN: [18:39:15.692] 113  Concat             INT8     NPU    (1,5,80,80),(1,5,20,80),(1,5,5,80)       (1,5,105,80)           0/0/0                    131          Concat:/model/model.22/Concat_1
+D RKNN: [18:39:15.692] 114  Sigmoid            INT8     NPU    (1,5,105,80)                             (1,5,105,80)           0/0/0                    131          Sigmoid:/model/model.22/Sigmoid
+D RKNN: [18:39:15.692] 115  Reshape            INT8     NPU    (1,5,105,80),(4)                         (1,5,1,8400)           0/0/0                    131          Reshape:/model/model.22/Sigmoid_output_0_rs
+D RKNN: [18:39:15.692] 116  Concat             INT8     NPU    (1,4,1,8400),(1,5,1,8400),(9,32,1,1)     (1,9,1,8400)           0/0/0                    262          Concat:/Concat  
+D RKNN: [18:39:15.692] 117  Reshape            INT8     NPU    (1,9,1,8400),(3)                         (1,9,8400)             0/0/0                    131          Reshape:output0-rs
+D RKNN: [18:39:15.692] 118  OutputOperator     INT8     CPU    (1,9,8400)                               \                      0/0/0                    73           OutputOperator:output0
+D RKNN: [18:39:15.692] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.692] <<<<<<<< end: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [18:39:15.692] >>>>>> start: rknn::RKNNModelExportPass
+D RKNN: [18:39:15.692] Export RKNN model to /tmp/tmpkebnxi4p/check.rknn
+D RKNN: [18:39:15.698] <<<<<<<< end: rknn::RKNNModelExportPass
+D RKNN: [18:39:15.698] >>>>>> start: rknn::RKNNMemStatisticsPass
+D RKNN: [18:39:15.698] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.698]                                                         Feature Tensor Information Table                                                     
+D RKNN: [18:39:15.698] ----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.698] ID  User           Tensor                                                        DataType  DataFormat   OrigShape      NativeShape      |     [Start       End)       Size
+D RKNN: [18:39:15.698] ----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.698] 1   ConvRelu       images                                                        INT8      NC1HWC2      (1,3,640,640)  (1,1,640,640,3)  | 0x00000000 0x0012c000 0x0012c000
+D RKNN: [18:39:15.698] 2   ConvRelu       /model/model.0/act/Relu_output_0                              INT8      NC1HWC2      (1,16,320,320) (1,2,320,320,16) | 0x0012c000 0x0044c000 0x00320000
+D RKNN: [18:39:15.698] 3   ConvRelu       /model/model.1/act/Relu_output_0                              INT8      NC1HWC2      (1,32,160,160) (1,2,160,160,16) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [18:39:15.698] 4   Split          /model/model.2/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,32,160,160) (1,2,160,160,16) | 0x000c8000 0x00190000 0x000c8000
+D RKNN: [18:39:15.698] 5   ConvRelu       /model/model.2/Split_output_1                                 INT8      NC1HWC2      (1,16,160,160) (1,2,160,160,16) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [18:39:15.698] 6   ConvReluAdd    /model/model.2/m.0/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,16,160,160) (1,2,160,160,16) | 0x000c8000 0x00190000 0x000c8000
+D RKNN: [18:39:15.698] 6   ConvReluAdd    /model/model.2/Split_output_1                                 INT8      NC1HWC2      (1,16,160,160) (1,2,160,160,16) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [18:39:15.698] 7   Concat         /model/model.2/Split_output_0                                 INT8      NC1HWC2      (1,16,160,160) (1,1,160,160,16) | 0x00190000 0x001f4000 0x00064000
+D RKNN: [18:39:15.698] 7   Concat         /model/model.2/Split_output_1                                 INT8      NC1HWC2      (1,16,160,160) (1,2,160,160,16) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [18:39:15.698] 7   Concat         /model/model.2/m.0/Add_output_0                               INT8      NC1HWC2      (1,16,160,160) (1,2,160,160,16) | 0x001f4000 0x002bc000 0x000c8000
+D RKNN: [18:39:15.698] 8   ConvRelu       /model/model.2/Concat_output_0                                INT8      NC1HWC2      (1,48,160,160) (1,3,160,160,16) | 0x002bc000 0x003e8000 0x0012c000
+D RKNN: [18:39:15.698] 9   ConvRelu       /model/model.2/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,32,160,160) (1,2,160,160,16) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [18:39:15.698] 10  ConvRelu       /model/model.3/act/Relu_output_0                              INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x000c8000 0x0012c000 0x00064000
+D RKNN: [18:39:15.698] 11  Split          /model/model.4/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 12  ConvRelu       /model/model.4/Split_output_1                                 INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00096000 0x000c8000 0x00032000
+D RKNN: [18:39:15.698] 13  ConvReluAdd    /model/model.4/m.0/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 13  ConvReluAdd    /model/model.4/Split_output_1                                 INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00096000 0x000c8000 0x00032000
+D RKNN: [18:39:15.698] 14  ConvRelu       /model/model.4/m.0/Add_output_0                               INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00032000 0x00064000 0x00032000
+D RKNN: [18:39:15.698] 15  ConvReluAdd    /model/model.4/m.1/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 15  ConvReluAdd    /model/model.4/m.0/Add_output_0                               INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00032000 0x00064000 0x00032000
+D RKNN: [18:39:15.698] 16  Concat         /model/model.4/Split_output_0                                 INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 16  Concat         /model/model.4/Split_output_1                                 INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00096000 0x000c8000 0x00032000
+D RKNN: [18:39:15.698] 16  Concat         /model/model.4/m.0/Add_output_0                               INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00032000 0x00064000 0x00032000
+D RKNN: [18:39:15.698] 16  Concat         /model/model.4/m.1/Add_output_0                               INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x000c8000 0x000fa000 0x00032000
+D RKNN: [18:39:15.698] 17  ConvRelu       /model/model.4/Concat_output_0                                INT8      NC1HWC2      (1,128,80,80)  (1,8,80,80,16)   | 0x000fa000 0x001c2000 0x000c8000
+D RKNN: [18:39:15.698] 18  ConvRelu       /model/model.4/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 19  ConvRelu       /model/model.5/act/Relu_output_0                              INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 20  Split          /model/model.6/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00096000 0x000c8000 0x00032000
+D RKNN: [18:39:15.698] 21  ConvRelu       /model/model.6/Split_output_1                                 INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 22  ConvReluAdd    /model/model.6/m.0/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 22  ConvReluAdd    /model/model.6/Split_output_1                                 INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 23  ConvRelu       /model/model.6/m.0/Add_output_0                               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 24  ConvReluAdd    /model/model.6/m.1/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 24  ConvReluAdd    /model/model.6/m.0/Add_output_0                               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 25  Concat         /model/model.6/Split_output_0                                 INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00064000 0x0007d000 0x00019000
+D RKNN: [18:39:15.698] 25  Concat         /model/model.6/Split_output_1                                 INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 25  Concat         /model/model.6/m.0/Add_output_0                               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 25  Concat         /model/model.6/m.1/Add_output_0                               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000c8000 0x000e1000 0x00019000
+D RKNN: [18:39:15.698] 26  ConvRelu       /model/model.6/Concat_output_0                                INT8      NC1HWC2      (1,256,40,40)  (1,16,40,40,16)  | 0x000e1000 0x00145000 0x00064000
+D RKNN: [18:39:15.698] 27  ConvRelu       /model/model.6/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 28  ConvRelu       /model/model.7/act/Relu_output_0                              INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 29  Split          /model/model.8/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 30  ConvRelu       /model/model.8/Split_output_1                                 INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000a2800 0x000af000 0x0000c800
+D RKNN: [18:39:15.698] 31  ConvReluAdd    /model/model.8/m.0/cv1/act/Relu_output_0                      INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000af000 0x000bb800 0x0000c800
+D RKNN: [18:39:15.698] 31  ConvReluAdd    /model/model.8/Split_output_1                                 INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000a2800 0x000af000 0x0000c800
+D RKNN: [18:39:15.698] 32  Concat         /model/model.8/Split_output_0                                 INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00096000 0x000a2800 0x0000c800
+D RKNN: [18:39:15.698] 32  Concat         /model/model.8/Split_output_1                                 INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000a2800 0x000af000 0x0000c800
+D RKNN: [18:39:15.698] 32  Concat         /model/model.8/m.0/Add_output_0                               INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000bb800 0x000c8000 0x0000c800
+D RKNN: [18:39:15.698] 33  ConvRelu       /model/model.8/Concat_output_0                                INT8      NC1HWC2      (1,384,20,20)  (1,24,20,20,16)  | 0x000c8000 0x000ed800 0x00025800
+D RKNN: [18:39:15.698] 34  ConvRelu       /model/model.8/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 35  MaxPool        /model/model.9/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000af000 0x000bb800 0x0000c800
+D RKNN: [18:39:15.698] 36  MaxPool        /model/model.9/m/MaxPool_output_0                             INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00096000 0x000a2800 0x0000c800
+D RKNN: [18:39:15.698] 37  MaxPool        /model/model.9/m_1/MaxPool_output_0                           INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000a2800 0x000af000 0x0000c800
+D RKNN: [18:39:15.698] 38  Concat         /model/model.9/cv1/act/Relu_output_0                          INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000af000 0x000bb800 0x0000c800
+D RKNN: [18:39:15.698] 38  Concat         /model/model.9/m/MaxPool_output_0                             INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00096000 0x000a2800 0x0000c800
+D RKNN: [18:39:15.698] 38  Concat         /model/model.9/m_1/MaxPool_output_0                           INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000a2800 0x000af000 0x0000c800
+D RKNN: [18:39:15.698] 38  Concat         /model/model.9/m_2/MaxPool_output_0                           INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x000bb800 0x000c8000 0x0000c800
+D RKNN: [18:39:15.698] 39  ConvRelu       /model/model.9/Concat_output_0                                INT8      NC1HWC2      (1,512,20,20)  (1,32,20,20,16)  | 0x000c8000 0x000fa000 0x00032000
+D RKNN: [18:39:15.698] 40  Resize         /model/model.9/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 41  Concat         /model/model.10/Resize_output_0                               INT8      NC1HWC2      (1,256,40,40)  (1,16,40,40,16)  | 0x000af040 0x00113040 0x00064000
+D RKNN: [18:39:15.698] 41  Concat         /model/model.6/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 42  ConvRelu       /model/model.11/Concat_output_0                               INT8      NC1HWC2      (1,384,40,40)  (1,24,40,40,16)  | 0x00113040 0x001a9040 0x00096000
+D RKNN: [18:39:15.698] 43  Split          /model/model.12/cv1/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 44  ConvRelu       /model/model.12/Split_output_1                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 45  ConvRelu       /model/model.12/m.0/cv1/act/Relu_output_0                     INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00064000 0x0007d000 0x00019000
+D RKNN: [18:39:15.698] 46  Concat         /model/model.12/Split_output_0                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000c8000 0x000e1000 0x00019000
+D RKNN: [18:39:15.698] 46  Concat         /model/model.12/Split_output_1                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 46  Concat         /model/model.12/m.0/cv2/act/Relu_output_0                     INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 47  ConvRelu       /model/model.12/Concat_output_0                               INT8      NC1HWC2      (1,192,40,40)  (1,12,40,40,16)  | 0x000e1000 0x0012c000 0x0004b000
+D RKNN: [18:39:15.698] 48  Resize         /model/model.12/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 49  Concat         /model/model.13/Resize_output_0                               INT8      NC1HWC2      (1,128,80,80)  (1,8,80,80,16)   | 0x000af040 0x00177040 0x000c8000
+D RKNN: [18:39:15.698] 49  Concat         /model/model.4/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 50  ConvRelu       /model/model.14/Concat_output_0                               INT8      NC1HWC2      (1,192,80,80)  (1,12,80,80,16)  | 0x00177040 0x002a3040 0x0012c000
+D RKNN: [18:39:15.698] 51  Split          /model/model.15/cv1/act/Relu_output_0                         INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 52  ConvRelu       /model/model.15/Split_output_1                                INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x000af000 0x000e1000 0x00032000
+D RKNN: [18:39:15.698] 53  ConvRelu       /model/model.15/m.0/cv1/act/Relu_output_0                     INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 54  Concat         /model/model.15/Split_output_0                                INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x000e1000 0x00113000 0x00032000
+D RKNN: [18:39:15.698] 54  Concat         /model/model.15/Split_output_1                                INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x000af000 0x000e1000 0x00032000
+D RKNN: [18:39:15.698] 54  Concat         /model/model.15/m.0/cv2/act/Relu_output_0                     INT8      NC1HWC2      (1,32,80,80)   (1,2,80,80,16)   | 0x00032000 0x00064000 0x00032000
+D RKNN: [18:39:15.698] 55  ConvRelu       /model/model.15/Concat_output_0                               INT8      NC1HWC2      (1,96,80,80)   (1,6,80,80,16)   | 0x00113000 0x001a9000 0x00096000
+D RKNN: [18:39:15.698] 56  ConvRelu       /model/model.15/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 57  Concat         /model/model.16/act/Relu_output_0                             INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x000af000 0x000c8000 0x00019000
+D RKNN: [18:39:15.698] 57  Concat         /model/model.12/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00064000 0x00096000 0x00032000
+D RKNN: [18:39:15.698] 58  ConvRelu       /model/model.15/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 59  ConvRelu       /model/model.15/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00000000 0x00064000 0x00064000
+D RKNN: [18:39:15.698] 60  ConvRelu       /model/model.17/Concat_output_0                               INT8      NC1HWC2      (1,192,40,40)  (1,12,40,40,16)  | 0x000c8000 0x00113000 0x0004b000
+D RKNN: [18:39:15.698] 61  Split          /model/model.18/cv1/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 62  ConvRelu       /model/model.22/cv2.0/cv2.0.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00113000 0x00177000 0x00064000
+D RKNN: [18:39:15.698] 63  Conv           /model/model.22/cv2.0/cv2.0.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x000af000 0x00113000 0x00064000
+D RKNN: [18:39:15.698] 64  ConvRelu       /model/model.22/cv3.0/cv3.0.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00177000 0x001db000 0x00064000
+D RKNN: [18:39:15.698] 65  exDataConvert  /model/model.22/cv3.0/cv3.0.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x000af000 0x00113000 0x00064000
+D RKNN: [18:39:15.698] 66  Conv           /model/model.22/cv3.0/cv3.0.1/act/Relu_output_0__float16      FLOAT16   NC1HWC2      (1,64,80,80)   (1,32,80,80,8)   | 0x00177000 0x0023f000 0x000c8000
+D RKNN: [18:39:15.698] 67  exDataConvert  /model/model.22/cv3.0/cv3.0.2/Conv_output_0                   FLOAT16   NC1HWC2      (1,5,80,80)    (1,8,80,80,8)    | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 68  ConvRelu       /model/model.18/Split_output_1                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0004b000 0x00064000 0x00019000
+D RKNN: [18:39:15.698] 69  ConvRelu       /model/model.18/m.0/cv1/act/Relu_output_0                     INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 70  Concat         /model/model.18/Split_output_0                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00032000 0x0004b000 0x00019000
+D RKNN: [18:39:15.698] 70  Concat         /model/model.18/Split_output_1                                INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0004b000 0x00064000 0x00019000
+D RKNN: [18:39:15.698] 70  Concat         /model/model.18/m.0/cv2/act/Relu_output_0                     INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00000000 0x00019000 0x00019000
+D RKNN: [18:39:15.698] 71  ConvRelu       /model/model.18/Concat_output_0                               INT8      NC1HWC2      (1,192,40,40)  (1,12,40,40,16)  | 0x000af000 0x000fa000 0x0004b000
+D RKNN: [18:39:15.698] 72  ConvRelu       /model/model.18/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 73  Concat         /model/model.19/act/Relu_output_0                             INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x0007d000 0x00089800 0x0000c800
+D RKNN: [18:39:15.698] 73  Concat         /model/model.9/cv2/act/Relu_output_0                          INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 74  ConvRelu       /model/model.18/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 75  ConvRelu       /model/model.18/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,128,40,40)  (1,8,40,40,16)   | 0x00000000 0x00032000 0x00032000
+D RKNN: [18:39:15.698] 76  ConvRelu       /model/model.20/Concat_output_0                               INT8      NC1HWC2      (1,384,20,20)  (1,24,20,20,16)  | 0x00032000 0x00057800 0x00025800
+D RKNN: [18:39:15.698] 77  Split          /model/model.21/cv1/act/Relu_output_0                         INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00000000 0x00019000 0x00019000
+D RKNN: [18:39:15.698] 78  ConvRelu       /model/model.22/cv2.1/cv2.1.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 79  Conv           /model/model.22/cv2.1/cv2.1.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00000000 0x00019000 0x00019000
+D RKNN: [18:39:15.698] 80  ConvRelu       /model/model.22/cv3.1/cv3.1.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00096000 0x000af000 0x00019000
+D RKNN: [18:39:15.698] 81  exDataConvert  /model/model.22/cv3.1/cv3.1.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00000000 0x00019000 0x00019000
+D RKNN: [18:39:15.698] 82  Conv           /model/model.22/cv3.1/cv3.1.1/act/Relu_output_0__float16      FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)   | 0x00032000 0x00064000 0x00032000
+D RKNN: [18:39:15.698] 83  exDataConvert  /model/model.22/cv3.1/cv3.1.2/Conv_output_0                   FLOAT16   NC1HWC2      (1,5,40,40)    (1,8,40,40,8)    | 0x00000000 0x0000c800 0x0000c800
+D RKNN: [18:39:15.698] 84  ConvRelu       /model/model.21/Split_output_1                                INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00025800 0x00032000 0x0000c800
+D RKNN: [18:39:15.698] 85  ConvRelu       /model/model.21/m.0/cv1/act/Relu_output_0                     INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00000000 0x0000c800 0x0000c800
+D RKNN: [18:39:15.698] 86  Concat         /model/model.21/Split_output_0                                INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00019000 0x00025800 0x0000c800
+D RKNN: [18:39:15.698] 86  Concat         /model/model.21/Split_output_1                                INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00025800 0x00032000 0x0000c800
+D RKNN: [18:39:15.698] 86  Concat         /model/model.21/m.0/cv2/act/Relu_output_0                     INT8      NC1HWC2      (1,128,20,20)  (1,8,20,20,16)   | 0x00032000 0x0003e800 0x0000c800
+D RKNN: [18:39:15.698] 87  ConvRelu       /model/model.21/Concat_output_0                               INT8      NC1HWC2      (1,384,20,20)  (1,24,20,20,16)  | 0x0003e800 0x00064000 0x00025800
+D RKNN: [18:39:15.698] 88  ConvRelu       /model/model.21/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00012c00 0x0002bc00 0x00019000
+D RKNN: [18:39:15.698] 89  ConvRelu       /model/model.21/cv2/act/Relu_output_0                         INT8      NC1HWC2      (1,256,20,20)  (1,16,20,20,16)  | 0x00012c00 0x0002bc00 0x00019000
+D RKNN: [18:39:15.698] 90  ConvRelu       /model/model.22/cv2.2/cv2.2.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x00000000 0x00006400 0x00006400
+D RKNN: [18:39:15.698] 91  Conv           /model/model.22/cv2.2/cv2.2.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x00012c00 0x00019000 0x00006400
+D RKNN: [18:39:15.698] 92  ConvRelu       /model/model.22/cv3.2/cv3.2.0/act/Relu_output_0               INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x00006400 0x0000c800 0x00006400
+D RKNN: [18:39:15.698] 93  exDataConvert  /model/model.22/cv3.2/cv3.2.1/act/Relu_output_0               INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x00012c00 0x00019000 0x00006400
+D RKNN: [18:39:15.698] 94  Conv           /model/model.22/cv3.2/cv3.2.1/act/Relu_output_0__float16      FLOAT16   NC1HWC2      (1,64,20,20)   (1,32,20,20,8)   | 0x00019000 0x00025800 0x0000c800
+D RKNN: [18:39:15.698] 95  exDataConvert  /model/model.22/cv3.2/cv3.2.2/Conv_output_0                   FLOAT16   NC1HWC2      (1,5,20,20)    (1,8,20,20,8)    | 0x00006400 0x00009600 0x00003200
+D RKNN: [18:39:15.698] 96  Reshape        /model/model.22/cv2.1/cv2.1.2/Conv_output_0                   INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 96  Reshape        /model/model.22/cv2.1/cv2.1.2/Conv_output_0_exSecondary       INT8      NC1HWC2      (1,64,40,40)   (1,4,40,40,16)   | 0x00012c00 0x0002bc00 0x00019000
+D RKNN: [18:39:15.698] 97  Reshape        /model/model.22/cv3.1/cv3.1.2/Conv_output_0__int8             INT8      NC1HWC2      (1,5,40,40)    (1,1,40,40,16)   | 0x0000c800 0x00012c00 0x00006400
+D RKNN: [18:39:15.698] 97  Reshape        /model/model.22/cv3.1/cv3.1.2/Conv_output_0__int8_exSecondary INT8      NC1HWC2      (1,5,40,40)    (1,2,40,40,16)   | 0x00012c00 0x0001f400 0x0000c800
+D RKNN: [18:39:15.698] 98  Reshape        /model/model.22/cv2.2/cv2.2.2/Conv_output_0                   INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x00000000 0x00006400 0x00006400
+D RKNN: [18:39:15.698] 98  Reshape        /model/model.22/cv2.2/cv2.2.2/Conv_output_0_exSecondary       INT8      NC1HWC2      (1,64,20,20)   (1,4,20,20,16)   | 0x0000af00 0x00011300 0x00006400
+D RKNN: [18:39:15.698] 99  Concat         /model/model.22/cv2.0/cv2.0.2/Conv_output_0                   INT8      NC1HWC2      (1,64,80,80)   (1,4,80,80,16)   | 0x00113000 0x00177000 0x00064000
+D RKNN: [18:39:15.698] 99  Concat         /model/model.22/Reshape_1_output_0                            INT8      NC1HWC2      (1,64,20,80)   (1,4,20,80,16)   | 0x0007d000 0x00096000 0x00019000
+D RKNN: [18:39:15.698] 99  Concat         /model/model.22/Reshape_2_output_0                            INT8      NC1HWC2      (1,64,5,80)    (1,4,5,80,16)    | 0x00000000 0x00006400 0x00006400
+D RKNN: [18:39:15.698] 100 Reshape        /model/model.22/Concat_output_0                               INT8      NC1HWC2      (1,64,105,80)  (1,4,105,80,16)  | 0x00177000 0x001fa400 0x00083400
+D RKNN: [18:39:15.698] 100 Reshape        /model/model.22/Concat_output_0_exSecondary                   INT8      NC1HWC2      (1,64,105,80)  (1,4,105,80,16)  | 0x0007d000 0x00100400 0x00083400
+D RKNN: [18:39:15.698] 101 exSoftmax13    /model/model.22/dfl/Reshape_output_0                          INT8      NC1HWC2      (4,16,1,8400)  (4,1,1,8400,16)  | 0x00177000 0x001fa400 0x00083400
+D RKNN: [18:39:15.698] 101 exSoftmax13    /model/model.22/dfl/Reshape_output_0_exSecondary              INT8      NC1HWC2      (4,16,1,8400)  (4,9,1,8400,16)  | 0x001fa400*0x006b8500 0x004be100
+D RKNN: [18:39:15.698] 102 Conv           /model/model.22/dfl/Transpose_output_0_sw                     INT8      NC1HWC2      (4,16,1,8400)  (4,1,1,8400,16)  | 0x0007d000 0x00100400 0x00083400
+D RKNN: [18:39:15.698] 103 Transpose      /model/model.22/dfl/Softmax_output_0_sw                       INT8      NC1HWC2      (4,1,1,8400)   (4,2,1,8400,16)  | 0x00100400 0x00206c00 0x00106800
+D RKNN: [18:39:15.698] 104 Split          /model/model.22/dfl/Reshape_1_output_0_rs                     INT8      NC1HWC2      (1,4,1,8400)   (1,1,1,8400,16)  | 0x00025800 0x00046500 0x00020d00
+D RKNN: [18:39:15.698] 105 Sub            /model/model.22/Slice_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x000bea00 0x000df700 0x00020d00
+D RKNN: [18:39:15.698] 106 Add            /model/model.22/Slice_1_output_0-rs                           INT8      NC1HWC2      (1,2,1,8400)   (1,2,1,8400,16)  | 0x0007d000 0x000bea00 0x00041a00
+D RKNN: [18:39:15.698] 107 Sub            /model/model.22/Add_1_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x000bea00 0x000df700 0x00020d00
+D RKNN: [18:39:15.698] 107 Sub            /model/model.22/Sub_output_0-rs                               INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x00025800 0x00046500 0x00020d00
+D RKNN: [18:39:15.698] 108 Add            /model/model.22/Sub_output_0-rs                               INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x00025800 0x00046500 0x00020d00
+D RKNN: [18:39:15.698] 108 Add            /model/model.22/Add_1_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x000bea00 0x000df700 0x00020d00
+D RKNN: [18:39:15.698] 109 Mul            /model/model.22/Add_2_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x0009dd00 0x000bea00 0x00020d00
+D RKNN: [18:39:15.698] 110 Concat         /model/model.22/Div_1_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x00025800 0x00046500 0x00020d00
+D RKNN: [18:39:15.698] 110 Concat         /model/model.22/Sub_1_output_0-rs                             INT8      NC1HWC2      (1,2,1,8400)   (1,1,1,8400,16)  | 0x0007d000 0x0009dd00 0x00020d00
+D RKNN: [18:39:15.698] 110 Concat         /model/model.22/Div_1_output_0-rs_exSecondary                 INT8      NC1HWC2      (1,4,1,8400)   (1,2,1,8400,16)  | 0x0009dd00 0x000df700 0x00041a00
+D RKNN: [18:39:15.698] 111 Mul            /model/model.22/Concat_2_output_0-rs                          INT8      NC1HWC2      (1,4,1,8400)   (1,2,1,8400,16)  | 0x000df700 0x00121100 0x00041a00
+D RKNN: [18:39:15.698] 111 Mul            /model/model.22/Concat_2_output_0-rs_exSecondary              INT8      NC1HWC2      (1,4,1,8400)   (1,4,1,8400,16)  | 0x00121100 0x001a4500 0x00083400
+D RKNN: [18:39:15.698] 112 Reshape        /model/model.22/cv3.2/cv3.2.2/Conv_output_0__int8             INT8      NC1HWC2      (1,5,20,20)    (1,1,20,20,16)   | 0x00009600 0x0000af00 0x00001900
+D RKNN: [18:39:15.698] 112 Reshape        /model/model.22/cv3.2/cv3.2.2/Conv_output_0__int8_exSecondary INT8      NC1HWC2      (1,5,20,20)    (1,2,20,20,16)   | 0x00000000 0x00003200 0x00003200
+D RKNN: [18:39:15.698] 113 Concat         /model/model.22/cv3.0/cv3.0.2/Conv_output_0__int8             INT8      NC1HWC2      (1,5,80,80)    (1,1,80,80,16)   | 0x00064000 0x0007d000 0x00019000
+D RKNN: [18:39:15.698] 113 Concat         /model/model.22/Reshape_4_output_0                            INT8      NC1HWC2      (1,5,20,80)    (1,1,20,80,16)   | 0x0001f400 0x00025800 0x00006400
+D RKNN: [18:39:15.698] 113 Concat         /model/model.22/Reshape_5_output_0                            INT8      NC1HWC2      (1,5,5,80)     (1,1,5,80,16)    | 0x00003200 0x00004b00 0x00001900
+D RKNN: [18:39:15.698] 114 Sigmoid        /model/model.22/Concat_1_output_0-rs                          INT8      NC1HWC2      (1,5,105,80)   (1,1,105,80,16)  | 0x0007d000 0x0009dd00 0x00020d00
+D RKNN: [18:39:15.698] 115 Reshape        /model/model.22/Concat_1_output_0_sw                          INT8      NC1HWC2      (1,5,105,80)   (1,4,105,80,16)  | 0x0009dd00 0x00121100 0x00083400
+D RKNN: [18:39:15.698] 115 Reshape        /model/model.22/Concat_1_output_0_sw_exSecondary              INT8      NC1HWC2      (1,5,105,80)   (1,2,105,80,16)  | 0x00046500 0x00087f00 0x00041a00
+D RKNN: [18:39:15.698] 116 Concat         /Div_output_0-rs                                              INT8      NC1HWC2      (1,4,1,8400)   (1,1,1,8400,16)  | 0x00025800 0x00046500 0x00020d00
+D RKNN: [18:39:15.698] 116 Concat         /model/model.22/Sigmoid_output_0_rs                           INT8      NC1HWC2      (1,5,1,8400)   (1,1,1,8400,16)  | 0x00000000 0x00020d00 0x00020d00
+D RKNN: [18:39:15.698] 116 Concat         /Div_output_0-rs_exSecondary                                  INT8      NC1HWC2      (1,9,1,8400)   (1,2,1,8400,16)  | 0x00046500 0x00087f00 0x00041a00
+D RKNN: [18:39:15.698] 117 Reshape        output0-rs                                                    INT8      NC1HWC2      (1,9,1,8400)   (1,2,1,8400,16)  | 0x00087f00 0x000c9900 0x00041a00
+D RKNN: [18:39:15.698] 117 Reshape        output0-rs_exSecondary                                        INT8      NC1HWC2      (1,9,1,8400)   (1,1,1,8400,16)  | 0x00000000 0x00033450 0x00033450
+D RKNN: [18:39:15.698] 118 OutputOperator output0                                                       INT8      UNDEFINED    (1,9,8400)     (1,9,8400)       | 0x00033480 0x00054180 0x00020d00
+D RKNN: [18:39:15.698] ----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.698] -----------------------------------------------------------------------------------------------------------------
+D RKNN: [18:39:15.698]                                      Const Tensor Information Table                          
+D RKNN: [18:39:15.698] -------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.698] ID  User        Tensor                                 DataType  OrigShape     |     [Start       End)       Size
+D RKNN: [18:39:15.698] -------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.698] 1   ConvRelu    model.model.0.conv.weight              INT8      (16,3,3,3)    | 0x00000000 0x00000900 0x00000900
+D RKNN: [18:39:15.698] 1   ConvRelu    model.model.0.conv.bias                INT32     (16)          | 0x00000900 0x00000a00 0x00000100
+D RKNN: [18:39:15.698] 2   ConvRelu    model.model.1.conv.weight              INT8      (32,16,3,3)   | 0x00000a00 0x00001c00 0x00001200
+D RKNN: [18:39:15.698] 2   ConvRelu    model.model.1.conv.bias                INT32     (32)          | 0x00001c00 0x00001d00 0x00000100
+D RKNN: [18:39:15.698] 3   ConvRelu    model.model.2.cv1.conv.weight          INT8      (32,32,1,1)   | 0x00001d00 0x00002100 0x00000400
+D RKNN: [18:39:15.698] 3   ConvRelu    model.model.2.cv1.conv.bias            INT32     (32)          | 0x00002100 0x00002200 0x00000100
+D RKNN: [18:39:15.698] 4   Split       onnx::Split_135                        INT64     (2)           | 0x00002200 0x00002210 0x00000010
+D RKNN: [18:39:15.698] 5   ConvRelu    model.model.2.m.0.cv1.conv.weight      INT8      (16,16,3,3)   | 0x00002240 0x00002b40 0x00000900
+D RKNN: [18:39:15.698] 5   ConvRelu    model.model.2.m.0.cv1.conv.bias        INT32     (16)          | 0x00002b40 0x00002c40 0x00000100
+D RKNN: [18:39:15.698] 6   ConvReluAdd model.model.2.m.0.cv2.conv.weight      INT8      (16,16,3,3)   | 0x00002c40 0x00003540 0x00000900
+D RKNN: [18:39:15.698] 6   ConvReluAdd model.model.2.m.0.cv2.conv.bias        INT32     (16)          | 0x00003540 0x00003640 0x00000100
+D RKNN: [18:39:15.698] 8   ConvRelu    model.model.2.cv2.conv.weight          INT8      (32,48,1,1)   | 0x00003640 0x00003c40 0x00000600
+D RKNN: [18:39:15.698] 8   ConvRelu    model.model.2.cv2.conv.bias            INT32     (32)          | 0x00003c40 0x00003d40 0x00000100
+D RKNN: [18:39:15.698] 9   ConvRelu    model.model.3.conv.weight              INT8      (64,32,3,3)   | 0x00003d40 0x00008540 0x00004800
+D RKNN: [18:39:15.698] 9   ConvRelu    model.model.3.conv.bias                INT32     (64)          | 0x00008540 0x00008740 0x00000200
+D RKNN: [18:39:15.698] 10  ConvRelu    model.model.4.cv1.conv.weight          INT8      (64,64,1,1)   | 0x00008740 0x00009740 0x00001000
+D RKNN: [18:39:15.698] 10  ConvRelu    model.model.4.cv1.conv.bias            INT32     (64)          | 0x00009740 0x00009940 0x00000200
+D RKNN: [18:39:15.698] 11  Split       onnx::Split_150                        INT64     (2)           | 0x00009940 0x00009950 0x00000010
+D RKNN: [18:39:15.698] 12  ConvRelu    model.model.4.m.0.cv1.conv.weight      INT8      (32,32,3,3)   | 0x00009980 0x0000bd80 0x00002400
+D RKNN: [18:39:15.698] 12  ConvRelu    model.model.4.m.0.cv1.conv.bias        INT32     (32)          | 0x0000bd80 0x0000be80 0x00000100
+D RKNN: [18:39:15.698] 13  ConvReluAdd model.model.4.m.0.cv2.conv.weight      INT8      (32,32,3,3)   | 0x0000be80 0x0000e280 0x00002400
+D RKNN: [18:39:15.698] 13  ConvReluAdd model.model.4.m.0.cv2.conv.bias        INT32     (32)          | 0x0000e280 0x0000e380 0x00000100
+D RKNN: [18:39:15.698] 14  ConvRelu    model.model.4.m.1.cv1.conv.weight      INT8      (32,32,3,3)   | 0x0000e380 0x00010780 0x00002400
+D RKNN: [18:39:15.698] 14  ConvRelu    model.model.4.m.1.cv1.conv.bias        INT32     (32)          | 0x00010780 0x00010880 0x00000100
+D RKNN: [18:39:15.698] 15  ConvReluAdd model.model.4.m.1.cv2.conv.weight      INT8      (32,32,3,3)   | 0x00010880 0x00012c80 0x00002400
+D RKNN: [18:39:15.698] 15  ConvReluAdd model.model.4.m.1.cv2.conv.bias        INT32     (32)          | 0x00012c80 0x00012d80 0x00000100
+D RKNN: [18:39:15.698] 17  ConvRelu    model.model.4.cv2.conv.weight          INT8      (64,128,1,1)  | 0x00012d80 0x00014d80 0x00002000
+D RKNN: [18:39:15.698] 17  ConvRelu    model.model.4.cv2.conv.bias            INT32     (64)          | 0x00014d80 0x00014f80 0x00000200
+D RKNN: [18:39:15.698] 18  ConvRelu    model.model.5.conv.weight              INT8      (128,64,3,3)  | 0x00014f80 0x00026f80 0x00012000
+D RKNN: [18:39:15.698] 18  ConvRelu    model.model.5.conv.bias                INT32     (128)         | 0x00026f80 0x00027380 0x00000400
+D RKNN: [18:39:15.698] 19  ConvRelu    model.model.6.cv1.conv.weight          INT8      (128,128,1,1) | 0x00027380 0x0002b380 0x00004000
+D RKNN: [18:39:15.698] 19  ConvRelu    model.model.6.cv1.conv.bias            INT32     (128)         | 0x0002b380 0x0002b780 0x00000400
+D RKNN: [18:39:15.698] 20  Split       onnx::Split_170                        INT64     (2)           | 0x0002b780 0x0002b790 0x00000010
+D RKNN: [18:39:15.698] 21  ConvRelu    model.model.6.m.0.cv1.conv.weight      INT8      (64,64,3,3)   | 0x0002b7c0 0x000347c0 0x00009000
+D RKNN: [18:39:15.698] 21  ConvRelu    model.model.6.m.0.cv1.conv.bias        INT32     (64)          | 0x000347c0 0x000349c0 0x00000200
+D RKNN: [18:39:15.698] 22  ConvReluAdd model.model.6.m.0.cv2.conv.weight      INT8      (64,64,3,3)   | 0x000349c0 0x0003d9c0 0x00009000
+D RKNN: [18:39:15.698] 22  ConvReluAdd model.model.6.m.0.cv2.conv.bias        INT32     (64)          | 0x0003d9c0 0x0003dbc0 0x00000200
+D RKNN: [18:39:15.698] 23  ConvRelu    model.model.6.m.1.cv1.conv.weight      INT8      (64,64,3,3)   | 0x0003dbc0 0x00046bc0 0x00009000
+D RKNN: [18:39:15.698] 23  ConvRelu    model.model.6.m.1.cv1.conv.bias        INT32     (64)          | 0x00046bc0 0x00046dc0 0x00000200
+D RKNN: [18:39:15.698] 24  ConvReluAdd model.model.6.m.1.cv2.conv.weight      INT8      (64,64,3,3)   | 0x00046dc0 0x0004fdc0 0x00009000
+D RKNN: [18:39:15.698] 24  ConvReluAdd model.model.6.m.1.cv2.conv.bias        INT32     (64)          | 0x0004fdc0 0x0004ffc0 0x00000200
+D RKNN: [18:39:15.698] 26  ConvRelu    model.model.6.cv2.conv.weight          INT8      (128,256,1,1) | 0x0004ffc0 0x00057fc0 0x00008000
+D RKNN: [18:39:15.698] 26  ConvRelu    model.model.6.cv2.conv.bias            INT32     (128)         | 0x00057fc0 0x000583c0 0x00000400
+D RKNN: [18:39:15.698] 27  ConvRelu    model.model.7.conv.weight              INT8      (256,128,3,3) | 0x000583c0 0x000a03c0 0x00048000
+D RKNN: [18:39:15.698] 27  ConvRelu    model.model.7.conv.bias                INT32     (256)         | 0x000a03c0 0x000a0bc0 0x00000800
+D RKNN: [18:39:15.698] 28  ConvRelu    model.model.8.cv1.conv.weight          INT8      (256,256,1,1) | 0x000a0bc0 0x000b0bc0 0x00010000
+D RKNN: [18:39:15.698] 28  ConvRelu    model.model.8.cv1.conv.bias            INT32     (256)         | 0x000b0bc0 0x000b13c0 0x00000800
+D RKNN: [18:39:15.698] 29  Split       onnx::Split_190                        INT64     (2)           | 0x000b13c0 0x000b13d0 0x00000010
+D RKNN: [18:39:15.698] 30  ConvRelu    model.model.8.m.0.cv1.conv.weight      INT8      (128,128,3,3) | 0x000b1400 0x000d5400 0x00024000
+D RKNN: [18:39:15.698] 30  ConvRelu    model.model.8.m.0.cv1.conv.bias        INT32     (128)         | 0x000d5400 0x000d5800 0x00000400
+D RKNN: [18:39:15.698] 31  ConvReluAdd model.model.8.m.0.cv2.conv.weight      INT8      (128,128,3,3) | 0x000d5800 0x000f9800 0x00024000
+D RKNN: [18:39:15.698] 31  ConvReluAdd model.model.8.m.0.cv2.conv.bias        INT32     (128)         | 0x000f9800 0x000f9c00 0x00000400
+D RKNN: [18:39:15.698] 33  ConvRelu    model.model.8.cv2.conv.weight          INT8      (256,384,1,1) | 0x000f9c00 0x00111c00 0x00018000
+D RKNN: [18:39:15.698] 33  ConvRelu    model.model.8.cv2.conv.bias            INT32     (256)         | 0x00111c00 0x00112400 0x00000800
+D RKNN: [18:39:15.698] 34  ConvRelu    model.model.9.cv1.conv.weight          INT8      (128,256,1,1) | 0x00112400 0x0011a400 0x00008000
+D RKNN: [18:39:15.698] 34  ConvRelu    model.model.9.cv1.conv.bias            INT32     (128)         | 0x0011a400 0x0011a800 0x00000400
+D RKNN: [18:39:15.698] 39  ConvRelu    model.model.9.cv2.conv.weight          INT8      (256,512,1,1) | 0x0011a800 0x0013a800 0x00020000
+D RKNN: [18:39:15.698] 39  ConvRelu    model.model.9.cv2.conv.bias            INT32     (256)         | 0x0013a800 0x0013b000 0x00000800
+D RKNN: [18:39:15.698] 40  Resize      empty_placeholder_0                    FLOAT     (1)           | 0x0036bc00 0x0036bd00 0x00000100
+D RKNN: [18:39:15.698] 40  Resize      /model/model.10/Constant_output_0      FLOAT     (4)           | 0x0013b000 0x0013b100 0x00000100
+D RKNN: [18:39:15.698] 42  ConvRelu    model.model.12.cv1.conv.weight         INT8      (128,384,1,1) | 0x0013b100 0x00147100 0x0000c000
+D RKNN: [18:39:15.698] 42  ConvRelu    model.model.12.cv1.conv.bias           INT32     (128)         | 0x00147100 0x00147500 0x00000400
+D RKNN: [18:39:15.698] 43  Split       onnx::Split_170_1                      INT64     (2)           | 0x0034aac0 0x0034aad0 0x00000010
+D RKNN: [18:39:15.698] 44  ConvRelu    model.model.12.m.0.cv1.conv.weight     INT8      (64,64,3,3)   | 0x00147500 0x00150500 0x00009000
+D RKNN: [18:39:15.698] 44  ConvRelu    model.model.12.m.0.cv1.conv.bias       INT32     (64)          | 0x00150500 0x00150700 0x00000200
+D RKNN: [18:39:15.698] 45  ConvRelu    model.model.12.m.0.cv2.conv.weight     INT8      (64,64,3,3)   | 0x00150700 0x00159700 0x00009000
+D RKNN: [18:39:15.698] 45  ConvRelu    model.model.12.m.0.cv2.conv.bias       INT32     (64)          | 0x00159700 0x00159900 0x00000200
+D RKNN: [18:39:15.698] 47  ConvRelu    model.model.12.cv2.conv.weight         INT8      (128,192,1,1) | 0x00159900 0x0015f900 0x00006000
+D RKNN: [18:39:15.698] 47  ConvRelu    model.model.12.cv2.conv.bias           INT32     (128)         | 0x0015f900 0x0015fd00 0x00000400
+D RKNN: [18:39:15.698] 48  Resize      empty_placeholder_0                    FLOAT     (1)           | 0x0036bc00 0x0036bd00 0x00000100
+D RKNN: [18:39:15.698] 48  Resize      /model/model.10/Constant_output_0_1    FLOAT     (4)           | 0x0034ab00 0x0034ac00 0x00000100
+D RKNN: [18:39:15.698] 50  ConvRelu    model.model.15.cv1.conv.weight         INT8      (64,192,1,1)  | 0x0015fd00 0x00162d00 0x00003000
+D RKNN: [18:39:15.698] 50  ConvRelu    model.model.15.cv1.conv.bias           INT32     (64)          | 0x00162d00 0x00162f00 0x00000200
+D RKNN: [18:39:15.698] 51  Split       onnx::Split_150_1                      INT64     (2)           | 0x0034ac00 0x0034ac10 0x00000010
+D RKNN: [18:39:15.698] 52  ConvRelu    model.model.15.m.0.cv1.conv.weight     INT8      (32,32,3,3)   | 0x00162f00 0x00165300 0x00002400
+D RKNN: [18:39:15.698] 52  ConvRelu    model.model.15.m.0.cv1.conv.bias       INT32     (32)          | 0x00165300 0x00165400 0x00000100
+D RKNN: [18:39:15.698] 53  ConvRelu    model.model.15.m.0.cv2.conv.weight     INT8      (32,32,3,3)   | 0x00165400 0x00167800 0x00002400
+D RKNN: [18:39:15.698] 53  ConvRelu    model.model.15.m.0.cv2.conv.bias       INT32     (32)          | 0x00167800 0x00167900 0x00000100
+D RKNN: [18:39:15.698] 55  ConvRelu    model.model.15.cv2.conv.weight         INT8      (64,96,1,1)   | 0x00167900 0x00169100 0x00001800
+D RKNN: [18:39:15.698] 55  ConvRelu    model.model.15.cv2.conv.bias           INT32     (64)          | 0x00169100 0x00169300 0x00000200
+D RKNN: [18:39:15.698] 56  ConvRelu    model.model.16.conv.weight             INT8      (64,64,3,3)   | 0x00169300 0x00172300 0x00009000
+D RKNN: [18:39:15.698] 56  ConvRelu    model.model.16.conv.bias               INT32     (64)          | 0x00172300 0x00172500 0x00000200
+D RKNN: [18:39:15.698] 58  ConvRelu    model.model.22.cv2.0.0.conv.weight     INT8      (64,64,3,3)   | 0x00172500 0x0017b500 0x00009000
+D RKNN: [18:39:15.698] 58  ConvRelu    model.model.22.cv2.0.0.conv.bias       INT32     (64)          | 0x0017b500 0x0017b700 0x00000200
+D RKNN: [18:39:15.698] 59  ConvRelu    model.model.22.cv3.0.0.conv.weight     INT8      (64,64,3,3)   | 0x0017b700 0x00184700 0x00009000
+D RKNN: [18:39:15.698] 59  ConvRelu    model.model.22.cv3.0.0.conv.bias       INT32     (64)          | 0x00184700 0x00184900 0x00000200
+D RKNN: [18:39:15.698] 60  ConvRelu    model.model.18.cv1.conv.weight         INT8      (128,192,1,1) | 0x00196d00 0x0019cd00 0x00006000
+D RKNN: [18:39:15.698] 60  ConvRelu    model.model.18.cv1.conv.bias           INT32     (128)         | 0x0019cd00 0x0019d100 0x00000400
+D RKNN: [18:39:15.698] 61  Split       onnx::Split_170_2                      INT64     (2)           | 0x0034ac40 0x0034ac50 0x00000010
+D RKNN: [18:39:15.698] 62  ConvRelu    model.model.22.cv2.0.1.conv.weight     INT8      (64,64,3,3)   | 0x00184900 0x0018d900 0x00009000
+D RKNN: [18:39:15.698] 62  ConvRelu    model.model.22.cv2.0.1.conv.bias       INT32     (64)          | 0x0018d900 0x0018db00 0x00000200
+D RKNN: [18:39:15.698] 63  Conv        model.model.22.cv2.0.2.weight          INT8      (64,64,1,1)   | 0x0019d100 0x0019e100 0x00001000
+D RKNN: [18:39:15.698] 63  Conv        model.model.22.cv2.0.2.bias            INT32     (64)          | 0x0019e100 0x0019e300 0x00000200
+D RKNN: [18:39:15.698] 64  ConvRelu    model.model.22.cv3.0.1.conv.weight     INT8      (64,64,3,3)   | 0x0018db00 0x00196b00 0x00009000
+D RKNN: [18:39:15.698] 64  ConvRelu    model.model.22.cv3.0.1.conv.bias       INT32     (64)          | 0x00196b00 0x00196d00 0x00000200
+D RKNN: [18:39:15.698] 66  Conv        model.model.22.cv3.0.2.weight          FLOAT16   (5,64,1,1)    | 0x0019e300 0x0019e580 0x00000280
+D RKNN: [18:39:15.698] 66  Conv        model.model.22.cv3.0.2.bias            FLOAT     (5)           | 0x0019e580 0x0019e5c0 0x00000040
+D RKNN: [18:39:15.698] 68  ConvRelu    model.model.18.m.0.cv1.conv.weight     INT8      (64,64,3,3)   | 0x0019e5c0 0x001a75c0 0x00009000
+D RKNN: [18:39:15.698] 68  ConvRelu    model.model.18.m.0.cv1.conv.bias       INT32     (64)          | 0x001a75c0 0x001a77c0 0x00000200
+D RKNN: [18:39:15.698] 69  ConvRelu    model.model.18.m.0.cv2.conv.weight     INT8      (64,64,3,3)   | 0x001a77c0 0x001b07c0 0x00009000
+D RKNN: [18:39:15.698] 69  ConvRelu    model.model.18.m.0.cv2.conv.bias       INT32     (64)          | 0x001b07c0 0x001b09c0 0x00000200
+D RKNN: [18:39:15.698] 71  ConvRelu    model.model.18.cv2.conv.weight         INT8      (128,192,1,1) | 0x001b09c0 0x001b69c0 0x00006000
+D RKNN: [18:39:15.698] 71  ConvRelu    model.model.18.cv2.conv.bias           INT32     (128)         | 0x001b69c0 0x001b6dc0 0x00000400
+D RKNN: [18:39:15.698] 72  ConvRelu    model.model.19.conv.weight             INT8      (128,128,3,3) | 0x001b6dc0 0x001dadc0 0x00024000
+D RKNN: [18:39:15.698] 72  ConvRelu    model.model.19.conv.bias               INT32     (128)         | 0x001dadc0 0x001db1c0 0x00000400
+D RKNN: [18:39:15.698] 74  ConvRelu    model.model.22.cv2.1.0.conv.weight     INT8      (64,128,3,3)  | 0x001db1c0 0x001ed1c0 0x00012000
+D RKNN: [18:39:15.698] 74  ConvRelu    model.model.22.cv2.1.0.conv.bias       INT32     (64)          | 0x001ed1c0 0x001ed3c0 0x00000200
+D RKNN: [18:39:15.698] 75  ConvRelu    model.model.22.cv3.1.0.conv.weight     INT8      (64,128,3,3)  | 0x001ed3c0 0x001ff3c0 0x00012000
+D RKNN: [18:39:15.698] 75  ConvRelu    model.model.22.cv3.1.0.conv.bias       INT32     (64)          | 0x001ff3c0 0x001ff5c0 0x00000200
+D RKNN: [18:39:15.698] 76  ConvRelu    model.model.21.cv1.conv.weight         INT8      (256,384,1,1) | 0x002119c0 0x002299c0 0x00018000
+D RKNN: [18:39:15.698] 76  ConvRelu    model.model.21.cv1.conv.bias           INT32     (256)         | 0x002299c0 0x0022a1c0 0x00000800
+D RKNN: [18:39:15.698] 77  Split       onnx::Split_190_1                      INT64     (2)           | 0x0034ac80 0x0034ac90 0x00000010
+D RKNN: [18:39:15.698] 78  ConvRelu    model.model.22.cv2.1.1.conv.weight     INT8      (64,64,3,3)   | 0x001ff5c0 0x002085c0 0x00009000
+D RKNN: [18:39:15.698] 78  ConvRelu    model.model.22.cv2.1.1.conv.bias       INT32     (64)          | 0x002085c0 0x002087c0 0x00000200
+D RKNN: [18:39:15.698] 79  Conv        model.model.22.cv2.1.2.weight          INT8      (64,64,1,1)   | 0x0022a1c0 0x0022b1c0 0x00001000
+D RKNN: [18:39:15.698] 79  Conv        model.model.22.cv2.1.2.bias            INT32     (64)          | 0x0022b1c0 0x0022b3c0 0x00000200
+D RKNN: [18:39:15.698] 80  ConvRelu    model.model.22.cv3.1.1.conv.weight     INT8      (64,64,3,3)   | 0x002087c0 0x002117c0 0x00009000
+D RKNN: [18:39:15.698] 80  ConvRelu    model.model.22.cv3.1.1.conv.bias       INT32     (64)          | 0x002117c0 0x002119c0 0x00000200
+D RKNN: [18:39:15.698] 82  Conv        model.model.22.cv3.1.2.weight          FLOAT16   (5,64,1,1)    | 0x0022b3c0 0x0022b640 0x00000280
+D RKNN: [18:39:15.698] 82  Conv        model.model.22.cv3.1.2.bias            FLOAT     (5)           | 0x0022b640 0x0022b680 0x00000040
+D RKNN: [18:39:15.698] 84  ConvRelu    model.model.21.m.0.cv1.conv.weight     INT8      (128,128,3,3) | 0x0022b680 0x0024f680 0x00024000
+D RKNN: [18:39:15.698] 84  ConvRelu    model.model.21.m.0.cv1.conv.bias       INT32     (128)         | 0x0024f680 0x0024fa80 0x00000400
+D RKNN: [18:39:15.698] 85  ConvRelu    model.model.21.m.0.cv2.conv.weight     INT8      (128,128,3,3) | 0x0024fa80 0x00273a80 0x00024000
+D RKNN: [18:39:15.698] 85  ConvRelu    model.model.21.m.0.cv2.conv.bias       INT32     (128)         | 0x00273a80 0x00273e80 0x00000400
+D RKNN: [18:39:15.698] 87  ConvRelu    model.model.21.cv2.conv.weight         INT8      (256,384,1,1) | 0x00273e80 0x0028be80 0x00018000
+D RKNN: [18:39:15.698] 87  ConvRelu    model.model.21.cv2.conv.bias           INT32     (256)         | 0x0028be80 0x0028c680 0x00000800
+D RKNN: [18:39:15.698] 88  ConvRelu    model.model.22.cv2.2.0.conv.weight     INT8      (64,256,3,3)  | 0x0028c680 0x002b0680 0x00024000
+D RKNN: [18:39:15.698] 88  ConvRelu    model.model.22.cv2.2.0.conv.bias       INT32     (64)          | 0x002b0680 0x002b0880 0x00000200
+D RKNN: [18:39:15.698] 89  ConvRelu    model.model.22.cv3.2.0.conv.weight     INT8      (64,256,3,3)  | 0x002b0880 0x002d4880 0x00024000
+D RKNN: [18:39:15.698] 89  ConvRelu    model.model.22.cv3.2.0.conv.bias       INT32     (64)          | 0x002d4880 0x002d4a80 0x00000200
+D RKNN: [18:39:15.698] 90  ConvRelu    model.model.22.cv2.2.1.conv.weight     INT8      (64,64,3,3)   | 0x002d4a80 0x002dda80 0x00009000
+D RKNN: [18:39:15.698] 90  ConvRelu    model.model.22.cv2.2.1.conv.bias       INT32     (64)          | 0x002dda80 0x002ddc80 0x00000200
+D RKNN: [18:39:15.698] 91  Conv        model.model.22.cv2.2.2.weight          INT8      (64,64,1,1)   | 0x002e6e80 0x002e7e80 0x00001000
+D RKNN: [18:39:15.698] 91  Conv        model.model.22.cv2.2.2.bias            INT32     (64)          | 0x002e7e80 0x002e8080 0x00000200
+D RKNN: [18:39:15.698] 92  ConvRelu    model.model.22.cv3.2.1.conv.weight     INT8      (64,64,3,3)   | 0x002ddc80 0x002e6c80 0x00009000
+D RKNN: [18:39:15.698] 92  ConvRelu    model.model.22.cv3.2.1.conv.bias       INT32     (64)          | 0x002e6c80 0x002e6e80 0x00000200
+D RKNN: [18:39:15.698] 94  Conv        model.model.22.cv3.2.2.weight          FLOAT16   (5,64,1,1)    | 0x002e8080 0x002e8300 0x00000280
+D RKNN: [18:39:15.698] 94  Conv        model.model.22.cv3.2.2.bias            FLOAT     (5)           | 0x002e8300 0x002e8340 0x00000040
+D RKNN: [18:39:15.698] 96  Reshape     /model/model.22/Constant_output_0_1    INT64     (4)           | 0x0034acc0 0x0034ace0 0x00000020
+D RKNN: [18:39:15.698] 97  Reshape     /model/model.22/Constant_3_output_0_1  INT64     (4)           | 0x0034ad00 0x0034ad20 0x00000020
+D RKNN: [18:39:15.698] 98  Reshape     /model/model.22/Constant_output_0_2    INT64     (4)           | 0x0034ad40 0x0034ad60 0x00000020
+D RKNN: [18:39:15.698] 100 Reshape     /model/model.22/dfl/Constant_output_0  INT64     (4)           | 0x002e8340 0x002e8360 0x00000020
+D RKNN: [18:39:15.698] 102 Conv        model.model.22.dfl.conv.weight         INT8      (1,16,1,1)    | 0x002e8380 0x002e83a0 0x00000020
+D RKNN: [18:39:15.698] 102 Conv        model.model.22.dfl.conv.weight_bias_0  INT32     (1)           | 0x0036bd00 0x0036bd80 0x00000080
+D RKNN: [18:39:15.698] 104 Split       /model/model.22/Slice_2sp_split        INT64     (2)           | 0x0034adc0 0x0034add0 0x00000010
+D RKNN: [18:39:15.698] 105 Sub         /model/model.22/Constant_12_output_0   INT8      (1,2,1,8400)  | 0x002e83I rknn building done.
+Done: /home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_relu_100ep_s0/weights/rknn_int8_h1 (3 float16 layers)
+c0 0x00329dc0 0x00041a00
+D RKNN: [18:39:15.698] 106 Add         /model/model.22/Constant_13_output_0   INT8      (1,2,1,8400)  | 0x00329dc0 0x0034aac0 0x00020d00
+D RKNN: [18:39:15.698] 109 Mul         /model/model.22/Div_1_2mul_i1          FLOAT     (1,1,1,1)     | 0x0034ae00 0x0034ae80 0x00000080
+D RKNN: [18:39:15.698] 111 Mul         /Div_2mul_i1                           INT8      (1,1,1,8400)  | 0x0034ae80 0x0036bb80 0x00020d00
+D RKNN: [18:39:15.698] 112 Reshape     /model/model.22/Constant_3_output_0_2  INT64     (4)           | 0x0034ad80 0x0034ada0 0x00000020
+D RKNN: [18:39:15.698] 115 Reshape     /model/model.22/Sigmoid_output_0_rs_i1 INT64     (4)           | 0x0036bb80 0x0036bba0 0x00000020
+D RKNN: [18:39:15.698] 117 Reshape     output0-rs_i1                          INT64     (3)           | 0x0036bbc0 0x0036bbd8 0x00000018
+D RKNN: [18:39:15.698] -------------------------------------------------------------------------------+---------------------------------
+D RKNN: [18:39:15.699] ----------------------------------------
+D RKNN: [18:39:15.699] Total Internal Memory Size: 6881.25KB
+D RKNN: [18:39:15.699] Total Weight Memory Size: 3505.38KB
+D RKNN: [18:39:15.699] ----------------------------------------
+D RKNN: [18:39:15.699] <<<<<<<< end: rknn::RKNNMemStatisticsPass

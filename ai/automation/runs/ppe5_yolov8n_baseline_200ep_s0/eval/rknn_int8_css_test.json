@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.7269,
+  "recall": 0.7043,
+  "map50": 0.7081,
+  "map50_95": 0.3796,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.6152,
+      "recall": 0.7273,
+      "ap50": 0.697,
+      "ap50_95": 0.3287,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.6114,
+      "recall": 0.5122,
+      "ap50": 0.4978,
+      "ap50_95": 0.2631,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.8259,
+      "recall": 0.6889,
+      "ap50": 0.7344,
+      "ap50_95": 0.4,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.8366,
+      "recall": 0.8689,
+      "ap50": 0.8587,
+      "ap50_95": 0.4871,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.7453,
+      "recall": 0.7241,
+      "ap50": 0.7527,
+      "ap50_95": 0.4189,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_200ep_s0",
+  "model_file": "weights/rknn_int8/best-rk3588.rknn",
+  "model_sha256": "7a1e0f66b8665dd518b8f87c030ad98a8bcd71a7b2fbc12ce7a7025d8adda705",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T18:58:29",
+    "kept_anchors": 10047,
+    "normalized_boxes": true
+  }
+}

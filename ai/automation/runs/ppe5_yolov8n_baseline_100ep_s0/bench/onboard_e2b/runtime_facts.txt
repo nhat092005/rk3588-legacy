@@ -1,0 +1,7 @@
+# read 2026-10-30 after E2b
+E2b first line of b1_A.log: api 2.3.2 (429f97ae6b@2025-04-09T09:09:27) driver 0.9.8 core_mask 1 detail 0
+E2   first line of ../onboard_e2/b1_A.log: api 2.3.2 (429f97ae6b@2025-04-09T09:09:27) driver 0.9.8 core_mask 1 detail 0
+Same RKNN API and driver version. Board kernel at E2b: 6.1.99-rockchip-rk3588 (uname -r). The kernel at E2 was not recorded, so same kernel is not confirmed.
+The board was rebooted between E2 and E2b (uptime 39 min when first read on 2026-10-30).
+Local copy check: 34 files and the md5 of the 8 CSVs are the same on the board and in this directory.
+Dates use the PC clock (UTC+7, 2026-10-30 23:54 when checked). The board clock is UTC+8 and showed 2026-10-31 00:54 at the same instant, so board logs say 10-31 for the same night.

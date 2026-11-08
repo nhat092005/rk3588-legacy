@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.9014,
+  "recall": 0.7302,
+  "map50": 0.7952,
+  "map50_95": 0.4966,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.989,
+      "recall": 0.8208,
+      "ap50": 0.9291,
+      "ap50_95": 0.6008,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.7655,
+      "recall": 0.5366,
+      "ap50": 0.5299,
+      "ap50_95": 0.2865,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.909,
+      "recall": 0.7,
+      "ap50": 0.7812,
+      "ap50_95": 0.4949,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.9107,
+      "recall": 0.8525,
+      "ap50": 0.8898,
+      "ap50_95": 0.5645,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.9327,
+      "recall": 0.7414,
+      "ap50": 0.8461,
+      "ap50_95": 0.5364,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "model_file": "weights/rknn_int8h5/best-rk3588.rknn",
+  "model_sha256": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T23:59:51",
+    "kept_anchors": 11255,
+    "normalized_boxes": true
+  }
+}

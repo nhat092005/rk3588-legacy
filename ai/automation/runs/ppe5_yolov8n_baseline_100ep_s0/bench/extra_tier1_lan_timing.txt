@@ -1,0 +1,14 @@
+load_rknn 0.0 s
+init_runtime ret=0 1.5 s
+eval_perf call 0 wall 0.21 s
+eval_perf call 1 wall 0.21 s
+eval_perf call 2 wall 0.22 s
+eval_perf call 3 wall 0.21 s
+eval_perf call 4 wall 0.23 s
+eval_perf call 5 wall 0.43 s
+eval_perf call 6 wall 0.23 s
+eval_perf call 7 wall 0.23 s
+eval_perf call 8 wall 0.22 s
+eval_perf call 9 wall 0.22 s
+release 0.0 s
+DONE

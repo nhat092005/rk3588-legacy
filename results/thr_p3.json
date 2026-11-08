@@ -1,0 +1,874 @@
+{
+ "runs": [
+  {
+   "code": "T1",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 54.7,
+   "wall_s": 22.631,
+   "t_pre": 0.216,
+   "t_npu": 17.15,
+   "t_post": 0.662,
+   "cpu_pct": 23.7,
+   "temp_start": 47.2,
+   "temp_max": 49.0,
+   "rss": {
+    "start": 49.75390625,
+    "frames_loaded": 148.52734375,
+    "after_context_1": 172.265625
+   },
+   "peak_rss": 242.5,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T2",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 55.86,
+   "wall_s": 22.164,
+   "t_pre": 0.21,
+   "t_npu": 16.78,
+   "t_post": 0.663,
+   "cpu_pct": 24.7,
+   "temp_start": 47.2,
+   "temp_max": 49.0,
+   "rss": {
+    "start": 49.75390625,
+    "frames_loaded": 148.52734375,
+    "after_context_1": 172.26171875
+   },
+   "peak_rss": 250.8,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T3",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 56.09,
+   "wall_s": 22.07,
+   "t_pre": 0.212,
+   "t_npu": 16.68,
+   "t_post": 0.668,
+   "cpu_pct": 25.6,
+   "temp_start": 47.2,
+   "temp_max": 49.9,
+   "rss": {
+    "start": 49.75,
+    "frames_loaded": 148.5234375,
+    "after_context_1": 172.2578125
+   },
+   "peak_rss": 242.7,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T4",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 102.09,
+   "wall_s": 12.127,
+   "t_pre": 0.312,
+   "t_npu": 18.222,
+   "t_post": 0.694,
+   "cpu_pct": 46.5,
+   "temp_start": 47.2,
+   "temp_max": 52.7,
+   "rss": {
+    "start": 49.73828125,
+    "frames_loaded": 148.51171875,
+    "after_context_1": 172.24609375,
+    "after_context_2": 188.53515625
+   },
+   "peak_rss": 295.3,
+   "frames_per_context": [
+    625,
+    613
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T5",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 140.67,
+   "wall_s": 8.801,
+   "t_pre": 0.466,
+   "t_npu": 19.526,
+   "t_post": 0.762,
+   "cpu_pct": 67.5,
+   "temp_start": 48.1,
+   "temp_max": 54.5,
+   "rss": {
+    "start": 49.76171875,
+    "frames_loaded": 148.53515625,
+    "after_context_1": 172.20703125,
+    "after_context_2": 188.5546875,
+    "after_context_3": 197.91796875
+   },
+   "peak_rss": 285.6,
+   "frames_per_context": [
+    421,
+    407,
+    410
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T6",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 147.39,
+   "wall_s": 8.399,
+   "t_pre": 1.084,
+   "t_npu": 20.138,
+   "t_post": 1.277,
+   "cpu_pct": 72.4,
+   "temp_start": 48.1,
+   "temp_max": 55.5,
+   "rss": {
+    "start": 49.87109375,
+    "frames_loaded": 148.640625,
+    "after_context_1": 172.30859375,
+    "after_context_2": 188.65625,
+    "after_context_3": 198.01953125
+   },
+   "peak_rss": 330.9,
+   "frames_per_context": [
+    415,
+    413,
+    410
+   ],
+   "cached_images": 82,
+   "pre_workers": 1,
+   "post_workers": 1
+  },
+  {
+   "code": "T7",
+   "rep": 1,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 143.51,
+   "wall_s": 8.626,
+   "t_pre": 0.377,
+   "t_npu": 19.468,
+   "t_post": 0.738,
+   "cpu_pct": 0.7,
+   "temp_start": 48.1,
+   "temp_max": 54.5,
+   "rss": {
+    "start": 49.76171875,
+    "per_process_after_init": [
+     183.6875,
+     183.75,
+     183.94921875
+    ]
+   },
+   "peak_rss": 51.6,
+   "frames_per_context": [
+    419,
+    409,
+    410
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T1",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 54.66,
+   "wall_s": 22.649,
+   "t_pre": 0.223,
+   "t_npu": 17.161,
+   "t_post": 0.662,
+   "cpu_pct": 23.5,
+   "temp_start": 49.0,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.75,
+    "frames_loaded": 148.5234375,
+    "after_context_1": 172.26171875
+   },
+   "peak_rss": 243.5,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T2",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 55.76,
+   "wall_s": 22.201,
+   "t_pre": 0.217,
+   "t_npu": 16.789,
+   "t_post": 0.662,
+   "cpu_pct": 24.9,
+   "temp_start": 48.1,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.75390625,
+    "frames_loaded": 148.52734375,
+    "after_context_1": 172.26171875
+   },
+   "peak_rss": 251.9,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T3",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 56.1,
+   "wall_s": 22.067,
+   "t_pre": 0.219,
+   "t_npu": 16.683,
+   "t_post": 0.665,
+   "cpu_pct": 25.6,
+   "temp_start": 48.1,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.74609375,
+    "frames_loaded": 148.51953125,
+    "after_context_1": 172.1953125
+   },
+   "peak_rss": 242.8,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T4",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 101.62,
+   "wall_s": 12.183,
+   "t_pre": 0.325,
+   "t_npu": 18.286,
+   "t_post": 0.696,
+   "cpu_pct": 47.2,
+   "temp_start": 48.1,
+   "temp_max": 53.6,
+   "rss": {
+    "start": 49.7421875,
+    "frames_loaded": 148.515625,
+    "after_context_1": 172.19140625,
+    "after_context_2": 188.5390625
+   },
+   "peak_rss": 294.9,
+   "frames_per_context": [
+    623,
+    615
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T5",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 141.47,
+   "wall_s": 8.751,
+   "t_pre": 0.415,
+   "t_npu": 19.49,
+   "t_post": 0.753,
+   "cpu_pct": 66.2,
+   "temp_start": 49.0,
+   "temp_max": 55.5,
+   "rss": {
+    "start": 49.76171875,
+    "frames_loaded": 148.53515625,
+    "after_context_1": 172.265625,
+    "after_context_2": 188.61328125,
+    "after_context_3": 197.9765625
+   },
+   "peak_rss": 318.0,
+   "frames_per_context": [
+    421,
+    409,
+    408
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T6",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 146.88,
+   "wall_s": 8.428,
+   "t_pre": 1.11,
+   "t_npu": 20.231,
+   "t_post": 1.337,
+   "cpu_pct": 74.1,
+   "temp_start": 49.0,
+   "temp_max": 56.4,
+   "rss": {
+    "start": 49.86328125,
+    "frames_loaded": 148.6328125,
+    "after_context_1": 172.36328125,
+    "after_context_2": 188.7109375,
+    "after_context_3": 198.07421875
+   },
+   "peak_rss": 325.5,
+   "frames_per_context": [
+    417,
+    410,
+    411
+   ],
+   "cached_images": 82,
+   "pre_workers": 1,
+   "post_workers": 1
+  },
+  {
+   "code": "T7",
+   "rep": 2,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 143.44,
+   "wall_s": 8.631,
+   "t_pre": 0.383,
+   "t_npu": 19.472,
+   "t_post": 0.739,
+   "cpu_pct": 0.7,
+   "temp_start": 49.0,
+   "temp_max": 55.5,
+   "rss": {
+    "start": 49.75,
+    "per_process_after_init": [
+     183.8515625,
+     183.6953125,
+     183.69921875
+    ]
+   },
+   "peak_rss": 51.6,
+   "frames_per_context": [
+    418,
+    411,
+    409
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T1",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 54.62,
+   "wall_s": 22.666,
+   "t_pre": 0.216,
+   "t_npu": 17.174,
+   "t_post": 0.666,
+   "cpu_pct": 23.7,
+   "temp_start": 49.0,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.75,
+    "frames_loaded": 148.51953125,
+    "after_context_1": 172.25390625
+   },
+   "peak_rss": 242.3,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T2",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 55.72,
+   "wall_s": 22.217,
+   "t_pre": 0.214,
+   "t_npu": 16.812,
+   "t_post": 0.661,
+   "cpu_pct": 24.8,
+   "temp_start": 49.0,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.7578125,
+    "frames_loaded": 148.53125,
+    "after_context_1": 172.265625
+   },
+   "peak_rss": 242.6,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T3",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 56.15,
+   "wall_s": 22.047,
+   "t_pre": 0.216,
+   "t_npu": 16.674,
+   "t_post": 0.666,
+   "cpu_pct": 25.6,
+   "temp_start": 49.0,
+   "temp_max": 50.8,
+   "rss": {
+    "start": 49.75390625,
+    "frames_loaded": 148.52734375,
+    "after_context_1": 172.265625
+   },
+   "peak_rss": 242.7,
+   "frames_per_context": [
+    1238
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T4",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 102.0,
+   "wall_s": 12.137,
+   "t_pre": 0.321,
+   "t_npu": 18.24,
+   "t_post": 0.695,
+   "cpu_pct": 46.9,
+   "temp_start": 49.0,
+   "temp_max": 53.6,
+   "rss": {
+    "start": 49.75390625,
+    "frames_loaded": 148.52734375,
+    "after_context_1": 172.26171875,
+    "after_context_2": 188.609375
+   },
+   "peak_rss": 294.6,
+   "frames_per_context": [
+    623,
+    615
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T5",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 141.18,
+   "wall_s": 8.769,
+   "t_pre": 0.457,
+   "t_npu": 19.558,
+   "t_post": 0.754,
+   "cpu_pct": 68.5,
+   "temp_start": 49.0,
+   "temp_max": 56.4,
+   "rss": {
+    "start": 49.7578125,
+    "frames_loaded": 148.53125,
+    "after_context_1": 172.203125,
+    "after_context_2": 188.55078125,
+    "after_context_3": 197.9140625
+   },
+   "peak_rss": 285.1,
+   "frames_per_context": [
+    418,
+    411,
+    409
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  },
+  {
+   "code": "T6",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 147.64,
+   "wall_s": 8.385,
+   "t_pre": 1.025,
+   "t_npu": 20.115,
+   "t_post": 1.28,
+   "cpu_pct": 72.4,
+   "temp_start": 49.9,
+   "temp_max": 56.4,
+   "rss": {
+    "start": 49.875,
+    "frames_loaded": 148.64453125,
+    "after_context_1": 172.375,
+    "after_context_2": 188.72265625,
+    "after_context_3": 198.0859375
+   },
+   "peak_rss": 305.7,
+   "frames_per_context": [
+    417,
+    410,
+    411
+   ],
+   "cached_images": 82,
+   "pre_workers": 1,
+   "post_workers": 1
+  },
+  {
+   "code": "T7",
+   "rep": 3,
+   "realized": true,
+   "checks": {
+    "irq": true,
+    "affinity": true,
+    "freq": true,
+    "hold": true
+   },
+   "fps": 143.6,
+   "wall_s": 8.621,
+   "t_pre": 0.377,
+   "t_npu": 19.479,
+   "t_post": 0.736,
+   "cpu_pct": 0.7,
+   "temp_start": 49.9,
+   "temp_max": 56.4,
+   "rss": {
+    "start": 49.7421875,
+    "per_process_after_init": [
+     184.0,
+     183.65234375,
+     183.64453125
+    ]
+   },
+   "peak_rss": 51.5,
+   "frames_per_context": [
+    419,
+    408,
+    411
+   ],
+   "cached_images": 82,
+   "pre_workers": null,
+   "post_workers": null
+  }
+ ],
+ "configs": {
+  "T1": {
+   "label": "1 context CORE_0",
+   "fps_runs": [
+    54.7,
+    54.66,
+    54.62
+   ],
+   "fps": 54.66,
+   "spread": 0.0800000000000054,
+   "realized": true,
+   "cpu_pct": 23.7,
+   "cpu_spread": 0.1999999999999993,
+   "t_pre": 0.216,
+   "t_npu": 17.161,
+   "t_post": 0.662,
+   "temp_max": 50.8,
+   "irq_line_min": 79254,
+   "irq_lines_fired": 1
+  },
+  "T2": {
+   "label": "1 context CORE_0_1",
+   "fps_runs": [
+    55.86,
+    55.76,
+    55.72
+   ],
+   "fps": 55.76,
+   "spread": 0.14000000000000057,
+   "realized": true,
+   "cpu_pct": 24.8,
+   "cpu_spread": 0.1999999999999993,
+   "t_pre": 0.214,
+   "t_npu": 16.789,
+   "t_post": 0.662,
+   "temp_max": 50.8,
+   "irq_line_min": 36482,
+   "irq_lines_fired": 2
+  },
+  "T3": {
+   "label": "1 context CORE_0_1_2",
+   "fps_runs": [
+    56.09,
+    56.1,
+    56.15
+   ],
+   "fps": 56.1,
+   "spread": 0.05999999999999517,
+   "realized": true,
+   "cpu_pct": 25.6,
+   "cpu_spread": 0.0,
+   "t_pre": 0.216,
+   "t_npu": 16.68,
+   "t_post": 0.666,
+   "temp_max": 50.8,
+   "irq_line_min": 36482,
+   "irq_lines_fired": 3
+  },
+  "T4": {
+   "label": "2 context CORE_0 v\u00e0 CORE_1",
+   "fps_runs": [
+    102.09,
+    101.62,
+    102.0
+   ],
+   "fps": 102.0,
+   "spread": 0.46999999999999886,
+   "realized": true,
+   "cpu_pct": 46.9,
+   "cpu_spread": 0.7000000000000028,
+   "t_pre": 0.321,
+   "t_npu": 18.24,
+   "t_post": 0.695,
+   "temp_max": 53.6,
+   "irq_line_min": 39879,
+   "irq_lines_fired": 2
+  },
+  "T5": {
+   "label": "3 context (S2)",
+   "fps_runs": [
+    140.67,
+    141.47,
+    141.18
+   ],
+   "fps": 141.18,
+   "spread": 0.8000000000000114,
+   "realized": true,
+   "cpu_pct": 67.5,
+   "cpu_spread": 2.299999999999997,
+   "t_pre": 0.457,
+   "t_npu": 19.526,
+   "t_post": 0.754,
+   "temp_max": 56.4,
+   "irq_line_min": 26901,
+   "irq_lines_fired": 3
+  },
+  "T6": {
+   "label": "S3 pipeline",
+   "fps_runs": [
+    147.39,
+    146.88,
+    147.64
+   ],
+   "fps": 147.39,
+   "spread": 0.7599999999999909,
+   "realized": true,
+   "cpu_pct": 72.4,
+   "cpu_spread": 1.6999999999999886,
+   "t_pre": 1.084,
+   "t_npu": 20.138,
+   "t_post": 1.28,
+   "temp_max": 56.4,
+   "irq_line_min": 27090,
+   "irq_lines_fired": 3
+  },
+  "T7": {
+   "label": "3 ti\u1ebfn tr\u00ecnh (ch\u1ea9n \u0111o\u00e1n)",
+   "fps_runs": [
+    143.51,
+    143.44,
+    143.6
+   ],
+   "fps": 143.51,
+   "spread": 0.1599999999999966,
+   "realized": true,
+   "cpu_pct": 0.7,
+   "cpu_spread": 0.0,
+   "t_pre": 0.377,
+   "t_npu": 19.472,
+   "t_post": 0.738,
+   "temp_max": 56.4,
+   "irq_line_min": 26964,
+   "irq_lines_fired": 3
+  }
+ },
+ "all_realized": true,
+ "best_s1": "T3",
+ "m12": {
+  "best": "T3",
+  "gain_fps": 85.08000000000001,
+  "gain_pct": 151.65775401069521,
+  "larger_spread": 0.8000000000000114,
+  "verdict": "h\u01a1n"
+ },
+ "m13": {
+  "gain_fps": 6.2099999999999795,
+  "gain_pct": 4.398640033999135,
+  "larger_spread": 0.8000000000000114,
+  "cpu_t5": 67.5,
+  "cpu_t6": 72.4,
+  "cpu_gain": -4.900000000000006,
+  "cpu_spread": 2.299999999999997,
+  "verdict": "kh\u00f4ng \u0111\u00e1ng gi\u1eef",
+  "workers": {
+   "pre": 1,
+   "post": 1
+  }
+ },
+ "m3": {
+  "diff_fps": 2.329999999999984,
+  "diff_pct": 1.6503754072814734,
+  "larger_spread": 0.8000000000000114,
+  "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+ },
+ "m14": {
+  "t1_after_init": 172.265625,
+  "t5_after_init": 197.91796875,
+  "per_added_context": 12.826171875,
+  "t1_peak": 242.5,
+  "t5_peak": 285.6
+ },
+ "rule": "Throughput rule (S2, S3, S1 throughput form, diagnostic), written 2026-10-31T11:45:58+07:00 before any throughput data exists. Not from a source. Not reviewed by the user (goal of 2026-10-31, phase 2). Reviewed by the advisor (design). The thresholds 5% (approved 2026-10-25, page 02-multi-core section 5.2) and the 3 independent runs per configuration (same page) are the only approved numbers. Protocol P3, the S3 worker formula and the realization checks are new and unreviewed.\nQuestions: M12 (S2, three contexts one core each, against the best single context), M13 (S3, explicit pipeline, against S2), M3 and M5 (does three processes differ from three threads), M14 (RSS per context), S1 in throughput form.\nModel: baseline SiLU seed 0 INT8, weights/rknn_int8/best-rk3588.rknn (sha256 a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd, same file as phase 1). The model is not changed for S2 and S3 because each context runs on one core, so the multi-core support of the activation op does not enter. ReLU is not measured for S2 and S3 (unknown).\nProtocol P3 (new, not P2). P2 puts everything on CPU4, which would serialize three contexts and a pipeline. P3: irqbalance stopped, NPU interrupt line 36 on CPU4, 37 on CPU5, 38 on CPU6 (set once by ~/p3/p3_hold.sh, saved affinities restored at the end), the measuring process runs under taskset -c 4-7 (little cores idle), frequencies locked (make board-check LOCK=1), rknn_server untouched (RKNNLite on the board does not use it). P3 is not approved by the user. The one context P2 latency of the same model (G4B run, CORE_0) is reported next to T1 as 1000 divided by latency.\nRealization of a run (per run, from its own record and the helper log): every fired interrupt line has at least 99 percent of its count on its assigned CPU (36 CPU4, 37 CPU5, 38 CPU6), the CPU affinity of the process (and of each child process in T7) is inside CPU4 to CPU7, frequency_before and frequency_after report locked, and the helper log inside the run window shows irqbalance inactive and the three affinities unchanged. A run that is not realized makes its configuration 'ch\u01b0a k\u1ebft lu\u1eadn (P3 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)'.\nConfigurations (same order in every repetition, 3 repetitions, 1238 frames each, warm-up 20 frames per context cycling over the first 20 cached images, 20 s rest between runs): T1 one context CORE_0, T2 one context CORE_0_1, T3 one context CORE_0_1_2 (these three are the S1 throughput form), T4 two contexts CORE_0 and CORE_1 (extra point), T5 three threads each with a context on CORE_0, CORE_1, CORE_2 (S2), T6 S3 pipeline (pre workers, one NPU worker per context on CORE_0, CORE_1, CORE_2, post workers, queues of 6), T7 diagnostic only: three processes one context each on CORE_0, CORE_1, CORE_2. Images: data/ppe5/processed/images/test (cached_images in the record gives the number actually cached).\nS3 worker formula, fixed now: from the first T5 run, effective NPU time per frame e = median T_npu / 3 (p50 of t_npu_ms, T5 run 1). pre workers = min(3, max(1, ceil(median T_pre / e))), post workers = min(3, max(1, ceil(median T_post / e))). Used for all three T6 runs. Limit: this is one formula, not a search, so S3 gains with other worker counts are unknown.\nStatements, only for configurations whose three runs are realized. spread of a configuration = maximum minus minimum FPS of its 3 runs. FPS of a configuration = median of the 3 runs.\nM12: best S1 = the one of T1, T2, T3 with the highest FPS. S2 is 'h\u01a1n' when FPS(T5) is at least 1.05 times FPS(best S1) and FPS(T5) minus FPS(best S1) is larger than the larger of the two spreads, otherwise 'kh\u00f4ng h\u01a1n'.\nM13: S3 is '\u0111\u00e1ng gi\u1eef' when FPS(T6) is at least 1.05 times FPS(T5) and the gain is larger than the larger spread, or when the gain is within the larger spread and median avg_process_cpu_pct of T6 is lower than of T5 by more than the larger spread of that percentage, otherwise 'kh\u00f4ng \u0111\u00e1ng gi\u1eef'.\nM3 and M5 (diagnostic, not a gate): T7 'kh\u00e1c' from T5 when the difference of the FPS is at least 5 percent of FPS(T5) and larger than the larger spread, otherwise 'kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c'. It does not say why.\nM14 (description): peak and after-init RSS of the process for 1 context (T1) and 3 contexts (T5) from rss_mib, and the difference per added context.\nLimits: Python threads (GIL behaviour of RKNNLite.inference is unknown unless T7 differs), only the test images are cached, one model, one seed, temperatures are recorded and not used as a condition.\nBudget: experiment 1 (3 repetitions). A second experiment only when P3 was not realized in some run.\n",
+ "driver_log": "11:52:06 r1_T1.json threads CORE_0: 54.7 FPS\n11:52:51 r1_T2.json threads CORE_0_1: 55.86 FPS\n11:53:36 r1_T3.json threads CORE_0_1_2: 56.09 FPS\n11:54:12 r1_T4.json threads CORE_0,CORE_1: 102.09 FPS\n11:54:44 r1_T5.json threads CORE_0,CORE_1,CORE_2: 140.67 FPS\n11:55:04 S3 workers from r1_T5: {'pre': 1, 'post': 1} (t_pre 0.466, t_npu 19.526, t_post 0.762 ms)\n11:55:17 r1_T6.json pipeline CORE_0,CORE_1,CORE_2: 147.39 FPS\n11:55:48 r1_T7.json procs CORE_0,CORE_1,CORE_2: 143.51 FPS\n11:56:33 r2_T1.json threads CORE_0: 54.66 FPS\n11:57:19 r2_T2.json threads CORE_0_1: 55.76 FPS\n11:58:04 r2_T3.json threads CORE_0_1_2: 56.1 FPS\n11:58:39 r2_T4.json threads CORE_0,CORE_1: 101.62 FPS\n11:59:11 r2_T5.json threads CORE_0,CORE_1,CORE_2: 141.47 FPS\n11:59:44 r2_T6.json pipeline CORE_0,CORE_1,CORE_2: 146.88 FPS\n12:00:15 r2_T7.json procs CORE_0,CORE_1,CORE_2: 143.44 FPS\n12:01:01 r3_T1.json threads CORE_0: 54.62 FPS\n12:01:46 r3_T2.json threads CORE_0_1: 55.72 FPS\n12:02:31 r3_T3.json threads CORE_0_1_2: 56.15 FPS\n12:03:06 r3_T4.json threads CORE_0,CORE_1: 102.0 FPS\n12:03:39 r3_T5.json threads CORE_0,CORE_1,CORE_2: 141.18 FPS\n12:04:11 r3_T6.json pipeline CORE_0,CORE_1,CORE_2: 147.64 FPS\n12:04:42 r3_T7.json procs CORE_0,CORE_1,CORE_2: 143.6 FPS\n",
+ "hold_progress": "12:51:40 state: kernel 6.1.99-rockchip-rk3588 ; up 13 hours, 12 minutes ; irqbalance was active ; saved: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n12:51:40 pinned: irq 36 smp=4 effective=4 irq 37 smp=5 effective=5 irq 38 smp=6 effective=6  irqbalance inactive\n13:05:03 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active\n"
+}

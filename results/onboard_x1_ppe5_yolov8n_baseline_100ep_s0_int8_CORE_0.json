@@ -1,0 +1,649 @@
+{
+ "blocks": {
+  "1": {
+   "cond": "A",
+   "block": 1,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 6,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 16.858999999999998,
+    "C": 0.9050000044226181,
+    "N": 15.65649999793095,
+    "D": 0.2980000099341851,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 0.047619047619047616,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 4.999999873689376,
+    "p95": 6.000000212225132
+   },
+   "handler_us": {
+    "median": 2.999999196617864,
+    "p95": 3.99999953515362
+   },
+   "irq_to_wakeup_us": {
+    "median": 3.99999953515362,
+    "p95": 4.999999873689376
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3753574 1242918168\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2838149 12355169979\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2936505 838027073\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1174280 12800861077\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1788354 528273696\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1005333 13129629355\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1614029 465229071\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1017510 13195553165\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7270026 11425311370\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8471246 11376668151\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7053838 11401372002\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5444105 11434094095\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3776428 1247838790\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2840160 12356870597\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2936684 838107899\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1174466 12807687212\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1788455 528321949\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1005731 13136495366\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1614066 465247624\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1017646 13202469339\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7270268 11432266708\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8471432 11383612530\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7077381 11407918035\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5444487 11440268922\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "2": {
+   "cond": "a1i0",
+   "block": 2,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 1,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 22.200499999999998,
+    "C": 2.126499999576481,
+    "N": 17.756000002009387,
+    "D": 2.348000001802575,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.6825396825396826,
+   "irq_idle1_median": 1.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 49.000000217347406,
+    "p95": 51.00000089441892
+   },
+   "handler_us": {
+    "median": 2.999999196617864,
+    "p95": 3.99999953515362
+   },
+   "irq_to_wakeup_us": {
+    "median": 45.000000682193786,
+    "p95": 46.00000102072954
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3778055 1248616195\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2840927 12375990913\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2937232 838231449\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1175322 12827373154\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1789221 528472245\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1007252 13156236711\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1614813 465396043\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1020369 13222165562\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7273109 11452260749\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8473515 11403602815\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7079877 11427919790\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5446928 11460233377\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3781447 1249400710\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2860392 12383526951\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2946238 839821195\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1190075 12833349184\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1789283 528497209\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1007493 13164924696\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1614870 465423760\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1020641 13230834480\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7273553 11461005656\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8474336 11412338667\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7082345 11436644205\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5447622 11468188296\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "3": {
+   "cond": "a0i0",
+   "block": 3,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 0,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.256500000000003,
+    "C": 2.060499995423015,
+    "N": 16.633000005640497,
+    "D": 0.5754999965574825,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.5238095238095238,
+   "irq_idle1_median": 0.5238095238095238,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 8.000000889296643,
+    "p95": 12.000000424450263
+   },
+   "handler_us": {
+    "median": 3.99999953515362,
+    "p95": 7.000000550760888
+   },
+   "irq_to_wakeup_us": {
+    "median": 4.0000013541430235,
+    "p95": 6.000000212225132
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3782804 1250271724\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2861878 12402524336\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2946982 840038129\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1190831 12853012118\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1790147 528860294\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1009503 13184436269\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1615624 465532058\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1020919 13250659697\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7275841 11480993736\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8476675 11432320627\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7085413 11456629730\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5450125 11488140955\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3795402 1252250628\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2872862 12406881538\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2947123 840088290\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1192135 12860507764\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1790412 529038179\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1010074 13191827387\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1615698 465596581\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1021117 13258171082\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7276126 11488595331\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8476990 11439924945\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7085802 11464224500\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5450457 11495102683\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "4": {
+   "cond": "a4i0",
+   "block": 4,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 4,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.216,
+    "C": 0.9109999937209068,
+    "N": 17.980000000534346,
+    "D": 0.3240000023652101,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 1.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 4.999999873689376,
+    "p95": 6.000000212225132
+   },
+   "handler_us": {
+    "median": 2.999999196617864,
+    "p95": 4.0000013541430235
+   },
+   "irq_to_wakeup_us": {
+    "median": 3.99999953515362,
+    "p95": 4.999999873689376
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3795917 1253027944\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2873714 12426083961\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2947385 840306197\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1192460 12880308893\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1790631 529269621\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1010356 13211617036\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1615719 465609586\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1021356 13278176482\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7278025 11508637900\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8479965 11459962397\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7086655 11484269174\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5451333 11515124564\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3801188 1254037226\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2891529 12432178029\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2948228 840475781\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1192788 12887660916\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1791444 529573614\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1010563 13218781626\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1616391 465911615\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1021624 13285381420\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7302555 11515824000\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8482324 11467525685\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7089902 11491853138\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5454132 11521885088\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "5": {
+   "cond": "a1i4",
+   "block": 5,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 1,
+   "app_share": 1.0,
+   "irq_cpu": 4,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.3805,
+    "C": 2.113499998813495,
+    "N": 15.158999996856437,
+    "D": 2.1109999988766504,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.6349206349206349,
+   "irq_idle1_median": 0.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 47.99999987881165,
+    "p95": 50.00000055588316
+   },
+   "handler_us": {
+    "median": 0.0,
+    "p95": 1.0000003385357559
+   },
+   "irq_to_wakeup_us": {
+    "median": 43.99999852466863,
+    "p95": 45.000000682193786
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3801730 1254887813\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2892306 12451298165\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2948337 840529863\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1193998 12907594207\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1791509 529604228\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1010911 13238766904\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1616453 465943034\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1024370 13305320085\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7303124 11535878172\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8483010 11487576284\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7091367 11511896494\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5454674 11541919670\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3801850 1254903929\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2892836 12459037186\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2958374 841976501\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1207271 12912782499\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1791685 529683320\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1012491 13246415282\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1616511 465971882\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1024482 13313056186\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7325631 11543571691\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8483357 11495362660\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7091829 11518922425\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5455037 11549698678\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "6": {
+   "cond": "a4i4",
+   "block": 6,
+   "half": 1,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 4,
+   "app_share": 1.0,
+   "irq_cpu": 4,
+   "irq_share": 1.0,
+   "median": {
+    "T": 16.413,
+    "C": 0.9000000063679181,
+    "N": 15.371999999842956,
+    "D": 0.14099999680183828,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 0.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 2.0000006770715117,
+    "p95": 3.0000010156072676
+   },
+   "handler_us": {
+    "median": 0.0,
+    "p95": 1.0000003385357559
+   },
+   "irq_to_wakeup_us": {
+    "median": 1.0000003385357559,
+    "p95": 2.0000006770715117
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3803003 1255885862\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2893729 12477828360\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2959046 842094728\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1207489 12932564459\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1792941 530112073\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1013274 13265910629\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1617124 466126316\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027113 13332775444\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7329537 11563568781\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8485762 11515352968\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7094280 11538924552\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5457527 11569678873\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3803092 1255899758\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2894138 12484403557\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2959063 842106227\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1207652 12939042454\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1793128 530188654\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1014655 13272438453\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1617144 466139651\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027212 13339406962\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7353093 11569156585\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8486217 11522021218\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7094731 11545588225\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5457930 11576334480\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "7": {
+   "cond": "a4i4",
+   "block": 7,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 4,
+   "app_share": 1.0,
+   "irq_cpu": 4,
+   "irq_share": 1.0,
+   "median": {
+    "T": 16.423000000000002,
+    "C": 0.9010000012494856,
+    "N": 15.37800000187417,
+    "D": 0.14450000162469223,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 0.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 2.0000006770715117,
+    "p95": 3.0000010156072676
+   },
+   "handler_us": {
+    "median": 0.0,
+    "p95": 1.0000003385357559
+   },
+   "irq_to_wakeup_us": {
+    "median": 1.0000003385357559,
+    "p95": 2.0000006770715117
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3803517 1256421050\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2895000 12503877115\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2959080 842110053\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1207861 12959237001\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1793364 530239776\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1015157 13292408095\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1617151 466142985\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027343 13359419998\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7357330 11589193141\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8487094 11542068222\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7095718 11565629473\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5458965 11596357838\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3803626 1256435087\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2895464 12510462949\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2959166 842172986\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1207997 12965819999\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1793565 530313203\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1016387 13298929730\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1617175 466158349\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027486 13366005185\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7380308 11594756377\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8487632 11548721988\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7095956 11572278762\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5459443 11602997181\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "8": {
+   "cond": "a1i4",
+   "block": 8,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 1,
+   "app_share": 1.0,
+   "irq_cpu": 4,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.3385,
+    "C": 2.1049999922979623,
+    "N": 15.159500002482673,
+    "D": 2.075000002150773,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.6190476190476191,
+   "irq_idle1_median": 0.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 47.0000013592653,
+    "p95": 50.00000055588316
+   },
+   "handler_us": {
+    "median": 0.0,
+    "p95": 1.0000003385357559
+   },
+   "irq_to_wakeup_us": {
+    "median": 43.99999852466863,
+    "p95": 44.99999886320438
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3805248 1257234323\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2898417 12529410897\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2960704 842655769\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1208900 12985129182\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1794772 530558127\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1016693 13318506941\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1618505 466375119\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027752 13385644215\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7383667 11614697335\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8491417 11568628920\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7100038 11592176660\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5463880 11622929379\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3805602 1257382006\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2899598 12537011040\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2971227 844198084\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1221761 12990232969\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1794943 530641628\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1017637 13326165190\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1618547 466417978\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1027852 13393351529\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7405908 11621646392\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8491797 11576419525\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7100467 11599962598\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5464213 11630720455\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "9": {
+   "cond": "a4i0",
+   "block": 9,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 4,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.122,
+    "C": 0.9039999986271141,
+    "N": 17.875500001537148,
+    "D": 0.32299999838869553,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 0.9603174603174602,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 4.999999873689376,
+    "p95": 6.000000212225132
+   },
+   "handler_us": {
+    "median": 2.999999196617864,
+    "p95": 4.0000013541430235
+   },
+   "irq_to_wakeup_us": {
+    "median": 3.99999953515362,
+    "p95": 4.999999873689376
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3806113 1257892508\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2901991 12556472774\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2971331 844261858\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1222105 13010210968\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1795228 530763724\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1017828 13346058468\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1618934 466745193\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1029665 13413014383\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7406574 11641678344\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8492615 11596448945\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7101694 11620007746\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5464679 11650770109\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3811473 1258900290\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2919790 12562586234\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2972059 844497271\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1222377 13017505145\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1795816 530898101\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1018093 13353403316\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1619439 466888790\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1030334 13420337497\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7431601 11648853260\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8494837 11603195518\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7103488 11627576048\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5466585 11658326111\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "10": {
+   "cond": "a0i0",
+   "block": 10,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 0,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.278499999999998,
+    "C": 2.0625000033760443,
+    "N": 16.629999997348932,
+    "D": 0.5764999950770289,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.5238095238095238,
+   "irq_idle1_median": 0.5238095238095238,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 8.999999408842996,
+    "p95": 12.000000424450263
+   },
+   "handler_us": {
+    "median": 3.99999953515362,
+    "p95": 7.000000550760888
+   },
+   "irq_to_wakeup_us": {
+    "median": 4.0000013541430235,
+    "p95": 6.000000212225132
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3812295 1259734343\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2920579 12581752931\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2972176 844531057\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1222541 13037511096\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1796004 530957453\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1018534 13373318596\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1619451 466898430\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1030673 13440316082\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7433399 11668898456\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8496828 11623229320\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7105735 11647614152\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5466885 11678375249\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3824811 1261750194\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2931806 12586105984\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2972362 844624432\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1222869 13045036570\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1796140 530995395\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1018798 13380856646\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1619524 466943277\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1030843 13447838219\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7433681 11675903193\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8497259 11630857525\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7107464 11655235365\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5467165 11685999255\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "11": {
+   "cond": "a1i0",
+   "block": 11,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 1,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 22.109,
+    "C": 2.1205000002737506,
+    "N": 17.75199999792676,
+    "D": 2.335499997570878,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.6825396825396826,
+   "irq_idle1_median": 1.0,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 49.000000217347406,
+    "p95": 51.00000089441892
+   },
+   "handler_us": {
+    "median": 2.999999196617864,
+    "p95": 3.99999953515362
+   },
+   "irq_to_wakeup_us": {
+    "median": 45.000000682193786,
+    "p95": 46.00000102072954
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3825990 1262702952\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2932650 12605036028\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2973504 844997629\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1223268 13064544120\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1796861 531155384\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1019235 13400555868\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1620516 467221062\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1031119 13467461236\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7439097 11695862409\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8500793 11650840430\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7111012 11675202035\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5470061 11705954227\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3829416 1263515580\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2952122 12612504116\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2983253 846786144\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1237228 13070231218\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1796976 531195109\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1019405 13409187875\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1620680 467274037\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1031875 13476060320\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7440567 11703778653\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8501315 11659532042\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7111226 11683892089\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5470739 11714634998\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  },
+  "12": {
+   "cond": "A",
+   "block": 12,
+   "half": 2,
+   "n": 300,
+   "realized": true,
+   "closure_ok_share": 1.0,
+   "overrun_delta": 0,
+   "app_cpu": 5,
+   "app_share": 1.0,
+   "irq_cpu": 0,
+   "irq_share": 1.0,
+   "median": {
+    "T": 19.2365,
+    "C": 0.905999992028228,
+    "N": 17.937499998879503,
+    "D": 0.3859999978885753,
+    "P": 0.0
+   },
+   "app_idle1_median": 0.0,
+   "irq_idle1_median": 0.9761904761904762,
+   "n_irq_median": 126.0,
+   "unpaired_total": 0,
+   "d_us": {
+    "median": 6.000000212225132,
+    "p95": 7.000000550760888
+   },
+   "handler_us": {
+    "median": 3.99999953515362,
+    "p95": 4.999999873689376
+   },
+   "irq_to_wakeup_us": {
+    "median": 4.999999873689376,
+    "p95": 6.000000212225132
+   },
+   "idle_counters": {
+    "pre": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3830003 1264318423\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2952939 12631701146\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2983621 847092789\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1237525 13089938924\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1797273 531489080\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1019641 13428918707\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1620803 467332632\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1035899 13495919140\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7441011 11723818024\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8502154 11679573405\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7111597 11703934213\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5471571 11734660786\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n",
+    "post": "/sys/devices/system/cpu/cpu0/cpuidle/state0 3834989 1265364837\n/sys/devices/system/cpu/cpu0/cpuidle/state1 2971087 12637856386\n/sys/devices/system/cpu/cpu1/cpuidle/state0 2983674 847113347\n/sys/devices/system/cpu/cpu1/cpuidle/state1 1237729 13097478773\n/sys/devices/system/cpu/cpu2/cpuidle/state0 1797345 531523549\n/sys/devices/system/cpu/cpu2/cpuidle/state1 1019836 13436504809\n/sys/devices/system/cpu/cpu3/cpuidle/state0 1620820 467339146\n/sys/devices/system/cpu/cpu3/cpuidle/state1 1036135 13503531381\n/sys/devices/system/cpu/cpu4/cpuidle/state0 7443083 11730687740\n/sys/devices/system/cpu/cpu4/cpuidle/state1 58856 2334503212\n/sys/devices/system/cpu/cpu5/cpuidle/state0 8525262 11686807292\n/sys/devices/system/cpu/cpu5/cpuidle/state1 61040 2341244919\n/sys/devices/system/cpu/cpu6/cpuidle/state0 7111835 11711571852\n/sys/devices/system/cpu/cpu6/cpuidle/state1 42294 2340396097\n/sys/devices/system/cpu/cpu7/cpuidle/state0 5471948 11742288523\n/sys/devices/system/cpu/cpu7/cpuidle/state1 37295 2335210986\n"
+   }
+  }
+ },
+ "r1": {
+  "a1i0 vs a4i4": {
+   "halves": [
+    {
+     "dT": 5.787499999999998,
+     "ratios": {
+      "C": 0.21192224504683602,
+      "N": 0.41192224659463184,
+      "D": 0.3813390937366285,
+      "P": 0.0
+     }
+    },
+    {
+     "dT": 5.686,
+     "ratios": {
+      "C": 0.2144741468561845,
+      "N": 0.41751670700889715,
+      "D": 0.38533239464407065,
+      "P": 0.0
+     }
+    }
+   ],
+   "verdict": "ch\u01b0a k\u1ebft lu\u1eadn"
+  },
+  "a0i0 vs a4i4": {
+   "halves": [
+    {
+     "dT": 2.8435000000000024,
+     "ratios": {
+      "C": 0.40812378725341875,
+      "N": 0.4434675596263549,
+      "D": 0.1528046420804093,
+      "P": 0.0
+     }
+    },
+    {
+     "dT": 2.8554999999999957,
+     "ratios": {
+      "C": 0.4067588871043812,
+      "N": 0.4384521083784849,
+      "D": 0.15128698772626065,
+      "P": 0.0
+     }
+    }
+   ],
+   "verdict": "ch\u01b0a k\u1ebft lu\u1eadn"
+  },
+  "a4i0 vs a4i4": {
+   "halves": [
+    {
+     "dT": 2.803000000000001,
+     "ratios": {
+      "C": 0.003924362237955291,
+      "N": 0.9304316805891508,
+      "D": 0.06528719427876267,
+      "P": 0.0
+     }
+    },
+    {
+     "dT": 2.698999999999998,
+     "ratios": {
+      "C": 0.001111521814608545,
+      "N": 0.9253427194008816,
+      "D": 0.06613560458095719,
+      "P": 0.0
+     }
+    }
+   ],
+   "verdict": "ch\u00eanh l\u1ec7ch th\u1eddi gian ch\u1ea1y c\u1ee7a c\u1eb7p n\u00e0y n\u1eb1m ch\u1ee7 y\u1ebfu \u1edf ph\u1ea7n N"
+  },
+  "a1i4 vs a4i4": {
+   "halves": [
+    {
+     "dT": 2.967500000000001,
+     "ratios": {
+      "C": 0.40893007327567865,
+      "N": -0.07177759157085714,
+      "D": 0.6638584674220088,
+      "P": 0.0
+     }
+    },
+    {
+     "dT": 2.915499999999998,
+     "ratios": {
+      "C": 0.4129651830041082,
+      "N": -0.07494426321094058,
+      "D": 0.6621505746959637,
+      "P": 0.0
+     }
+    }
+   ],
+   "verdict": "ch\u01b0a k\u1ebft lu\u1eadn"
+  },
+  "a1i0 vs a1i4": {
+   "halves": [
+    {
+     "dT": 2.8199999999999967,
+     "ratios": {
+      "C": 0.004609929348576608,
+      "N": 0.920921987642891,
+      "D": 0.08404255422905134,
+      "P": 0.0
+     }
+    },
+    {
+     "dT": 2.770500000000002,
+     "ratios": {
+      "C": 0.005594660882796719,
+      "N": 0.9357516677293213,
+      "D": 0.09402634738137687,
+      "P": 0.0
+     }
+    }
+   ],
+   "verdict": "ch\u00eanh l\u1ec7ch th\u1eddi gian ch\u1ea1y c\u1ee7a c\u1eb7p n\u00e0y n\u1eb1m ch\u1ee7 y\u1ebfu \u1edf ph\u1ea7n N"
+  }
+ },
+ "r2": {
+  "a1i0": [
+   0.6825396825396826,
+   0.6825396825396826
+  ],
+  "a4i4": [
+   0.0,
+   0.0
+  ],
+  "statement": "ch\u1ec9 b\u00e1o s\u1ed1"
+ },
+ "r3": {
+  "cells": {
+   "A": {
+    "x1": 18.04775,
+    "e2d": 20.500999999999998,
+    "gap": -2.453249999999997
+   },
+   "a1i0": {
+    "x1": 22.15475,
+    "e2d": 21.544249999999998,
+    "gap": 0.6105000000000018
+   },
+   "a0i0": {
+    "x1": 19.2675,
+    "e2d": 18.817500000000003,
+    "gap": 0.44999999999999574
+   },
+   "a4i0": {
+    "x1": 19.169,
+    "e2d": 18.8625,
+    "gap": 0.3064999999999998
+   },
+   "a1i4": {
+    "x1": 19.3595,
+    "e2d": 19.042749999999998,
+    "gap": 0.31675000000000253
+   },
+   "a4i4": {
+    "x1": 16.418,
+    "e2d": 16.308500000000002,
+    "gap": 0.10949999999999704
+   }
+  },
+  "caveat": true
+ },
+ "progress": "npu irqs: 36\n37\n38 ; irqbalance was: active ; trace_clock was local ; buffer_kb was 7\n03:30:21 state: kernel 6.1.99-rockchip-rk3588 ; up 3 hours, 51 minutes ; rknn_server pid '10380' ; adbd pid '11257'\n03:30:21 frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n03:30:21 md5: 9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench \n03:30:21 buffer_size_kb read back: 32771\n03:30:21 block 1 cond A pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 \n03:30:28 block 1 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  overrun_delta: 0\n03:30:48 block 2 cond a1i0 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:30:57 block 2 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:31:17 block 3 cond a0i0 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:31:24 block 3 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:31:44 block 4 cond a4i0 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:31:52 block 4 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:32:12 block 5 cond a1i4 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \n03:32:20 block 5 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  overrun_delta: 0\n03:32:40 block 6 cond a4i4 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \n03:32:47 block 6 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  overrun_delta: 0\n03:33:07 block 7 cond a4i4 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \n03:33:13 block 7 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  overrun_delta: 0\n03:33:33 block 8 cond a1i4 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \n03:33:41 block 8 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  overrun_delta: 0\n03:34:01 block 9 cond a4i0 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:34:09 block 9 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:34:29 block 10 cond a0i0 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:34:37 block 10 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:34:57 block 11 cond a1i0 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \n03:35:05 block 11 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0  overrun_delta: 0\n03:35:26 block 12 cond A pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 \n03:35:33 block 12 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  overrun_delta: 0\n03:35:53 restored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  trace_clock=[local] global counter uptime perf mono mono_raw boot tai buffer_kb=7 events_enable=0\n03:35:53 irqbalance now: active\n",
+ "rule": "X1 rule, written 2026-10-31T02:29:32+07:00 before any X1 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (the goal of 2026-10-31 lets the agent run without user approval, with advisor review before launch).\nQuestion (U1, U2, U9 of tmp/2026-10-31_latency-unknowns-tracker.md): split the wall time of each run into parts and find which part carries the difference between the slow, mid and fast levels. Position and timing only, no mechanism claim.\nSetup: C API path (rknn_perf_bench, CORE_0, zero UINT8 input), irqbalance stopped, frequencies locked, ftrace with trace_clock mono (same clock as the CSV t_us column), per-CPU buffer 32768 KB (read back, abort if not set). Events: irq:irq_handler_entry and irq_handler_exit filtered on irq 36, sched:sched_wakeup filtered on comm rknn_perf_bench, sched:sched_switch filtered on next_comm or prev_comm rknn_perf_bench, power:cpu_idle on all CPUs. A pilot of 7 runs (thread names only, no timing kept) showed rknn_perf_bench is the only thread switched in, about 63 times per run.\nConditions (app CPU / NPU interrupt CPU, names as E2d): A (no pin, default), a1i0, a0i0, a4i0, a1i4, a4i4. Order: A a1i0 a0i0 a4i0 a1i4 a4i4 then reversed (12 blocks), 50 warm-up and 300 timed runs per block, 20 s rest.\nDecomposition of a timed run (window [t_us, t_us + wall_us] from the CSV), from the rknn_perf_bench switch events inside the window:\n  C = time the thread is on CPU.\n  P = time off CPU after a switch-out with prev_state R (preempted while runnable).\n  For each off-CPU interval after a switch-out with prev_state S or D (sleeping), ended by a switch-in at s: the ending interrupt is the LAST irq 36 entry e with switch-out time < e <= s. N = e minus the switch-out time, D = s minus e. If no irq 36 entry lies in the interval, the whole interval counts as N and the interval is flagged unpaired.\n  Interrupts that arrive while the thread is on CPU, and earlier interrupts in the same off-CPU interval, add nothing to D.\n  Per run: T = wall_us, and C, N, D, P are sums over the run. Closure check: |T - (C+N+D+P)| <= 2 percent of T in at least 95 percent of timed runs of a block (2 percent and 95 percent are new numbers, not user approved).\nIdle state metrics (same definition in every cell):\n  app_idle = deepest power:cpu_idle state (0 WFI, 1 cpu-sleep) the CPU that later switches the thread in entered during the off-CPU interval (from switch-out to switch-in), per sleeping interval. Per run: share of sleeping intervals with app_idle = 1.\n  irq_idle = idle state of the interrupt CPU in the idle period that ends right before the ending interrupt entry e, per sleeping interval. Descriptive only.\nRealized block: as E2d (app on its pinned CPU in at least 99 percent of runs, A exempt, at least 99 percent of irq 36 entries on the target CPU), plus the closure check, plus no trace overrun during the block (per-block delta of the overrun counters is 0).\nStatements allowed (need both blocks of each compared cell realized):\n  R1 (where the difference is): pairs a1i0, a0i0, a4i0, a1i4 against a4i4, and a1i0 against a1i4. In each half: dT = difference of the median T, and for each part X in C, N, D, P: dX = difference of the median X. If |dT| < 1.25 ms (approved number) in a half, the pair is 'kh\u00f4ng \u00e1p d\u1ee5ng'. Otherwise, if 0.8 <= dX/dT <= 1.2 in both halves for one part X, write 'ch\u00eanh l\u1ec7ch th\u1eddi gian ch\u1ea1y c\u1ee7a c\u1eb7p n\u00e0y n\u1eb1m ch\u1ee7 y\u1ebfu \u1edf ph\u1ea7n X'. If no part qualifies, write 'ch\u01b0a k\u1ebft lu\u1eadn' and give all ratios. The bounds 0.8 and 1.2 are new numbers, not user approved.\n  R2 (association with cpu-sleep): per cell, median over runs of the app_idle share. If a1i0 is at least 0.9 in both blocks and a4i4 at most 0.1 in both blocks, write '\u1edf \u00f4 ch\u1eadm, CPU c\u1ee7a ti\u1ebfn tr\u00ecnh \u0111o h\u1ea7u nh\u01b0 lu\u00f4n v\u00e0o cpu-sleep trong l\u00fac ch\u1edd ng\u1eaft, \u1edf \u00f4 nhanh h\u1ea7u nh\u01b0 kh\u00f4ng'. Otherwise report the numbers only. 0.9 and 0.1 are new numbers, not user approved. This is an association, not a cause.\n  R3 (trace overhead, descriptive): median T per cell compared with the E2d medians of the same cell (same boot, uptime logged). If the gap exceeds 1.25 ms (approved number) for any cell, every statement carries '\u0111o khi c\u00f3 trace, m\u1ee9c c\u00f3 th\u1ec3 kh\u00e1c khi kh\u00f4ng trace'.\nDescriptive only: cpuidle counters per block (U9), distributions of D, of the handler time (entry to exit), and of interrupt to sched_wakeup.\nNot allowed: any statement about why the delay exists, about clusters or clock (CPU0-3 1.8 GHz, CPU4-5 2.256 GHz, CPU6-7 2.304 GHz).\nBudget: experiment 1 of at most 2 for U1 and U2.\n"
+}

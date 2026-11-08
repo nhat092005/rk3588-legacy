@@ -1,0 +1,59 @@
+{
+ "trials": [
+  {
+   "trial": 1,
+   "samples": 55,
+   "changed_samples": 54,
+   "first_changed": "36:0-7/0",
+   "irq_per_cpu": [
+    188583,
+    0,
+    0,
+    0,
+    3567,
+    0,
+    0,
+    0
+   ],
+   "cpu4_share": 0.018563622170179546
+  },
+  {
+   "trial": 2,
+   "samples": 49,
+   "changed_samples": 0,
+   "first_changed": null,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    192150,
+    0,
+    0,
+    0
+   ],
+   "cpu4_share": 1.0
+  },
+  {
+   "trial": 3,
+   "samples": 49,
+   "changed_samples": 0,
+   "first_changed": null,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    192150,
+    0,
+    0,
+    0
+   ],
+   "cpu4_share": 1.0
+  }
+ ],
+ "verdict": "irqbalance \u0111\u1ed5i affinity ng\u1eaft NPU trong l\u00fac ch\u1ea1y (\u0111\u00e3 quan s\u00e1t \u1edf 1/3 l\u1ea7n)",
+ "label_U4": "\u0110O",
+ "progress": "npu irqs: 36\n37\n38\n06:02:26 state: kernel 6.1.99-rockchip-rk3588 ; up 6 hours, 23 minutes ; irqbalance active ; md5 9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench \n06:02:26 trial 1 start: 36:4/4 37:4/4 38:4/4 \n06:03:23 trial 1 end: 36:0-7/0 37:0-7/0 38:0-7/0 \n06:03:53 trial 2 start: 36:4/4 37:4/4 38:4/4 \n06:04:43 trial 2 end: 36:4/4 37:4/4 38:4/4 \n06:05:13 trial 3 start: 36:4/4 37:4/4 38:4/4 \n06:06:04 trial 3 end: 36:4/4 37:4/4 38:4/4 \n06:06:34 restored: 36:0-7/0 37:0-7/0 38:0-7/0  irqbalance active\n",
+ "rule": "X9 rule, written 2026-10-31T04:06:26+07:00 before any X9 data exists. Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).\nQuestion (U4): in E2 block 2, 89 percent of the NPU interrupts stayed on CPU0 although the affinity had been set to CPU4, with irqbalance running. Does irqbalance rewrite the NPU interrupt affinity while the NPU is busy?\nSetup: E2 condition B repeated with irqbalance ACTIVE (as in E2): NPU interrupts 36, 37, 38 set to CPU4, app pinned to CPU4, C API (rknn_perf_bench, CORE_0, zero input), 3 trials of 3000 back-to-back runs (about 60 s each), 30 s rest. During each trial a reader logs smp_affinity_list and effective_affinity_list of the three lines every second. /proc/interrupts before and after each trial. Restore saved affinity on exit, irqbalance left as it was (active).\nStatements:\n  If in at least one trial any logged smp_affinity_list or effective_affinity_list of line 36 differs from 4: 'irqbalance \u0111\u1ed5i affinity ng\u1eaft NPU trong l\u00fac ch\u1ea1y (\u0111\u00e3 quan s\u00e1t \u1edf N/3 l\u1ea7n)', and report the CPU share of interrupts per trial. U4 label: \u0110O.\n  If no change is logged in all 3 trials and at least 99 percent of the interrupts are on CPU4 in all 3: 'kh\u00f4ng quan s\u00e1t th\u1ea5y irqbalance \u0111\u1ed5i affinity trong 3 l\u1ea7n 60 gi\u00e2y'. U4 label: CH\u01afA BI\u1ebeT (the E2 block 2 event is not reproduced).\n  Otherwise: 'ch\u01b0a k\u1ebft lu\u1eadn', U4 CH\u01afA BI\u1ebeT.\nBudget: experiment 1 for U4.\n"
+}

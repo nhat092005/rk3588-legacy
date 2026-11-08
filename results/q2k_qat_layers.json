@@ -1,0 +1,111 @@
+{
+ "note": "Q-2 of rule_qat.txt: layer table (first table of the verbose build log), written 2026-11-01 before the QAT mAP exists",
+ "qat": {
+  "rows": 114,
+  "counts": {
+   "CPU|INT8": 3,
+   "NPU|INT8": 103,
+   "NPU|FLOAT16": 8
+  },
+  "non_int8_npu": [
+   {
+    "id": 47,
+    "op": "exSwish",
+    "dtype": "FLOAT16",
+    "name": "exSwish:2014_Sigmoid_2swish"
+   },
+   {
+    "id": 48,
+    "op": "exDataConvert",
+    "dtype": "FLOAT16",
+    "name": "exDataConvert:quantize_per_tensor_72.1_QuantizeLinear"
+   },
+   {
+    "id": 49,
+    "op": "Resize",
+    "dtype": "FLOAT16",
+    "name": "Resize:layers_10.1_Resize"
+   },
+   {
+    "id": 50,
+    "op": "exDataConvert",
+    "dtype": "FLOAT16",
+    "name": "exDataConvert:layers_10.1__cvt_float16_int8"
+   },
+   {
+    "id": 59,
+    "op": "exSwish",
+    "dtype": "FLOAT16",
+    "name": "exSwish:2038_Sigmoid_2swish"
+   },
+   {
+    "id": 60,
+    "op": "exDataConvert",
+    "dtype": "FLOAT16",
+    "name": "exDataConvert:quantize_per_tensor_84.1_QuantizeLinear"
+   },
+   {
+    "id": 61,
+    "op": "Resize",
+    "dtype": "FLOAT16",
+    "name": "Resize:layers_13.1_Resize"
+   },
+   {
+    "id": 62,
+    "op": "exDataConvert",
+    "dtype": "FLOAT16",
+    "name": "exDataConvert:layers_13.1__cvt_float16_int8"
+   }
+  ],
+  "cpu_ops": [],
+  "total_cycles": 5532317
+ },
+ "split_ptq": {
+  "rows": 106,
+  "counts": {
+   "CPU|INT8": 3,
+   "NPU|INT8": 103
+  },
+  "non_int8_npu": [],
+  "cpu_ops": [],
+  "total_cycles": 5532317
+ },
+ "qat_train_log": [
+  {
+   "epoch": 1,
+   "mean_loss": 2.586325640693033,
+   "batches": 326,
+   "seconds": 108.9
+  },
+  {
+   "epoch": 2,
+   "mean_loss": 2.59383236411159,
+   "batches": 326,
+   "seconds": 102.7
+  },
+  {
+   "epoch": 3,
+   "mean_loss": 2.5646035927204998,
+   "batches": 326,
+   "seconds": 102.4
+  },
+  {
+   "epoch": 4,
+   "mean_loss": 2.5404050364816118,
+   "batches": 326,
+   "seconds": 102.1
+  },
+  {
+   "epoch": 5,
+   "mean_loss": 2.5422799536055583,
+   "batches": 326,
+   "seconds": 85.0
+  },
+  {
+   "epoch": 6,
+   "mean_loss": 2.458630794030757,
+   "batches": 326,
+   "seconds": 83.1
+  }
+ ]
+}

@@ -1,0 +1,815 @@
+{
+ "note": "N-1 to N-4 of rule_nodfl.txt, evaluated 2026-11-01 on board (RKNN via rknn_server), 1 seed, 1 run, git_dirty true",
+ "a2": {
+  "pt_fp32": {
+   "map50": 80.78,
+   "map50_95": 49.18,
+   "per_class": {
+    "Helmet": 58.2,
+    "NoHelmet": 30.48,
+    "NoVest": 48.1,
+    "Vest": 55.16,
+    "Person": 53.98
+   },
+   "sha256": "547fbee8a6c3de2876d422231eedeffba9c97a740450eda4a347f6dbd27e6d0f",
+   "file": "eval/pt_fp32_css_test.json"
+  },
+  "rknn_fp16": {
+   "map50": 80.81,
+   "map50_95": 49.33,
+   "per_class": {
+    "Helmet": 58.04,
+    "NoHelmet": 31.19,
+    "NoVest": 48.1,
+    "Vest": 55.17,
+    "Person": 54.12
+   },
+   "sha256": "f99258a99bb730b60d0ca35b3474811b2d253bc00ec33c0d903a800f0e828afd",
+   "file": "eval/rknn_fp16_css_test.json"
+  },
+  "rknn_int8": {
+   "map50": 70.61,
+   "map50_95": 36.75,
+   "per_class": {
+    "Helmet": 37.59,
+    "NoHelmet": 21.45,
+    "NoVest": 39.49,
+    "Vest": 44.82,
+    "Person": 40.37
+   },
+   "sha256": "84f1990865ff30df576fc409597bb125ea1a24c0882db037db833b135efaba7b",
+   "file": "eval/rknn_int8_css_test.json"
+  }
+ },
+ "silu": {
+  "pt_fp32": {
+   "map50": 80.06,
+   "map50_95": 49.99,
+   "per_class": {
+    "Helmet": 59.24,
+    "NoHelmet": 31.11,
+    "NoVest": 49.43,
+    "Vest": 56.78,
+    "Person": 53.4
+   },
+   "sha256": "193efa392540a21336cdf1f8e53ca6477e6f867806ee9cfb2e1d833fe25287a2",
+   "file": "eval/pt_fp32_css_test.json"
+  },
+  "rknn_fp16": {
+   "map50": 80.22,
+   "map50_95": 49.76,
+   "per_class": {
+    "Helmet": 59.15,
+    "NoHelmet": 30.74,
+    "NoVest": 49.29,
+    "Vest": 56.49,
+    "Person": 53.13
+   },
+   "sha256": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786",
+   "file": "eval/rknn_fp16_css_test.json"
+  },
+  "rknn_int8": {
+   "map50": 69.65,
+   "map50_95": 36.75,
+   "per_class": {
+    "Helmet": 34.12,
+    "NoHelmet": 22.77,
+    "NoVest": 38.26,
+    "Vest": 46.98,
+    "Person": 41.61
+   },
+   "sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+   "file": "eval/rknn_int8_css_test.json"
+  }
+ },
+ "drop_a2": 12.58,
+ "drop_silu": 13.01,
+ "band": [
+  11.66,
+  14.36
+ ],
+ "reading": "within 1.35 of SiLU drop: decode arithmetic in INT8 enough to cause the loss without DFL",
+ "n3_int8_ge_48_41": false,
+ "val_map50_95_a2": {
+  "epochs": 100,
+  "final": 0.52402,
+  "best": 0.52402
+ },
+ "val_map50_95_silu": {
+  "epochs": 100,
+  "final": 0.52234,
+  "best": 0.52355
+ },
+ "transferred": "285/354 items (nc 5 training log)",
+ "calibration": {
+  "stems_md5": "11d6a5c69414a6eafd8b98f99724b0b2",
+  "png_md5": "6652576adb7608ddf8ff326c57851732"
+ },
+ "rknn_sha256_int8": "84f1990865ff30df576fc409597bb125ea1a24c0882db037db833b135efaba7b",
+ "layers_int8": {
+  "rows": 116,
+  "counts": {
+   "CPU|INT8": 2,
+   "NPU|INT8": 114
+  },
+  "non_int8_npu": [],
+  "cpu_ops": [],
+  "total_cycles": 5070317
+ },
+ "layers_fp16": {
+  "rows": 116,
+  "counts": {
+   "CPU|FLOAT16": 2,
+   "NPU|FLOAT16": 114
+  },
+  "non_int8_npu": [
+   {
+    "id": 1,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.0/conv/Conv"
+   },
+   {
+    "id": 2,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.1/conv/Conv"
+   },
+   {
+    "id": 3,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.2/cv1/conv/Conv"
+   },
+   {
+    "id": 4,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.2/Split"
+   },
+   {
+    "id": 5,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.2/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 6,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.2/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 7,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.2/m.0/Add"
+   },
+   {
+    "id": 8,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.2/Concat"
+   },
+   {
+    "id": 9,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.2/cv2/conv/Conv"
+   },
+   {
+    "id": 10,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.3/conv/Conv"
+   },
+   {
+    "id": 11,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/cv1/conv/Conv"
+   },
+   {
+    "id": 12,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.4/Split"
+   },
+   {
+    "id": 13,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 14,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 15,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.4/m.0/Add"
+   },
+   {
+    "id": 16,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/m.1/cv1/conv/Conv"
+   },
+   {
+    "id": 17,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/m.1/cv2/conv/Conv"
+   },
+   {
+    "id": 18,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.4/m.1/Add"
+   },
+   {
+    "id": 19,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.4/Concat"
+   },
+   {
+    "id": 20,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.4/cv2/conv/Conv"
+   },
+   {
+    "id": 21,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.5/conv/Conv"
+   },
+   {
+    "id": 22,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/cv1/conv/Conv"
+   },
+   {
+    "id": 23,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.6/Split"
+   },
+   {
+    "id": 24,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 25,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 26,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.6/m.0/Add"
+   },
+   {
+    "id": 27,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/m.1/cv1/conv/Conv"
+   },
+   {
+    "id": 28,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/m.1/cv2/conv/Conv"
+   },
+   {
+    "id": 29,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.6/m.1/Add"
+   },
+   {
+    "id": 30,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.6/Concat"
+   },
+   {
+    "id": 31,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.6/cv2/conv/Conv"
+   },
+   {
+    "id": 32,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.7/conv/Conv"
+   },
+   {
+    "id": 33,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.8/cv1/conv/Conv"
+   },
+   {
+    "id": 34,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.8/Split"
+   },
+   {
+    "id": 35,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.8/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 36,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.8/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 37,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.8/m.0/Add"
+   },
+   {
+    "id": 38,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.8/Concat"
+   },
+   {
+    "id": 39,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.8/cv2/conv/Conv"
+   },
+   {
+    "id": 40,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.9/cv1/conv/Conv"
+   },
+   {
+    "id": 41,
+    "op": "MaxPool",
+    "dtype": "FLOAT16",
+    "name": "MaxPool:/model.9/m/MaxPool"
+   },
+   {
+    "id": 42,
+    "op": "MaxPool",
+    "dtype": "FLOAT16",
+    "name": "MaxPool:/model.9/m_1/MaxPool"
+   },
+   {
+    "id": 43,
+    "op": "MaxPool",
+    "dtype": "FLOAT16",
+    "name": "MaxPool:/model.9/m_2/MaxPool"
+   },
+   {
+    "id": 44,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.9/Concat"
+   },
+   {
+    "id": 45,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.9/cv2/conv/Conv"
+   },
+   {
+    "id": 46,
+    "op": "Resize",
+    "dtype": "FLOAT16",
+    "name": "Resize:/model.10/Resize"
+   },
+   {
+    "id": 47,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.11/Concat"
+   },
+   {
+    "id": 48,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.12/cv1/conv/Conv"
+   },
+   {
+    "id": 49,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.12/Split"
+   },
+   {
+    "id": 50,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.12/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 51,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.12/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 52,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.12/Concat"
+   },
+   {
+    "id": 53,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.12/cv2/conv/Conv"
+   },
+   {
+    "id": 54,
+    "op": "Resize",
+    "dtype": "FLOAT16",
+    "name": "Resize:/model.13/Resize"
+   },
+   {
+    "id": 55,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.14/Concat"
+   },
+   {
+    "id": 56,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.15/cv1/conv/Conv"
+   },
+   {
+    "id": 57,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.15/Split"
+   },
+   {
+    "id": 58,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.15/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 59,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.15/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 60,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.15/Concat"
+   },
+   {
+    "id": 61,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.15/cv2/conv/Conv"
+   },
+   {
+    "id": 62,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.16/conv/Conv"
+   },
+   {
+    "id": 63,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.17/Concat"
+   },
+   {
+    "id": 64,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.0/cv2.0.0/conv/Conv"
+   },
+   {
+    "id": 65,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.0/cv3.0.0/conv/Conv"
+   },
+   {
+    "id": 66,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.18/cv1/conv/Conv"
+   },
+   {
+    "id": 67,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.18/Split"
+   },
+   {
+    "id": 68,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.0/cv2.0.1/conv/Conv"
+   },
+   {
+    "id": 69,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.0/cv2.0.2/Conv"
+   },
+   {
+    "id": 70,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.0/cv3.0.1/conv/Conv"
+   },
+   {
+    "id": 71,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.0/cv3.0.2/Conv"
+   },
+   {
+    "id": 72,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.18/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 73,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.18/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 74,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.18/Concat"
+   },
+   {
+    "id": 75,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.18/cv2/conv/Conv"
+   },
+   {
+    "id": 76,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.19/conv/Conv"
+   },
+   {
+    "id": 77,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.20/Concat"
+   },
+   {
+    "id": 78,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.1/cv2.1.0/conv/Conv"
+   },
+   {
+    "id": 79,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.1/cv3.1.0/conv/Conv"
+   },
+   {
+    "id": 80,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.21/cv1/conv/Conv"
+   },
+   {
+    "id": 81,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.21/Split"
+   },
+   {
+    "id": 82,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.1/cv2.1.1/conv/Conv"
+   },
+   {
+    "id": 83,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.1/cv2.1.2/Conv"
+   },
+   {
+    "id": 84,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.1/cv3.1.1/conv/Conv"
+   },
+   {
+    "id": 85,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.1/cv3.1.2/Conv"
+   },
+   {
+    "id": 86,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.21/m.0/cv1/conv/Conv"
+   },
+   {
+    "id": 87,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.21/m.0/cv2/conv/Conv"
+   },
+   {
+    "id": 88,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.21/Concat"
+   },
+   {
+    "id": 89,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.21/cv2/conv/Conv"
+   },
+   {
+    "id": 90,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.2/cv2.2.0/conv/Conv"
+   },
+   {
+    "id": 91,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.2/cv3.2.0/conv/Conv"
+   },
+   {
+    "id": 92,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.2/cv2.2.1/conv/Conv"
+   },
+   {
+    "id": 93,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv2.2/cv2.2.2/Conv"
+   },
+   {
+    "id": 94,
+    "op": "ConvExSwish",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.2/cv3.2.1/conv/Conv"
+   },
+   {
+    "id": 95,
+    "op": "Conv",
+    "dtype": "FLOAT16",
+    "name": "Conv:/model.22/cv3.2/cv3.2.2/Conv"
+   },
+   {
+    "id": 96,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Reshape_1"
+   },
+   {
+    "id": 97,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Reshape_4"
+   },
+   {
+    "id": 98,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Reshape_2"
+   },
+   {
+    "id": 99,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.22/Concat"
+   },
+   {
+    "id": 100,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Concat_output_0_rs"
+   },
+   {
+    "id": 101,
+    "op": "Split",
+    "dtype": "FLOAT16",
+    "name": "Split:/model.22/Slice_2sp"
+   },
+   {
+    "id": 102,
+    "op": "Sub",
+    "dtype": "FLOAT16",
+    "name": "Sub:/model.22/Sub"
+   },
+   {
+    "id": 103,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.22/Add_1"
+   },
+   {
+    "id": 104,
+    "op": "Sub",
+    "dtype": "FLOAT16",
+    "name": "Sub:/model.22/Sub_1"
+   },
+   {
+    "id": 105,
+    "op": "Add",
+    "dtype": "FLOAT16",
+    "name": "Add:/model.22/Add_2"
+   },
+   {
+    "id": 106,
+    "op": "Mul",
+    "dtype": "FLOAT16",
+    "name": "Mul:/model.22/Div_1_2mul"
+   },
+   {
+    "id": 107,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.22/Concat_2"
+   },
+   {
+    "id": 108,
+    "op": "Mul",
+    "dtype": "FLOAT16",
+    "name": "Mul:/model.22/Mul_2"
+   },
+   {
+    "id": 109,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Reshape_5"
+   },
+   {
+    "id": 110,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.22/Concat_1"
+   },
+   {
+    "id": 111,
+    "op": "Sigmoid",
+    "dtype": "FLOAT16",
+    "name": "Sigmoid:/model.22/Sigmoid"
+   },
+   {
+    "id": 112,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:/model.22/Sigmoid_output_0_rs"
+   },
+   {
+    "id": 113,
+    "op": "Concat",
+    "dtype": "FLOAT16",
+    "name": "Concat:/model.22/Concat_3"
+   },
+   {
+    "id": 114,
+    "op": "Reshape",
+    "dtype": "FLOAT16",
+    "name": "Reshape:output0-rs"
+   }
+  ],
+  "cpu_ops": [],
+  "total_cycles": 8269158
+ },
+ "second_experiment_run": false
+}

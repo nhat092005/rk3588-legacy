@@ -1,0 +1,896 @@
+{
+ "protocols": {
+  "p1lan": {
+   "sessions": [
+    {
+     "session": 1,
+     "realized": true,
+     "latency_ms": 21.874,
+     "latency_all": [
+      19.015,
+      19.428,
+      22.281,
+      21.874,
+      22.303
+     ],
+     "level": "slow",
+     "first_minus_rest": -3.0625,
+     "first_lower": true,
+     "debug_total_ms": 23.081,
+     "row_intercept_us": 51.700493536513854,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 2,
+     "realized": true,
+     "latency_ms": 17.254,
+     "latency_all": [
+      19.29,
+      19.271,
+      17.157,
+      17.197,
+      17.254
+     ],
+     "level": "mid",
+     "first_minus_rest": 2.064499999999999,
+     "first_lower": false,
+     "debug_total_ms": 19.1,
+     "row_intercept_us": 13.808801938629953,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 3,
+     "realized": true,
+     "latency_ms": 17.829,
+     "latency_all": [
+      18.325,
+      19.315,
+      17.088,
+      17.829,
+      17.249
+     ],
+     "level": "mid",
+     "first_minus_rest": 0.7859999999999978,
+     "first_lower": false,
+     "debug_total_ms": 21.285,
+     "row_intercept_us": 45.267896112815954,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 4,
+     "realized": true,
+     "latency_ms": 19.285,
+     "latency_all": [
+      19.285,
+      17.167,
+      18.383,
+      19.547,
+      19.649
+     ],
+     "level": "mid",
+     "first_minus_rest": 0.3200000000000003,
+     "first_lower": false,
+     "debug_total_ms": 18.667,
+     "row_intercept_us": 13.125361788689307,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 5,
+     "realized": true,
+     "latency_ms": 19.192,
+     "latency_all": [
+      17.453,
+      17.073,
+      19.29,
+      19.278,
+      19.192
+     ],
+     "level": "mid",
+     "first_minus_rest": -1.782,
+     "first_lower": true,
+     "debug_total_ms": 19.443,
+     "row_intercept_us": 19.237901919910538,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 6,
+     "realized": true,
+     "latency_ms": 17.574,
+     "latency_all": [
+      17.574,
+      19.213,
+      17.199,
+      19.296,
+      17.052
+     ],
+     "level": "mid",
+     "first_minus_rest": -0.6320000000000014,
+     "first_lower": true,
+     "debug_total_ms": 17.426,
+     "row_intercept_us": 8.329113323835735,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 7,
+     "realized": true,
+     "latency_ms": 19.299,
+     "latency_all": [
+      19.309,
+      19.142,
+      19.299,
+      19.291,
+      19.314
+     ],
+     "level": "mid",
+     "first_minus_rest": 0.013999999999999346,
+     "first_lower": false,
+     "debug_total_ms": 21.473,
+     "row_intercept_us": 46.90181500663136,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 8,
+     "realized": true,
+     "latency_ms": 19.308,
+     "latency_all": [
+      18.622,
+      19.314,
+      17.416,
+      19.308,
+      19.313
+     ],
+     "level": "mid",
+     "first_minus_rest": -0.6884999999999977,
+     "first_lower": true,
+     "debug_total_ms": 18.217,
+     "row_intercept_us": 9.342692400600987,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 9,
+     "realized": true,
+     "latency_ms": 19.316,
+     "latency_all": [
+      19.739,
+      19.779,
+      18.918,
+      18.766,
+      19.316
+     ],
+     "level": "mid",
+     "first_minus_rest": 0.6220000000000034,
+     "first_lower": false,
+     "debug_total_ms": 19.084,
+     "row_intercept_us": 15.80173158118291,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 10,
+     "realized": true,
+     "latency_ms": 19.299,
+     "latency_all": [
+      19.299,
+      19.327,
+      19.27,
+      19.312,
+      17.308
+     ],
+     "level": "mid",
+     "first_minus_rest": 0.007999999999999119,
+     "first_lower": false,
+     "debug_total_ms": 21.513,
+     "row_intercept_us": 46.81904653437365,
+     "irq_per_cpu": [
+      880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "all_realized": true,
+   "gate_sessions_realized": true,
+   "gates": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": false,
+    "A6": true,
+    "A8": false,
+    "A7": true
+   },
+   "u6": "kh\u00f4ng \u1ed5n \u0111\u1ecbnh",
+   "first_lower": 4,
+   "first_minus_rest_median_ms": 0.010999999999999233,
+   "intercepts_us": [
+    51.700493536513854,
+    13.808801938629953,
+    45.267896112815954,
+    13.125361788689307,
+    19.237901919910538,
+    8.329113323835735,
+    46.90181500663136,
+    9.342692400600987,
+    15.80173158118291,
+    46.81904653437365
+   ],
+   "intercept_spread_us": 43.37138021267812,
+   "debug_below_latency": 4,
+   "levels": [
+    "slow",
+    "mid",
+    "mid",
+    "mid",
+    "mid",
+    "mid",
+    "mid",
+    "mid",
+    "mid",
+    "mid"
+   ]
+  },
+  "p2": {
+   "sessions": [
+    {
+     "session": 1,
+     "realized": true,
+     "latency_ms": 16.636,
+     "latency_all": [
+      16.799,
+      16.636,
+      16.626,
+      16.641,
+      16.621
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.16799999999999926,
+     "first_lower": false,
+     "debug_total_ms": 16.801,
+     "row_intercept_us": 5.179032292504287,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 2,
+     "realized": true,
+     "latency_ms": 16.632,
+     "latency_all": [
+      16.649,
+      16.633,
+      16.622,
+      16.628,
+      16.632
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.01899999999999835,
+     "first_lower": false,
+     "debug_total_ms": 16.807,
+     "row_intercept_us": 4.988806866090074,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 3,
+     "realized": true,
+     "latency_ms": 16.643,
+     "latency_all": [
+      16.653,
+      16.869,
+      16.643,
+      16.64,
+      16.639
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.011499999999998067,
+     "first_lower": false,
+     "debug_total_ms": 16.815,
+     "row_intercept_us": 5.071694234282314,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 4,
+     "realized": true,
+     "latency_ms": 16.645,
+     "latency_all": [
+      16.667,
+      16.638,
+      16.645,
+      16.629,
+      16.652
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.025500000000000966,
+     "first_lower": false,
+     "debug_total_ms": 16.817,
+     "row_intercept_us": 5.031636313723736,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 5,
+     "realized": true,
+     "latency_ms": 16.65,
+     "latency_all": [
+      16.645,
+      16.652,
+      16.652,
+      16.65,
+      16.65
+     ],
+     "level": "fast",
+     "first_minus_rest": -0.006000000000000227,
+     "first_lower": true,
+     "debug_total_ms": 16.815,
+     "row_intercept_us": 5.086350297334695,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 6,
+     "realized": true,
+     "latency_ms": 16.653,
+     "latency_all": [
+      16.828,
+      16.659,
+      16.653,
+      16.644,
+      16.642
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.17950000000000088,
+     "first_lower": false,
+     "debug_total_ms": 16.812,
+     "row_intercept_us": 4.890697140798763,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 7,
+     "realized": true,
+     "latency_ms": 16.639,
+     "latency_all": [
+      16.672,
+      16.633,
+      16.639,
+      16.628,
+      16.639
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.036000000000001364,
+     "first_lower": false,
+     "debug_total_ms": 16.818,
+     "row_intercept_us": 5.13431023525366,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 8,
+     "realized": true,
+     "latency_ms": 16.645,
+     "latency_all": [
+      16.647,
+      16.635,
+      16.638,
+      16.645,
+      16.658
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.00549999999999784,
+     "first_lower": false,
+     "debug_total_ms": 16.802,
+     "row_intercept_us": 5.042682424729033,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 9,
+     "realized": true,
+     "latency_ms": 16.641,
+     "latency_all": [
+      16.636,
+      16.648,
+      16.641,
+      16.64,
+      16.648
+     ],
+     "level": "fast",
+     "first_minus_rest": -0.008500000000001506,
+     "first_lower": true,
+     "debug_total_ms": 16.798,
+     "row_intercept_us": 4.975836883126645,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "session": 10,
+     "realized": true,
+     "latency_ms": 16.658,
+     "latency_all": [
+      16.819,
+      16.645,
+      16.647,
+      16.658,
+      16.663
+     ],
+     "level": "fast",
+     "first_minus_rest": 0.1664999999999992,
+     "first_lower": false,
+     "debug_total_ms": 16.808,
+     "row_intercept_us": 4.996929479666765,
+     "irq_per_cpu": [
+      0,
+      0,
+      0,
+      0,
+      880,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "all_realized": true,
+   "gate_sessions_realized": true,
+   "gates": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": true,
+    "A6": true,
+    "A8": true,
+    "A7": true
+   },
+   "u6": "kh\u00f4ng \u1ed5n \u0111\u1ecbnh",
+   "first_lower": 2,
+   "first_minus_rest_median_ms": 0.02224999999999966,
+   "intercepts_us": [
+    5.179032292504287,
+    4.988806866090074,
+    5.071694234282314,
+    5.031636313723736,
+    5.086350297334695,
+    4.890697140798763,
+    5.13431023525366,
+    5.042682424729033,
+    4.975836883126645,
+    4.996929479666765
+   ],
+   "intercept_spread_us": 0.2883351517055237,
+   "debug_below_latency": 0,
+   "levels": [
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast",
+    "fast"
+   ]
+  }
+ },
+ "gate_reading": {
+  "A5": "tr\u00ean LAN, ghim l\u00f5i l\u00e0m c\u1ed5ng \u0111\u1ea1t",
+  "A8": "tr\u00ean LAN, ghim l\u00f5i l\u00e0m c\u1ed5ng \u0111\u1ea1t"
+ },
+ "labels": {
+  "U25": "\u0110O",
+  "U7": "\u0110O"
+ },
+ "fp16_allowed": true,
+ "u10": "ghim l\u00f5i thu h\u1eb9p ch\u00eanh l\u1ec7ch h\u1eb1ng s\u1ed1 m\u1ed7i d\u00f2ng gi\u1eefa c\u00e1c phi\u00ean",
+ "masks": {
+  "CORE_0": {
+   "session_medians": [
+    16.676,
+    16.652,
+    16.647,
+    16.657
+   ],
+   "diff_vs_core0_ms": 0.0,
+   "realized": true,
+   "irq_lines_per_session": [
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    }
+   ],
+   "irq_cpu_per_session": [
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict": null
+  },
+  "AUTO": {
+   "session_medians": [
+    16.643,
+    16.652,
+    16.646,
+    16.641
+   ],
+   "diff_vs_core0_ms": -0.00999999999999801,
+   "realized": true,
+   "irq_lines_per_session": [
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    },
+    {
+     "36": 315,
+     "37": 0,
+     "38": 0
+    }
+   ],
+   "irq_cpu_per_session": [
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     315,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+  },
+  "CORE_0_1_2": {
+   "session_medians": [
+    16.096,
+    16.105,
+    16.119,
+    16.118
+   ],
+   "diff_vs_core0_ms": -0.5429999999999993,
+   "realized": true,
+   "irq_lines_per_session": [
+    {
+     "36": 385,
+     "37": 145,
+     "38": 145
+    },
+    {
+     "36": 385,
+     "37": 145,
+     "38": 145
+    },
+    {
+     "36": 385,
+     "37": 145,
+     "38": 145
+    },
+    {
+     "36": 385,
+     "37": 145,
+     "38": 145
+    }
+   ],
+   "irq_cpu_per_session": [
+    [
+     0,
+     0,
+     0,
+     0,
+     675,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     675,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     675,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     675,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict": "kh\u00e1c"
+  }
+ },
+ "log": {
+  "False": {
+   "session_medians": [
+    16.642,
+    16.648,
+    16.644
+   ],
+   "diff_vs_quiet_ms": 0.0,
+   "realized": false,
+   "verdict": null
+  },
+  "True": {
+   "session_medians": [
+    16.65,
+    16.643,
+    16.64
+   ],
+   "diff_vs_quiet_ms": -0.0009999999999976694,
+   "realized": true,
+   "verdict": "ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)"
+  }
+ },
+ "rule": "X4 rule, written 2026-10-31T04:00:12+07:00 before any X4 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).\nQuestions (tmp/2026-10-31_latency-unknowns-tracker.md): U25 and U7 (A5 and A8 under a pinned protocol P2), U6 (first eval_perf call), U10 (per-row debug constant between sessions), U13 (debug total against latency), U16 (CORE_0 against AUTO), U22 (CORE_0_1_2 latency), U19 (log level). Measurements and comparisons only, no mechanism claim.\nThe original A5 and A8 results (relay, 2026-10-30) stay 'kh\u00f4ng \u0111\u1ea1t'. Nothing here changes them.\nProtocols (one session = benchmark_npu.py --precision int8 --core-mask CORE_0 --session N --skip-memory: a latency session of 5 eval_perf calls with perf_debug False and a per-layer session of 5 calls with perf_debug True):\n  P1-LAN: rknn_server and NPU interrupts not pinned (all 0-7), irqbalance active, as in the original runs, but over the direct LAN.\n  P2: rknn_server (every thread) and NPU interrupts 36, 37, 38 on CPU4, irqbalance stopped (cell (4, 4)).\nA root helper on the board (x4_hold.sh, on CPU7) switches between the two modes on request (mode file, acknowledged before each session) and logs every second the Cpus_allowed_list of every rknn_server thread.\nOrder: P1 and P2 alternate session by session (P1 s1, P2 s1, P1 s2, ... P1 s10, P2 s10), with a fixed rest of 45 s between sessions (new number, not user approved). Sessions 1 to 3 of each protocol go to bench/onboard_x4/p1lan and bench/onboard_x4/p2 (gate sessions), sessions 4 to 10 to p1lan_extra and p2_extra. Then, in P2 mode, latency-only sessions with the same 45 s rest: masks CORE_0, AUTO, CORE_0_1_2 in 4 interleaved rounds, then log RKNN(verbose=False) and RKNN(verbose=True) on CORE_0 in 3 interleaved rounds.\nFor every session the driver records the board time (date +%s) at start and end and /proc/interrupts lines 36, 37, 38 before and after.\nP2 session realized: every log line of the helper inside the session window is in pin mode with zero threads outside CPU4, and at least 99 percent of the NPU interrupts counted in the session are on CPU4. P1 sessions: the helper is in unpin mode during the session window. A statement that uses an unrealized session reads 'ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)' (or P1).\nGates: ai/automation/aggregate_layers.py unchanged (code and thresholds 5 percent and 10 percent, approved), run with --bench-subdir onboard_x4/p1lan --tag p1lan and --bench-subdir onboard_x4/p2 --tag p2 on sessions 1 to 3. Reading of A5 and of A8 separately (2 x 2):\n  P1-LAN fails, P2 passes: 'tr\u00ean LAN, ghim l\u00f5i l\u00e0m c\u1ed5ng \u0111\u1ea1t' -> U25 \u0110O, U7 \u0110O (supports level sampling as the reason of the failure, together with the level class of each session median below).\n  Both pass: 'tr\u00ean LAN c\u1ea3 hai giao th\u1ee9c \u0111\u1ec1u \u0111\u1ea1t, kh\u00f4ng t\u00e1ch \u0111\u01b0\u1ee3c ghim l\u00f5i kh\u1ecfi kho\u1ea3ng c\u00e1ch gi\u1eefa c\u00e1c phi\u00ean' -> U25 \u0110O, U7 CH\u01afA BI\u1ebeT.\n  Both fail: 'ghim l\u00f5i kh\u00f4ng \u0111\u1ee7 \u0111\u1ec3 c\u1ed5ng \u0111\u1ea1t' -> U25 \u0110O, U7 CH\u01afA BI\u1ebeT.\n  P1-LAN passes, P2 fails: 'ch\u01b0a k\u1ebft lu\u1eadn' -> U25 CH\u01afA BI\u1ebeT, U7 CH\u01afA BI\u1ebeT.\n  Descriptive for U7: each session latency median classified fast (< 17.0 ms), mid, slow (>= 20.0 ms) as in the other experiments.\n  FP16 (U23) runs later only if A8 of P2 passes, interleaved ABAB with INT8 under P2, as a P2 result.\nStatements:\n  U6: per protocol, over its 10 sessions, count sessions whose first latency call is below the median of its other 4 calls. 9 or 10 of 10: 'l\u1ea7n g\u1ecdi \u0111\u1ea7u th\u1ea5p h\u01a1n c\u00e1c l\u1ea7n sau \u1edf N/10 phi\u00ean'. 6 or fewer: 'kh\u00f4ng \u1ed5n \u0111\u1ecbnh'. Otherwise report the count. Also report the median of (first minus median of the rest).\n  U10: per protocol, the per-row intercept of each of its 10 per-layer sessions (same Conv fit as aggregate_layers). spread = max minus min. If spread(P2) <= 0.5 spread(P1-LAN): 'ghim l\u00f5i thu h\u1eb9p ch\u00eanh l\u1ec7ch h\u1eb1ng s\u1ed1 m\u1ed7i d\u00f2ng gi\u1eefa c\u00e1c phi\u00ean'. If spread(P2) >= 0.8 spread(P1-LAN): 'ghim l\u00f5i kh\u00f4ng thu h\u1eb9p'. Otherwise 'ch\u01b0a k\u1ebft lu\u1eadn'.\n  U13: per protocol, count sessions whose debug total (median of 5 calls) is below the latency (median of 5 calls) of the same session. Report the counts.\n  U16, U22, U19: per setting, the 4 (or 3) session medians. 'kh\u00e1c' when every session median of the setting lies outside the min to max range of the reference (CORE_0, or verbose False), with the difference of the medians of the session medians. 'kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c' otherwise. Next to U16 and U22, report which interrupt lines (and so which cores) each session used.\n  The numbers 9, 6, 0.5, 0.8 and 45 s are new, chosen for this rule, not user approved.\nBudget: experiment 1 for U25, U7, U6, U10, U13, U16, U22, U19.\n",
+ "driver_log": "04:25:40 p1lan session 1 -> onboard_x4/p1lan\n04:26:36 p2 session 1 -> onboard_x4/p2\n04:27:33 p1lan session 2 -> onboard_x4/p1lan\n04:28:29 p2 session 2 -> onboard_x4/p2\n04:29:24 p1lan session 3 -> onboard_x4/p1lan\n04:30:18 p2 session 3 -> onboard_x4/p2\n04:31:13 p1lan session 4 -> onboard_x4/p1lan_extra\n04:32:06 p2 session 4 -> onboard_x4/p2_extra\n04:33:01 p1lan session 5 -> onboard_x4/p1lan_extra\n04:33:56 p2 session 5 -> onboard_x4/p2_extra\n04:34:51 p1lan session 6 -> onboard_x4/p1lan_extra\n04:35:46 p2 session 6 -> onboard_x4/p2_extra\n04:36:41 p1lan session 7 -> onboard_x4/p1lan_extra\n04:37:34 p2 session 7 -> onboard_x4/p2_extra\n04:38:27 p1lan session 8 -> onboard_x4/p1lan_extra\n04:39:21 p2 session 8 -> onboard_x4/p2_extra\n04:40:15 p1lan session 9 -> onboard_x4/p1lan_extra\n04:41:12 p2 session 9 -> onboard_x4/p2_extra\n04:42:06 p1lan session 10 -> onboard_x4/p1lan_extra\n04:42:59 p2 session 10 -> onboard_x4/p2_extra\n04:43:49 mask CORE_0 round 1\n04:44:38 mask AUTO round 1\n04:45:27 mask CORE_0_1_2 round 1\n04:46:15 mask CORE_0 round 2\n04:47:05 mask AUTO round 2\n04:47:54 mask CORE_0_1_2 round 2\n04:48:43 mask CORE_0 round 3\n04:49:31 mask AUTO round 3\n04:50:21 mask CORE_0_1_2 round 3\n04:51:10 mask CORE_0 round 4\n04:51:59 mask AUTO round 4\n04:52:48 mask CORE_0_1_2 round 4\n04:53:37 verbose False round 1\n04:54:26 verbose True round 1\n04:55:14 verbose False round 2\n04:56:03 verbose True round 2\n04:56:52 verbose False round 3\n04:57:41 verbose True round 3\n",
+ "hold_progress": "05:25:13 state: kernel 6.1.99-rockchip-rk3588 ; up 5 hours, 46 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n05:26:26 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:27:23 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:28:19 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:29:15 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:30:09 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:31:05 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:31:59 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:32:52 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:33:47 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:34:42 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:35:37 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:36:33 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:37:27 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:38:20 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:39:13 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:40:07 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:41:01 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:41:58 mode unpin: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active rknn_server allowed:       9 0-7 \n05:42:52 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n05:58:27 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active\n"
+}

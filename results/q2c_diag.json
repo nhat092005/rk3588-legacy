@@ -1,0 +1,477 @@
+{
+ "silu": {
+  "n_images": 10,
+  "images": [
+   {
+    "image": "calib",
+    "class_cos": 0.9978708530031323,
+    "box_cos": 0.9997215544078928,
+    "class_max_abs": 0.270301,
+    "t0.25": {
+     "golden_above": 57,
+     "missed": 1,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 222,
+     "missed": 64,
+     "extra": 5
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9879807897835466,
+    "box_cos": 0.9997660071803451,
+    "class_max_abs": 0.592779,
+    "t0.25": {
+     "golden_above": 88,
+     "missed": 4,
+     "extra": 4
+    },
+    "t0.001": {
+     "golden_above": 249,
+     "missed": 75,
+     "extra": 2
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9719478725998777,
+    "box_cos": 0.9994827821901134,
+    "class_max_abs": 0.862377,
+    "t0.25": {
+     "golden_above": 88,
+     "missed": 2,
+     "extra": 4
+    },
+    "t0.001": {
+     "golden_above": 468,
+     "missed": 111,
+     "extra": 12
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9978604771736039,
+    "box_cos": 0.9997072827446687,
+    "class_max_abs": 0.22139999999999999,
+    "t0.25": {
+     "golden_above": 129,
+     "missed": 0,
+     "extra": 2
+    },
+    "t0.001": {
+     "golden_above": 251,
+     "missed": 40,
+     "extra": 7
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9965289701691998,
+    "box_cos": 0.9994652350031711,
+    "class_max_abs": 0.054207000000000005,
+    "t0.25": {
+     "golden_above": 15,
+     "missed": 0,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 192,
+     "missed": 62,
+     "extra": 11
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9825497048513739,
+    "box_cos": 0.999509029852974,
+    "class_max_abs": 0.332239,
+    "t0.25": {
+     "golden_above": 22,
+     "missed": 1,
+     "extra": 3
+    },
+    "t0.001": {
+     "golden_above": 272,
+     "missed": 137,
+     "extra": 3
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9894414486047378,
+    "box_cos": 0.9996659466272932,
+    "class_max_abs": 0.15540200000000004,
+    "t0.25": {
+     "golden_above": 21,
+     "missed": 0,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 81,
+     "missed": 19,
+     "extra": 1
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9965459217890132,
+    "box_cos": 0.9993528443904461,
+    "class_max_abs": 0.06575600000000001,
+    "t0.25": {
+     "golden_above": 0,
+     "missed": 0,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 61,
+     "missed": 29,
+     "extra": 0
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9926285938479711,
+    "box_cos": 0.9992895082089911,
+    "class_max_abs": 0.352657,
+    "t0.25": {
+     "golden_above": 29,
+     "missed": 1,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 78,
+     "missed": 15,
+     "extra": 3
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9953515944174187,
+    "box_cos": 0.9993213557151606,
+    "class_max_abs": 0.385581,
+    "t0.25": {
+     "golden_above": 30,
+     "missed": 1,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 164,
+     "missed": 87,
+     "extra": 1
+    }
+   }
+  ],
+  "lowest_single": [
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.1/cv3.1.2/Conv_output_0",
+    "mean_single_cos": 0.9721670000000001
+   },
+   {
+    "op": "Reshape",
+    "name": "/model/model.22/Reshape_4_output_0",
+    "mean_single_cos": 0.972209
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.2/cv3.2.2/Conv_output_0",
+    "mean_single_cos": 0.976723
+   },
+   {
+    "op": "Reshape",
+    "name": "/model/model.22/Reshape_5_output_0",
+    "mean_single_cos": 0.97676
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.0/cv3.0.2/Conv_output_0",
+    "mean_single_cos": 0.9855480000000002
+   },
+   {
+    "op": "Split",
+    "name": "/model/model.21/Split_output_0",
+    "mean_single_cos": 0.997729
+   },
+   {
+    "op": "Concat",
+    "name": "/model/model.20/Concat_output_0",
+    "mean_single_cos": 0.9982090000000001
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.1/conv/Conv_output_0",
+    "mean_single_cos": 0.998297
+   },
+   {
+    "op": "Split",
+    "name": "/model/model.8/Split_output_1",
+    "mean_single_cos": 0.9983429999999999
+   },
+   {
+    "op": "exSwish",
+    "name": "/model/model.21/cv1/act/Mul_output_0",
+    "mean_single_cos": 0.998456
+   }
+  ],
+  "last_row": {
+   "op": "exDataConvert",
+   "name": "output0",
+   "mean_entire_cos": 0.9994789999999998
+  },
+  "mean_class_cos": 0.9908706226239875,
+  "mean_box_cos": 0.9995281546321056,
+  "d3": "l\u1edbp class m\u1ea5t nhi\u1ec1u h\u01a1n l\u1edbp box",
+  "mean_counts": {
+   "t0.25": {
+    "golden_above": 47.9,
+    "missed": 1.0,
+    "extra": 1.5
+   },
+   "t0.001": {
+    "golden_above": 203.8,
+    "missed": 63.9,
+    "extra": 4.5
+   }
+  }
+ },
+ "relu": {
+  "n_images": 10,
+  "images": [
+   {
+    "image": "calib",
+    "class_cos": 0.9962354307276546,
+    "box_cos": 0.9996859093488498,
+    "class_max_abs": 0.341457,
+    "t0.25": {
+     "golden_above": 59,
+     "missed": 0,
+     "extra": 2
+    },
+    "t0.001": {
+     "golden_above": 292,
+     "missed": 110,
+     "extra": 4
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.992761679108322,
+    "box_cos": 0.9997746898313603,
+    "class_max_abs": 0.31544799999999995,
+    "t0.25": {
+     "golden_above": 83,
+     "missed": 6,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 331,
+     "missed": 104,
+     "extra": 5
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9579060946257936,
+    "box_cos": 0.9995248908479932,
+    "class_max_abs": 0.7525259999999999,
+    "t0.25": {
+     "golden_above": 91,
+     "missed": 8,
+     "extra": 7
+    },
+    "t0.001": {
+     "golden_above": 506,
+     "missed": 158,
+     "extra": 25
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9982938792657495,
+    "box_cos": 0.9998067259799285,
+    "class_max_abs": 0.232873,
+    "t0.25": {
+     "golden_above": 129,
+     "missed": 1,
+     "extra": 2
+    },
+    "t0.001": {
+     "golden_above": 287,
+     "missed": 54,
+     "extra": 3
+    }
+   },
+   {
+    "image": "calib",
+    "class_cos": 0.9962601373694537,
+    "box_cos": 0.9995742853865868,
+    "class_max_abs": 0.07068399999999997,
+    "t0.25": {
+     "golden_above": 9,
+     "missed": 0,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 200,
+     "missed": 76,
+     "extra": 4
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.982301343819983,
+    "box_cos": 0.999513474015999,
+    "class_max_abs": 0.153374,
+    "t0.25": {
+     "golden_above": 33,
+     "missed": 5,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 571,
+     "missed": 180,
+     "extra": 2
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9843159098936358,
+    "box_cos": 0.9996777093485257,
+    "class_max_abs": 0.18823599999999996,
+    "t0.25": {
+     "golden_above": 30,
+     "missed": 2,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 113,
+     "missed": 30,
+     "extra": 12
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9390826483606772,
+    "box_cos": 0.9996418195138074,
+    "class_max_abs": 0.028600999999999998,
+    "t0.25": {
+     "golden_above": 0,
+     "missed": 0,
+     "extra": 0
+    },
+    "t0.001": {
+     "golden_above": 78,
+     "missed": 49,
+     "extra": 6
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9826342296901192,
+    "box_cos": 0.9988793969579526,
+    "class_max_abs": 0.479527,
+    "t0.25": {
+     "golden_above": 31,
+     "missed": 2,
+     "extra": 1
+    },
+    "t0.001": {
+     "golden_above": 155,
+     "missed": 35,
+     "extra": 10
+    }
+   },
+   {
+    "image": "test",
+    "class_cos": 0.9520933515533555,
+    "box_cos": 0.9995452857840327,
+    "class_max_abs": 0.6667379999999999,
+    "t0.25": {
+     "golden_above": 31,
+     "missed": 3,
+     "extra": 3
+    },
+    "t0.001": {
+     "golden_above": 160,
+     "missed": 81,
+     "extra": 2
+    }
+   }
+  ],
+  "lowest_single": [
+   {
+    "op": "Reshape",
+    "name": "/model/model.22/Reshape_4_output_0",
+    "mean_single_cos": 0.9618220000000001
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.1/cv3.1.2/Conv_output_0",
+    "mean_single_cos": 0.9618260000000001
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.2/cv3.2.2/Conv_output_0",
+    "mean_single_cos": 0.97079
+   },
+   {
+    "op": "Reshape",
+    "name": "/model/model.22/Reshape_5_output_0",
+    "mean_single_cos": 0.9707950000000001
+   },
+   {
+    "op": "Conv",
+    "name": "/model/model.22/cv3.0/cv3.0.2/Conv_output_0",
+    "mean_single_cos": 0.9836220000000001
+   },
+   {
+    "op": "Relu",
+    "name": "/model/model.1/act/Relu_output_0",
+    "mean_single_cos": 0.9977170000000001
+   },
+   {
+    "op": "Reshape",
+    "name": "/model/model.22/Sigmoid_output_0_rs",
+    "mean_single_cos": 0.9986700000000001
+   },
+   {
+    "op": "Sigmoid",
+    "name": "/model/model.22/Concat_1_output_0_sw",
+    "mean_single_cos": 0.9986980000000001
+   },
+   {
+    "op": "Relu",
+    "name": "/model/model.2/cv1/act/Relu_output_0",
+    "mean_single_cos": 0.998774
+   },
+   {
+    "op": "exSoftmax13",
+    "name": "/model/model.22/dfl/Transpose_output_0_sw",
+    "mean_single_cos": 0.999079
+   }
+  ],
+  "last_row": {
+   "op": "exDataConvert",
+   "name": "output0",
+   "mean_entire_cos": 0.9994999999999999
+  },
+  "mean_class_cos": 0.9781884704414743,
+  "mean_box_cos": 0.9995624187015035,
+  "d3": "l\u1edbp class m\u1ea5t nhi\u1ec1u h\u01a1n l\u1edbp box",
+  "mean_counts": {
+   "t0.25": {
+    "golden_above": 49.6,
+    "missed": 2.7,
+    "extra": 1.8
+   },
+   "t0.001": {
+    "golden_above": 269.3,
+    "missed": 87.7,
+    "extra": 7.3
+   }
+  }
+ },
+ "rule": "Quantization diagnosis rule (2c-b, per-layer INT8 error), written 2026-10-31T18:07:51+07:00 before any diagnosis data of SiLU and ReLU exists (one probe build of SiLU on one image was run only to check the tool, its numbers are not used). Not from a source. Not reviewed by the user (user approval of 2026-10-31 for phase 2c). Sources of the tool: rknn.accuracy_analysis (API p22, UG p8 and p30 to 31), results/phase2c_source_facts.md.\nQuestion: where does the INT8 build lose accuracy against its own float graph, for SiLU seed 0 and ReLU seed 0, and is the loss concentrated in the class-score output?\nModels and build: ppe5_yolov8n_baseline_100ep_s0 and ppe5_yolov8n_relu_100ep_s0, rebuilt by ai/automation/diagnose_quant.py exactly like the Ultralytics 8.4.154 INT8 export (normalized-coordinate ONNX, config mean 0, std 255, defaults of the toolkit: quantized_dtype w8a8, algorithm normal, method channel, optimization level 3, the calibration list of baseline seed 0). The rebuilt .rknn has the same size as the deployed file but a different sha256, so the diagnosis is of a rebuild, not of the deployed bytes.\nImages: 5 calibration images (evenly spaced in the seed 0 calibration list) and 5 css_test images (evenly spaced, letterboxed like the evaluator), 10 per model, one accuracy_analysis call per image, simulator (no board).\nStatements (descriptive, no threshold, no keep or drop):\nD1 per-layer table: mean over the 10 images of the single-layer cosine ('single cos') of every layer row. Report the 10 rows with the lowest mean single cos per model (op, name) and the mean 'entire' cosine of the last output row.\nD2 output tensor output0 (shape 1 x 9 x 8400, boxes channels 0 to 3, class channels 4 to 8): between the float graph (golden) and the simulator, per image the cosine over the class channels and over the box channels, then the mean over images. Per image, among anchors with golden max class score at least 0.25 (deployment confidence) the number whose simulator max class score is below 0.25, and among anchors with golden max class score at least 0.001 (evaluation confidence of Protocol v1) the number whose simulator max class score is below 0.001, and the opposite counts (simulator at least threshold and golden below). Mean over images.\nD3 the statement 'class channels lose more than box channels' is made only when the class-channel cosine is lower than the box-channel cosine in every one of the 10 images of a model, 'box channels lose more' when it is higher in every image, otherwise 'ch\u01b0a k\u1ebft lu\u1eadn'.\nLimits: one simulator run per image, error against the float graph not against labels (no mAP here), 10 images, rebuild not byte-identical to the deployed file, the simulator is not the NPU (the board path is measured by mAP in 2c-c).\nBudget: experiment 1 per model.\n"
+}

@@ -1,0 +1,83 @@
+{
+ "fit": {
+  "a": 1.960110810894395,
+  "b_us": 51.83760540657736
+ },
+ "small_rows": [
+  {
+   "name": "Conv:/model/model.6/cv1/conv/Conv",
+   "op": "ConvExSwish",
+   "est_us": 25.6,
+   "time_us": 174,
+   "ratio": 6.796875,
+   "predicted_us": 102.01644216547388
+  },
+  {
+   "name": "Conv:/model/model.9/cv1/conv/Conv",
+   "op": "ConvExSwish",
+   "est_us": 12.8,
+   "time_us": 93,
+   "ratio": 7.265625,
+   "predicted_us": 76.92702378602561
+  },
+  {
+   "name": "Conv:/model/model.22/cv2.1/cv2.1.2/Conv",
+   "op": "Conv",
+   "est_us": 12.8,
+   "time_us": 82,
+   "ratio": 6.40625,
+   "predicted_us": 76.92702378602561
+  },
+  {
+   "name": "Conv:/model/model.22/cv3.1/cv3.1.2/Conv",
+   "op": "Conv",
+   "est_us": 6.4,
+   "time_us": 73,
+   "ratio": 11.40625,
+   "predicted_us": 64.38231459630148
+  },
+  {
+   "name": "Conv:/model/model.22/cv2.2/cv2.2.2/Conv",
+   "op": "Conv",
+   "est_us": 3.2,
+   "time_us": 64,
+   "ratio": 20.0,
+   "predicted_us": 58.109960001439426
+  },
+  {
+   "name": "Conv:/model/model.22/cv3.2/cv3.2.2/Conv",
+   "op": "Conv",
+   "est_us": 1.6,
+   "time_us": 62,
+   "ratio": 38.75,
+   "predicted_us": 54.97378270400839
+  }
+ ],
+ "n_small": 6,
+ "u11": "ch\u01b0a k\u1ebft lu\u1eadn",
+ "stages": {
+  "backbone L0-L9": {
+   "time_share": 0.44391067255258376,
+   "time_share_without_row_constant": 0.46150115711940326,
+   "gflops_share": 0.3901994301994302,
+   "gap_before": 0.053711242353153554,
+   "gap_after": 0.07130172691997305
+  },
+  "neck L10-L21": {
+   "time_share": 0.20371332121526875,
+   "time_share_without_row_constant": 0.17674993852976165,
+   "gflops_share": 0.24311490978157646,
+   "gap_before": -0.03940158856630771,
+   "gap_after": -0.06636497125181481
+  },
+  "head L22": {
+   "time_share": 0.3322946420843071,
+   "time_share_without_row_constant": 0.34433587887124273,
+   "gflops_share": 0.36668566001899333,
+   "gap_before": -0.03439101793468624,
+   "gap_after": -0.022349781147750603
+  }
+ },
+ "u12": "ch\u01b0a k\u1ebft lu\u1eadn",
+ "rule": "X10 rule, written 2026-10-31T04:02:49+07:00 before the X10 numbers are computed. Analysis of existing data only (B3 per-layer sessions, results/layer_analysis_* and results/latency_per_block_*), no new measurement. Not from a source. Not reviewed by the user.\nU11: the six Conv rows whose time is more than 6 times the compiler estimate (page 03 section 1). Model: the B3 Conv fit time = a x est + b (a, b from results/layer_analysis_*, field conv fit_slope and fit_intercept_us). For each of the six rows, predicted = a x est + b. If |measured - predicted| <= 0.2 x measured for all six rows: 't\u1ec9 s\u1ed1 l\u1edbn c\u1ee7a c\u00e1c Conv nh\u1ecf kh\u1edbp v\u1edbi ph\u1ea7n h\u1eb1ng s\u1ed1 b c\u1ee7a ph\u00e9p kh\u1edbp' (the large ratio follows from b, whose cause is U10). Otherwise 'ch\u01b0a k\u1ebft lu\u1eadn'. 0.2 is a new number, not user approved.\nU12: stage shares (backbone L0-L9, neck L10-L21, head L22) of time against GFLOPs (page 03 section 4). Recompute the time shares after removing the per-row constant (share_sens of results/latency_per_block_*, summed per stage). gap = time share minus GFLOPs share. If |gap_after| <= 0.5 |gap_before| for all three stages: 'ph\u1ea7n l\u1edbn ch\u00eanh l\u1ec7ch gi\u1eefa t\u1ec9 l\u1ec7 th\u1eddi gian v\u00e0 t\u1ec9 l\u1ec7 GFLOPs theo giai \u0111o\u1ea1n \u0111i theo h\u1eb1ng s\u1ed1 m\u1ed7i d\u00f2ng'. If |gap_after| >= 0.8 |gap_before| for all three: 'h\u1eb1ng s\u1ed1 m\u1ed7i d\u00f2ng kh\u00f4ng gi\u1ea3i th\u00edch ch\u00eanh l\u1ec7ch'. Otherwise 'ch\u01b0a k\u1ebft lu\u1eadn'. 0.5 and 0.8 are new numbers, not user approved.\n"
+}

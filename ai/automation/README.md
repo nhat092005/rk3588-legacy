@@ -17,10 +17,17 @@ Phases skip steps whose result file exists and stop at the first error; re-run t
 
 ## Structure
 
-- `run.py`, `pipeline.py`, `evaluate.py`, `check_evaluator.py`, `export_npu.py`, `complexity.py`, `benchmark_npu.py`, `bench_gpu.py`, `board_check.py`, `tables.py`, `compare_train_sets.py`: the pipeline steps behind the `make` targets.
-- `configs/`: experiment configurations (model, dataset, hyperparameters, seed, optional `acceptance: <profile>`).
-- `profiles/<name>.yaml`: acceptance profiles. `npu_g4.yaml` holds the thresholds of conditions A, B, C of the NPU operator-support gate.
-- `acceptance.py`: evaluates a candidate against a profile. `tests/test_acceptance_profile.py` checks that the profile agrees with the thresholds in `ai/npu/operator_support/analyze_g4*.py`, and `tests/test_acceptance_replay.py` checks that it reproduces the stored published verdicts.
+The steps behind the `make` targets are grouped in three packages, run as `python -m ai.automation.<group>.<module>`:
+
+| Group | Modules |
+|---|---|
+| `pipeline/` | `run.py` (train), `pipeline.py` (phase driver, `make phase2` to `phase4`), `evaluate.py`, `check_evaluator.py`, `export_npu.py`, `complexity.py` |
+| `bench/` | `benchmark_npu.py` (tier-1 NPU), `bench_gpu.py`, `board_check.py` |
+| `report/` | `tables.py`, `compare_train_sets.py`, `acceptance.py` |
+
+- `configs/`: experiment configurations (model, dataset, hyperparameters, seed, optional `acceptance: <profile>`). Read by `pipeline/pipeline.py`.
+- `profiles/<name>.yaml`: acceptance profiles. `npu_g4.yaml` holds the thresholds of conditions A, B, C of the NPU operator-support gate. Read by `report/acceptance.py`.
+- `report/acceptance.py`: evaluates a candidate against a profile. `tests/test_acceptance_profile.py` checks that the profile agrees with the thresholds in `ai/npu/operator_support/analyze_g4*.py`, and `tests/test_acceptance_replay.py` checks that it reproduces the stored published verdicts.
 
 ## Where the data is
 

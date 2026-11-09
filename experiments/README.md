@@ -8,7 +8,7 @@ All experiment data, kept apart from the code in `ai/`. Paths come from `ai/path
 | `leaderboards/<dataset>.csv` | Protocol v1 FP32 result of every run | `make train` |
 | `golden/` | Logs of golden and crosscheck runs of the evaluator | `make golden-test`, `make crosscheck` |
 | `npu/<topic>/<exp_id>/` | Board and analysis experiments: rule files written before the data, drivers, raw measurements, board logs. Topics: `operator_support`, `latency`, `throughput` | `ai/npu/`, board drivers |
-| `camera/<exp_id>/` | Camera pipeline experiments on the board (frame rate runs, GC and pinning A/B, encoder and RGA probes, preprocessing evaluations). Path constant `CAMERA_DIR` in `ai/paths.py`. Not registered in `_EXPERIMENTS`, no script reads them through `experiment_dir` | board drivers, `ai/board/camera.py` |
+| `camera/<exp_id>/` | Camera pipeline experiments on the board (frame rate runs, GC and pinning A/B, encoder and RGA probes, preprocessing evaluations). Path constant `CAMERA_DIR` in `ai/paths.py`. Not registered in `_EXPERIMENTS`, no script reads them through `experiment_dir` | board drivers, `ai/board/app/camera.py` |
 | `research/<topic>/<exp_id>/` | Architecture experiments (none yet) | `ai/research/` scripts |
 | `index.csv` | One row per experiment, see below | `log_experiment()` |
 
@@ -36,6 +36,8 @@ The 30 rows present on 2026-11-09 were backfilled from existing files:
 
 On 2026-11-09 the locations changed (`ai/automation/runs` to `experiments/runs`, `runs/<id>/bench/<exp>` to `experiments/npu/<topic>/<exp>`, `results/<file>` to `results/npu/<topic>/<file>`).
 Path strings inside tracked text files (rule files, drivers, session records, logs of results) were updated to match. No number was changed.
+
+On 2026-11-10 `ai/board/` and `ai/automation/` were grouped into subpackages (`ai/board/{app,bench,probe,sh}/`, `ai/automation/{pipeline,bench,report}/`). Module and file paths in text files were rewritten the same way (`ai.board.bench_npu` to `ai.board.bench.bench_npu`, `ai.automation.run` to `ai.automation.pipeline.run`), no number was changed. A `git_commit` or a command in a log recorded before that date still shows the old flat name.
 
 ## Moved from tmp/ on 2026-11-10
 

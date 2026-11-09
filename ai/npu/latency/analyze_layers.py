@@ -14,7 +14,7 @@ import sys
 import numpy as np
 
 from ai.npu.latency.aggregate_layers import OUT_DIR, block_order, layer_gflops, load_sessions, med, spread
-from ai.automation.benchmark_npu import RUNS_DIR
+from ai.automation.bench.benchmark_npu import RUNS_DIR
 from ai.core.rknn.blocks import assign
 
 NPU_MHZ = 1000  # NPU frequency printed by eval_perf after lock_freq.sh lock: 1000000000 Hz

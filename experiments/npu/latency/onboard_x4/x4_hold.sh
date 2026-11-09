@@ -31,7 +31,7 @@ cleanup() {
   echo HOLD_DONE > $D/done
 }
 trap cleanup EXIT
-say "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid $P ; adbd pid $(pgrep -x adbd | head -1) ; irqbalance was $IRQBAL ; frequencies: $(bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status | tr '\n' ';')"
+say "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid $P ; adbd pid $(pgrep -x adbd | head -1) ; irqbalance was $IRQBAL ; frequencies: $(bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status | tr '\n' ';')"
 [ -z "$P" ] && { say "ABORT: no rknn_server"; exit 1; }
 MODE=unpin; unpin; echo unpin > $D/mode_ack
 touch $D/ready

@@ -1,4 +1,4 @@
-"""INT8 RKNN build replicating ai/automation/export_npu.py (same calibration, same Ultralytics export), verbose compiler output."""
+"""INT8 RKNN build replicating ai/automation/pipeline/export_npu.py (same calibration, same Ultralytics export), verbose compiler output."""
 import sys, shutil, yaml
 from pathlib import Path
 REPO = Path("/home/nhat/workspace/prjs/rk3588")

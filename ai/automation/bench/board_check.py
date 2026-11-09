@@ -27,17 +27,17 @@ def main() -> None:
     subprocess.run([str(ADB), "connect", args.device_id], capture_output=True, text=True)
     devices = subprocess.run([str(ADB), "devices"], capture_output=True, text=True).stdout
     if f"{args.device_id}\tdevice" not in devices:
-        fixes.append("adb cannot reach the board: sudo bash ai/board/start_rknn_server.sh")
+        fixes.append("adb cannot reach the board: sudo bash ai/board/sh/start_rknn_server.sh")
 
     remote = subprocess.run(["ssh", args.board, f"pgrep -x rknn_server >/dev/null && echo SERVER_OK; cat {GOVERNORS}"],
                             capture_output=True, text=True)
     if "SERVER_OK" not in remote.stdout:
-        fixes.append("rknn_server is not running: sudo bash ai/board/start_rknn_server.sh")
+        fixes.append("rknn_server is not running: sudo bash ai/board/sh/start_rknn_server.sh")
     governors = [g for g in remote.stdout.split() if g != "SERVER_OK"]
     # tier 1 (eval_perf fix_freq=True) leaves NPU/DDR on 'userspace' at their maximum frequency: also fixed
     locked = bool(governors) and all(g in ("performance", "userspace") for g in governors)
     if args.require_lock and not locked:
-        fixes.append(f"frequencies not locked (governors: {' '.join(governors)}): sudo bash ai/board/lock_freq.sh lock")
+        fixes.append(f"frequencies not locked (governors: {' '.join(governors)}): sudo bash ai/board/sh/lock_freq.sh lock")
 
     print(f"adb: {'ok' if not any('adb' in f for f in fixes) else 'FAIL'}, rknn_server: "
           f"{'ok' if 'SERVER_OK' in remote.stdout else 'FAIL'}, frequencies locked: {locked}")

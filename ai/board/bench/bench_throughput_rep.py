@@ -6,7 +6,7 @@ One invocation = one independent run (own process, own contexts): the driver rep
   procs     diagnostic only: one process per context (compares with threads, tells whether the GIL matters)
 Per frame it records T_pre, T_npu and T_post. The record also holds the placement evidence of the run (CPU affinity of every process,
 NPU interrupts per CPU before and after, temperatures, frequencies, RSS after each context init).
-Usage: taskset -c 4-7 .venv-board/bin/python -m ai.board.bench_throughput_rep --model <dir> --images <dir> --mode threads --core-masks CORE_0,CORE_1,CORE_2 --out <json> --run-id <id> --git-commit <sha> --git-dirty true
+Usage: taskset -c 4-7 .venv-board/bin/python -m ai.board.bench.bench_throughput_rep --model <dir> --images <dir> --mode threads --core-masks CORE_0,CORE_1,CORE_2 --out <json> --run-id <id> --git-commit <sha> --git-dirty true
 """
 import argparse
 import datetime
@@ -41,7 +41,7 @@ def irq_counts() -> dict:
 
 def load_ctx(model_dir: Path, mask: str):
     """(rknn, normalized, split): split is True for a split-head model (metadata split_head, two raw outputs decoded in numpy)."""
-    from ai.board.bench_npu import load_model
+    from ai.board.bench.bench_npu import load_model
 
     rknn, normalized = load_model(model_dir, mask)
     meta = yaml.safe_load((model_dir / "metadata.yaml").read_text())
@@ -219,7 +219,7 @@ def main() -> None:
     args = parser.parse_args()
     masks = args.core_masks.split(",")
 
-    from ai.board.bench_npu import CORE_MASK
+    from ai.board.bench.bench_npu import CORE_MASK
 
     for m in masks:
         if m not in CORE_MASK:

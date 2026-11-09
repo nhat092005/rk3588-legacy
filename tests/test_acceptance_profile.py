@@ -5,7 +5,7 @@ Run: .venv/bin/python -m unittest tests.test_acceptance_profile
 import re
 import unittest
 
-from ai.automation.acceptance import load_profile
+from ai.automation.report.acceptance import load_profile
 from ai.paths import REPO_ROOT
 
 OP = REPO_ROOT / "ai" / "npu" / "operator_support"

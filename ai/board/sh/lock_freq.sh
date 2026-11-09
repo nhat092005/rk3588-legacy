@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Fix CPU / NPU / DDR frequency before tier-2 measurements (Guide section 5.3), or restore it.
-# Needs root. Run on the board:  sudo bash ai/board/lock_freq.sh lock | unlock | status
+# Needs root. Run on the board:  sudo bash ai/board/sh/lock_freq.sh lock | unlock | status
 #
 # RKNPU2 User Guide (p.72-73) uses "userspace"; this board's "performance" pins every clock at
 # its max without the debugfs path, so that is used here. Original governors: CPU ondemand,

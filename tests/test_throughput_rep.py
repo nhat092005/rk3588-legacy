@@ -7,7 +7,7 @@ import unittest
 
 import numpy as np
 
-from ai.board.bench_throughput_rep import run_pipeline, run_threads
+from ai.board.bench.bench_throughput_rep import run_pipeline, run_threads
 
 
 class FakeRknn:

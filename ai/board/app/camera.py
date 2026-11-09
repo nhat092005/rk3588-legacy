@@ -18,7 +18,7 @@ frame has been read from the pipe to the end of post-processing, not exposure or
 `lap` (numpy.linalg in the Kalman filter is ~100x slower with the default BLAS thread count, hence the
 OPENBLAS_NUM_THREADS=1 default below).
 
-Usage (on the board): taskset -c 4-7 .venv-board/bin/python -m ai.board.camera --model <rknn_dir> --out <json>
+Usage (on the board): taskset -c 4-7 .venv-board/bin/python -m ai.board.app.camera --model <rknn_dir> --out <json>
        --duration-s 60 --run-id <id> --git-commit <sha> --git-dirty true|false [--core-mask CORE_0] [--track]
        [--save-dir <dir> [--save-max 200] [--save-interval-s 1.0]] [--save-video <file.mp4> [--video-fps 30]]
        [--until-stable [--stable-window-min 10] [--stable-rise-c 1.0] [--stable-after-min 30] [--max-minutes 120]]
@@ -607,7 +607,7 @@ def main() -> None:
     import datetime
     import cv2
     import yaml
-    from ai.board.bench_npu import CORE_MASK, load_model
+    from ai.board.bench.bench_npu import CORE_MASK, load_model
     from ai.board.common import provenance
 
     parser = argparse.ArgumentParser()

@@ -31,7 +31,7 @@ cleanup() {
 trap cleanup EXIT
 echo "npu irqs: $IRQS ; irqbalance was: $IRQBAL ; trace_clock was $OLDCLK ; buffer_kb was $OLDBUF" > $O/progress.txt
 say "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid '$(pgrep -x rknn_server)' ; adbd pid '$(pgrep -x adbd)'"
-say "frequencies: $(bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status | tr '\n' ';')"
+say "frequencies: $(bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status | tr '\n' ';')"
 say "md5: $(md5sum $M rknn_perf_bench | tr '\n' ' ')"
 systemctl stop irqbalance
 if [ "$(systemctl is-active irqbalance)" != inactive ]; then say "ABORT: irqbalance not inactive"; exit 1; fi

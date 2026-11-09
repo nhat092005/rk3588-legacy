@@ -19,7 +19,7 @@ cleanup() {
   echo HOLD_DONE > $D/done
 }
 trap cleanup EXIT
-say "state: kernel $(uname -r) ; $(uptime -p) ; irqbalance was $IRQBAL ; saved: $(readback) ; frequencies: $(bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status | tr '\n' ';')"
+say "state: kernel $(uname -r) ; $(uptime -p) ; irqbalance was $IRQBAL ; saved: $(readback) ; frequencies: $(bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status | tr '\n' ';')"
 systemctl stop irqbalance
 cpu=4
 for i in $IRQS; do echo $cpu > /proc/irq/$i/smp_affinity_list; cpu=$((cpu+1)); done

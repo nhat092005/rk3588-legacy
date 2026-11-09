@@ -1,7 +1,7 @@
 """Tier-1 measurements of an RKNN model on the board, driven from the PC (Guide section 5.3).
 
 Timing comes from board hardware via eval_perf(), unaffected by PC-board network delay.
-Needs adbd + rknn_server on the board (ai/board/start_rknn_server.sh).
+Needs adbd + rknn_server on the board (ai/board/sh/start_rknn_server.sh).
 Output formats match RKNN-Toolkit2 2.3.2, tested in tests/test_parsers.py.
 """
 from __future__ import annotations

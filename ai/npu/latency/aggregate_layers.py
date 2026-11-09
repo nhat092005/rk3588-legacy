@@ -18,7 +18,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from ai.automation.benchmark_npu import RUNS_DIR
+from ai.automation.bench.benchmark_npu import RUNS_DIR
 from ai.core.rknn.benchmark import LAYERS_TIME_RE, parse_frequencies
 from ai.core.rknn.blocks import assign
 from ai.paths import REPO_ROOT, LATENCY_RESULTS_DIR, RUNS_DIR, bench_path

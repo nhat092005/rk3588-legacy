@@ -18,7 +18,7 @@ import cv2
 import numpy as np
 import psutil
 
-from ai.board import camera
+from ai.board.app import camera
 from ai.board.common import ResourceMonitor, postprocess_raw, preprocess
 
 W, H = 640, 360
@@ -40,7 +40,7 @@ def main() -> None:
     nv = np.full((H * 3 // 2, W), 110, dtype=np.uint8)  # static gray frame: no detections, like the empty room
     rknn, normalized = None, False
     if stage in ("npu", "post", "bookkeeping"):
-        from ai.board.bench_npu import load_model
+        from ai.board.bench.bench_npu import load_model
 
         rknn, normalized = load_model(model, "CORE_0")
 

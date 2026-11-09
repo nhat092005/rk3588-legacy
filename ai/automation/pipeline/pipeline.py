@@ -14,7 +14,7 @@ from pathlib import Path
 from ai.core.evaluator import EVAL_SETS_BY_DATASET, PROTOCOL_VERSION
 from ai.paths import REPO_ROOT, LEADERBOARDS_DIR, RUNS_DIR
 
-AUTOMATION_DIR = Path(__file__).resolve().parent
+AUTOMATION_DIR = Path(__file__).resolve().parents[1]
 MODELS = ["yolov8n_baseline", "yolov8s_baseline"]
 SEED = 0  # every phase trains one seed (Guide section 7)
 MASKS_1CTX = ["AUTO", "CORE_0", "CORE_0_1", "CORE_0_1_2"]
@@ -31,7 +31,7 @@ def models_for(dataset: str) -> list[str]:
 
 
 def run_id(dataset: str, model: str, seed: int) -> str:
-    out = subprocess.run([sys.executable, "-m", "ai.automation.run", str(config_path(dataset, model)),
+    out = subprocess.run([sys.executable, "-m", "ai.automation.pipeline.run", str(config_path(dataset, model)),
                           "--seed", str(seed), "--print-run-id"], cwd=REPO_ROOT, capture_output=True, text=True)
     if out.returncode == 0:
         return out.stdout.strip().splitlines()[-1]

@@ -46,7 +46,7 @@ EVAL_SETS_BY_DATASET = {
     "ppe2286": ["ppe2286_val"],
     "ppe4": ["ppe4_test"],
 }
-# Cross-training-set comparison (ai/automation/compare_train_sets.py): common test sets for every ppe* model.
+# Cross-training-set comparison (ai/automation/report/compare_train_sets.py): common test sets for every ppe* model.
 # Written to runs/<run_id>/eval/ only, never to a leaderboard (a leaderboard's columns follow the trained classes).
 CROSS_EVAL_SETS = ["css_test", "ppe2286_heldout"]
 

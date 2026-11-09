@@ -1,7 +1,7 @@
 """CLI: evaluate a run under Evaluation Protocol v1 (Guide section 5.1).
 
 --backend pt/onnx run FP32 on the PC (GPU/CPU); rknn runs NPU inference on the board
-(ai/board/infer_dump.py, RKNNLite), since PC-side rknn_server measured ~35s/image over
+(ai/board/probe/infer_dump.py, RKNNLite), since PC-side rknn_server measured ~35s/image over
 Tailscale vs 42ms on-board. Writes runs/<run_id>/eval/<backend>_<precision>_<eval_set>.json.
 """
 import argparse
@@ -38,7 +38,7 @@ def board_dump(run_dir: Path, precision: str, eval_set: str, board: str, board_r
         sh(["rsync", "-aL", f"--files-from={lst}", str(REPO_ROOT), f"{board}:{board_repo}/"])  # images (skips unchanged)
         sh(["rsync", "-a", f"{rknn_dir}/", f"{board}:{board_repo}/{rel_run}/weights/rknn_{precision}{suffix}/"])
         sh(["scp", "-q", str(lst), f"{board}:{board_repo}/{rel_run}/weights/{lst.name}"])
-    sh(["ssh", board, f"cd {board_repo} && .venv-board/bin/python -m ai.board.infer_dump "
+    sh(["ssh", board, f"cd {board_repo} && .venv-board/bin/python -m ai.board.probe.infer_dump "
         f"--model {rel_run}/weights/rknn_{precision}{suffix} --list {rel_run}/weights/{eval_set}.txt --out {remote_dump} "
         f"--run-id {run_dir.name} --git-commit {git_commit()} --git-dirty {str(git_dirty()).lower()}"])
     sh(["scp", "-q", f"{board}:{board_repo}/{remote_dump}", f"{board}:{board_repo}/{remote_dump[:-4]}.json", str(local_dump.parent)])

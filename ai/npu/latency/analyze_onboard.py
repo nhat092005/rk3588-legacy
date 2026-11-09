@@ -1,4 +1,4 @@
-"""CLI: analysis of the on-board C API measurement (ai/board/rknn_perf_bench.c) of a run, set against eval_perf over the PC link.
+"""CLI: analysis of the on-board C API measurement (ai/board/bench/rknn_perf_bench.c) of a run, set against eval_perf over the PC link.
 
 Reads experiments/npu/latency/onboard/ (copied from the board's ~/onboard/out by the operator, see docs 03-phuong-phap/02-tang-npu-nen-do/02-ket-qua-latency-tung-khoi):
 hot_<n>.csv, gap2s.csv, gap10s.csv, detail_<n>_detail.txt, load_hot_1.csv, cpuidle.csv, progress.txt; and the eval_perf data already in
@@ -15,7 +15,7 @@ import sys
 import numpy as np
 
 from ai.npu.latency.aggregate_layers import OUT_DIR, block_order, linfit, med, spread
-from ai.automation.benchmark_npu import RUNS_DIR
+from ai.automation.bench.benchmark_npu import RUNS_DIR
 from ai.paths import experiment_dir
 from ai.core.rknn.benchmark import LAYERS_TIME_RE, parse_layers
 from ai.core.rknn.blocks import assign

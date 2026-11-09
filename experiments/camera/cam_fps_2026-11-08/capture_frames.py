@@ -7,7 +7,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from ai.board.camera import CROP_16_9, CROP_FULL, capture_command, check_frame_size, read_exact, set_crop
+from ai.board.app.camera import CROP_16_9, CROP_FULL, capture_command, check_frame_size, read_exact, set_crop
 
 DEV, W, H = "/dev/video12", 640, 360
 out = Path(sys.argv[1])

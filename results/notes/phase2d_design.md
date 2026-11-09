@@ -18,5 +18,5 @@ Mọi kết quả ghi "1 seed". Cổng C và nhãn G4 đã duyệt không đổi
 
 ## Công cụ cần viết
 - `ai/core/rknn/split_head.py`: bọc mô hình thành hai đầu ra thô, hàm giải mã numpy (kiểm tương đương với `Detect._inference` bằng test).
-- `ai/board/infer_dump.py`: nhận model tách đầu (metadata có `split_head`), giải mã bằng numpy, ghi cùng định dạng dump.
+- `ai/board/probe/infer_dump.py`: nhận model tách đầu (metadata có `split_head`), giải mã bằng numpy, ghi cùng định dạng dump.
 - `export_npu.py` thêm tùy chọn xuất tách đầu, `build` bằng cùng cấu hình.

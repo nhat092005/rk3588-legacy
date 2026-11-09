@@ -63,7 +63,7 @@ def npu_session(prec, n):
     sub = f"onboard_x8/{prec}"
 
     def run():
-        r = subprocess.run([".venv/bin/python", "-m", "ai.automation.benchmark_npu", RUN, DEVICE, "--precision", prec, "--core-mask", "CORE_0",
+        r = subprocess.run([".venv/bin/python", "-m", "ai.automation.bench.benchmark_npu", RUN, DEVICE, "--precision", prec, "--core-mask", "CORE_0",
                             "--session", str(n), "--skip-memory", "--out-subdir", sub], capture_output=True, text=True, timeout=900)
         if r.returncode != 0:
             raise RuntimeError(f"{prec} session {n} failed: {r.stderr[-400:]}")

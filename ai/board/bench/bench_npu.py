@@ -2,7 +2,7 @@
 
 20 warmup frames, then one timed pass over the test set (pre/npu/post/e2e per image, file
 read/decode excluded). Resource usage (VmRSS, CPU, NPU temperature) is sampled during the pass.
-Usage (on the board): .venv-board/bin/python -m ai.board.bench_npu --model <dir> --images <dir> --out <json>
+Usage (on the board): .venv-board/bin/python -m ai.board.bench.bench_npu --model <dir> --images <dir> --out <json>
 """
 import argparse
 import datetime

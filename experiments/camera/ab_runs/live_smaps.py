@@ -85,7 +85,7 @@ def report() -> None:
 
 
 if __name__ == "__main__":
-    from ai.board import camera
+    from ai.board.app import camera
 
     sys.argv = ["camera"] + sys.argv[1:]
     if os.environ.get('TM'):

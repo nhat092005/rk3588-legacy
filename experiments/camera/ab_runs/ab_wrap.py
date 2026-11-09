@@ -1,7 +1,7 @@
 """A/B wrapper: python ab_wrap.py <pin 0|1> <gc 0|1> <camera.py args>. Switches the mallopt pin and the gc freeze/collect without editing camera.py."""
 import sys
 
-from ai.board import camera
+from ai.board.app import camera
 
 pin, gc_on = sys.argv[1] == "1", sys.argv[2] == "1"
 if not pin:

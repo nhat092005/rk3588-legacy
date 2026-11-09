@@ -63,7 +63,7 @@ def session(model, mask, n, shas):
         raise RuntimeError(f"{model} model file changed during the run")
     entry["epoch_start"] = int(ssh("date +%s").strip())
     entry["irq_before"] = irq_lines()
-    r = subprocess.run([".venv/bin/python", "-m", "ai.automation.benchmark_npu", RUNS[model], DEVICE, "--precision", "int8", "--core-mask", mask,
+    r = subprocess.run([".venv/bin/python", "-m", "ai.automation.bench.benchmark_npu", RUNS[model], DEVICE, "--precision", "int8", "--core-mask", mask,
                         "--session", str(n), "--skip-memory", "--out-subdir", SUB], capture_output=True, text=True, timeout=900)
     entry["irq_after"] = irq_lines()
     entry["epoch_end"] = int(ssh("date +%s").strip())

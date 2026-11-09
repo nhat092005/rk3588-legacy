@@ -1,7 +1,7 @@
 """Tier-2 latency of the FP32 .onnx on the board CPU with ONNX Runtime (Guide section 6.3, Table H).
 
 Same pre/post-processing, warmup and test pass as bench_npu.py; only inference differs.
-Usage (on the board): .venv-board/bin/python -m ai.board.bench_cpu_onnx --model best.onnx --images <dir> --threads 4 --out <json>
+Usage (on the board): .venv-board/bin/python -m ai.board.bench.bench_cpu_onnx --model best.onnx --images <dir> --threads 4 --out <json>
 """
 import argparse
 import datetime

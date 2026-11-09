@@ -42,7 +42,7 @@ def detect_pc(images: list[Path], model_path: Path, backend: str, device: str, d
 
 
 def detect_board(source: Path, model_dir: Path, out_dir: Path, args: argparse.Namespace) -> None:
-    """Mirror ai.automation.evaluate.board_dump: rsync images + model, run ai.board.detect_images, scp back."""
+    """Mirror ai.automation.pipeline.evaluate.board_dump: rsync images + model, run ai.board.app.detect_images, scp back."""
     rel_source = source.resolve().relative_to(REPO_ROOT)
     rel_model = model_dir.relative_to(REPO_ROOT)
     rel_out = Path(os.path.relpath(out_dir, REPO_ROOT))
@@ -51,7 +51,7 @@ def detect_board(source: Path, model_dir: Path, out_dir: Path, args: argparse.Na
         f"{args.board_repo}/{rel_model.parent} {args.board_repo}/{rel_out}"])
     sh(["rsync", "-aL", f"{source}/", f"{args.board}:{args.board_repo}/{rel_source}/"])
     sh(["rsync", "-a", f"{model_dir}/", f"{args.board}:{args.board_repo}/{rel_model}/"])
-    sh(["ssh", args.board, f"cd {args.board_repo} && .venv-board/bin/python -m ai.board.detect_images "
+    sh(["ssh", args.board, f"cd {args.board_repo} && .venv-board/bin/python -m ai.board.app.detect_images "
         f"--model {rel_model} --source {rel_source} --out {remote_npz} --det-conf {args.det_conf} "
         f"--core-mask {args.core_mask} --run-id {args.run} --git-commit {git_commit()} "
         f"--git-dirty {str(git_dirty()).lower()}"])

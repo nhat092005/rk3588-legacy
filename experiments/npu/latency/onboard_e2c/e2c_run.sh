@@ -8,7 +8,7 @@ M=best-rk3588.rknn
 IRQS=$(grep -i npu /proc/interrupts | awk -F: '{gsub(/ /,"",$1); print $1}')
 IRQBAL=$(systemctl is-active irqbalance)
 echo "npu irqs: $IRQS ; irqbalance was: $IRQBAL" > out_e2c/progress.txt
-{ echo "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid '$(pgrep -x rknn_server)' ; adbd pid '$(pgrep -x adbd)' ; adb port 5555 listeners $(ss -ltn | grep -c ':5555 ')"; bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status; md5sum $M rknn_perf_bench; } >> out_e2c/progress.txt 2>&1
+{ echo "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid '$(pgrep -x rknn_server)' ; adbd pid '$(pgrep -x adbd)' ; adb port 5555 listeners $(ss -ltn | grep -c ':5555 ')"; bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status; md5sum $M rknn_perf_bench; } >> out_e2c/progress.txt 2>&1
 declare -A SAVED_IRQ SAVED_IDLE
 for i in $IRQS; do SAVED_IRQ[$i]=$(cat /proc/irq/$i/smp_affinity_list); done
 for s in /sys/devices/system/cpu/cpu[0-9]*/cpuidle/state1/disable; do SAVED_IDLE[$s]=$(cat $s); done

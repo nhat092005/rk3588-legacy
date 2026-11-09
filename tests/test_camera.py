@@ -10,7 +10,8 @@ from unittest import mock
 
 import numpy as np
 
-from ai.board import camera, common
+from ai.board import common
+from ai.board.app import camera
 
 
 class Trickle(io.RawIOBase):

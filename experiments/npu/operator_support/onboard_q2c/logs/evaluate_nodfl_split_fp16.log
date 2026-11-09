@@ -4,7 +4,7 @@
 + rsync -aL --files-from=/tmp/tmpp4sh6taw/css_test.txt /home/nhat/workspace/prjs/rk3588 minhnhat@192.168.137.49:rk3588/
 + rsync -a /home/nhat/workspace/prjs/rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split/ minhnhat@192.168.137.49:rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split/
 + scp -q /tmp/tmpp4sh6taw/css_test.txt minhnhat@192.168.137.49:rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/css_test.txt
-+ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.infer_dump --model experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split --list experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/css_test.txt --out experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_css_test.npz --run-id ppe5_yolov8n_nodfl_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
++ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.probe.infer_dump --model experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split --list experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/css_test.txt --out experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_css_test.npz --run-id ppe5_yolov8n_nodfl_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
 W rknn-toolkit-lite2 version: 2.3.2
 W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
 Done: experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_css_test.npz (82 images, 11748 anchors kept)
@@ -22,7 +22,7 @@ W RKNN: [17:07:14.348] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is
 + rsync -aL --files-from=/tmp/tmpc5wd_wy4/ppe2286_ext.txt /home/nhat/workspace/prjs/rk3588 minhnhat@192.168.137.49:rk3588/
 + rsync -a /home/nhat/workspace/prjs/rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split/ minhnhat@192.168.137.49:rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split/
 + scp -q /tmp/tmpc5wd_wy4/ppe2286_ext.txt minhnhat@192.168.137.49:rk3588/experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/ppe2286_ext.txt
-+ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.infer_dump --model experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split --list experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/ppe2286_ext.txt --out experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_ppe2286_ext.npz --run-id ppe5_yolov8n_nodfl_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
++ ssh minhnhat@192.168.137.49 cd rk3588 && .venv-board/bin/python -m ai.board.probe.infer_dump --model experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/rknn_fp16_split --list experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/ppe2286_ext.txt --out experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_ppe2286_ext.npz --run-id ppe5_yolov8n_nodfl_100ep_s0 --git-commit d84836b09d07bbd07e1ebc20172b24ef40347d5d --git-dirty true
 W rknn-toolkit-lite2 version: 2.3.2
 W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
 Done: experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/weights/npu_dump_fp16_split_ppe2286_ext.npz (180 images, 24097 anchors kept)

@@ -7,7 +7,7 @@ Run: .venv/bin/python -m unittest tests.test_acceptance_replay
 import json
 import unittest
 
-from ai.automation.acceptance import check_a, check_b, check_c, evaluate, load_profile
+from ai.automation.report.acceptance import check_a, check_b, check_c, evaluate, load_profile
 from ai.paths import OPERATOR_SUPPORT_RESULTS_DIR
 
 

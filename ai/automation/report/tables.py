@@ -52,7 +52,7 @@ class Builder:
             self.warnings.append(f"{rel}: produced with uncommitted code (git_dirty)")
         freq = data.get("frequency_before")
         if freq is not None and not freq.get("locked"):
-            self.problems.append(f"{rel}: frequencies not locked during the measurement (run ai/board/lock_freq.sh lock)")
+            self.problems.append(f"{rel}: frequencies not locked during the measurement (run ai/board/sh/lock_freq.sh lock)")
 
     def cell(self, table: str, row: str, col: str, path: Path, keys: list, fmt: str = "{:.4f}") -> str:
         data = self.load(path)

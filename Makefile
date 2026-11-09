@@ -65,7 +65,7 @@ help:
 	@echo "  make bench-board-throughput RUN=<id> PREC=<p> CORE_MASKS=CORE_0,CORE_1,CORE_2"
 	@echo "                                          - multi-context throughput"
 	@echo "  make bench-camera RUN=<id> PREC=<p> [DURATION=60] [CAMERA_CORE_MASK=CORE_0] [TRACK=1] [SAVE=1] [VIDEO=1] [STABLE=1 [MAX_MINUTES=120]]"
-	@echo "                                          - live OV13855 pipeline on the board (ai/board/camera.py), pinned to cores 4-7"
+	@echo "                                          - live OV13855 pipeline on the board (ai/board/app/camera.py), pinned to cores 4-7"
 	@echo ""
 	@echo "Demo (videos and images, outputs under data/demo/outputs/):"
 	@echo "  make demo-video RUN=<id> SRC=<video> [BACKEND=pt|onnx|rknn] [PREC=fp16|int8]"
@@ -74,7 +74,7 @@ help:
 	@echo "                                          - detect once -> predict/<name>.jpg per image"
 	@echo "  make demo-compare A=<path> B=<path> [OUT=<path>]"
 	@echo "                                          - side by side; video/compare.py if A ends .mp4, else image/compare.py"
-	@echo "                                          - BACKEND=rknn needs make board-sync first (copies ai/board/detect_video.py, detect_images.py)"
+	@echo "                                          - BACKEND=rknn needs make board-sync first (copies ai/board/app/detect_video.py, detect_images.py)"
 	@echo ""
 	@echo "Data & Utilities:"
 	@echo "  make compare-train-sets                - compare ppe5/ppe5_plus/ppe4/ppe2286 on common test sets -> results/train_set_comparison.md"
@@ -101,41 +101,41 @@ docs:
 # Training and evaluation
 .PHONY: train evaluate golden-test golden-update crosscheck test-parsers
 train:
-	$(eval RID := $(shell .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id 2>/dev/null | tail -n 1))
-	@test -n "$(RID)" || .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id
-	$(LOGTEE) experiments/runs/$(RID)/logs/train -- .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED))
+	$(eval RID := $(shell .venv/bin/python -m ai.automation.pipeline.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id 2>/dev/null | tail -n 1))
+	@test -n "$(RID)" || .venv/bin/python -m ai.automation.pipeline.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id
+	$(LOGTEE) experiments/runs/$(RID)/logs/train -- .venv/bin/python -m ai.automation.pipeline.run $(CONFIG) $(if $(SEED),--seed $(SEED))
 
 evaluate:
-	$(LOGTEE) $(RUN_DIR)/logs/evaluate_$(BACKEND)$(if $(PREC),_$(PREC)) -- .venv/bin/python -m ai.automation.evaluate $(RUN) --backend $(BACKEND) $(if $(PREC),--precision $(PREC) --board $(BOARD) --board-repo $(BOARD_REPO))
+	$(LOGTEE) $(RUN_DIR)/logs/evaluate_$(BACKEND)$(if $(PREC),_$(PREC)) -- .venv/bin/python -m ai.automation.pipeline.evaluate $(RUN) --backend $(BACKEND) $(if $(PREC),--precision $(PREC) --board $(BOARD) --board-repo $(BOARD_REPO))
 
 golden-test:
-	$(LOGTEE) experiments/golden/logs/golden_test -- .venv/bin/python -m ai.automation.check_evaluator golden
+	$(LOGTEE) experiments/golden/logs/golden_test -- .venv/bin/python -m ai.automation.pipeline.check_evaluator golden
 
 test-parsers:
 	.venv/bin/python -m tests.test_parsers
 
 golden-update:
-	$(LOGTEE) experiments/golden/logs/golden_update -- .venv/bin/python -m ai.automation.check_evaluator golden --update
+	$(LOGTEE) experiments/golden/logs/golden_update -- .venv/bin/python -m ai.automation.pipeline.check_evaluator golden --update
 
 crosscheck:
-	$(LOGTEE) $(if $(RUN),$(RUN_DIR)/logs/crosscheck,experiments/golden/logs/crosscheck) -- .venv/bin/python -m ai.automation.check_evaluator crosscheck $(if $(WEIGHTS),--weights $(WEIGHTS)) $(if $(RUN),--run-id $(RUN))
+	$(LOGTEE) $(if $(RUN),$(RUN_DIR)/logs/crosscheck,experiments/golden/logs/crosscheck) -- .venv/bin/python -m ai.automation.pipeline.check_evaluator crosscheck $(if $(WEIGHTS),--weights $(WEIGHTS)) $(if $(RUN),--run-id $(RUN))
 
 # Model export and tier 1 benchmark
 .PHONY: export-npu complexity tables benchmark-npu bench-gpu
 export-npu:
-	RKNN_LOG_LEVEL=3 $(LOGTEE) $(RUN_DIR)/logs/export_$(PREC) -- .venv/bin/python -m ai.automation.export_npu $(RUN) --quantize $(if $(filter fp16,$(PREC)),16,8)$(if $(filter int8h5,$(PREC)), --recipe h5 --calib-from $(or $(CALIB_FROM),ppe5_yolov8n_baseline_100ep_s0))$(if $(and $(filter int8,$(PREC)),$(CALIB_FROM)), --calib-from $(CALIB_FROM))
+	RKNN_LOG_LEVEL=3 $(LOGTEE) $(RUN_DIR)/logs/export_$(PREC) -- .venv/bin/python -m ai.automation.pipeline.export_npu $(RUN) --quantize $(if $(filter fp16,$(PREC)),16,8)$(if $(filter int8h5,$(PREC)), --recipe h5 --calib-from $(or $(CALIB_FROM),ppe5_yolov8n_baseline_100ep_s0))$(if $(and $(filter int8,$(PREC)),$(CALIB_FROM)), --calib-from $(CALIB_FROM))
 
 complexity:
-	$(LOGTEE) $(RUN_DIR)/logs/complexity -- .venv/bin/python -m ai.automation.complexity $(RUN)
+	$(LOGTEE) $(RUN_DIR)/logs/complexity -- .venv/bin/python -m ai.automation.pipeline.complexity $(RUN)
 
 tables:
-	.venv/bin/python -m ai.automation.tables $(DATASET)
+	.venv/bin/python -m ai.automation.report.tables $(DATASET)
 
 bench-gpu:
-	$(LOGTEE) $(RUN_DIR)/logs/bench_gpu -- .venv/bin/python -m ai.automation.bench_gpu $(RUN)
+	$(LOGTEE) $(RUN_DIR)/logs/bench_gpu -- .venv/bin/python -m ai.automation.bench.bench_gpu $(RUN)
 
 benchmark-npu:
-	$(LOGTEE) $(RUN_DIR)/logs/tier1_$(PREC)_$(CORE_MASK)$(if $(SESSION),_sess$(SESSION)) -- .venv/bin/python -m ai.automation.benchmark_npu $(RUN) $(DEVICE) --precision $(PREC) --core-mask $(CORE_MASK) $(if $(SESSION),--session $(SESSION)) $(if $(SKIP_MEMORY),--skip-memory)
+	$(LOGTEE) $(RUN_DIR)/logs/tier1_$(PREC)_$(CORE_MASK)$(if $(SESSION),_sess$(SESSION)) -- .venv/bin/python -m ai.automation.bench.benchmark_npu $(RUN) $(DEVICE) --precision $(PREC) --core-mask $(CORE_MASK) $(if $(SESSION),--session $(SESSION)) $(if $(SKIP_MEMORY),--skip-memory)
 
 # Board operations and tier 2 benchmark
 .PHONY: board-sync board-setup board-check bench-board bench-board-cpu bench-board-throughput bench-camera phase2 phase3 phase4
@@ -146,30 +146,30 @@ board-sync:
 	rsync -aL --delete $(BOARD_IMAGES)/ $(BOARD):$(BOARD_REPO)/$(BOARD_IMAGES)/
 
 board-check:
-	.venv/bin/python -m ai.automation.board_check $(BOARD) $(DEVICE) $(if $(LOCK),--require-lock)
+	.venv/bin/python -m ai.automation.bench.board_check $(BOARD) $(DEVICE) $(if $(LOCK),--require-lock)
 
 # Whole phases of Guide section 8 (skip finished steps, stop at the first error, end with make tables)
 phase2 phase3 phase4:
-	.venv/bin/python -m ai.automation.pipeline $@ --dataset $(DATASET)
+	.venv/bin/python -m ai.automation.pipeline.pipeline $@ --dataset $(DATASET)
 
 board-setup:
-	ssh $(BOARD) 'cd $(BOARD_REPO) && bash ai/board/setup_board.sh'
+	ssh $(BOARD) 'cd $(BOARD_REPO) && bash ai/board/sh/setup_board.sh'
 
 bench-board:
 	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/$(RUN_DIR)/weights $(BOARD_REPO)/$(RUN_DIR)/bench'
 	rsync -a --relative $(RUN_DIR)/weights/./rknn_$(PREC)/*.rknn $(RUN_DIR)/weights/./rknn_$(PREC)/metadata.yaml $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/weights/
-	$(LOGTEE) $(RUN_DIR)/logs/tier2_$(PREC)_$(CORE_MASK) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench_npu --model $(RUN_DIR)/weights/rknn_$(PREC) --images $(BOARD_IMAGES) --core-mask $(CORE_MASK) --out $(RUN_DIR)/bench/tier2_$(PREC)_$(CORE_MASK).json $(BOARD_PROV)'
+	$(LOGTEE) $(RUN_DIR)/logs/tier2_$(PREC)_$(CORE_MASK) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench.bench_npu --model $(RUN_DIR)/weights/rknn_$(PREC) --images $(BOARD_IMAGES) --core-mask $(CORE_MASK) --out $(RUN_DIR)/bench/tier2_$(PREC)_$(CORE_MASK).json $(BOARD_PROV)'
 	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/tier2_$(PREC)_$(CORE_MASK).json $(RUN_DIR)/bench/
 
 bench-board-cpu:
 	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/$(RUN_DIR)/weights $(BOARD_REPO)/$(RUN_DIR)/bench' && scp $(RUN_DIR)/weights/best.onnx $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/weights/
-	$(LOGTEE) $(RUN_DIR)/logs/tier2_cpu_onnx_t$(or $(THREADS),4) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench_cpu_onnx --model $(RUN_DIR)/weights/best.onnx --images $(BOARD_IMAGES) --threads $(or $(THREADS),4) --out $(RUN_DIR)/bench/tier2_cpu_onnx_t$(or $(THREADS),4).json $(BOARD_PROV)'
+	$(LOGTEE) $(RUN_DIR)/logs/tier2_cpu_onnx_t$(or $(THREADS),4) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench.bench_cpu_onnx --model $(RUN_DIR)/weights/best.onnx --images $(BOARD_IMAGES) --threads $(or $(THREADS),4) --out $(RUN_DIR)/bench/tier2_cpu_onnx_t$(or $(THREADS),4).json $(BOARD_PROV)'
 	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/tier2_cpu_onnx_t$(or $(THREADS),4).json $(RUN_DIR)/bench/
 
 bench-board-throughput:
 	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/$(RUN_DIR)/weights $(BOARD_REPO)/$(RUN_DIR)/bench'
 	rsync -a --relative $(RUN_DIR)/weights/./rknn_$(PREC)/*.rknn $(RUN_DIR)/weights/./rknn_$(PREC)/metadata.yaml $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/weights/
-	$(LOGTEE) $(RUN_DIR)/logs/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench_throughput --model $(RUN_DIR)/weights/rknn_$(PREC) --images $(BOARD_IMAGES) --core-masks $(CORE_MASKS) --out $(RUN_DIR)/bench/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)).json $(BOARD_PROV)'
+	$(LOGTEE) $(RUN_DIR)/logs/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)) -- ssh $(BOARD) '$(BOARD_PY) ai.board.bench.bench_throughput --model $(RUN_DIR)/weights/rknn_$(PREC) --images $(BOARD_IMAGES) --core-masks $(CORE_MASKS) --out $(RUN_DIR)/bench/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)).json $(BOARD_PROV)'
 	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/throughput_$(PREC)_$(subst $(comma),-,$(CORE_MASKS)).json $(RUN_DIR)/bench/
 
 # Live camera pipeline (Phase 9 harness). Needs make board-sync first. Pinned to the A76 cores: unpinned, cv2 preprocess was 3.3x slower.
@@ -179,7 +179,7 @@ bench-camera:
 	$(eval CAMERA_VID := camera_$(shell date +%F).mp4)
 	ssh $(BOARD) 'mkdir -p $(BOARD_REPO)/$(RUN_DIR)/weights $(BOARD_REPO)/$(RUN_DIR)/bench'
 	rsync -a --relative $(RUN_DIR)/weights/./rknn_$(PREC)/*.rknn $(RUN_DIR)/weights/./rknn_$(PREC)/metadata.yaml $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/weights/
-	$(LOGTEE) $(RUN_DIR)/logs/camera_$(PREC) -- ssh $(BOARD) 'cd $(BOARD_REPO) && taskset -c 4-7 .venv-board/bin/python -m ai.board.camera --model $(RUN_DIR)/weights/rknn_$(PREC) --core-mask $(or $(CAMERA_CORE_MASK),CORE_0) $(if $(STABLE),--until-stable --max-minutes $(or $(MAX_MINUTES),120),--duration-s $(or $(DURATION),60)) $(if $(TRACK),--track) $(if $(SAVE),--save-dir $(RUN_DIR)/bench/$(CAMERA_IMG)) $(if $(VIDEO),--save-video $(RUN_DIR)/bench/$(CAMERA_VID)) --out $(RUN_DIR)/bench/$(CAMERA_OUT) $(BOARD_PROV)'
+	$(LOGTEE) $(RUN_DIR)/logs/camera_$(PREC) -- ssh $(BOARD) 'cd $(BOARD_REPO) && taskset -c 4-7 .venv-board/bin/python -m ai.board.app.camera --model $(RUN_DIR)/weights/rknn_$(PREC) --core-mask $(or $(CAMERA_CORE_MASK),CORE_0) $(if $(STABLE),--until-stable --max-minutes $(or $(MAX_MINUTES),120),--duration-s $(or $(DURATION),60)) $(if $(TRACK),--track) $(if $(SAVE),--save-dir $(RUN_DIR)/bench/$(CAMERA_IMG)) $(if $(VIDEO),--save-video $(RUN_DIR)/bench/$(CAMERA_VID)) --out $(RUN_DIR)/bench/$(CAMERA_OUT) $(BOARD_PROV)'
 	mkdir -p $(RUN_DIR)/bench && scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_OUT) $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_OUT:.json=.rows.jsonl) $(RUN_DIR)/bench/
 	$(if $(SAVE),rsync -a $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_IMG)/ $(RUN_DIR)/bench/$(CAMERA_IMG)/)
 	$(if $(VIDEO),scp $(BOARD):$(BOARD_REPO)/$(RUN_DIR)/bench/$(CAMERA_VID) $(RUN_DIR)/bench/)
@@ -206,7 +206,7 @@ demo-compare:
 # Data and utilities
 .PHONY: compare-train-sets leaderboard tail prepare-data archive restore clean
 compare-train-sets:
-	.venv/bin/python -m ai.automation.compare_train_sets
+	.venv/bin/python -m ai.automation.report.compare_train_sets
 
 leaderboard:
 	cat experiments/leaderboards/$(DATASET).csv

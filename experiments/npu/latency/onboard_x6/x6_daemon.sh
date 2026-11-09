@@ -41,7 +41,7 @@ P=$(srv_pid)
 [ -z "$P" ] && { say "ABORT: no rknn_server"; exit 1; }
 say "state: kernel $(uname -r) ; $(uptime -p) ; rknn_server pid $P tasks $(ls /proc/$P/task | wc -l) ; adbd pid $(pgrep -x adbd | head -1) ; port 5555 listeners $(ss -ltn | grep -c ':5555 ')"
 say "librknnrt mapped by rknn_server: $(grep -o '/[^ ]*librknn[^ ]*' /proc/$P/maps | sort -u | tr '\n' ' ') ; md5 $(md5sum /usr/lib/librknnrt.so | cut -c1-32) ; model md5 $(md5sum $M | cut -c1-32)"
-say "frequencies: $(bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status | tr '\n' ';')"
+say "frequencies: $(bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status | tr '\n' ';')"
 say "saved irq affinities: $(for i in $IRQS; do echo -n "$i=${SAVED_IRQ[$i]} "; done) ; irqbalance was $IRQBAL"
 snap() {  # tid utime stime last-cpu name
   local p; p=$(srv_pid)
@@ -75,7 +75,7 @@ while [ ! -f $D/stop ]; do
       for i in $IRQS; do echo $irqc > /proc/irq/$i/smp_affinity_list; done
       taskset -a -p -c $app $(srv_pid) > /dev/null
     fi
-    say "block $N cond $cond pid $(srv_pid) readback: $(readback) rknn_server tasks allowed: $(srv_allowed) ; governors: $(bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status | awk '{printf "%s ", $2}')"
+    say "block $N cond $cond pid $(srv_pid) readback: $(readback) rknn_server tasks allowed: $(srv_allowed) ; governors: $(bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status | awk '{printf "%s ", $2}')"
     echo "pid=$(srv_pid) cond=$cond" > $D/ready_$N
     wait_for $D/inited_$N $INIT_TIMEOUT || { say "ABORT: block $N no inited_N within ${INIT_TIMEOUT} s or stop"; exit 1; }
     P=$(srv_pid)
@@ -83,14 +83,14 @@ while [ ! -f $D/stop ]; do
     for t in /proc/$P/task/*; do echo "${t##*/} $(grep Cpus_allowed_list $t/status | cut -f2)"; done > $D/allowed1_$N.txt
     snap > $D/cpu0_$N.txt
     grep -i npu /proc/interrupts > $D/irq_pre_$N.txt
-    bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status > $D/gov_pre_$N.txt
+    bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status > $D/gov_pre_$N.txt
     say "block $N inited: tasks $(ls /proc/$P/task | wc -l), allowed $(srv_allowed), readback: $(readback)"
     touch $D/started_$N
     wait_for $D/end_$N $RUN_TIMEOUT || { say "ABORT: block $N no end_N within ${RUN_TIMEOUT} s or stop"; exit 1; }
     grep -i npu /proc/interrupts > $D/irq_post_$N.txt
     for t in /proc/$P/task/*; do echo "${t##*/} $(grep Cpus_allowed_list $t/status | cut -f2)"; done > $D/allowed2_$N.txt
     snap > $D/cpu1_$N.txt
-    bash /home/minhnhat/rk3588/ai/board/lock_freq.sh status > $D/gov_post_$N.txt
+    bash /home/minhnhat/rk3588/ai/board/sh/lock_freq.sh status > $D/gov_post_$N.txt
     say "block $N end: allowed $(srv_allowed), readback: $(readback)"
     restore
     touch $D/done_$N

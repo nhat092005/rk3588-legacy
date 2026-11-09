@@ -2,7 +2,7 @@
 /home/minhnhat/p3). Rule: rule.txt next to this file.
 
 Run from the repo root, detached:  .venv/bin/python <this file>
-Each run is one ssh call of ai/board/bench_throughput_rep.py under taskset -c 4-7, 3 repetitions of the same 7 configurations in the
+Each run is one ssh call of ai/board/bench/bench_throughput_rep.py under taskset -c 4-7, 3 repetitions of the same 7 configurations in the
 same order, 20 s rest. S3 worker counts come from the formula of rule.txt applied to the medians of the first T5 run.
 Writes sessions.json. Marker: driver_done contains DONE or ABORT <reason>.
 """
@@ -50,7 +50,7 @@ def run_one(rep, code, mode, masks, model, npre, npost):
     name = f"r{rep}_{code}.json"
     remote = f"experiments/npu/throughput/onboard_q2f_split/{name}"
     extra = f"--pre-workers {npre} --post-workers {npost}" if mode == "pipeline" else ""
-    cmd = (f"cd rk3588 && mkdir -p $(dirname {remote}) && taskset -c 4-7 .venv-board/bin/python -m ai.board.bench_throughput_rep "
+    cmd = (f"cd rk3588 && mkdir -p $(dirname {remote}) && taskset -c 4-7 .venv-board/bin/python -m ai.board.bench.bench_throughput_rep "
            f"--model experiments/runs/{RUN}/weights/rknn_{model} --images data/ppe5/processed/images/test --mode {mode} --core-masks {masks} "
            f"--frames {FRAMES} {extra} --out {remote} {provenance()}")
     entry = dict(rep=rep, code=code, mode=mode, masks=masks, model=model, pre_workers=npre, post_workers=npost, file=name, epoch_start=int(ssh("date +%s").stdout.strip()))

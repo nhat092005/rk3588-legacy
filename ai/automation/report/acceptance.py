@@ -3,7 +3,7 @@
 Only conditions A, B and C of the gate are computed here. G1 to G3 (sources, workload table, per-layer reading) need human reading
 of the documentation, so `passes` is necessary for a "Giữ" label, not sufficient.
 
-    from ai.automation.acceptance import evaluate, load_profile
+    from ai.automation.report.acceptance import evaluate, load_profile
     evaluate(load_profile("npu_g4"), coverage_per_session=[0.976], drop_pct=33.4, drop_ms=4.29, gap_ms=0.02, diff_pp={"map50_95": -0.3, ...})
 """
 from __future__ import annotations
@@ -12,7 +12,7 @@ from pathlib import Path
 
 import yaml
 
-PROFILES_DIR = Path(__file__).resolve().parent / "profiles"
+PROFILES_DIR = Path(__file__).resolve().parents[1] / "profiles"
 
 
 def load_profile(name: str) -> dict:

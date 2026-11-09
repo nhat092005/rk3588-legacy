@@ -1,7 +1,7 @@
 """Throughput FPS with several RKNNLite contexts in parallel, run ON THE BOARD (Guide section 5.3, Table I).
 
 One thread per context, each running pre->NPU->post on cached decoded frames (file decode excluded).
-Throughput FPS = frames / wall time. Usage: python -m ai.board.bench_throughput --model <dir> --images <dir> --core-masks <masks> --out <json>
+Throughput FPS = frames / wall time. Usage: python -m ai.board.bench.bench_throughput --model <dir> --images <dir> --core-masks <masks> --out <json>
 """
 import argparse
 import datetime
@@ -13,7 +13,7 @@ from pathlib import Path
 
 import cv2
 
-from ai.board.bench_npu import CORE_MASK, load_model
+from ai.board.bench.bench_npu import CORE_MASK, load_model
 from ai.board.common import (
     WARMUP, ResourceMonitor, add_provenance_args, provenance, frequency_state, list_images, postprocess, preprocess, summarize, system_info,
 )

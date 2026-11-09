@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Start the PC <-> board link needed by tier 1 (eval_perf, eval_memory) and NPU accuracy from the PC.
-# Needs root, and must be re-run after every reboot. Run on the board:  sudo bash ai/board/start_rknn_server.sh
+# Needs root, and must be re-run after every reboot. Run on the board:  sudo bash ai/board/sh/start_rknn_server.sh
 # Steps and reasons: tmp/04_debug-logs/2026-09-18_board-bringup-log.md (sections 2 and 3).
 set -uo pipefail
 

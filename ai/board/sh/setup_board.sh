@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Create the tier-2 venv on the board (no sudo). Run on the board from the repo root:
-#   bash ai/board/setup_board.sh
+#   bash ai/board/sh/setup_board.sh
 set -euo pipefail
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/../../.."
 python3 -m venv .venv-board
 .venv-board/bin/pip install --upgrade pip
 .venv-board/bin/pip install -r ai/board/requirements.txt

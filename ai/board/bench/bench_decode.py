@@ -1,6 +1,6 @@
 """CPU time of the split-head decode (numpy), run ON THE BOARD: 200 decodes of random raw outputs, median and p95 in ms.
 
-Usage (pin it like the measurement): taskset -c 4 .venv-board/bin/python -m ai.board.bench_decode --out <json> --run-id <id> --git-commit <sha> --git-dirty true
+Usage (pin it like the measurement): taskset -c 4 .venv-board/bin/python -m ai.board.bench.bench_decode --out <json> --run-id <id> --git-commit <sha> --git-dirty true
 """
 import argparse
 import json

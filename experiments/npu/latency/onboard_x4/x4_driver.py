@@ -68,7 +68,7 @@ def npu_session(proto, n):
     sub = f"onboard_x4/{proto}" if n <= 3 else f"onboard_x4/{proto}_extra"
 
     def run():
-        r = subprocess.run([".venv/bin/python", "-m", "ai.automation.benchmark_npu", RUN, DEVICE, "--precision", "int8", "--core-mask", "CORE_0",
+        r = subprocess.run([".venv/bin/python", "-m", "ai.automation.bench.benchmark_npu", RUN, DEVICE, "--precision", "int8", "--core-mask", "CORE_0",
                             "--session", str(n), "--skip-memory", "--out-subdir", sub], capture_output=True, text=True, timeout=900)
         if r.returncode != 0:
             raise RuntimeError(f"{proto} session {n} failed: {r.stderr[-400:]}")

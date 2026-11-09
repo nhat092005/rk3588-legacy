@@ -4,7 +4,7 @@ Reads runs/<run_id>/eval/pt_fp32_<eval_set>.json for every training dataset x se
 results/train_set_comparison.md. The "PPE4" columns average the four classes every training set shares
 (Helmet, NoHelmet, NoVest, Vest), so a model without a Person output is not penalised for the Person ground truth
 of the test set. A missing file is listed and exits 1; create it with
-`python -m ai.automation.evaluate <run_id> --backend pt --eval-set <eval_set>`.
+`python -m ai.automation.pipeline.evaluate <run_id> --backend pt --eval-set <eval_set>`.
 """
 from __future__ import annotations
 

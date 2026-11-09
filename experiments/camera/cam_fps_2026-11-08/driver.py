@@ -44,7 +44,7 @@ def run_one(rep, cond, t):
             raise RuntimeError(f"bg_start failed: {r.stdout} {r.stderr}")
         time.sleep(3)
         entry["isp_before"] = isp()
-    cmd = (f"cd rk3588 && mkdir -p ../tmp_camfps && taskset -c 4-7 .venv-board/bin/python -m ai.board.bench_throughput_rep "
+    cmd = (f"cd rk3588 && mkdir -p ../tmp_camfps && taskset -c 4-7 .venv-board/bin/python -m ai.board.bench.bench_throughput_rep "
            f"--model experiments/runs/{RUN}/weights/rknn_int8h5 --images {IMAGES[cond]} --mode threads --core-masks {TS[t]} "
            f"--frames {FRAMES} --out ../{remote} {provenance()}")
     entry["epoch_start"] = int(ssh("date +%s").stdout.strip())

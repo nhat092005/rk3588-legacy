@@ -14,7 +14,7 @@ import cv2
 import numpy as np
 import yaml
 
-from ai.board.bench_npu import load_model
+from ai.board.bench.bench_npu import load_model
 from ai.board.common import add_provenance_args, preprocess, provenance
 from ai.board.split_decode import decode_split
 

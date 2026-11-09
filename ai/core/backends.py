@@ -34,7 +34,7 @@ class UltralyticsBackend:
 
 
 class RknnDumpBackend:
-    """.rknn outputs computed on the board NPU by ai/board/infer_dump.py (RKNNLite).
+    """.rknn outputs computed on the board NPU by ai/board/probe/infer_dump.py (RKNNLite).
 
     The dump holds, per image, the md5 of the board's input and the raw output of every anchor whose
     best class score is > conf; this backend rebuilds the full output and refuses any image whose

@@ -1,0 +1,3 @@
+00:59:13 state: kernel 6.1.99-rockchip-rk3588 ; up 1 day, 1 hour, 20 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;
+00:59:15 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 
+01:09:49 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active

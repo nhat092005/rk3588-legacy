@@ -1,5 +1,3 @@
-docs/_notes/
-docs/outputs/
 data/**
 !data/*/
 !data/*/DATA_CARD.md
@@ -8,11 +6,32 @@ data/**
 .venv/
 __pycache__/
 *.pyc
-ai/automation/runs/*/weights/
-ai/automation/runs/*/logs/
-ai/automation/runs/_codecheck/
-ai/automation/golden/logs/
+experiments/runs/*/weights/
+experiments/runs/*/logs/
+experiments/runs/_codecheck/
+experiments/golden/logs/
 tmp/
+
+# Regenerable heavy artifacts. Raw board traces (*.gz) and measured .rknn builds stay tracked.
+experiments/runs/*/plots/sample_predictions/
+experiments/**/*.onnx
+!experiments/npu/operator_support/onboard_q2c/diag/ppe5_yolov8n_baseline_100ep_s0/int8_input.onnx
+
+# Secrets and local tool config, none exist today
+.env*
+*.pem
+*.key
+*.p12
+*.kdbx
+id_rsa*
+id_ed25519*
+credentials*
+.mcp.json
+.claude/
+*.bundle
 
 CLAUDE.md
 .venv-board/
+GLOSSARY.md
+
+3rdparty/

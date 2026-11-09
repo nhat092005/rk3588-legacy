@@ -1,0 +1,22 @@
+11:52:06 r1_T1.json threads CORE_0: 54.7 FPS
+11:52:51 r1_T2.json threads CORE_0_1: 55.86 FPS
+11:53:36 r1_T3.json threads CORE_0_1_2: 56.09 FPS
+11:54:12 r1_T4.json threads CORE_0,CORE_1: 102.09 FPS
+11:54:44 r1_T5.json threads CORE_0,CORE_1,CORE_2: 140.67 FPS
+11:55:04 S3 workers from r1_T5: {'pre': 1, 'post': 1} (t_pre 0.466, t_npu 19.526, t_post 0.762 ms)
+11:55:17 r1_T6.json pipeline CORE_0,CORE_1,CORE_2: 147.39 FPS
+11:55:48 r1_T7.json procs CORE_0,CORE_1,CORE_2: 143.51 FPS
+11:56:33 r2_T1.json threads CORE_0: 54.66 FPS
+11:57:19 r2_T2.json threads CORE_0_1: 55.76 FPS
+11:58:04 r2_T3.json threads CORE_0_1_2: 56.1 FPS
+11:58:39 r2_T4.json threads CORE_0,CORE_1: 101.62 FPS
+11:59:11 r2_T5.json threads CORE_0,CORE_1,CORE_2: 141.47 FPS
+11:59:44 r2_T6.json pipeline CORE_0,CORE_1,CORE_2: 146.88 FPS
+12:00:15 r2_T7.json procs CORE_0,CORE_1,CORE_2: 143.44 FPS
+12:01:01 r3_T1.json threads CORE_0: 54.62 FPS
+12:01:46 r3_T2.json threads CORE_0_1: 55.72 FPS
+12:02:31 r3_T3.json threads CORE_0_1_2: 56.15 FPS
+12:03:06 r3_T4.json threads CORE_0,CORE_1: 102.0 FPS
+12:03:39 r3_T5.json threads CORE_0,CORE_1,CORE_2: 141.18 FPS
+12:04:11 r3_T6.json pipeline CORE_0,CORE_1,CORE_2: 147.64 FPS
+12:04:42 r3_T7.json procs CORE_0,CORE_1,CORE_2: 143.6 FPS

@@ -1,0 +1,31 @@
+W rknn-toolkit-lite2 version: 2.3.2
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+W rknn-toolkit-lite2 version: 2.3.2
+E RKNN: [17:32:29.633] core mask = 1 is invalid for batch size: 4, fall back to CORE_AUTO mode
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+{
+ "batch1_median_ms": 41.9323224996333,
+ "batch4_output_shape": [
+  4,
+  9,
+  8400
+ ],
+ "max_abs_diff_per_image": [
+  0.0,
+  0.0,
+  0.1934814453125,
+  0.0
+ ],
+ "batch4_median_ms": 94.17954549962815,
+ "batch4_ms_per_image": 23.544886374907037
+}
+I RKNN: [17:32:28.498] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [17:32:28.498] RKNN Driver Information, version: 0.9.8
+I RKNN: [17:32:28.499] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [17:32:28.513] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [17:32:29.597] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [17:32:29.597] RKNN Driver Information, version: 0.9.8
+I RKNN: [17:32:29.597] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+I RKNN: [17:32:29.611] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [17:32:29.623] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+W RKNN: [17:32:29.633] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

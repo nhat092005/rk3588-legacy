@@ -1,0 +1,1049 @@
+{
+ "sessions": [
+  {
+   "model": "silu",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.507,
+   "latency_all": [
+    16.501,
+    16.507,
+    16.513,
+    16.52,
+    16.502
+   ],
+   "debug_total_ms": 16.705,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 12.839,
+   "latency_all": [
+    12.811,
+    12.832,
+    12.84,
+    12.841,
+    12.839
+   ],
+   "debug_total_ms": 13.396,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.141,
+   "latency_all": [
+    16.136,
+    16.141,
+    16.144,
+    16.148,
+    16.14
+   ],
+   "debug_total_ms": 16.236,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1240,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 9.888,
+   "latency_all": [
+    9.876,
+    9.888,
+    9.888,
+    9.882,
+    9.888
+   ],
+   "debug_total_ms": 10.25,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1420,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.025,
+   "latency_all": [
+    16.017,
+    16.098,
+    16.025,
+    16.033,
+    16.021
+   ],
+   "debug_total_ms": 16.131,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1530,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 8.524,
+   "latency_all": [
+    8.512,
+    8.526,
+    8.524,
+    8.523,
+    8.527
+   ],
+   "debug_total_ms": 9.032,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "AUTO",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.509,
+   "latency_all": [
+    16.509,
+    16.501,
+    16.518,
+    16.511,
+    16.509
+   ],
+   "debug_total_ms": 16.687,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "AUTO",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 12.861,
+   "latency_all": [
+    12.861,
+    12.847,
+    12.862,
+    12.86,
+    12.972
+   ],
+   "debug_total_ms": 13.371,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.516,
+   "latency_all": [
+    16.501,
+    16.518,
+    16.509,
+    16.516,
+    16.703
+   ],
+   "debug_total_ms": 16.698,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 12.828,
+   "latency_all": [
+    12.833,
+    12.823,
+    12.828,
+    12.837,
+    12.827
+   ],
+   "debug_total_ms": 13.372,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.161,
+   "latency_all": [
+    16.158,
+    16.16,
+    16.161,
+    16.164,
+    16.167
+   ],
+   "debug_total_ms": 16.221,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1240,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 9.889,
+   "latency_all": [
+    9.884,
+    9.889,
+    9.933,
+    9.884,
+    9.892
+   ],
+   "debug_total_ms": 10.252,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1420,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.047,
+   "latency_all": [
+    16.012,
+    16.047,
+    16.054,
+    16.089,
+    16.044
+   ],
+   "debug_total_ms": 16.121,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1530,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 8.524,
+   "latency_all": [
+    8.53,
+    8.522,
+    8.523,
+    8.531,
+    8.524
+   ],
+   "debug_total_ms": 9.045,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  },
+  {
+   "model": "silu",
+   "mask": "AUTO",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.575,
+   "latency_all": [
+    16.554,
+    16.557,
+    16.578,
+    16.575,
+    16.586
+   ],
+   "debug_total_ms": 16.71,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 119
+  },
+  {
+   "model": "relu",
+   "mask": "AUTO",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 12.856,
+   "latency_all": [
+    12.84,
+    12.857,
+    12.859,
+    12.848,
+    12.856
+   ],
+   "debug_total_ms": 13.396,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "cpu_ops": [
+    "Transpose"
+   ],
+   "n_layers": 113
+  }
+ ],
+ "all_realized": true,
+ "conditions": {
+  "silu|CORE_0": {
+   "session_medians": [
+    16.507,
+    16.516
+   ],
+   "median": 16.511499999999998,
+   "gap_ms": 0.008999999999996788,
+   "realized": true
+  },
+  "silu|CORE_0_1": {
+   "session_medians": [
+    16.141,
+    16.161
+   ],
+   "median": 16.151,
+   "gap_ms": 0.020000000000003126,
+   "realized": true
+  },
+  "silu|CORE_0_1_2": {
+   "session_medians": [
+    16.025,
+    16.047
+   ],
+   "median": 16.036,
+   "gap_ms": 0.022000000000002018,
+   "realized": true
+  },
+  "silu|AUTO": {
+   "session_medians": [
+    16.509,
+    16.575
+   ],
+   "median": 16.542,
+   "gap_ms": 0.06599999999999895,
+   "realized": true
+  },
+  "relu|CORE_0": {
+   "session_medians": [
+    12.839,
+    12.828
+   ],
+   "median": 12.8335,
+   "gap_ms": 0.011000000000001009,
+   "realized": true
+  },
+  "relu|CORE_0_1": {
+   "session_medians": [
+    9.888,
+    9.889
+   ],
+   "median": 9.8885,
+   "gap_ms": 0.0009999999999994458,
+   "realized": true
+  },
+  "relu|CORE_0_1_2": {
+   "session_medians": [
+    8.524,
+    8.524
+   ],
+   "median": 8.524,
+   "gap_ms": 0.0,
+   "realized": true
+  },
+  "relu|AUTO": {
+   "session_medians": [
+    12.861,
+    12.856
+   ],
+   "median": 12.8585,
+   "gap_ms": 0.005000000000000782,
+   "realized": true
+  }
+ },
+ "gate_b": {
+  "silu|CORE_0_1": {
+   "core0_ms": 16.511499999999998,
+   "mask_ms": 16.151,
+   "drop_ms": 0.36049999999999827,
+   "drop_pct": 2.183326772249634,
+   "gap_ms": 0.020000000000003126,
+   "verdict": "kh\u00f4ng nhanh h\u01a1n"
+  },
+  "silu|CORE_0_1_2": {
+   "core0_ms": 16.511499999999998,
+   "mask_ms": 16.036,
+   "drop_ms": 0.4754999999999967,
+   "drop_pct": 2.879811040789733,
+   "gap_ms": 0.022000000000002018,
+   "verdict": "kh\u00f4ng nhanh h\u01a1n"
+  },
+  "relu|CORE_0_1": {
+   "core0_ms": 12.8335,
+   "mask_ms": 9.8885,
+   "drop_ms": 2.9450000000000003,
+   "drop_pct": 22.947753925273695,
+   "gap_ms": 0.011000000000001009,
+   "verdict": "nhanh h\u01a1n"
+  },
+  "relu|CORE_0_1_2": {
+   "core0_ms": 12.8335,
+   "mask_ms": 8.524,
+   "drop_ms": 4.309500000000002,
+   "drop_pct": 33.58008337554059,
+   "gap_ms": 0.011000000000001009,
+   "verdict": "nhanh h\u01a1n"
+  }
+ },
+ "auto_vs_core0": {
+  "silu": {
+   "auto_ms": 16.542,
+   "core0_ms": 16.511499999999998,
+   "diff_ms": 0.030500000000003524,
+   "gap_ms": 0.06599999999999895
+  },
+  "relu": {
+   "auto_ms": 12.8585,
+   "core0_ms": 12.8335,
+   "diff_ms": 0.02499999999999858,
+   "gap_ms": 0.011000000000001009
+  }
+ },
+ "relu_vs_silu": {
+  "CORE_0": {
+   "silu_ms": 16.511499999999998,
+   "relu_ms": 12.8335,
+   "diff_ms": -3.6779999999999973,
+   "diff_pct": -22.275383823395803
+  },
+  "CORE_0_1": {
+   "silu_ms": 16.151,
+   "relu_ms": 9.8885,
+   "diff_ms": -6.262499999999999,
+   "diff_pct": -38.77468887375394
+  },
+  "CORE_0_1_2": {
+   "silu_ms": 16.036,
+   "relu_ms": 8.524,
+   "diff_ms": -7.512000000000002,
+   "diff_pct": -46.844599650785746
+  },
+  "AUTO": {
+   "silu_ms": 16.542,
+   "relu_ms": 12.8585,
+   "diff_ms": -3.683500000000002,
+   "diff_pct": -22.26756135896507
+  }
+ },
+ "gate_a": {
+  "silu": {
+   "coverage_per_session": [
+    0.017788077294136975,
+    0.017788077294136975
+   ],
+   "build_rows": 119,
+   "build_total_cycles": 5666717,
+   "build_cpu_ops": [
+    "InputOperator",
+    "OutputOperator",
+    "Transpose"
+   ],
+   "verdict": "kh\u00f4ng \u0111\u1ea1t"
+  },
+  "relu": {
+   "coverage_per_session": [
+    0.9762825636078174,
+    0.9762825636078174
+   ],
+   "build_rows": 113,
+   "build_total_cycles": 5666717,
+   "build_cpu_ops": [
+    "InputOperator",
+    "OutputOperator",
+    "Transpose"
+   ],
+   "verdict": "\u0111\u1ea1t"
+  }
+ },
+ "by_op": {
+  "silu": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 4.0,
+    "time_share_core0": 0.000239585517055494
+   },
+   "ConvExSwish": {
+    "rows": 57,
+    "split": 0,
+    "cycles": 5431517,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 57
+    },
+    "time_us_core0": 10446.0,
+    "time_share_core0": 0.6256775777904225
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 9
+    },
+    "time_us_core0": 538.0,
+    "time_share_core0": 0.032224252043963945
+   },
+   "Add": {
+    "rows": 8,
+    "split": 8,
+    "cycles": 0,
+    "workloads": {
+     "33.7%/33.7%/32.5%": 2,
+     "35.0%/32.5%/32.5%": 2,
+     "33.3%/33.3%/33.3%": 2,
+     "33.7%/33.1%/33.1%": 1
+    },
+    "time_us_core0": 330.0,
+    "time_share_core0": 0.019765805157078254
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0,
+    "workloads": {
+     "35.0%/32.5%/32.5%": 5,
+     "35.0%/35.0%/30.0%": 4,
+     "33.7%/33.7%/32.5%": 3,
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 1433.0,
+    "time_share_core0": 0.08583151148513073
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 3
+    },
+    "time_us_core0": 69.0,
+    "time_share_core0": 0.004132850169207271
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 178.0,
+    "time_share_core0": 0.010661555508969483
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200,
+    "workloads": {
+     "33.7%/33.7%/32.5%": 2,
+     "35.0%/32.5%/32.5%": 1,
+     "34.9%/32.5%/32.5%": 1,
+     "34.9%/34.9%/30.2%": 1
+    },
+    "time_us_core0": 489.0,
+    "time_share_core0": 0.029289329460034142
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 4,
+     "0.0%/0.0%/0.0%": 3
+    },
+    "time_us_core0": 313.0,
+    "time_share_core0": 0.018747566709592406
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 2051.5,
+    "time_share_core0": 0.12287742205983648
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 571.5,
+    "time_share_core0": 0.034230780749303705
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 71.5,
+    "time_share_core0": 0.004282591117366955
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 119.0,
+    "time_share_core0": 0.007127669132400947
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 76.0,
+    "time_share_core0": 0.004552124824054386
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 6.0,
+    "time_share_core0": 0.000359378275583241
+   }
+  },
+  "relu": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 4.0,
+    "time_share_core0": 0.0002988531510329112
+   },
+   "ConvRelu": {
+    "rows": 51,
+    "split": 51,
+    "cycles": 4913117,
+    "workloads": {
+     "35.0%/32.5%/32.5%": 18,
+     "33.8%/33.8%/32.5%": 10,
+     "35.0%/35.0%/30.0%": 8,
+     "33.8%/33.1%/33.1%": 3
+    },
+    "time_us_core0": 6735.5,
+    "time_share_core0": 0.5032313496955434
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 9
+    },
+    "time_us_core0": 538.5,
+    "time_share_core0": 0.040233105457805673
+   },
+   "ConvReluAdd": {
+    "rows": 6,
+    "split": 6,
+    "cycles": 518400,
+    "workloads": {
+     "35.0%/32.5%/32.5%": 2,
+     "33.7%/33.1%/33.1%": 1,
+     "33.8%/33.8%/32.5%": 1,
+     "33.7%/33.7%/32.5%": 1
+    },
+    "time_us_core0": 645.0,
+    "time_share_core0": 0.04819007060405693
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0,
+    "workloads": {
+     "35.0%/32.5%/32.5%": 5,
+     "35.0%/35.0%/30.0%": 4,
+     "33.7%/33.7%/32.5%": 3,
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 1437.0,
+    "time_share_core0": 0.10736299450857335
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 3
+    },
+    "time_us_core0": 69.0,
+    "time_share_core0": 0.005155216855317718
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 179.0,
+    "time_share_core0": 0.013373678508722776
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200,
+    "workloads": {
+     "33.8%/33.8%/32.5%": 2,
+     "35.0%/32.5%/32.5%": 2,
+     "35.0%/35.0%/30.0%": 1,
+     "34.8%/34.8%/30.4%": 1
+    },
+    "time_us_core0": 489.0,
+    "time_share_core0": 0.036534797713773395
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 4,
+     "0.0%/0.0%/0.0%": 3
+    },
+    "time_us_core0": 317.0,
+    "time_share_core0": 0.023684112219358212
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 2053.5,
+    "time_share_core0": 0.1534237364115208
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 573.0,
+    "time_share_core0": 0.04281071388546453
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 73.5,
+    "time_share_core0": 0.005491426650229743
+   },
+   "Add": {
+    "rows": 2,
+    "split": 2,
+    "cycles": 0,
+    "workloads": {
+     "33.3%/33.3%/33.3%": 2
+    },
+    "time_us_core0": 69.5,
+    "time_share_core0": 0.005192573499196832
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 2
+    },
+    "time_us_core0": 119.0,
+    "time_share_core0": 0.008890881243229109
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "100.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 76.5,
+    "time_share_core0": 0.0057155665135044265
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0,
+    "workloads": {
+     "0.0%/0.0%/0.0%": 1
+    },
+    "time_us_core0": 5.5,
+    "time_share_core0": 0.0004109230826702529
+   }
+  }
+ },
+ "resize": {
+  "silu": [
+   {
+    "id": 47,
+    "name": "Resize:/model/model.10/Resize",
+    "workload": "100.0%/0.0%/0.0%",
+    "time_us_core012": 62.0,
+    "time_us_core0": 62.5,
+    "cycles": 0
+   },
+   {
+    "id": 55,
+    "name": "Resize:/model/model.13/Resize",
+    "workload": "100.0%/0.0%/0.0%",
+    "time_us_core012": 115.5,
+    "time_us_core0": 115.5,
+    "cycles": 0
+   }
+  ],
+  "relu": [
+   {
+    "id": 41,
+    "name": "Resize:/model/model.10/Resize",
+    "workload": "100.0%/0.0%/0.0%",
+    "time_us_core012": 62.5,
+    "time_us_core0": 63.0,
+    "cycles": 0
+   },
+   {
+    "id": 49,
+    "name": "Resize:/model/model.13/Resize",
+    "workload": "100.0%/0.0%/0.0%",
+    "time_us_core012": 115.5,
+    "time_us_core0": 116.0,
+    "cycles": 0
+   }
+  ]
+ },
+ "g3": {
+  "silu": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 119,
+   "fp16_rows": 119
+  },
+  "relu": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 113,
+   "fp16_rows": 113
+  }
+ },
+ "rule": "G4 A, B and S1 latency rule (onboard_g4b), written 2026-10-31T12:08:57+07:00 before any G4 latency or workload data of the ReLU model exists. Not from a source. Not reviewed by the user (goal of 2026-10-31, phase 2). Reviewed by the advisor (design). Approved numbers used: 5 percent latency drop and the 2 session gap rule (page 01-operator-support section 2, condition B), 50 percent cycles (condition A), approved 2026-10-25. Protocol P2 is the one of phase 1 (X4), not approved as the main protocol.\nQuestions: G4A (cycles covered by layers split over two or more cores), G4B (does CORE_0_1_2 beat CORE_0 for the ReLU candidate), S1 (M11: CORE_0_1 and CORE_0_1_2 against CORE_0 for the baseline), G6 and G8 (workload of Resize, Concat, Split, MaxPool, ConvExSwish).\nModels (INT8, same calibration list, ids in export_int8.json): SiLU baseline seed 0 sha256 a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd (the file of phase 1), ReLU seed 0 sha256 c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f. The driver aborts if a file changes during the run.\nDesign: one interleaved run under P2 (rknn_server threads and NPU interrupts 36, 37, 38 on CPU4, irqbalance stopped, ~/x4/x4_hold.sh in pin mode, frequencies locked). 16 sessions: conditions S-C0 R-C0 S-C01 R-C01 S-C012 R-C012 S-AUTO R-AUTO (S SiLU, R ReLU, C0 CORE_0, C01 CORE_0_1, C012 CORE_0_1_2), the same order in round 1 and round 2, 45 s rest. One session = benchmark_npu.py: 5 eval_perf without perf_debug (latency) then 5 eval_perf with perf_debug=True (per-layer table), --skip-memory.\nRealization of a session, exactly as X4 and X8: helper log in pin mode with zero threads off CPU4 inside the session window, at least 99 percent of the NPU interrupts of the session on CPU4. A condition whose two sessions are not both realized is 'ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)'.\nStatements:\nB (per model, mask CORE_0_1 and CORE_0_1_2): median of the two session medians per condition. drop_ms = median(CORE_0) minus median(mask), drop_pct = drop_ms / median(CORE_0). gap_ms = the larger, over CORE_0 and the mask, of the absolute difference of that condition's two session medians (conservative). The mask is 'nhanh h\u01a1n' only when drop_pct is at least 5 percent and drop_ms is larger than gap_ms, otherwise 'kh\u00f4ng nhanh h\u01a1n'. Gate B is the verdict of the ReLU model at CORE_0_1_2. The SiLU result is the control. S1 is the verdict of the SiLU model for CORE_0_1 and CORE_0_1_2.\nA (per model, CORE_0_1_2 sessions): a table row is split when at least 2 of its 3 WorkLoad percentages are above 0.0 percent. coverage = sum of Total cycles of split rows divided by the sum of Total cycles of all rows with cycles. The sum of Total cycles from the board table must equal the sum from the build table of the same .rknn (asserted). A is '\u0111\u1ea1t' when coverage is at least 50 percent in every session of that model, 'kh\u00f4ng \u0111\u1ea1t' otherwise (coverage does not need realized sessions, it is read from the table). Caveat of the standard: perf_debug may disable parallel mechanisms (UG232 p177), A is an indicator, B decides speed.\nDescriptive only: ReLU against SiLU latency at each mask (ms, percent), AUTO against CORE_0 (difference and gap), workload and cycles per OpType (G8), the two Resize rows selected by op name (workload, time, G6), CPU ops of the build tables (G3).\nNo keep or drop statement here: the label of the candidate needs G1 to G4 and is written in the docs. Limit: one run, 2 sessions per condition, one seed per model.\nBudget: experiment 1. Experiment 2 only if some condition was not realized.\n",
+ "driver_log": "12:09:23 silu CORE_0 session 1\n12:10:16 relu CORE_0 session 1\n12:11:09 silu CORE_0_1 session 1\n12:12:04 relu CORE_0_1 session 1\n12:12:56 silu CORE_0_1_2 session 1\n12:13:48 relu CORE_0_1_2 session 1\n12:14:40 silu AUTO session 1\n12:15:33 relu AUTO session 1\n12:16:26 silu CORE_0 session 2\n12:17:18 relu CORE_0 session 2\n12:18:12 silu CORE_0_1 session 2\n12:19:04 relu CORE_0_1 session 2\n12:19:57 silu CORE_0_1_2 session 2\n12:20:49 relu CORE_0_1_2 session 2\n12:21:42 silu AUTO session 2\n12:22:34 relu AUTO session 2\n",
+ "hold_progress": "13:09:12 state: kernel 6.1.99-rockchip-rk3588 ; up 13 hours, 30 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n13:09:15 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n13:23:20 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active\n"
+}

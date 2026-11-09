@@ -1,0 +1,16 @@
+{
+ "exp_id": "eval_g4",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/eval_g4/rule.txt",
+ "rule_first_line": "G4 C and seed-noise rule (eval_g4), written 2026-10-31T11:37:41+07:00 before any RKNNLite INT8 or FP16 mAP result of baseline seeds 1 and 2 and before any result of ReLU exists (FP32 PyTorch results of seeds 1 and 2 from training already exist, descriptive only). Not from a source. Not reviewed by the user (goal of 2026-10-31, phase 2). The number 1.0 pp (approved 2026-10-25, page 01-operator-support section 2) is the only threshold. Everything else here is new and unreviewed.",
+ "script": [
+  "ai/npu/operator_support/analyze_g4c.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

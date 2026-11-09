@@ -1,0 +1,24 @@
+X4 rule, written 2026-10-31T04:00:12+07:00 before any X4 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).
+Questions (tmp/2026-10-31_latency-unknowns-tracker.md): U25 and U7 (A5 and A8 under a pinned protocol P2), U6 (first eval_perf call), U10 (per-row debug constant between sessions), U13 (debug total against latency), U16 (CORE_0 against AUTO), U22 (CORE_0_1_2 latency), U19 (log level). Measurements and comparisons only, no mechanism claim.
+The original A5 and A8 results (relay, 2026-10-30) stay 'không đạt'. Nothing here changes them.
+Protocols (one session = benchmark_npu.py --precision int8 --core-mask CORE_0 --session N --skip-memory: a latency session of 5 eval_perf calls with perf_debug False and a per-layer session of 5 calls with perf_debug True):
+  P1-LAN: rknn_server and NPU interrupts not pinned (all 0-7), irqbalance active, as in the original runs, but over the direct LAN.
+  P2: rknn_server (every thread) and NPU interrupts 36, 37, 38 on CPU4, irqbalance stopped (cell (4, 4)).
+A root helper on the board (x4_hold.sh, on CPU7) switches between the two modes on request (mode file, acknowledged before each session) and logs every second the Cpus_allowed_list of every rknn_server thread.
+Order: P1 and P2 alternate session by session (P1 s1, P2 s1, P1 s2, ... P1 s10, P2 s10), with a fixed rest of 45 s between sessions (new number, not user approved). Sessions 1 to 3 of each protocol go to experiments/npu/latency/onboard_x4/p1lan and experiments/npu/latency/onboard_x4/p2 (gate sessions), sessions 4 to 10 to p1lan_extra and p2_extra. Then, in P2 mode, latency-only sessions with the same 45 s rest: masks CORE_0, AUTO, CORE_0_1_2 in 4 interleaved rounds, then log RKNN(verbose=False) and RKNN(verbose=True) on CORE_0 in 3 interleaved rounds.
+For every session the driver records the board time (date +%s) at start and end and /proc/interrupts lines 36, 37, 38 before and after.
+P2 session realized: every log line of the helper inside the session window is in pin mode with zero threads outside CPU4, and at least 99 percent of the NPU interrupts counted in the session are on CPU4. P1 sessions: the helper is in unpin mode during the session window. A statement that uses an unrealized session reads 'chưa kết luận (P2 không thực hiện đúng)' (or P1).
+Gates: ai/npu/latency/aggregate_layers.py unchanged (code and thresholds 5 percent and 10 percent, approved), run with --bench-subdir onboard_x4/p1lan --tag p1lan and --bench-subdir onboard_x4/p2 --tag p2 on sessions 1 to 3. Reading of A5 and of A8 separately (2 x 2):
+  P1-LAN fails, P2 passes: 'trên LAN, ghim lõi làm cổng đạt' -> U25 ĐO, U7 ĐO (supports level sampling as the reason of the failure, together with the level class of each session median below).
+  Both pass: 'trên LAN cả hai giao thức đều đạt, không tách được ghim lõi khỏi khoảng cách giữa các phiên' -> U25 ĐO, U7 CHƯA BIẾT.
+  Both fail: 'ghim lõi không đủ để cổng đạt' -> U25 ĐO, U7 CHƯA BIẾT.
+  P1-LAN passes, P2 fails: 'chưa kết luận' -> U25 CHƯA BIẾT, U7 CHƯA BIẾT.
+  Descriptive for U7: each session latency median classified fast (< 17.0 ms), mid, slow (>= 20.0 ms) as in the other experiments.
+  FP16 (U23) runs later only if A8 of P2 passes, interleaved ABAB with INT8 under P2, as a P2 result.
+Statements:
+  U6: per protocol, over its 10 sessions, count sessions whose first latency call is below the median of its other 4 calls. 9 or 10 of 10: 'lần gọi đầu thấp hơn các lần sau ở N/10 phiên'. 6 or fewer: 'không ổn định'. Otherwise report the count. Also report the median of (first minus median of the rest).
+  U10: per protocol, the per-row intercept of each of its 10 per-layer sessions (same Conv fit as aggregate_layers). spread = max minus min. If spread(P2) <= 0.5 spread(P1-LAN): 'ghim lõi thu hẹp chênh lệch hằng số mỗi dòng giữa các phiên'. If spread(P2) >= 0.8 spread(P1-LAN): 'ghim lõi không thu hẹp'. Otherwise 'chưa kết luận'.
+  U13: per protocol, count sessions whose debug total (median of 5 calls) is below the latency (median of 5 calls) of the same session. Report the counts.
+  U16, U22, U19: per setting, the 4 (or 3) session medians. 'khác' when every session median of the setting lies outside the min to max range of the reference (CORE_0, or verbose False), with the difference of the medians of the session medians. 'không phân biệt được' otherwise. Next to U16 and U22, report which interrupt lines (and so which cores) each session used.
+  The numbers 9, 6, 0.5, 0.8 and 45 s are new, chosen for this rule, not user approved.
+Budget: experiment 1 for U25, U7, U6, U10, U13, U16, U22, U19.

@@ -1,0 +1,15 @@
+# PC to board link, measured 2026-10-30 (values copied from the command outputs of that session)
+tailscale status: board 100.67.251.37 "active; relay "sin"" (relay path, not a direct connection)
+ping -c 3 100.67.251.37: rtt min/avg/max/mdev = 159.228/231.307/268.790/50.981 ms
+adb push of a 4000000 byte file: 0.1 MB/s (4000000 bytes in 50.377s)
+scp of the same file: 10.551 s
+init_runtime of the INT8 model with perf_debug=True over this link: 241.9 s ; each eval_perf call: 37.3 s and 36.5 s (probe), 34.4 to 57.4 s wall in E1
+
+# Direct LAN, measured 2026-10-30 (PC eno2 192.168.137.1 shared, board eth0 192.168.137.49)
+link: Speed: 1000Mb/s
+rtt min/avg/max/mdev = 0.449/0.531/0.629/0.067 ms
+scp 4786255 bytes (best-rk3588.rknn + 2 small files), wall 0.56 s including ssh setup
+adb push over LAN, 2026-10-30: 4786255 bytes in 0.365 s, 12.5 MB/s (adb push output). init_runtime on LAN not measured.
+
+# Tier-1 over direct LAN, 2026-10-31 (timing pilot, latency values not recorded): see extra_tier1_lan_timing.txt
+# init_runtime 1.5 s (relay: 241.9 s), eval_perf 0.21 to 0.23 s per call with one 0.43 s (relay: 34.4 to 57.4 s)

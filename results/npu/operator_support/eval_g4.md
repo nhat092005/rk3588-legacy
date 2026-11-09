@@ -1,0 +1,24 @@
+# G4 C and seed spread
+
+- css_test|int8: map50_95 range 1.35 pp (trong nhiễu seed), NoHelmet range 1.85 pp (trong nhiễu seed), Vest range 2.40 pp (trong nhiễu seed)
+- css_test|fp16: map50_95 range 1.25 pp (trong nhiễu seed), NoHelmet range 0.62 pp (ngoài nhiễu seed), Vest range 4.36 pp (trong nhiễu seed)
+- css_test|fp32: map50_95 range 1.12 pp (trong nhiễu seed), NoHelmet range 0.14 pp (ngoài nhiễu seed), Vest range 3.96 pp (trong nhiễu seed)
+- ppe2286_ext|int8: map50_95 range 0.73 pp (ngoài nhiễu seed), NoHelmet range 0.11 pp (ngoài nhiễu seed), Vest range 4.86 pp (trong nhiễu seed)
+- ppe2286_ext|fp16: map50_95 range 0.56 pp (ngoài nhiễu seed), NoHelmet range 0.23 pp (ngoài nhiễu seed), Vest range 3.76 pp (trong nhiễu seed)
+- ppe2286_ext|fp32: map50_95 range 0.45 pp (ngoài nhiễu seed), NoHelmet range 0.26 pp (ngoài nhiễu seed), Vest range 3.68 pp (trong nhiễu seed)
+- C css_test|int8: diff map50_95 -3.51, NoHelmet -4.94, Vest +0.14, passes False
+- C css_test|fp16: diff map50_95 -3.27, NoHelmet -5.29, Vest +1.62, passes False
+- C css_test|fp32: diff map50_95 -3.66, NoHelmet -6.26, Vest +1.34, passes False
+- C ppe2286_ext|int8: diff map50_95 -1.30, NoHelmet +0.03, Vest -4.28, passes False
+- C ppe2286_ext|fp16: diff map50_95 -1.70, NoHelmet +0.05, Vest -5.58, passes False
+- C ppe2286_ext|fp32: diff map50_95 -1.65, NoHelmet +0.04, Vest -5.69, passes False
+- ReLU spread css_test|int8: map50_95 range 1.57, mean diff -3.87 (lớn hơn nhiễu seed), NoHelmet range 2.33, mean diff -5.01 (lớn hơn nhiễu seed), Vest range 3.32, mean diff -2.76 (trong nhiễu seed)
+- ReLU spread css_test|fp16: map50_95 range 1.07, mean diff -4.49 (lớn hơn nhiễu seed), NoHelmet range 2.64, mean diff -4.81 (lớn hơn nhiễu seed), Vest range 5.51, mean diff -3.04 (trong nhiễu seed)
+- ReLU spread css_test|fp32: map50_95 range 0.97, mean diff -4.53 (lớn hơn nhiễu seed), NoHelmet range 3.12, mean diff -5.15 (lớn hơn nhiễu seed), Vest range 5.11, mean diff -2.99 (trong nhiễu seed)
+- ReLU spread ppe2286_ext|int8: map50_95 range 1.32, mean diff +0.01 (trong nhiễu seed), NoHelmet range 0.29, mean diff +0.09 (trong nhiễu seed), Vest range 1.32, mean diff -1.66 (trong nhiễu seed)
+- ReLU spread ppe2286_ext|fp16: map50_95 range 1.66, mean diff -0.38 (trong nhiễu seed), NoHelmet range 0.82, mean diff +0.24 (trong nhiễu seed), Vest range 4.65, mean diff -1.98 (trong nhiễu seed)
+- ReLU spread ppe2286_ext|fp32: map50_95 range 1.72, mean diff -0.35 (trong nhiễu seed), NoHelmet range 0.78, mean diff +0.23 (trong nhiễu seed), Vest range 4.65, mean diff -2.03 (trong nhiễu seed)
+- variant leakyrelu css_test INT8 vs SiLU: map50_95 -2.64, NoHelmet -5.00, Vest -3.98, passes False
+- variant relu6 css_test INT8 vs SiLU: map50_95 -3.63, NoHelmet -0.36, Vest -3.40, passes False
+- variant relu200 css_test INT8 vs SiLU: map50_95 -0.57, NoHelmet +1.57, Vest +1.10, passes True
+- ReLU seeds passing C against SiLU same seed: 0/3

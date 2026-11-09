@@ -11,7 +11,7 @@ def sample_calibration_images(
     labels_dir: Path,
     n: int = 100,
     min_per_class: int = 10,
-    seed: int = 42,
+    seed: int = 0,
 ) -> list[str]:
     """Select calibration image stems, guaranteeing min_per_class per class before filling the rest uniformly."""
     rng = random.Random(seed)
@@ -26,7 +26,7 @@ def sample_calibration_images(
 
     selected: set[str] = set()
     for c in sorted(class_to_images, key=lambda c: len(class_to_images[c])):
-        candidates = list(class_to_images[c] - selected)
+        candidates = sorted(class_to_images[c] - selected)  # set order depends on PYTHONHASHSEED, sort before the seeded shuffle
         rng.shuffle(candidates)
         selected.update(candidates[:min_per_class])
 
@@ -34,7 +34,7 @@ def sample_calibration_images(
     rng.shuffle(remaining)
     selected.update(remaining[: max(0, n - len(selected))])
 
-    return list(selected)[:n]
+    return sorted(selected)[:n]
 
 
 def write_letterboxed_calib(image_paths: list[Path], out_dir: Path, imgsz: int = 640) -> Path:

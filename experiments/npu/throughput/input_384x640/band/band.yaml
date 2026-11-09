@@ -1,0 +1,10 @@
+names:
+- Helmet
+- NoHelmet
+- NoVest
+- Vest
+- Person
+nc: 5
+path: /home/nhat/workspace/prjs/rk3588/experiments/npu/throughput/input_384x640/band
+train: images/val
+val: images/val

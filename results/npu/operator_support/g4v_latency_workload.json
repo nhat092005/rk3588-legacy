@@ -1,0 +1,1217 @@
+{
+ "sessions": [
+  {
+   "model": "silu",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.505,
+   "latency_all": [
+    16.488,
+    16.499,
+    16.507,
+    16.505,
+    16.507
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 12.837,
+   "latency_all": [
+    12.819,
+    12.847,
+    12.85,
+    12.837,
+    12.834
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+  },
+  {
+   "model": "leakyrelu",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 12.831,
+   "latency_all": [
+    12.817,
+    12.831,
+    12.827,
+    12.834,
+    12.84
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "7a1f6167c0e9f83f25b55619b023999e57aeff34e4b10821baff5babf6f68323"
+  },
+  {
+   "model": "relu6",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 13.032,
+   "latency_all": [
+    13.235,
+    13.036,
+    13.028,
+    13.032,
+    13.012
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    595,
+    0,
+    0,
+    0
+   ],
+   "sha256": "0ea9b44c078f34baf61f66f6139e9c9bd287dde6b52461a14a6ec1fdee489e5a"
+  },
+  {
+   "model": "relu200",
+   "mask": "CORE_0",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 12.83,
+   "latency_all": [
+    12.825,
+    12.829,
+    12.835,
+    12.833,
+    12.83
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664"
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": false,
+   "latency_ms": 16.017,
+   "latency_all": [
+    16.0,
+    16.022,
+    16.01,
+    16.017,
+    16.047
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1530,
+    0,
+    0,
+    0
+   ],
+   "sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 8.54,
+   "latency_all": [
+    8.525,
+    8.544,
+    8.537,
+    8.54,
+    8.542
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+  },
+  {
+   "model": "leakyrelu",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 8.53,
+   "latency_all": [
+    8.518,
+    8.534,
+    8.53,
+    8.534,
+    8.527
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "7a1f6167c0e9f83f25b55619b023999e57aeff34e4b10821baff5babf6f68323"
+  },
+  {
+   "model": "relu6",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 8.745,
+   "latency_all": [
+    8.727,
+    9.07,
+    8.737,
+    8.745,
+    8.747
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2225,
+    0,
+    0,
+    0
+   ],
+   "sha256": "0ea9b44c078f34baf61f66f6139e9c9bd287dde6b52461a14a6ec1fdee489e5a"
+  },
+  {
+   "model": "relu200",
+   "mask": "CORE_0_1_2",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 8.53,
+   "latency_all": [
+    8.518,
+    8.53,
+    8.528,
+    8.677,
+    8.541
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664"
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.512,
+   "latency_all": [
+    16.499,
+    16.52,
+    16.492,
+    16.513,
+    16.512
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ],
+   "sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 12.837,
+   "latency_all": [
+    12.834,
+    12.837,
+    12.84,
+    12.892,
+    12.837
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+  },
+  {
+   "model": "leakyrelu",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 12.869,
+   "latency_all": [
+    12.866,
+    12.868,
+    12.869,
+    12.874,
+    12.873
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "7a1f6167c0e9f83f25b55619b023999e57aeff34e4b10821baff5babf6f68323"
+  },
+  {
+   "model": "relu6",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 13.069,
+   "latency_all": [
+    13.026,
+    13.074,
+    13.068,
+    13.071,
+    13.069
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    595,
+    0,
+    0,
+    0
+   ],
+   "sha256": "0ea9b44c078f34baf61f66f6139e9c9bd287dde6b52461a14a6ec1fdee489e5a"
+  },
+  {
+   "model": "relu200",
+   "mask": "CORE_0",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 12.857,
+   "latency_all": [
+    12.847,
+    12.858,
+    12.857,
+    12.862,
+    12.856
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    565,
+    0,
+    0,
+    0
+   ],
+   "sha256": "6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664"
+  },
+  {
+   "model": "silu",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.031,
+   "latency_all": [
+    16.03,
+    16.033,
+    16.031,
+    16.028,
+    16.035
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    1530,
+    0,
+    0,
+    0
+   ],
+   "sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  },
+  {
+   "model": "relu",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 8.558,
+   "latency_all": [
+    8.546,
+    8.557,
+    8.573,
+    8.57,
+    8.558
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+  },
+  {
+   "model": "leakyrelu",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 8.552,
+   "latency_all": [
+    8.546,
+    8.56,
+    8.558,
+    8.552,
+    8.549
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "7a1f6167c0e9f83f25b55619b023999e57aeff34e4b10821baff5babf6f68323"
+  },
+  {
+   "model": "relu6",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 8.742,
+   "latency_all": [
+    8.727,
+    8.744,
+    8.743,
+    8.742,
+    8.735
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2225,
+    0,
+    0,
+    0
+   ],
+   "sha256": "0ea9b44c078f34baf61f66f6139e9c9bd287dde6b52461a14a6ec1fdee489e5a"
+  },
+  {
+   "model": "relu200",
+   "mask": "CORE_0_1_2",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 8.551,
+   "latency_all": [
+    8.551,
+    8.547,
+    8.548,
+    8.573,
+    8.557
+   ],
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    2015,
+    0,
+    0,
+    0
+   ],
+   "sha256": "6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664"
+  }
+ ],
+ "all_realized": false,
+ "conditions": {
+  "silu|CORE_0": {
+   "session_medians": [
+    16.505,
+    16.512
+   ],
+   "median": 16.508499999999998,
+   "gap_ms": 0.0070000000000014495,
+   "realized": true
+  },
+  "silu|CORE_0_1_2": {
+   "session_medians": [
+    16.017,
+    16.031
+   ],
+   "median": 16.024,
+   "gap_ms": 0.013999999999999346,
+   "realized": false
+  },
+  "relu|CORE_0": {
+   "session_medians": [
+    12.837,
+    12.837
+   ],
+   "median": 12.837,
+   "gap_ms": 0.0,
+   "realized": true
+  },
+  "relu|CORE_0_1_2": {
+   "session_medians": [
+    8.54,
+    8.558
+   ],
+   "median": 8.549,
+   "gap_ms": 0.018000000000000682,
+   "realized": true
+  },
+  "leakyrelu|CORE_0": {
+   "session_medians": [
+    12.831,
+    12.869
+   ],
+   "median": 12.85,
+   "gap_ms": 0.038000000000000256,
+   "realized": true
+  },
+  "leakyrelu|CORE_0_1_2": {
+   "session_medians": [
+    8.53,
+    8.552
+   ],
+   "median": 8.541,
+   "gap_ms": 0.02200000000000024,
+   "realized": true
+  },
+  "relu6|CORE_0": {
+   "session_medians": [
+    13.032,
+    13.069
+   ],
+   "median": 13.0505,
+   "gap_ms": 0.03700000000000081,
+   "realized": true
+  },
+  "relu6|CORE_0_1_2": {
+   "session_medians": [
+    8.745,
+    8.742
+   ],
+   "median": 8.743500000000001,
+   "gap_ms": 0.0029999999999983373,
+   "realized": true
+  },
+  "relu200|CORE_0": {
+   "session_medians": [
+    12.83,
+    12.857
+   ],
+   "median": 12.843499999999999,
+   "gap_ms": 0.026999999999999247,
+   "realized": true
+  },
+  "relu200|CORE_0_1_2": {
+   "session_medians": [
+    8.53,
+    8.551
+   ],
+   "median": 8.5405,
+   "gap_ms": 0.021000000000000796,
+   "realized": true
+  }
+ },
+ "gate_b": {
+  "silu": {
+   "core0_ms": 16.508499999999998,
+   "mask_ms": 16.024,
+   "drop_ms": 0.48449999999999704,
+   "drop_pct": 2.934851743041446,
+   "gap_ms": 0.013999999999999346,
+   "verdict": "ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)"
+  },
+  "relu": {
+   "core0_ms": 12.837,
+   "mask_ms": 8.549,
+   "drop_ms": 4.288,
+   "drop_pct": 33.403443172080706,
+   "gap_ms": 0.018000000000000682,
+   "verdict": "nhanh h\u01a1n"
+  },
+  "leakyrelu": {
+   "core0_ms": 12.85,
+   "mask_ms": 8.541,
+   "drop_ms": 4.308999999999999,
+   "drop_pct": 33.533073929961084,
+   "gap_ms": 0.038000000000000256,
+   "verdict": "nhanh h\u01a1n"
+  },
+  "relu6": {
+   "core0_ms": 13.0505,
+   "mask_ms": 8.743500000000001,
+   "drop_ms": 4.306999999999999,
+   "drop_pct": 33.00256695145779,
+   "gap_ms": 0.03700000000000081,
+   "verdict": "nhanh h\u01a1n"
+  },
+  "relu200": {
+   "core0_ms": 12.843499999999999,
+   "mask_ms": 8.5405,
+   "drop_ms": 4.302999999999999,
+   "drop_pct": 33.50332853194222,
+   "gap_ms": 0.026999999999999247,
+   "verdict": "nhanh h\u01a1n"
+  }
+ },
+ "vs_silu": {
+  "CORE_0": {
+   "silu": {
+    "ms": 16.508499999999998,
+    "diff_ms": 0.0,
+    "diff_pct": 0.0
+   },
+   "relu": {
+    "ms": 12.837,
+    "diff_ms": -3.671499999999998,
+    "diff_pct": -22.240058151861152
+   },
+   "leakyrelu": {
+    "ms": 12.85,
+    "diff_ms": -3.6584999999999983,
+    "diff_pct": -22.161310839870364
+   },
+   "relu6": {
+    "ms": 13.0505,
+    "diff_ms": -3.4579999999999984,
+    "diff_pct": -20.94678498955083
+   },
+   "relu200": {
+    "ms": 12.843499999999999,
+    "diff_ms": -3.664999999999999,
+    "diff_pct": -22.20068449586576
+   }
+  },
+  "CORE_0_1_2": {
+   "silu": {
+    "ms": 16.024,
+    "diff_ms": 0.0,
+    "diff_pct": 0.0
+   },
+   "relu": {
+    "ms": 8.549,
+    "diff_ms": -7.475000000000001,
+    "diff_pct": -46.648776834747885
+   },
+   "leakyrelu": {
+    "ms": 8.541,
+    "diff_ms": -7.4830000000000005,
+    "diff_pct": -46.698701947079385
+   },
+   "relu6": {
+    "ms": 8.743500000000001,
+    "diff_ms": -7.2805,
+    "diff_pct": -45.43497254118821
+   },
+   "relu200": {
+    "ms": 8.5405,
+    "diff_ms": -7.483500000000001,
+    "diff_pct": -46.701822266600104
+   }
+  }
+ },
+ "gate_a": {
+  "silu": {
+   "coverage_per_session": [
+    0.017788077294136975,
+    0.017788077294136975
+   ],
+   "build_rows": 119,
+   "build_total_cycles": 5666717,
+   "verdict": "kh\u00f4ng \u0111\u1ea1t"
+  },
+  "relu": {
+   "coverage_per_session": [
+    0.9762825636078174,
+    0.9762825636078174
+   ],
+   "build_rows": 113,
+   "build_total_cycles": 5666717,
+   "verdict": "\u0111\u1ea1t"
+  },
+  "leakyrelu": {
+   "coverage_per_session": [
+    0.9762825636078174,
+    0.9762825636078174
+   ],
+   "build_rows": 113,
+   "build_total_cycles": 5666717,
+   "verdict": "\u0111\u1ea1t"
+  },
+  "relu6": {
+   "coverage_per_session": [
+    0.9762825636078174,
+    0.9762825636078174
+   ],
+   "build_rows": 119,
+   "build_total_cycles": 5666717,
+   "verdict": "\u0111\u1ea1t"
+  },
+  "relu200": {
+   "coverage_per_session": [
+    0.9762825636078174,
+    0.9762825636078174
+   ],
+   "build_rows": 113,
+   "build_total_cycles": 5666717,
+   "verdict": "\u0111\u1ea1t"
+  }
+ },
+ "by_op": {
+  "silu": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvExSwish": {
+    "rows": 57,
+    "split": 0,
+    "cycles": 5431517
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0
+   },
+   "Add": {
+    "rows": 8,
+    "split": 8,
+    "cycles": 0
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   }
+  },
+  "relu": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvRelu": {
+    "rows": 51,
+    "split": 51,
+    "cycles": 4913117
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvReluAdd": {
+    "rows": 6,
+    "split": 6,
+    "cycles": 518400
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Add": {
+    "rows": 2,
+    "split": 2,
+    "cycles": 0
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   }
+  },
+  "leakyrelu": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvLeakyRelu": {
+    "rows": 51,
+    "split": 51,
+    "cycles": 4913117
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvLeakyReluAdd": {
+    "rows": 6,
+    "split": 6,
+    "cycles": 518400
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Add": {
+    "rows": 2,
+    "split": 2,
+    "cycles": 0
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   }
+  },
+  "relu6": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvClip": {
+    "rows": 57,
+    "split": 57,
+    "cycles": 5431517
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0
+   },
+   "Add": {
+    "rows": 8,
+    "split": 8,
+    "cycles": 0
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   }
+  },
+  "relu200": {
+   "InputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvRelu": {
+    "rows": 51,
+    "split": 51,
+    "cycles": 4913117
+   },
+   "Split": {
+    "rows": 9,
+    "split": 0,
+    "cycles": 0
+   },
+   "ConvReluAdd": {
+    "rows": 6,
+    "split": 6,
+    "cycles": 518400
+   },
+   "Concat": {
+    "rows": 17,
+    "split": 15,
+    "cycles": 0
+   },
+   "MaxPool": {
+    "rows": 3,
+    "split": 0,
+    "cycles": 0
+   },
+   "Resize": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Conv": {
+    "rows": 7,
+    "split": 6,
+    "cycles": 235200
+   },
+   "Reshape": {
+    "rows": 7,
+    "split": 0,
+    "cycles": 0
+   },
+   "exSoftmax13": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Transpose": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sub": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Add": {
+    "rows": 2,
+    "split": 2,
+    "cycles": 0
+   },
+   "Mul": {
+    "rows": 2,
+    "split": 0,
+    "cycles": 0
+   },
+   "Sigmoid": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   },
+   "OutputOperator": {
+    "rows": 1,
+    "split": 0,
+    "cycles": 0
+   }
+  }
+ },
+ "g3": {
+  "silu": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 119,
+   "fp16_rows": 119,
+   "fused_ops": {
+    "ConvExSwish": 57
+   }
+  },
+  "relu": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 113,
+   "fp16_rows": 113,
+   "fused_ops": {
+    "ConvRelu": 51,
+    "ConvReluAdd": 6
+   }
+  },
+  "leakyrelu": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 113,
+   "fp16_rows": 113,
+   "fused_ops": {
+    "ConvLeakyRelu": 51,
+    "ConvLeakyReluAdd": 6
+   }
+  },
+  "relu6": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 119,
+   "fp16_rows": 119,
+   "fused_ops": {
+    "ConvClip": 57
+   }
+  },
+  "relu200": {
+   "int8_cpu_ops": [
+    "Transpose"
+   ],
+   "fp16_cpu_ops": [
+    "Transpose"
+   ],
+   "int8_rows": 113,
+   "fp16_rows": 113,
+   "fused_ops": {
+    "ConvRelu": 51,
+    "ConvReluAdd": 6
+   }
+  }
+ },
+ "rule": "Variants latency rule (onboard_g4v), written 2026-10-31T16:47:11+07:00 before any latency or workload data of the variants exists. Not from a source. Not reviewed by the user (user approval of 2026-10-31 for the variants), design reviewed by the advisor (tmp/2026-10-31_phase2b-variants-design.md). Same statements and approved numbers as experiments/npu/operator_support/onboard_g4b/ppe5_yolov8n_baseline_100ep_s0/rule.txt (5 percent latency drop and the 2 session gap rule, 50 percent cycles), protocol P2 as there (not approved as the main protocol). Kept apart so the results of onboard_g4b are untouched.\nQuestions: G4A (cycles covered by layers split over two or more cores), G4B (does CORE_0_1_2 beat CORE_0) and G3 (CPU rows of the build table) for each candidate. The ReLU 100 epoch and ReLU 200 epoch models have the same architecture.\nModels (INT8, calibration list of baseline seed 0, seed 0 each), sha256 of the files used:\n  baseline_100ep_s0 a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd\n  relu_100ep_s0 c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f\n  leakyrelu_100ep_s0 7a1f6167c0e9f83f25b55619b023999e57aeff34e4b10821baff5babf6f68323\n  relu6_100ep_s0 0ea9b44c078f34baf61f66f6139e9c9bd287dde6b52461a14a6ec1fdee489e5a\n  relu_200ep_s0 6860ac8fd06e442d361c1e762c0cec212d41b4f89cca10e7839ef4de96c3e664\nDesign: one interleaved run under P2 (rknn_server threads and NPU interrupts 36, 37, 38 on CPU4, irqbalance stopped, helper in pin mode, frequencies locked). 20 sessions, for mask in CORE_0 then CORE_0_1_2: silu relu leakyrelu relu6 relu200, the same order in both rounds, 45 s rest. One session = benchmark_npu.py (5 eval_perf without perf_debug, then 5 with perf_debug=True), --skip-memory. The driver aborts if a model file changes.\nRealization of a session as in onboard_g4b: helper log in pin mode with zero threads off CPU4 inside the session window, at least 99 percent of the NPU interrupts on CPU4. A model whose two sessions at a mask are not both realized is 'ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)'.\nStatements: B per model: drop_ms = median(CORE_0) minus median(CORE_0_1_2) of the two session medians, drop_pct = drop_ms / median(CORE_0), gap_ms = the larger of the two conditions' session gaps. 'nhanh h\u01a1n' only when drop_pct is at least 5 percent and drop_ms is larger than gap_ms. A per model: a row is split when at least 2 of 3 WorkLoad percentages are above 0.0 percent, coverage = sum of Total cycles of split rows over the sum of all Total cycles of the CORE_0_1_2 session, asserted equal to the build table of the same .rknn, '\u0111\u1ea1t' when at least 50 percent in every session. G3: CPU rows of the INT8 and FP16 build tables other than InputOperator and OutputOperator, and the fused op names. Descriptive: each model against SiLU at each mask (ms and percent).\nLimit: one run, two sessions per condition, one seed per model. No keep or drop statement here: labels need G1 to G4 and are written in the docs (G1 mapping rule of experiments/npu/operator_support/eval_g4/rule_variants.txt).\nBudget: experiment 1. Experiment 2 only if a condition was not realized.\n",
+ "driver_log": "16:47:24 silu CORE_0 session 1\n16:48:16 relu CORE_0 session 1\n16:49:09 leakyrelu CORE_0 session 1\n16:50:02 relu6 CORE_0 session 1\n16:50:54 relu200 CORE_0 session 1\n16:51:47 silu CORE_0_1_2 session 1\n16:52:40 relu CORE_0_1_2 session 1\n16:53:32 leakyrelu CORE_0_1_2 session 1\n16:54:25 relu6 CORE_0_1_2 session 1\n16:55:17 relu200 CORE_0_1_2 session 1\n16:56:10 silu CORE_0 session 2\n16:57:02 relu CORE_0 session 2\n16:57:55 leakyrelu CORE_0 session 2\n16:58:48 relu6 CORE_0 session 2\n16:59:40 relu200 CORE_0 session 2\n17:00:33 silu CORE_0_1_2 session 2\n17:01:26 relu CORE_0_1_2 session 2\n17:02:18 leakyrelu CORE_0_1_2 session 2\n17:03:11 relu6 CORE_0_1_2 session 2\n17:04:04 relu200 CORE_0_1_2 session 2\n",
+ "hold_progress": "17:47:13 state: kernel 6.1.99-rockchip-rk3588 ; up 18 hours, 8 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n17:47:15 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n18:04:49 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active\n"
+}

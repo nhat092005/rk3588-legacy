@@ -1,0 +1,212 @@
+[
+ {
+  "rep": 1,
+  "code": "T1",
+  "mode": "threads",
+  "masks": "CORE_0",
+  "file": "r1_T1.json",
+  "epoch_start": 1793422301,
+  "epoch_end": 1793422326,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T2",
+  "mode": "threads",
+  "masks": "CORE_0_1",
+  "file": "r1_T2.json",
+  "epoch_start": 1793422347,
+  "epoch_end": 1793422371,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T3",
+  "mode": "threads",
+  "masks": "CORE_0_1_2",
+  "file": "r1_T3.json",
+  "epoch_start": 1793422392,
+  "epoch_end": 1793422416,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T4",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1",
+  "file": "r1_T4.json",
+  "epoch_start": 1793422437,
+  "epoch_end": 1793422451,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T5",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r1_T5.json",
+  "epoch_start": 1793422472,
+  "epoch_end": 1793422484,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T6",
+  "mode": "pipeline",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r1_T6.json",
+  "epoch_start": 1793422505,
+  "epoch_end": 1793422516,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "code": "T7",
+  "mode": "procs",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r1_T7.json",
+  "epoch_start": 1793422537,
+  "epoch_end": 1793422548,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T1",
+  "mode": "threads",
+  "masks": "CORE_0",
+  "file": "r2_T1.json",
+  "epoch_start": 1793422568,
+  "epoch_end": 1793422593,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T2",
+  "mode": "threads",
+  "masks": "CORE_0_1",
+  "file": "r2_T2.json",
+  "epoch_start": 1793422614,
+  "epoch_end": 1793422638,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T3",
+  "mode": "threads",
+  "masks": "CORE_0_1_2",
+  "file": "r2_T3.json",
+  "epoch_start": 1793422659,
+  "epoch_end": 1793422683,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T4",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1",
+  "file": "r2_T4.json",
+  "epoch_start": 1793422704,
+  "epoch_end": 1793422719,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T5",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r2_T5.json",
+  "epoch_start": 1793422739,
+  "epoch_end": 1793422751,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T6",
+  "mode": "pipeline",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r2_T6.json",
+  "epoch_start": 1793422772,
+  "epoch_end": 1793422783,
+  "returncode": 0
+ },
+ {
+  "rep": 2,
+  "code": "T7",
+  "mode": "procs",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r2_T7.json",
+  "epoch_start": 1793422804,
+  "epoch_end": 1793422815,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T1",
+  "mode": "threads",
+  "masks": "CORE_0",
+  "file": "r3_T1.json",
+  "epoch_start": 1793422836,
+  "epoch_end": 1793422860,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T2",
+  "mode": "threads",
+  "masks": "CORE_0_1",
+  "file": "r3_T2.json",
+  "epoch_start": 1793422881,
+  "epoch_end": 1793422905,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T3",
+  "mode": "threads",
+  "masks": "CORE_0_1_2",
+  "file": "r3_T3.json",
+  "epoch_start": 1793422926,
+  "epoch_end": 1793422950,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T4",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1",
+  "file": "r3_T4.json",
+  "epoch_start": 1793422971,
+  "epoch_end": 1793422986,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T5",
+  "mode": "threads",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r3_T5.json",
+  "epoch_start": 1793423007,
+  "epoch_end": 1793423018,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T6",
+  "mode": "pipeline",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r3_T6.json",
+  "epoch_start": 1793423039,
+  "epoch_end": 1793423050,
+  "returncode": 0
+ },
+ {
+  "rep": 3,
+  "code": "T7",
+  "mode": "procs",
+  "masks": "CORE_0,CORE_1,CORE_2",
+  "file": "r3_T7.json",
+  "epoch_start": 1793423071,
+  "epoch_end": 1793423082,
+  "returncode": 0
+ }
+]

@@ -1,0 +1,219 @@
+{
+ "sets": {
+  "css_test": {
+   "n_images": 82,
+   "int8": {
+    "precision": 0.766,
+    "recall": 0.6713,
+    "map50": 0.6965,
+    "map50_95": 0.3675
+   },
+   "fp32": {
+    "precision": 0.895,
+    "recall": 0.7396,
+    "map50": 0.8006,
+    "map50_95": 0.4999
+   },
+   "diff_pp": {
+    "precision": -12.9,
+    "recall": -6.830000000000003,
+    "map50": -10.409999999999997,
+    "map50_95": -13.240000000000002
+   },
+   "per_class_int8": {
+    "Helmet": {
+     "precision": 0.6177,
+     "recall": 0.7455,
+     "ap50": 0.7249,
+     "ap50_95": 0.3412,
+     "instances": 110
+    },
+    "NoHelmet": {
+     "precision": 0.6794,
+     "recall": 0.5366,
+     "ap50": 0.4632,
+     "ap50_95": 0.2277,
+     "instances": 41
+    },
+    "NoVest": {
+     "precision": 0.8562,
+     "recall": 0.6615,
+     "ap50": 0.7213,
+     "ap50_95": 0.3826,
+     "instances": 90
+    },
+    "Vest": {
+     "precision": 0.8708,
+     "recall": 0.7213,
+     "ap50": 0.8254,
+     "ap50_95": 0.4698,
+     "instances": 61
+    },
+    "Person": {
+     "precision": 0.8059,
+     "recall": 0.6918,
+     "ap50": 0.7481,
+     "ap50_95": 0.4161,
+     "instances": 174
+    }
+   },
+   "per_class_fp32": {
+    "Helmet": {
+     "precision": 0.9844,
+     "recall": 0.8273,
+     "ap50": 0.9252,
+     "ap50_95": 0.5924,
+     "instances": 110
+    },
+    "NoHelmet": {
+     "precision": 0.7862,
+     "recall": 0.5366,
+     "ap50": 0.5361,
+     "ap50_95": 0.3111,
+     "instances": 41
+    },
+    "NoVest": {
+     "precision": 0.8949,
+     "recall": 0.7333,
+     "ap50": 0.8075,
+     "ap50_95": 0.4943,
+     "instances": 90
+    },
+    "Vest": {
+     "precision": 0.896,
+     "recall": 0.8478,
+     "ap50": 0.889,
+     "ap50_95": 0.5678,
+     "instances": 61
+    },
+    "Person": {
+     "precision": 0.9137,
+     "recall": 0.7529,
+     "ap50": 0.845,
+     "ap50_95": 0.534,
+     "instances": 174
+    }
+   },
+   "int8_backend": "rknnlite-on-board",
+   "int8_model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  },
+  "ppe2286_ext": {
+   "n_images": 180,
+   "int8": {
+    "precision": 0.5234,
+    "recall": 0.6092,
+    "map50": 0.533,
+    "map50_95": 0.2313
+   },
+   "fp32": {
+    "precision": 0.616,
+    "recall": 0.6051,
+    "map50": 0.5736,
+    "map50_95": 0.2624
+   },
+   "diff_pp": {
+    "precision": -9.260000000000002,
+    "recall": 0.40999999999999925,
+    "map50": -4.059999999999997,
+    "map50_95": -3.1100000000000017
+   },
+   "per_class_int8": {
+    "Helmet": {
+     "precision": 0.5237,
+     "recall": 0.6685,
+     "ap50": 0.4263,
+     "ap50_95": 0.0755,
+     "instances": 184
+    },
+    "NoHelmet": {
+     "precision": 0.0797,
+     "recall": 0.0938,
+     "ap50": 0.0215,
+     "ap50_95": 0.0055,
+     "instances": 64
+    },
+    "NoVest": {
+     "precision": 0.6131,
+     "recall": 0.5943,
+     "ap50": 0.606,
+     "ap50_95": 0.2422,
+     "instances": 104
+    },
+    "Vest": {
+     "precision": 0.7402,
+     "recall": 0.8111,
+     "ap50": 0.8134,
+     "ap50_95": 0.4232,
+     "instances": 144
+    },
+    "Person": {
+     "precision": 0.6604,
+     "recall": 0.8785,
+     "ap50": 0.7978,
+     "ap50_95": 0.4103,
+     "instances": 247
+    }
+   },
+   "per_class_fp32": {
+    "Helmet": {
+     "precision": 0.6872,
+     "recall": 0.6568,
+     "ap50": 0.5101,
+     "ap50_95": 0.0841,
+     "instances": 184
+    },
+    "NoHelmet": {
+     "precision": 0.109,
+     "recall": 0.0938,
+     "ap50": 0.0335,
+     "ap50_95": 0.0089,
+     "instances": 64
+    },
+    "NoVest": {
+     "precision": 0.6942,
+     "recall": 0.5895,
+     "ap50": 0.6258,
+     "ap50_95": 0.2805,
+     "instances": 104
+    },
+    "Vest": {
+     "precision": 0.7885,
+     "recall": 0.8028,
+     "ap50": 0.8187,
+     "ap50_95": 0.4503,
+     "instances": 144
+    },
+    "Person": {
+     "precision": 0.8012,
+     "recall": 0.8826,
+     "ap50": 0.8799,
+     "ap50_95": 0.4883,
+     "instances": 247
+    }
+   },
+   "int8_backend": "rknnlite-on-board",
+   "int8_model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+  }
+ },
+ "rule": "X7 rule, written 2026-10-31T04:11:36+07:00 before any X7 data exists. Not from a source. Not reviewed by the user (goal of 2026-10-31).\nQuestion (U24): accuracy of the INT8 model whose latency the latency group measures (weights/rknn_int8/best-rk3588.rknn of ppe5_yolov8n_baseline_100ep_s0) against the FP32 PyTorch model of the same run.\nMethod: make evaluate RUN=ppe5_yolov8n_baseline_100ep_s0 BACKEND=rknn PREC=int8 BOARD=minhnhat@192.168.137.49 (Evaluation Protocol v1 of ai/core/evaluator.py: inference on the board with RKNNLite through ai/board/infer_dump.py, scoring on the PC with the same code and confidence as the FP32 evaluation). The script refuses to score when the board model sha256 differs from the local file or when an image is missing. Eval sets: the ones evaluate.py runs for a ppe5 run (css_test, 82 images, and ppe2286_ext, 180 images), compared with the existing eval/pt_fp32_<set>.json.\nReport only measured numbers: precision, recall, mAP50, mAP50-95 and per-class AP for INT8 and FP32, and the differences in percentage points. No threshold and no keep or drop statement here: the approved 1.0 pp mAP threshold belongs to gate G4 (SiLU against ReLU, phase 2) and is not applied to INT8 against FP32. U24 label: \u0110O.\nThe run happens when no timing measurement runs on the board (one job at a time).\n",
+ "x7b": {
+  "css_test": {
+   "fp16_rknn_map50_95": 0.4976,
+   "fp32_map50_95": 0.4999,
+   "d16_pp": -0.23000000000000242,
+   "d8_pp": -13.240000000000002,
+   "model_sha256": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786",
+   "backend": "rknnlite-on-board"
+  },
+  "ppe2286_ext": {
+   "fp16_rknn_map50_95": 0.2635,
+   "fp32_map50_95": 0.2624,
+   "d16_pp": 0.10999999999999899,
+   "d8_pp": -3.1100000000000017,
+   "model_sha256": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786",
+   "backend": "rknnlite-on-board"
+  },
+  "verdict": "m\u1ee9c gi\u1ea3m c\u1ee7a INT8 ch\u1ee7 y\u1ebfu \u0111i theo l\u01b0\u1ee3ng t\u1eed h\u00f3a",
+  "rule": "X7b rule, written 2026-10-31T11:15:36+07:00 before any X7b data exists. Final. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor suggestion).\nQuestion (U28): is the INT8 accuracy drop of X7 (INT8 on the board through RKNNLite against FP32 in PyTorch) due to quantization or to the inference path (RKNNLite on the board against PyTorch on the PC)?\nMethod: make evaluate RUN=ppe5_yolov8n_baseline_100ep_s0 BACKEND=rknn PREC=fp16 BOARD=minhnhat@192.168.137.49 (same RKNNLite path, same scoring code and confidence as X7, FP16 model weights/rknn_fp16/best-rk3588.rknn sha256 bd4a8c8a). Primary set css_test (82 images, one seed). ppe2286_ext (180 images) is descriptive only.\nStatement, on css_test mAP50-95: D8 = INT8 minus FP32 (X7), D16 = FP16 on RKNNLite minus FP32 (this run).\n  If |D16| <= 0.25 x |D8|: 'm\u1ee9c gi\u1ea3m c\u1ee7a INT8 ch\u1ee7 y\u1ebfu \u0111i theo l\u01b0\u1ee3ng t\u1eed h\u00f3a'.\n  If |D16| >= 0.75 x |D8|: 'm\u1ee9c gi\u1ea3m ch\u1ee7 y\u1ebfu \u0111i theo \u0111\u01b0\u1eddng suy lu\u1eadn (RKNNLite tr\u00ean board so v\u1edbi PyTorch tr\u00ean PC)'.\n  Otherwise 'ch\u01b0a k\u1ebft lu\u1eadn'.\n  The numbers 0.25 and 0.75 are new, not user approved. css_test has 82 images and one seed, so small differences are noise. No threshold on mAP and no keep or drop statement (the 1.0 pp mAP threshold belongs to gate G4, phase 2).\nBudget: experiment 1 for U28.\n"
+ }
+}

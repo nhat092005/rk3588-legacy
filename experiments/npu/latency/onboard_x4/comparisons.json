@@ -1,0 +1,240 @@
+{
+ "masks": [
+  {
+   "round": 1,
+   "mask": "CORE_0",
+   "latency_ms_all": [
+    16.673,
+    16.673,
+    16.678,
+    16.781,
+    16.676
+   ],
+   "median_ms": 16.676,
+   "session_index": 20
+  },
+  {
+   "round": 1,
+   "mask": "AUTO",
+   "latency_ms_all": [
+    16.629,
+    16.643,
+    16.645,
+    16.634,
+    16.869
+   ],
+   "median_ms": 16.643,
+   "session_index": 21
+  },
+  {
+   "round": 1,
+   "mask": "CORE_0_1_2",
+   "latency_ms_all": [
+    16.096,
+    16.096,
+    16.097,
+    16.095,
+    16.097
+   ],
+   "median_ms": 16.096,
+   "session_index": 22
+  },
+  {
+   "round": 2,
+   "mask": "CORE_0",
+   "latency_ms_all": [
+    16.648,
+    16.655,
+    16.652,
+    16.652,
+    16.648
+   ],
+   "median_ms": 16.652,
+   "session_index": 23
+  },
+  {
+   "round": 2,
+   "mask": "AUTO",
+   "latency_ms_all": [
+    16.652,
+    16.652,
+    16.648,
+    16.66,
+    16.661
+   ],
+   "median_ms": 16.652,
+   "session_index": 24
+  },
+  {
+   "round": 2,
+   "mask": "CORE_0_1_2",
+   "latency_ms_all": [
+    16.091,
+    16.105,
+    16.109,
+    16.106,
+    16.097
+   ],
+   "median_ms": 16.105,
+   "session_index": 25
+  },
+  {
+   "round": 3,
+   "mask": "CORE_0",
+   "latency_ms_all": [
+    16.851,
+    16.649,
+    16.642,
+    16.644,
+    16.647
+   ],
+   "median_ms": 16.647,
+   "session_index": 26
+  },
+  {
+   "round": 3,
+   "mask": "AUTO",
+   "latency_ms_all": [
+    16.646,
+    17.042,
+    16.63,
+    16.645,
+    16.706
+   ],
+   "median_ms": 16.646,
+   "session_index": 27
+  },
+  {
+   "round": 3,
+   "mask": "CORE_0_1_2",
+   "latency_ms_all": [
+    16.098,
+    16.13,
+    16.119,
+    16.109,
+    16.124
+   ],
+   "median_ms": 16.119,
+   "session_index": 28
+  },
+  {
+   "round": 4,
+   "mask": "CORE_0",
+   "latency_ms_all": [
+    16.65,
+    16.662,
+    16.657,
+    16.656,
+    16.659
+   ],
+   "median_ms": 16.657,
+   "session_index": 29
+  },
+  {
+   "round": 4,
+   "mask": "AUTO",
+   "latency_ms_all": [
+    16.618,
+    16.64,
+    16.654,
+    16.641,
+    16.645
+   ],
+   "median_ms": 16.641,
+   "session_index": 30
+  },
+  {
+   "round": 4,
+   "mask": "CORE_0_1_2",
+   "latency_ms_all": [
+    16.088,
+    16.118,
+    16.113,
+    16.118,
+    16.118
+   ],
+   "median_ms": 16.118,
+   "session_index": 31
+  }
+ ],
+ "log": [
+  {
+   "round": 1,
+   "verbose": false,
+   "latency_ms_all": [
+    16.679,
+    16.645,
+    16.641,
+    16.642,
+    16.627
+   ],
+   "median_ms": 16.642,
+   "session_index": 32
+  },
+  {
+   "round": 1,
+   "verbose": true,
+   "latency_ms_all": [
+    16.633,
+    16.659,
+    16.652,
+    16.645,
+    16.65
+   ],
+   "median_ms": 16.65,
+   "session_index": 33
+  },
+  {
+   "round": 2,
+   "verbose": false,
+   "latency_ms_all": [
+    16.628,
+    16.646,
+    16.648,
+    16.818,
+    16.768
+   ],
+   "median_ms": 16.648,
+   "session_index": 34
+  },
+  {
+   "round": 2,
+   "verbose": true,
+   "latency_ms_all": [
+    16.626,
+    16.639,
+    16.643,
+    16.647,
+    16.807
+   ],
+   "median_ms": 16.643,
+   "session_index": 35
+  },
+  {
+   "round": 3,
+   "verbose": false,
+   "latency_ms_all": [
+    16.651,
+    16.649,
+    16.642,
+    16.633,
+    16.644
+   ],
+   "median_ms": 16.644,
+   "session_index": 36
+  },
+  {
+   "round": 3,
+   "verbose": true,
+   "latency_ms_all": [
+    16.632,
+    16.64,
+    16.638,
+    16.644,
+    16.641
+   ],
+   "median_ms": 16.64,
+   "session_index": 37
+  }
+ ]
+}

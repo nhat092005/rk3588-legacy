@@ -1,0 +1,4 @@
+E2b rule, written 2026-10-30T23:05:22+07:00 before any E2b data exists. Not from a source.
+Condition B is realized in a block only when the per-run CPU of the app is CPU4, the NPU interrupts landed on CPU4, and the top-CPU share of interrupts is at least 0.99 (same realized() as E2 in ai/npu/latency/analyze_onboard.py).
+Label for B: 'ung ho' when the slow-level share moves by more than 0.20 in the same direction in both order of realized blocks, 'khong ung ho' under 0.10 in both, otherwise 'chua ket luan' (same as E2).
+B is compared only with A blocks of E2b (same boot, irqbalance stopped), not with E2 blocks.

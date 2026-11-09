@@ -2,7 +2,7 @@
 
 Writes results/<dataset>/table_<X>_*.md, tables.csv, and SOURCES.md (source file/field per cell).
 Missing data shows [TBD: ...]; consistency checks (protocol, fingerprint, sha256, freq lock) are
-listed in SOURCES.md and exit 1 on failure. Mean ± std uses sample std; hardware tables use seed-42.
+listed in SOURCES.md and exit 1 on failure. Mean ± std uses sample std; hardware tables use seed-0.
 """
 from __future__ import annotations
 
@@ -19,13 +19,10 @@ import yaml
 
 from ai.core.dataset import dataset_yaml_path
 from ai.core.evaluator import EVAL_SETS, EVAL_SETS_BY_DATASET, PROTOCOL_VERSION
+from ai.paths import REPO_ROOT, LEADERBOARDS_DIR, RESULTS_DIR, RUNS_DIR
 
-AUTOMATION_DIR = Path(__file__).resolve().parent
-REPO_ROOT = AUTOMATION_DIR.parents[1]
-RUNS_DIR = AUTOMATION_DIR / "runs"
-LEADERBOARDS_DIR = AUTOMATION_DIR / "leaderboards"
-CLASSES = ["person", "helmet", "head", "safety_clothes", "self_clothes"]
-HW_SEED = "42"
+CLASSES: list[str] = []  # set in main() from the class names of the dataset yaml
+HW_SEED = "0"
 MASKS_1CTX = ["AUTO", "CORE_0", "CORE_0_1", "CORE_0_1_2"]
 MASKS_3CTX = "CORE_0,CORE_1,CORE_2"
 
@@ -98,7 +95,9 @@ class Builder:
         """model -> seed -> run_id (from the leaderboard, first eval set)."""
         out: dict[str, dict[str, str]] = defaultdict(dict)
         for r in self.leaderboard():
-            out[r["model"]][r["seed"]] = r["run_id"]
+            epochs = re.search(r"_(\d+)ep_s\d+$", r["run_id"]).group(1)
+            # a 200 epoch run of the same model and seed is its own row, not a replacement of the 100 epoch run
+            out[r["model"] if epochs == "100" else f"{r['model']}_{epochs}ep"][r["seed"]] = r["run_id"]
         return dict(sorted(out.items()))
 
     def fingerprint_check(self, eval_set: str, files: list[Path]) -> None:
@@ -147,8 +146,9 @@ def table_a(b: Builder) -> str:
         else:  # txt list
             stems = [Path(ln).stem for ln in split_path.read_text().split()]
         counts = [0] * len(CLASSES)
+        label_dir = droot / "labels" / (split_path.name if split_path.is_dir() else "test")  # images/<split> and labels/<split> share the split name
         for stem in stems:
-            f = droot / "labels" / "test" / f"{stem}.txt"
+            f = label_dir / f"{stem}.txt"
             for ln in f.read_text().splitlines() if f.exists() else []:
                 if ln.strip():
                     counts[int(ln.split()[0])] += 1
@@ -182,7 +182,7 @@ def table_c(b: Builder, runs: dict) -> str:
     src = candidates[-1]
     rows = [[f"system.{k}", b.cell("C", k, "value", src, ["system", k], "{}")] for k in ("os", "kernel", "python", "ram_total_mib", "cpu_count")]
     sdk = " ".join(re.findall(r"(?:API|DRV): \S+", b.cell("C", "sdk", "value", src, ["sdk_version"], "{}")))
-    rows.append(["sdk_version (RKNNLite2 API, NPU driver)", sdk or "[TBD]"])
+    rows.append(["sdk_version (RKNN-Toolkit-Lite2 API, NPU driver)", sdk or "[TBD]"])
     for name in ("policy0", "policy4", "policy6", "npu", "ddr"):
         rows.append([f"governor {name}", b.cell("C", name, "governor", src, ["frequency_before", name, "governor"], "{}")])
     rows.append(["frequency locked", b.cell("C", "locked", "value", src, ["frequency_before", "locked"], "{}")])
@@ -230,7 +230,7 @@ def table_e(b: Builder, runs: dict) -> str:
             ("Params (M)", ["params_m"], "{:.3f}"), ("GFLOPs", ["gflops"], "{:.3f}"), ("MACs (G)", ["macs_g"], "{:.3f}"),
             ("ONNX FP32 (MB)", ["onnx_fp32_mb"], "{:.3f}"), ("RKNN FP16 (MB)", ["rknn_mb", "rknn_fp16"], "{:.3f}"),
             ("RKNN INT8 (MB)", ["rknn_mb", "rknn_int8"], "{:.3f}"))])
-    return "\n".join([f"# Table E. Model Complexity: `{b.dataset}`", "", "Seed-42 run; fused model, 640×640, MACs = GFLOPs / 2 (make complexity).", "",
+    return "\n".join([f"# Table E. Model Complexity: `{b.dataset}`", "", "Seed-0 run; fused model, 640×640, MACs = GFLOPs / 2 (make complexity).", "",
                       md_table(["Model", "Params (M)", "GFLOPs", "MACs (G)", "ONNX FP32 (MB)", "RKNN FP16 (MB)", "RKNN INT8 (MB)"], rows)])
 
 
@@ -239,7 +239,8 @@ def table_f(b: Builder, runs: dict) -> str:
     for eval_set in EVAL_SETS_BY_DATASET[b.dataset]:
         rows = []
         for model, seeds in runs.items():
-            for prec in ("fp32", "fp16", "int8"):
+            h5 = ("int8h5",) if all((RUNS_DIR / rid / "export_int8h5.json").exists() for rid in seeds.values()) else ()  # hybrid INT8 standard of phase 2c
+            for prec in ("fp32", "fp16", "int8") + h5:
                 tag = "pt_fp32" if prec == "fp32" else f"rknn_{prec}"
                 row = [model, prec.upper()]
                 maps, deltas = [], {c: [] for c in ["map50_95"] + CLASSES}
@@ -285,7 +286,7 @@ def table_g(b: Builder, runs: dict) -> str:
                          b.cell("G", r, "e2e_p95", t2, ["latency_ms", "e2e", "p95"], "{:.2f}"),
                          b.cell("G", r, "fps_latency", t2, ["fps_latency"], "{:.1f}")])
     return "\n".join([f"# Table G. Latency Breakdown (ms): `{b.dataset}`", "",
-                      "NPU (tier 1) = median of 5 `eval_perf` calls; other columns from tier 2 on the board (`sfchd_test`, core_mask AUTO). FPS_latency = 1000 / E2E mean.", "",
+                      "NPU (tier 1) = median of 5 `eval_perf` calls; other columns from tier 2 on the board (`css_test`, core_mask AUTO). FPS_latency = 1000 / E2E mean.", "",
                       md_table(["Model", "Precision", "Pre P50", "NPU (tier 1)", "NPU P50 (tier 2)", "Post P50", "E2E mean", "E2E P50", "E2E P95", "FPS_latency"], rows)])
 
 
@@ -378,9 +379,16 @@ def main() -> None:
     parser.add_argument("dataset", choices=list(EVAL_SETS_BY_DATASET))
     args = parser.parse_args()
 
+    names = yaml.safe_load(dataset_yaml_path(args.dataset).read_text())["names"]
+    CLASSES[:] = list(names.values()) if isinstance(names, dict) else names
     b = Builder(args.dataset)
     runs = b.runs_by_model()
-    out_dir = REPO_ROOT / "results" / args.dataset
+    for seeds in runs.values():
+        for run_id in seeds.values():
+            flag = RUNS_DIR / run_id / "git_dirty.txt"
+            if flag.exists() and flag.read_text().split()[0] == "true":
+                b.warnings.append(f"{flag.relative_to(REPO_ROOT)}: produced with uncommitted code (git_dirty)")
+    out_dir = RESULTS_DIR / args.dataset
     out_dir.mkdir(parents=True, exist_ok=True)
     tables = {
         "table_A_dataset.md": table_a(b), "table_B_training.md": table_b(b, runs), "table_C_environment.md": table_c(b, runs),

@@ -1,0 +1,41 @@
+npu irqs: 36
+37
+38 ; irqbalance was: active
+state: kernel 6.1.99-rockchip-rk3588 ; up 1 hour, 3 minutes ; rknn_server pid '10380' ; adbd pid '11257' ; adb port 5555 listeners 1
+policy0: performance 1800000 kHz
+policy4: performance 2256000 kHz
+policy6: performance 2304000 kHz
+npu: performance 1000000000 Hz
+ddr: performance 2112000000 Hz
+9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn
+d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench
+saved irq 36 affinity 0-7
+saved irq 37 affinity 0-7
+saved irq 38 affinity 0-7
+irqbalance now: inactive
+block 1 cond A 00:42:47 pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 1 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 2 cond B 00:43:29 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 2 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 3 cond C 00:44:06 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 3 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 4 cond E 00:44:46 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 4 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 5 cond F 00:45:25 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 5 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 6 cond G 00:46:05 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 6 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 7 cond G 00:46:47 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 7 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 8 cond F 00:47:29 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 8 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 9 cond E 00:48:09 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 9 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 10 cond C 00:48:49 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 10 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 
+block 11 cond B 00:49:29 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 11 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 
+block 12 cond A 00:50:06 pin='' irqbalance=inactive readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+block 12 post readback: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 
+restored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  idle_state1_disable=0
+irqbalance now: active ; readback after restart: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 

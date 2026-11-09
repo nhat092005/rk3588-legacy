@@ -1,0 +1,12 @@
+23:59:22 silu int8 CORE_0 session 1
+00:00:15 silu int8h5 CORE_0 session 1
+00:01:08 silu int8_split CORE_0 session 1
+00:02:00 silu int8 CORE_0_1_2 session 1
+00:02:53 silu int8h5 CORE_0_1_2 session 1
+00:03:46 silu int8_split CORE_0_1_2 session 1
+00:04:38 silu int8 CORE_0 session 2
+00:05:33 silu int8h5 CORE_0 session 2
+00:06:26 silu int8_split CORE_0 session 2
+00:07:18 silu int8 CORE_0_1_2 session 2
+00:08:10 silu int8h5 CORE_0_1_2 session 2
+00:09:03 silu int8_split CORE_0_1_2 session 2

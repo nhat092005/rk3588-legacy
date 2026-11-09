@@ -1,0 +1,30 @@
+E2c rule, written 2026-10-30T23:42:11+07:00 before any E2c data exists. Final: do not edit after the run starts. Not from a source.
+Question: which of the two placements (app, NPU interrupts) removes the slow level that B (both on CPU4) and C (both on CPU0) removed in E2 and E2b. Mechanism is out of scope.
+Setup: irqbalance stopped, 1000 runs per block after 50 warm-up runs, app pinned with taskset, NPU interrupts 36, 37, 38 all set to the target CPU. Order: A B C E F G then G F E C B A (12 blocks, each condition twice, one per half, so each half has exactly one A).
+Conditions (app CPU / NPU interrupt CPU): A none / default (0-7, lands on CPU0), B 4 / 4, C 0 / 0, E 4 / 0, F 0 / 4, G 1 / 0.
+Realized block: the app ran on its pinned CPU in at least 99 percent of runs (A exempt) and at least 99 percent of NPU interrupts landed on the target CPU (A: CPU0, E: CPU0, F: CPU4, G: CPU0, B: CPU4, C: CPU0). Unrealized blocks are excluded and reported.
+Slow level: a run of at least 20.0 ms (same threshold as E2 and E2b, read from the pooled histogram of E1).
+Primary outcome per condition, from its realized blocks only; both blocks must be realized, otherwise 'chua ket luan (khoi khong thuc hien dung)':
+  'mat muc cham' when slow share is at most 0.01 in both blocks (the 0.01 cutoff is new and was chosen for this rule);
+  'con muc cham' when slow share is at least 0.20 in both blocks;
+  'lan lon' otherwise, including the two blocks disagreeing.
+The primary rule is absolute, not a shift against A, because A ranged from 3.6 to 66 percent slow in E2b.
+Secondary outcome, for comparison with E2 and E2b: shift of the slow share against the A block of the same half; 'ung ho' when the shift is below -0.20 in both halves (same rule as E2), 'khong ung ho' when its size is under 0.10 in both, otherwise 'chua ket luan'. Reported next to the primary outcome, never replaces it.
+Validity checks (all needed before any reading below is allowed):
+  1. A shows a slow share of at least 0.20 in at least one of its two blocks;
+  2. B and C both have the primary outcome 'mat muc cham' in this run (replication of E2 and E2b).
+  If either fails, every reading is 'khong doc duoc yeu to' whatever E, F and G show.
+Reading table (allowed statements only, no mechanism claim). Rows use the primary outcomes of E, F, G:
+  E 'mat muc cham' and F 'con muc cham': the app on CPU4 removes the slow level whatever the interrupt CPU is.
+  E 'con muc cham' and F 'mat muc cham': the interrupts on CPU4 remove it whatever the app CPU is.
+  E and F both 'mat muc cham': either placement alone is enough.
+  E and F both 'con muc cham': app and interrupts on the same CPU are needed (B and C worked, E and F are the split cases).
+  Any other combination of E and F: no statement about which factor.
+  E 'mat muc cham' and G 'con muc cham': with the interrupts on CPU0, the app on CPU4 removes the slow level and the app on CPU1 does not. This is about where the app sits, not about same CPU versus different CPU.
+  E 'con muc cham' and G 'con muc cham': same-CPU placement is needed.
+  E 'con muc cham' and G 'mat muc cham': no statement.
+  Other combinations of E and G: no statement.
+G also tests the E2b exploratory hint (slow runs only when the app ended on CPU1 to CPU3): G 'con muc cham' supports it for an app pinned to CPU1, 'mat muc cham' does not.
+Descriptive only, not part of any outcome and not to be worded as an outcome: median, standard deviation, fast share, per block.
+Pairing: none, each condition is judged on its own two blocks, so the half-mean choice of E2b does not arise.
+State differences with E2b, disclosed: E2b ran before rknn_server and adbd on 5555 were restarted after the reboot, E2c runs with both up. E2c relies on its own B and C blocks as controls.

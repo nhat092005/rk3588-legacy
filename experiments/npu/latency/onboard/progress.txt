@@ -1,0 +1,10 @@
+start 04:08:36 npu=1000000000 gov=userspace ddr=2112000000 soc=39769 power=off
+hot_1 04:08:37 npu=1000000000 gov=userspace ddr=2112000000 soc=39769 power=off
+hot_2 04:09:57 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+hot_3 04:11:17 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+gap2s 04:12:39 npu=1000000000 gov=userspace ddr=2112000000 soc=39769 power=off
+gap10s 04:14:40 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+detail_1 04:18:31 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+detail_2 04:19:36 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+detail_3 04:20:41 npu=1000000000 gov=userspace ddr=2112000000 soc=38846 power=off
+end 04:21:47 npu=1000000000 gov=userspace ddr=2112000000 soc=37923 power=off

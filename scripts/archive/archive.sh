@@ -17,7 +17,7 @@ Description:
   Preserves relative directory structures and symlinks.
 
 Options:
-  -d, --dataset <name>   Archive only a specific dataset (e.g. sh17, sfchd, css)
+  -d, --dataset <name>   Archive only a specific dataset (e.g. css, ppe2286, ppe5)
                          and its corresponding run weights.
   -h, --help             Show this help message.
 
@@ -79,8 +79,8 @@ if [[ -n "$DATASET" ]]; then
         echo "Warning: Directory data/$DATASET not found." >&2
     fi
 
-    if [[ -d "ai/automation/runs" ]]; then
-        for run_dir in ai/automation/runs/*; do
+    if [[ -d "experiments/runs" ]]; then
+        for run_dir in experiments/runs/*; do
             [[ -d "$run_dir" ]] || continue
             matched=0
             if [[ -f "$run_dir/config.yaml" ]] && grep -Eq "^dataset:\s*['\"]?${DATASET}['\"]?\s*$" "$run_dir/config.yaml"; then
@@ -105,8 +105,8 @@ else
         done
     fi
 
-    if [[ -d "ai/automation/runs" ]]; then
-        for w in ai/automation/runs/*/weights; do
+    if [[ -d "experiments/runs" ]]; then
+        for w in experiments/runs/*/weights; do
             [[ -d "$w" ]] || continue
             TARGETS+=("$w")
         done

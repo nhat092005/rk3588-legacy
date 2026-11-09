@@ -49,7 +49,7 @@ class RknnDumpBackend:
         # Ultralytics INT8 RKNN export normalizes boxes by input size (engine/exporter.py
         # _NormalizeCoords); nn/backends/rknn.py reverses it the same way.
         meta = yaml.safe_load((Path(rknn_model_dir) / "metadata.yaml").read_text())
-        self.normalized = meta.get("args", {}).get("quantize") == 8
+        self.normalized = meta.get("args", {}).get("quantize") == 8 and not meta.get("split_head")
         with np.load(dump_path) as d:  # every d[key] access re-reads the array from the file: read once
             names, md5s, counts, idx, vals = (d[k] for k in ("names", "md5", "counts", "idx", "vals"))
             self.shape = tuple(int(x) for x in d["shape"])

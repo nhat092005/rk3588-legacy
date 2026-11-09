@@ -1,0 +1,16 @@
+19:33:44 silu base CORE_0 session 1
+19:34:36 silu h5 CORE_0 session 1
+19:35:30 relu base CORE_0 session 1
+19:36:23 relu h5 CORE_0 session 1
+19:37:15 silu base CORE_0_1_2 session 1
+19:38:08 silu h5 CORE_0_1_2 session 1
+19:39:00 relu base CORE_0_1_2 session 1
+19:39:53 relu h5 CORE_0_1_2 session 1
+19:40:45 silu base CORE_0 session 2
+19:41:38 silu h5 CORE_0 session 2
+19:42:30 relu base CORE_0 session 2
+19:43:22 relu h5 CORE_0 session 2
+19:44:14 silu base CORE_0_1_2 session 2
+19:45:07 silu h5 CORE_0_1_2 session 2
+19:46:01 relu base CORE_0_1_2 session 2
+19:46:53 relu h5 CORE_0_1_2 session 2

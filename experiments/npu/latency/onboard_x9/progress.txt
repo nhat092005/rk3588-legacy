@@ -1,0 +1,11 @@
+npu irqs: 36
+37
+38
+06:02:26 state: kernel 6.1.99-rockchip-rk3588 ; up 6 hours, 23 minutes ; irqbalance active ; md5 9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn d22a17c2723475ea95e2b620c089d63c  rknn_perf_bench 
+06:02:26 trial 1 start: 36:4/4 37:4/4 38:4/4 
+06:03:23 trial 1 end: 36:0-7/0 37:0-7/0 38:0-7/0 
+06:03:53 trial 2 start: 36:4/4 37:4/4 38:4/4 
+06:04:43 trial 2 end: 36:4/4 37:4/4 38:4/4 
+06:05:13 trial 3 start: 36:4/4 37:4/4 38:4/4 
+06:06:04 trial 3 end: 36:4/4 37:4/4 38:4/4 
+06:06:34 restored: 36:0-7/0 37:0-7/0 38:0-7/0  irqbalance active

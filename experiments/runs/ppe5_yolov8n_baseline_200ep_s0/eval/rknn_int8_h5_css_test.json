@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.9194,
+  "recall": 0.7641,
+  "map50": 0.8123,
+  "map50_95": 0.5321,
+  "per_class": {
+    "Helmet": {
+      "precision": 1.0,
+      "recall": 0.857,
+      "ap50": 0.9069,
+      "ap50_95": 0.6007,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.8296,
+      "recall": 0.561,
+      "ap50": 0.5847,
+      "ap50_95": 0.3657,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.9314,
+      "recall": 0.7544,
+      "ap50": 0.8054,
+      "ap50_95": 0.5289,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.93,
+      "recall": 0.8713,
+      "ap50": 0.9112,
+      "ap50_95": 0.6083,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.9061,
+      "recall": 0.7767,
+      "ap50": 0.8532,
+      "ap50_95": 0.557,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_200ep_s0",
+  "model_file": "weights/rknn_int8_h5/best-rk3588.rknn",
+  "model_sha256": "bedc77072e3da76b5d8179bd45d9804f3b44e4385d312200c31549d1ad90a0a4",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T21:01:22",
+    "kept_anchors": 10047,
+    "normalized_boxes": true
+  }
+}

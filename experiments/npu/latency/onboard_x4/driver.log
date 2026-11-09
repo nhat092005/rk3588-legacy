@@ -1,0 +1,38 @@
+04:25:40 p1lan session 1 -> onboard_x4/p1lan
+04:26:36 p2 session 1 -> onboard_x4/p2
+04:27:33 p1lan session 2 -> onboard_x4/p1lan
+04:28:29 p2 session 2 -> onboard_x4/p2
+04:29:24 p1lan session 3 -> onboard_x4/p1lan
+04:30:18 p2 session 3 -> onboard_x4/p2
+04:31:13 p1lan session 4 -> onboard_x4/p1lan_extra
+04:32:06 p2 session 4 -> onboard_x4/p2_extra
+04:33:01 p1lan session 5 -> onboard_x4/p1lan_extra
+04:33:56 p2 session 5 -> onboard_x4/p2_extra
+04:34:51 p1lan session 6 -> onboard_x4/p1lan_extra
+04:35:46 p2 session 6 -> onboard_x4/p2_extra
+04:36:41 p1lan session 7 -> onboard_x4/p1lan_extra
+04:37:34 p2 session 7 -> onboard_x4/p2_extra
+04:38:27 p1lan session 8 -> onboard_x4/p1lan_extra
+04:39:21 p2 session 8 -> onboard_x4/p2_extra
+04:40:15 p1lan session 9 -> onboard_x4/p1lan_extra
+04:41:12 p2 session 9 -> onboard_x4/p2_extra
+04:42:06 p1lan session 10 -> onboard_x4/p1lan_extra
+04:42:59 p2 session 10 -> onboard_x4/p2_extra
+04:43:49 mask CORE_0 round 1
+04:44:38 mask AUTO round 1
+04:45:27 mask CORE_0_1_2 round 1
+04:46:15 mask CORE_0 round 2
+04:47:05 mask AUTO round 2
+04:47:54 mask CORE_0_1_2 round 2
+04:48:43 mask CORE_0 round 3
+04:49:31 mask AUTO round 3
+04:50:21 mask CORE_0_1_2 round 3
+04:51:10 mask CORE_0 round 4
+04:51:59 mask AUTO round 4
+04:52:48 mask CORE_0_1_2 round 4
+04:53:37 verbose False round 1
+04:54:26 verbose True round 1
+04:55:14 verbose False round 2
+04:56:03 verbose True round 2
+04:56:52 verbose False round 3
+04:57:41 verbose True round 3

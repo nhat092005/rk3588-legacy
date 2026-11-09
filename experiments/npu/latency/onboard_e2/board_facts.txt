@@ -1,0 +1,4 @@
+# read on the board 2026-10-30 after E2 (read-only), copied here so the numbers in the docs trace to a file
+cpuidle cpu0 and cpu4 (identical): state0 name=WFI latency_us=1 residency_us=1 ; state1 name=cpu-sleep latency_us=220 residency_us=1000
+irqbalance: pid 913 /usr/sbin/irqbalance --foreground ; systemctl is-active irqbalance = active ; is-enabled = enabled
+NPU interrupt lines in /proc/interrupts: irq 36, 37, 38 (default smp_affinity_list 0-7, all three restored to 0-7 after E2; cpuidle state1 disable restored to 0)

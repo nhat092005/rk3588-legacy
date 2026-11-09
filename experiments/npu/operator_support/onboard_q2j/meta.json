@@ -1,0 +1,17 @@
+{
+ "exp_id": "onboard_q2j",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_q2j/rule.txt",
+ "rule_first_line": "Split-head latency rule (S-3 of experiments/npu/operator_support/onboard_q2c/rule_split.txt), written 2026-10-31T23:59:11+07:00 after the split-head accuracy results (AP50-95 49.84 INT8 split) and the CPU decode benchmark (median 8.02 ms pinned on CPU4) were read, before any NPU latency of the split model exists. Same statements and approved numbers (5 percent, 2 session gap rule) and protocol P2 (not approved) as onboard_q2i/rule.txt. Models of ppe5_yolov8n_baseline_100ep_s0 (sha256):",
+ "script": [
+  "ai/npu/operator_support/analyze_q2e_board.py",
+  "ai/npu/operator_support/analyze_q2j.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

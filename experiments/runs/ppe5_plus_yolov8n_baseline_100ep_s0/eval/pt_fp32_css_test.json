@@ -1,0 +1,71 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "33212040b359cc514ecbc1aef3aae5ef4017ea3e",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.8537,
+  "recall": 0.7573,
+  "map50": 0.7866,
+  "map50_95": 0.4676,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.9016,
+      "recall": 0.8328,
+      "ap50": 0.9063,
+      "ap50_95": 0.4677,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.68,
+      "recall": 0.5183,
+      "ap50": 0.4593,
+      "ap50_95": 0.2492,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.9365,
+      "recall": 0.7556,
+      "ap50": 0.7891,
+      "ap50_95": 0.4843,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.8549,
+      "recall": 0.8695,
+      "ap50": 0.9184,
+      "ap50_95": 0.5826,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.8955,
+      "recall": 0.8103,
+      "ap50": 0.8601,
+      "ap50_95": 0.5541,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_plus_yolov8n_baseline_100ep_s0",
+  "backend": "pytorch",
+  "model_file": "weights/best.pt",
+  "model_sha256": "d77353aa4be9ec81cc51efb58b52c6e129b3b7e789a11b09ac44015724364c0d"
+}

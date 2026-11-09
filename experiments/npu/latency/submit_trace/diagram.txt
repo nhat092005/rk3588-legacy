@@ -1,0 +1,44 @@
+                Cảm biến OV13855: RAW10 4224x3136, 30 FPS   (mục 2)
+                              |  MIPI CSI-2, VICAP
+                              v
+            ISP: cắt 16:9 -> 4224x2376 (bỏ 380 hàng trên, 380 hàng dưới)   (mục 4)
+                              |
+            +-----------------+---------------------+
+            v                                       v
+  LUỒNG 1: video chính                        LUỒNG 2: đưa vào AI
+  mainpath, thu nhỏ -> 3840x2160 (4K UHD)     selfpath, thu nhỏ -> 640x360
+            |                                       |
+            v                                       v
+  xoay theo hướng camera (mục 5)              xoay theo hướng camera (mục 5)
+  quay camera vật lý hoặc RGA                 quay camera vật lý hoặc RGA
+            |                                       |
+            |                                       v
+            |                                 RGA3: NV12 -> RGB888, đặt vào khung 640x384   (mục 6)
+            |                                 viền xám 114 (12 hàng trên, 12 hàng dưới),
+            |                                 tô sẵn một lần bằng RGA2
+            |                                       |  [1, 384, 640, 3] NHWC
+            |                                       v
+            |                                 NPU: ba lõi (intra-frame), zero-copy qua C API   (mục 7, 8)
+            |                                 model INT8, hiệu chuẩn 300 ảnh   (mục 6)
+            |                                       |  tensor (1, 9, 5040)
+            v                                       v
+  hàng đợi: giữ 1 đến 2 khung 4K              CPU, ghim lõi A76   (mục 9, 11)
+  chờ kết quả AI   (mục 14)                   hậu xử lý (giải mã hộp, NMS) -> ByteTrack
+            |                                 -> hộp và mã số, dựng chữ nhãn (dùng NEON)
+            |                                 quy tắc vi phạm   (mục 15)
+            |                                       |  x4K = x640 * 6, y4K = (y384 - 12) * 6
+            |                                       |
+            +-----------------+---------------------+
+                              v
+      RGA2: vẽ khung; RGA3 hoặc RGA2: chèn nhãn (imblend), lên khung 4K   (mục 12)
+                              |  khung 4K đã vẽ
+            +-----------------+---------------------+
+            v                 v                     v
+       VPU: H.264     bộ JPEG: ảnh vi phạm          GPU: giao diện ứng dụng
+       lưu video      lấy từ khung 4K               |
+       (mục 16)       (mục 15, 16)                  v
+                                                    VOP2: hiển thị
+                                                    (khi có màn hình, mục 12)
+
+Khung đi giữa các khối bằng dma-buf (mục 13). Chương trình chính viết bằng C hoặc C++ (mục 10).
+IEP không dùng (mục 12).

@@ -1,0 +1,304 @@
+{
+ "probe": "m16",
+ "model": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8/best-rk3588.rknn",
+ "model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+ "meminfo_before": {
+  "MemTotal": 3916,
+  "MemFree": 2583,
+  "MemAvailable": 3209,
+  "Buffers": 30,
+  "Cached": 622,
+  "SwapCached": 0,
+  "Active": 290,
+  "Inactive": 736,
+  "Active(anon)": 1,
+  "Inactive(anon)": 418,
+  "Active(file)": 289,
+  "Inactive(file)": 318,
+  "Unevictable": 3,
+  "Mlocked": 0,
+  "SwapTotal": 1958,
+  "SwapFree": 1958,
+  "Dirty": 0,
+  "Writeback": 0,
+  "AnonPages": 378,
+  "Mapped": 205,
+  "Shmem": 44,
+  "KReclaimable": 56,
+  "Slab": 109,
+  "SReclaimable": 56,
+  "SUnreclaim": 52,
+  "KernelStack": 5,
+  "PageTables": 9,
+  "SecPageTables": 0,
+  "NFS_Unstable": 0,
+  "Bounce": 0,
+  "WritebackTmp": 0,
+  "CommitLimit": 3916,
+  "Committed_AS": 2237,
+  "VmallocTotal": 253568,
+  "VmallocUsed": 36,
+  "VmallocChunk": 0,
+  "Percpu": 4,
+  "CmaTotal": 128,
+  "CmaAllocated": 3,
+  "CmaReleased": 124,
+  "CmaFree": 124,
+  "HugePages_Total": 0,
+  "HugePages_Free": 0,
+  "HugePages_Rsvd": 0,
+  "HugePages_Surp": 0,
+  "Hugepagesize": 2,
+  "Hugetlb": 0
+ },
+ "result": {
+  "contexts_created": 32,
+  "stop": {
+   "reason": "cap_reached",
+   "at_context": 32
+  },
+  "rows": [
+   {
+    "n": 1,
+    "mem_available_mib": 3182,
+    "rss_mib": 66.3,
+    "max_diff": 0.0
+   },
+   {
+    "n": 2,
+    "mem_available_mib": 3166,
+    "rss_mib": 83.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 3,
+    "mem_available_mib": 3149,
+    "rss_mib": 100.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 4,
+    "mem_available_mib": 3131,
+    "rss_mib": 117.1,
+    "max_diff": 0.0
+   },
+   {
+    "n": 5,
+    "mem_available_mib": 3114,
+    "rss_mib": 134.3,
+    "max_diff": 0.0
+   },
+   {
+    "n": 6,
+    "mem_available_mib": 3098,
+    "rss_mib": 151.2,
+    "max_diff": 0.0
+   },
+   {
+    "n": 7,
+    "mem_available_mib": 3080,
+    "rss_mib": 168.4,
+    "max_diff": 0.0
+   },
+   {
+    "n": 8,
+    "mem_available_mib": 3063,
+    "rss_mib": 185.6,
+    "max_diff": 0.0
+   },
+   {
+    "n": 9,
+    "mem_available_mib": 3046,
+    "rss_mib": 202.5,
+    "max_diff": 0.0
+   },
+   {
+    "n": 10,
+    "mem_available_mib": 3028,
+    "rss_mib": 219.7,
+    "max_diff": 0.0
+   },
+   {
+    "n": 11,
+    "mem_available_mib": 3011,
+    "rss_mib": 236.9,
+    "max_diff": 0.0
+   },
+   {
+    "n": 12,
+    "mem_available_mib": 2994,
+    "rss_mib": 253.8,
+    "max_diff": 0.0
+   },
+   {
+    "n": 13,
+    "mem_available_mib": 2977,
+    "rss_mib": 271.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 14,
+    "mem_available_mib": 2959,
+    "rss_mib": 288.2,
+    "max_diff": 0.0
+   },
+   {
+    "n": 15,
+    "mem_available_mib": 2942,
+    "rss_mib": 304.8,
+    "max_diff": 0.0
+   },
+   {
+    "n": 16,
+    "mem_available_mib": 2925,
+    "rss_mib": 322.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 17,
+    "mem_available_mib": 2908,
+    "rss_mib": 339.2,
+    "max_diff": 0.0
+   },
+   {
+    "n": 18,
+    "mem_available_mib": 2891,
+    "rss_mib": 356.1,
+    "max_diff": 0.0
+   },
+   {
+    "n": 19,
+    "mem_available_mib": 2874,
+    "rss_mib": 373.3,
+    "max_diff": 0.0
+   },
+   {
+    "n": 20,
+    "mem_available_mib": 2856,
+    "rss_mib": 390.5,
+    "max_diff": 0.0
+   },
+   {
+    "n": 21,
+    "mem_available_mib": 2839,
+    "rss_mib": 407.4,
+    "max_diff": 0.0
+   },
+   {
+    "n": 22,
+    "mem_available_mib": 2822,
+    "rss_mib": 424.6,
+    "max_diff": 0.0
+   },
+   {
+    "n": 23,
+    "mem_available_mib": 2805,
+    "rss_mib": 441.8,
+    "max_diff": 0.0
+   },
+   {
+    "n": 24,
+    "mem_available_mib": 2788,
+    "rss_mib": 458.7,
+    "max_diff": 0.0
+   },
+   {
+    "n": 25,
+    "mem_available_mib": 2771,
+    "rss_mib": 475.9,
+    "max_diff": 0.0
+   },
+   {
+    "n": 26,
+    "mem_available_mib": 2754,
+    "rss_mib": 493.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 27,
+    "mem_available_mib": 2737,
+    "rss_mib": 510.0,
+    "max_diff": 0.0
+   },
+   {
+    "n": 28,
+    "mem_available_mib": 2720,
+    "rss_mib": 527.1,
+    "max_diff": 0.0
+   },
+   {
+    "n": 29,
+    "mem_available_mib": 2702,
+    "rss_mib": 544.3,
+    "max_diff": 0.0
+   },
+   {
+    "n": 30,
+    "mem_available_mib": 2685,
+    "rss_mib": 561.2,
+    "max_diff": 0.0
+   },
+   {
+    "n": 31,
+    "mem_available_mib": 2668,
+    "rss_mib": 578.4,
+    "max_diff": 0.0
+   },
+   {
+    "n": 32,
+    "mem_available_mib": 2651,
+    "rss_mib": 595.6,
+    "max_diff": 0.0
+   }
+  ]
+ },
+ "meminfo_after": {
+  "MemTotal": 3916,
+  "MemFree": 2411,
+  "MemAvailable": 3037,
+  "Buffers": 30,
+  "Cached": 622,
+  "SwapCached": 0,
+  "Active": 290,
+  "Inactive": 907,
+  "Active(anon)": 1,
+  "Inactive(anon)": 588,
+  "Active(file)": 289,
+  "Inactive(file)": 318,
+  "Unevictable": 3,
+  "Mlocked": 0,
+  "SwapTotal": 1958,
+  "SwapFree": 1958,
+  "Dirty": 0,
+  "Writeback": 0,
+  "AnonPages": 548,
+  "Mapped": 206,
+  "Shmem": 44,
+  "KReclaimable": 57,
+  "Slab": 110,
+  "SReclaimable": 57,
+  "SUnreclaim": 52,
+  "KernelStack": 5,
+  "PageTables": 9,
+  "SecPageTables": 0,
+  "NFS_Unstable": 0,
+  "Bounce": 0,
+  "WritebackTmp": 0,
+  "CommitLimit": 3916,
+  "Committed_AS": 2407,
+  "VmallocTotal": 253568,
+  "VmallocUsed": 36,
+  "VmallocChunk": 0,
+  "Percpu": 4,
+  "CmaTotal": 128,
+  "CmaAllocated": 3,
+  "CmaReleased": 124,
+  "CmaFree": 124,
+  "HugePages_Total": 0,
+  "HugePages_Free": 0,
+  "HugePages_Rsvd": 0,
+  "HugePages_Surp": 0,
+  "Hugepagesize": 2,
+  "Hugetlb": 0
+ }
+}

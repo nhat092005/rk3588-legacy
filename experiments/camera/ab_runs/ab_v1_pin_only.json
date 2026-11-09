@@ -1,0 +1,276 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-11-08T01:38:37",
+  "run_id": "ab",
+  "tier": 2,
+  "protocol_version": "v1",
+  "model_file": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8/best-rk3588.rknn",
+  "model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+  "tag": "rknn_int8",
+  "backend": "rknnlite-on-board",
+  "camera": {
+    "device": "/dev/video12",
+    "frame": "640x360 NV12",
+    "crop_ltwh": [
+      0,
+      380,
+      4224,
+      2376
+    ],
+    "sensor_mode": "4224x3136 @30",
+    "isp_output_line": "Output rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:9015 rate:33ms delay:29ms frameloss:0 bufcnt:4)",
+    "isp_frames": 9015,
+    "isp_frameloss": 0,
+    "frames_isp_minus_read": -1,
+    "period_ms": 33.391,
+    "late_intervals": 0,
+    "interval_ms": {
+      "mean": 33.39,
+      "p50": 33.391,
+      "p95": 33.414,
+      "std": 0.15,
+      "n": 9015
+    }
+  },
+  "conditions": {
+    "affinity": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "openblas_num_threads": "1",
+    "cv2_threads": 4,
+    "core_mask": "CORE_0",
+    "tracker": false,
+    "freq_before": {
+      "policy0": {
+        "governor": "performance",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "performance",
+        "cur_khz": "2256000"
+      },
+      "policy6": {
+        "governor": "performance",
+        "cur_khz": "2304000"
+      },
+      "npu": {
+        "governor": "performance",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "performance",
+        "cur_hz": "2112000000"
+      },
+      "locked": true
+    },
+    "freq_after": {
+      "policy0": {
+        "governor": "performance",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "performance",
+        "cur_khz": "2256000"
+      },
+      "policy6": {
+        "governor": "performance",
+        "cur_khz": "2304000"
+      },
+      "npu": {
+        "governor": "performance",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "performance",
+        "cur_hz": "2112000000"
+      },
+      "locked": true
+    }
+  },
+  "frames": {
+    "read_from_pipe": 9016,
+    "processed_measured": 8986,
+    "warmup": 30,
+    "overwritten_in_slot": 0
+  },
+  "window_s": 300.0,
+  "fps": 29.95,
+  "latency_ms": {
+    "cvt": {
+      "mean": 0.257,
+      "p50": 0.246,
+      "p95": 0.305,
+      "std": 0.026,
+      "n": 8986
+    },
+    "pre": {
+      "mean": 0.825,
+      "p50": 0.82,
+      "p95": 0.864,
+      "std": 0.025,
+      "n": 8986
+    },
+    "npu": {
+      "mean": 19.472,
+      "p50": 19.283,
+      "p95": 19.423,
+      "std": 1.064,
+      "n": 8986
+    },
+    "post": {
+      "mean": 0.544,
+      "p50": 0.561,
+      "p95": 0.618,
+      "std": 0.044,
+      "n": 8986
+    },
+    "e2e": {
+      "mean": 21.584,
+      "p50": 21.389,
+      "p95": 21.621,
+      "std": 1.059,
+      "n": 8986
+    }
+  },
+  "n_det_mean": 0.0,
+  "saved_images": null,
+  "saved_video": null,
+  "per_minute": [
+    {
+      "minute": 0,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 21.644,
+      "e2e_ms_p95": 21.69,
+      "npu_ms_p50": 19.281,
+      "temp_c_mean": 56.91,
+      "temp_c_max": 57.307,
+      "npu_hz_min": 1000000000,
+      "ddr_hz_min": 2112000000,
+      "cpu_khz_min": {
+        "policy0": 1800000,
+        "policy4": 2256000,
+        "policy6": 2304000
+      },
+      "process_cpu_pct": 26.6,
+      "system_cpu_pct": 16.5,
+      "rss_mib": 93.6,
+      "gc_collect_ms": 0.0
+    },
+    {
+      "minute": 1,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 21.587,
+      "e2e_ms_p95": 21.608,
+      "npu_ms_p50": 19.282,
+      "temp_c_mean": 57.09,
+      "temp_c_max": 57.307,
+      "npu_hz_min": 1000000000,
+      "ddr_hz_min": 2112000000,
+      "cpu_khz_min": {
+        "policy0": 1800000,
+        "policy4": 2256000,
+        "policy6": 2304000
+      },
+      "process_cpu_pct": 26.3,
+      "system_cpu_pct": 16.3,
+      "rss_mib": 123.8,
+      "gc_collect_ms": 0.0
+    },
+    {
+      "minute": 2,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 21.59,
+      "e2e_ms_p95": 21.602,
+      "npu_ms_p50": 19.28,
+      "temp_c_mean": 57.29,
+      "temp_c_max": 57.307,
+      "npu_hz_min": 1000000000,
+      "ddr_hz_min": 2112000000,
+      "cpu_khz_min": {
+        "policy0": 1800000,
+        "policy4": 2256000,
+        "policy6": 2304000
+      },
+      "process_cpu_pct": 26.3,
+      "system_cpu_pct": 16.2,
+      "rss_mib": 103.1,
+      "gc_collect_ms": 0.0
+    },
+    {
+      "minute": 3,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 21.549,
+      "e2e_ms_p95": 21.551,
+      "npu_ms_p50": 19.287,
+      "temp_c_mean": 57.31,
+      "temp_c_max": 57.307,
+      "npu_hz_min": 1000000000,
+      "ddr_hz_min": 2112000000,
+      "cpu_khz_min": {
+        "policy0": 1800000,
+        "policy4": 2256000,
+        "policy6": 2304000
+      },
+      "process_cpu_pct": 26.2,
+      "system_cpu_pct": 16.3,
+      "rss_mib": 130.3,
+      "gc_collect_ms": 0.0
+    },
+    {
+      "minute": 4,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 21.553,
+      "e2e_ms_p95": 21.556,
+      "npu_ms_p50": 19.285,
+      "temp_c_mean": 57.31,
+      "temp_c_max": 57.307,
+      "npu_hz_min": 1000000000,
+      "ddr_hz_min": 2112000000,
+      "cpu_khz_min": {
+        "policy0": 1800000,
+        "policy4": 2256000,
+        "policy6": 2304000
+      },
+      "process_cpu_pct": 26.3,
+      "system_cpu_pct": 16.2,
+      "rss_mib": 110.0,
+      "gc_collect_ms": 0.0
+    }
+  ],
+  "rows_jsonl": "/tmp/ab_v1_pin_only.rows.jsonl",
+  "phase9": null,
+  "resources": {
+    "peak_rss_mib": 143.6,
+    "avg_process_cpu_pct": 26.3,
+    "avg_system_cpu_pct": 16.2,
+    "thermal_zone": "thermal_zone6",
+    "temp_start_c": 56.4,
+    "temp_end_c": 57.3,
+    "temp_max_c": 57.3,
+    "duration_s": 301.2,
+    "samples": 2993
+  },
+  "system": {
+    "kernel": "6.1.99-rockchip-rk3588",
+    "os": "Orange Pi 1.2.4 Jammy",
+    "python": "3.10.12",
+    "ram_total_mib": 3916,
+    "cpu_count": 8
+  },
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "created_note": "2026-11-08"
+}

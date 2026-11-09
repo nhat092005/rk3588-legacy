@@ -1,0 +1,63 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "33212040b359cc514ecbc1aef3aae5ef4017ea3e",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "ppe2286_val",
+  "dataset": "ppe2286",
+  "split": "val",
+  "n_images": 457,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest"
+  ],
+  "dataset_fingerprint": "26ab7e6f86a7355c0b2af5596da9549946e61135b0f1a23e2b226eb7dceebba1",
+  "precision": 0.5392,
+  "recall": 0.7559,
+  "map50": 0.6603,
+  "map50_95": 0.4732,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.4849,
+      "recall": 0.765,
+      "ap50": 0.6323,
+      "ap50_95": 0.4498,
+      "instances": 451
+    },
+    "NoHelmet": {
+      "precision": 0.5674,
+      "recall": 0.8131,
+      "ap50": 0.742,
+      "ap50_95": 0.5606,
+      "instances": 214
+    },
+    "NoVest": {
+      "precision": 0.4166,
+      "recall": 0.6081,
+      "ap50": 0.4891,
+      "ap50_95": 0.3386,
+      "instances": 222
+    },
+    "Vest": {
+      "precision": 0.6878,
+      "recall": 0.8374,
+      "ap50": 0.7778,
+      "ap50_95": 0.5438,
+      "instances": 289
+    }
+  },
+  "run_id": "ppe2286_yolov8n_baseline_100ep_s0",
+  "backend": "pytorch",
+  "model_file": "weights/best.pt",
+  "model_sha256": "728c938f36d977ad0e662d463884208d42ce8dafeaac53a9b9b7d89e7fb62975"
+}

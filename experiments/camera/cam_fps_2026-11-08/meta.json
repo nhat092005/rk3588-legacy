@@ -1,0 +1,18 @@
+{
+ "exp_id": "cam_fps_2026-11-08",
+ "domain": "camera",
+ "topic": "pipeline",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-08",
+ "rule_file": "experiments/camera/cam_fps_2026-11-08/rule.txt",
+ "script": [
+  "experiments/camera/cam_fps_2026-11-08/driver.py"
+ ],
+ "result_file": [
+  "experiments/camera/cam_fps_2026-11-08/sessions.json"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

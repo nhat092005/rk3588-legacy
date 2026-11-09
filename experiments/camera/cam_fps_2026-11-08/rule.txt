@@ -1,0 +1,11 @@
+Rule written 2026-11-08 before any camera-frame throughput exists. Not from a source, numbers below are new (chua duyet).
+Question (user): is the thong luong above 55 FPS (E1 int8h5 one context CORE_0 = 54.86, three contexts = 142.09, cached test images) real when the frames come from the camera?
+Model: ppe5_yolov8n_baseline_100ep_s0 rknn_int8h5 (SiLU, 100 epoch, 640x640 input). Harness: ai/board/bench_throughput_rep.py, mode threads, taskset -c 4-7, helper p3_hold.sh, locked clocks (lock_freq.sh lock), 1238 frames, 20 s rest, 3 repetitions in the same order. Same harness as onboard_q2f_thr so only the frames and the load change.
+Conditions (each with T1 = one context CORE_0, T5 = three contexts CORE_0,CORE_1,CORE_2):
+  C0 control: the 82 test images of ppe5 (must reproduce E1 within the larger spread, otherwise the board state differs and C1, C2 are not comparable).
+  C1: 200 real frames grabbed from the ISP selfpath (640x360 NV12 -> BGR PNG), camera stopped during the run.
+  C2: same frames as C1, while both ISP paths stream (mainpath 3840x2160 through the VPU mpph265enc to /dev/null, selfpath 640x360 to /dev/null), streaming processes pinned to CPU0-3.
+Statements: F-1 median FPS and spread (max minus min) per condition and T. F-2 C1 and C2 against C0: difference in FPS and percent, 'khac' when at least 5 percent and larger than the larger spread of the two, otherwise 'khong phan biet duoc'. F-3 the ISP counters (frames, frameloss) before and after C2 to show the stream really ran.
+Reading, fixed now: no cause is named for a difference. A run counts only if P3 was realized (the driver checks irq affinity in the record). The scene of the 200 frames is described, not controlled.
+Limits: one board, one seed, SiLU 100 epoch only, frames are replayed from RAM (decoded PNG), CPU preprocess (not RGA), no tracking, no drawing, no encode of the AI result. C2 loads ISP, VPU and DDR but not the RGA drawing. Camera cannot give more than 30 FPS, so the throughput is a replay of real frames, not a live rate.
+Budget: one run.

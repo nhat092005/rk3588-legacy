@@ -6,28 +6,31 @@ Writes runs/<run_id>/bench/tier1_<precision>_<core_mask>.json (+ _layers.json/.t
 """
 import argparse
 import json
-from pathlib import Path
 
 from ai.core.evaluator import PROTOCOL_VERSION
 from ai.core.provenance import file_sha256, provenance
 from ai.core.rknn.benchmark import CORE_MASK, PERF_REPEATS, connect_board, measure_latency, measure_layers, measure_memory
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR, bench_path
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("run_id", help="an existing directory under ai/automation/runs/")
+    parser.add_argument("run_id", help="an existing directory under experiments/runs/")
     parser.add_argument("device_id", help="board adb address, e.g. 100.67.251.37:5555")
-    parser.add_argument("--precision", choices=["fp16", "int8"], required=True)
+    parser.add_argument("--precision", choices=["fp16", "int8", "int8h5"], required=True)
     parser.add_argument("--core-mask", default="AUTO", choices=list(CORE_MASK))
+    parser.add_argument("--session", type=int, help="independent measurement number; adds _sess<N> to the file names")
+    parser.add_argument("--skip-memory", action="store_true", help="skip the eval_mem session (saves one slow init_runtime)")
+    parser.add_argument("--variant", default="", help="measure weights/rknn_<precision>_<variant> (quantization recipe) and add _<variant> to the file names")
+    parser.add_argument("--out-subdir", default="", help="write under bench/<subdir> instead of bench/ (separate protocols, for example onboard_x4/p2)")
     args = parser.parse_args()
 
     run_dir = RUNS_DIR / args.run_id
-    rknn_path = next((run_dir / "weights" / f"rknn_{args.precision}").glob("*.rknn"))
-    out_dir = run_dir / "bench"
-    out_dir.mkdir(exist_ok=True)
-    stem = f"tier1_{args.precision}_{args.core_mask}"
+    vs = f"_{args.variant}" if args.variant else ""
+    rknn_path = next((run_dir / "weights" / f"rknn_{args.precision}{vs}").glob("*.rknn"))
+    out_dir = bench_path(run_dir, args.out_subdir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    stem = f"tier1_{args.precision}{vs}_{args.core_mask}" + (f"_sess{args.session}" if args.session else "")
     connect = lambda **kw: connect_board(str(rknn_path), args.device_id, core_mask=args.core_mask, **kw)  # noqa: E731
 
     with connect() as rknn:
@@ -35,8 +38,10 @@ def main() -> None:
         latency = measure_latency(rknn)
     with connect(perf_debug=True) as rknn:
         layers, layers_text = measure_layers(rknn)
-    with connect(eval_mem=True) as rknn:
-        memory = measure_memory(rknn)
+    memory = None
+    if not args.skip_memory:
+        with connect(eval_mem=True) as rknn:
+            memory = measure_memory(rknn)
 
     (out_dir / f"{stem}_layers.txt").write_text(layers_text)
     (out_dir / f"{stem}_layers.json").write_text(json.dumps(layers, indent=1) + "\n")
@@ -58,6 +63,8 @@ def main() -> None:
         "cpu_ops": layers["cpu_ops"],
         "n_layers": layers["n_layers"],
         "debug_total_us": layers["debug_total_us"],
+        "debug_total_us_all": layers["debug_total_us_all"],
+        "layer_repeats": layers["repeats"],
         "eval_perf_summary_raw": latency["raw_last"],
         "layers_files": [f"{stem}_layers.json", f"{stem}_layers.txt"],
     }

@@ -1,0 +1,29 @@
+start build ppe5_yolov8n_baseline_100ep_s0 base 18:30:55
+ok ppe5_yolov8n_baseline_100ep_s0 base 18:32:14
+start build ppe5_yolov8n_relu_100ep_s0 base 18:32:14
+ok ppe5_yolov8n_relu_100ep_s0 base 18:33:20
+start build ppe5_yolov8n_baseline_100ep_s0 kl 18:33:20
+ok ppe5_yolov8n_baseline_100ep_s0 kl 18:35:06
+start build ppe5_yolov8n_relu_100ep_s0 kl 18:35:06
+ok ppe5_yolov8n_relu_100ep_s0 kl 18:36:45
+start build ppe5_yolov8n_baseline_100ep_s0 h1 18:36:45
+ok ppe5_yolov8n_baseline_100ep_s0 h1 18:38:18
+start build ppe5_yolov8n_relu_100ep_s0 h1 18:38:18
+ok ppe5_yolov8n_relu_100ep_s0 h1 18:39:34
+start build ppe5_yolov8n_baseline_100ep_s0 h2 18:39:34
+ok ppe5_yolov8n_baseline_100ep_s0 h2 18:41:05
+start build ppe5_yolov8n_relu_100ep_s0 h2 18:41:05
+ok ppe5_yolov8n_relu_100ep_s0 h2 18:42:23
+start build ppe5_yolov8n_baseline_100ep_s0 h3 18:42:23
+ok ppe5_yolov8n_baseline_100ep_s0 h3 18:56:14
+start build ppe5_yolov8n_relu_100ep_s0 h3 18:56:14
+ok ppe5_yolov8n_relu_100ep_s0 h3 19:10:53
+start build ppe5_yolov8n_baseline_100ep_s0 h4 19:10:53
+ok ppe5_yolov8n_baseline_100ep_s0 h4 19:14:35
+start build ppe5_yolov8n_relu_100ep_s0 h4 19:14:35
+ok ppe5_yolov8n_relu_100ep_s0 h4 19:18:07
+start build ppe5_yolov8n_baseline_100ep_s0 auto 19:18:07
+ok ppe5_yolov8n_baseline_100ep_s0 auto 19:19:26
+start build ppe5_yolov8n_relu_100ep_s0 auto 19:19:26
+ok ppe5_yolov8n_relu_100ep_s0 auto 19:20:33
+ALL_DONE

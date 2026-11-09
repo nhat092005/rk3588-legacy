@@ -1,0 +1,3 @@
+ 36:    2880549          0          0          0    2280600     132300     132300     132300     GICv3 142 Level     fdab9000.iommu, fdab0000.npu
+ 37:          0          0          0          0          0          0          0          0     GICv3 143 Level     fdab9000.iommu, fdab0000.npu
+ 38:          0          0          0          0          0          0          0          0     GICv3 144 Level     fdab9000.iommu, fdab0000.npu

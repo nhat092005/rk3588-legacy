@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_x6",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/latency/onboard_x6/rule.txt",
+ "rule_first_line": "X6 rule, written 2026-10-31T04:06:48+07:00 before any X6 data exists. Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).",
+ "script": [
+  "ai/npu/latency/analyze_onboard.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

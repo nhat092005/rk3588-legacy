@@ -1,0 +1,36 @@
+D Save log info to: /home/nhat/workspace/prjs/rk3588/experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h6/build.log
+D Save log info to: /home/nhat/workspace/prjs/rk3588/experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8_h6/build.log
+I rknn-toolkit2 version: 2.3.2
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mhybrid_quantization_step2: The node that pointed by '/model/model.22/Slice_output_0-rs' is specaifed repeatedly![0m
+[1;33mW[0m [1;33mhybrid_quantization_step2: The node that pointed by '/model/model.22/Slice_output_0-rs' is specaifed repeatedly![0m
+D fuse_ops ...
+D fuse_ops ...
+D fuse_ops with passes results:
+D fuse_ops with passes results:
+D     fuse_two_dataconvert: remove node = ['output0_int8__cvt_float16_int8', 'output0__cvt_int8_to_float16'], add node = ['output0_int8__cvt_float16_int8']
+D     fuse_two_dataconvert: remove node = ['output0_int8__cvt_float16_int8', 'output0__cvt_int8_to_float16'], add node = ['output0_int8__cvt_float16_int8']
+D fuse_ops done.
+D fuse_ops done.
+D 
+D 
+D quant_optimizer ...
+D quant_optimizer ...
+D quant_optimizer done.
+D quant_optimizer done.
+D 
+D 
+D quantized_algorithm is normal, skip re-quantization!
+D quantized_algorithm is normal, skip re-quantization!
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default input dtype of 'images' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default input dtype of 'images' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default output dtype of 'output0' is changed from 'float32' to 'float16' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mhybrid_quantization_step2: The default output dtype of 'output0' is changed from 'float32' to 'float16' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building ...
+I rknn building done.
+I rknn building done.

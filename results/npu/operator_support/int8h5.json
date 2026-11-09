@@ -1,0 +1,358 @@
+{
+ "runs": {
+  "silu_s0": {
+   "export": {
+    "sha": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938",
+    "recipe": "h5",
+    "n_float16": 15,
+    "stems_md5": "11d6a5c69414a6eafd8b98f99724b0b2",
+    "png_md5": "6652576adb7608ddf8ff326c57851732"
+   },
+   "sets": {
+    "css_test": {
+     "int8h5": {
+      "map50": 79.52,
+      "map50_95": 49.66,
+      "NoHelmet": 28.65,
+      "Vest": 56.45,
+      "sha": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+     },
+     "int8": {
+      "map50": 69.65,
+      "map50_95": 36.75,
+      "NoHelmet": 22.770000000000003,
+      "Vest": 46.98,
+      "sha": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+     },
+     "fp16": {
+      "map50": 80.22,
+      "map50_95": 49.76,
+      "NoHelmet": 30.740000000000002,
+      "Vest": 56.489999999999995,
+      "sha": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786"
+     },
+     "diff_vs_int8": {
+      "map50_95": 12.909999999999997,
+      "NoHelmet": 5.8799999999999955,
+      "Vest": 9.470000000000006
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.10000000000000142,
+      "NoHelmet": -2.0900000000000034,
+      "Vest": -0.03999999999999204
+     }
+    },
+    "ppe2286_ext": {
+     "int8h5": {
+      "map50": 57.56,
+      "map50_95": 25.95,
+      "NoHelmet": 0.89,
+      "Vest": 44.230000000000004,
+      "sha": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+     },
+     "int8": {
+      "map50": 53.300000000000004,
+      "map50_95": 23.13,
+      "NoHelmet": 0.5499999999999999,
+      "Vest": 42.32,
+      "sha": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+     },
+     "fp16": {
+      "map50": 57.86,
+      "map50_95": 26.35,
+      "NoHelmet": 0.8999999999999999,
+      "Vest": 45.050000000000004,
+      "sha": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786"
+     },
+     "diff_vs_int8": {
+      "map50_95": 2.8200000000000003,
+      "NoHelmet": 0.3400000000000001,
+      "Vest": 1.9100000000000037
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.40000000000000213,
+      "NoHelmet": -0.009999999999999898,
+      "Vest": -0.8200000000000003
+     }
+    }
+   }
+  },
+  "silu_s1": {
+   "export": {
+    "sha": "a5a5f8c083cdb93bdb70c3e8494e5753ba89214da9160742c03e2dd7e4a5c975",
+    "recipe": "h5",
+    "n_float16": 15,
+    "stems_md5": "11d6a5c69414a6eafd8b98f99724b0b2",
+    "png_md5": "6652576adb7608ddf8ff326c57851732"
+   },
+   "sets": {
+    "css_test": {
+     "int8h5": {
+      "map50": 80.19,
+      "map50_95": 50.79,
+      "NoHelmet": 30.56,
+      "Vest": 60.42999999999999,
+      "sha": "a5a5f8c083cdb93bdb70c3e8494e5753ba89214da9160742c03e2dd7e4a5c975"
+     },
+     "int8": {
+      "map50": 71.08,
+      "map50_95": 38.1,
+      "NoHelmet": 24.62,
+      "Vest": 49.38,
+      "sha": "33d571bfe61c0a2275c037e753881abd6721a4f07b2de95dba9344f8109b7853"
+     },
+     "fp16": {
+      "map50": 80.87,
+      "map50_95": 51.01,
+      "NoHelmet": 31.130000000000003,
+      "Vest": 60.85,
+      "sha": "3404106949ee1072ea71d8e825a09077cc015c663092c33e88a69a59116be51c"
+     },
+     "diff_vs_int8": {
+      "map50_95": 12.689999999999998,
+      "NoHelmet": 5.939999999999998,
+      "Vest": 11.04999999999999
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.21999999999999886,
+      "NoHelmet": -0.5700000000000038,
+      "Vest": -0.4200000000000088
+     }
+    },
+    "ppe2286_ext": {
+     "int8h5": {
+      "map50": 56.04,
+      "map50_95": 25.46,
+      "NoHelmet": 0.66,
+      "Vest": 42.77,
+      "sha": "a5a5f8c083cdb93bdb70c3e8494e5753ba89214da9160742c03e2dd7e4a5c975"
+     },
+     "int8": {
+      "map50": 51.64,
+      "map50_95": 22.470000000000002,
+      "NoHelmet": 0.5,
+      "Vest": 39.71,
+      "sha": "33d571bfe61c0a2275c037e753881abd6721a4f07b2de95dba9344f8109b7853"
+     },
+     "fp16": {
+      "map50": 56.96,
+      "map50_95": 25.97,
+      "NoHelmet": 0.67,
+      "Vest": 44.190000000000005,
+      "sha": "3404106949ee1072ea71d8e825a09077cc015c663092c33e88a69a59116be51c"
+     },
+     "diff_vs_int8": {
+      "map50_95": 2.9899999999999984,
+      "NoHelmet": 0.16000000000000003,
+      "Vest": 3.0600000000000023
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.509999999999998,
+      "NoHelmet": -0.010000000000000009,
+      "Vest": -1.4200000000000017
+     }
+    }
+   }
+  },
+  "silu_s2": {
+   "export": {
+    "sha": "263f7d2acdf45a300f54dd516d087fe617ee116e4ea4ce32a365da68583a4f5a",
+    "recipe": "h5",
+    "n_float16": 15,
+    "stems_md5": "11d6a5c69414a6eafd8b98f99724b0b2",
+    "png_md5": "6652576adb7608ddf8ff326c57851732"
+   },
+   "sets": {
+    "css_test": {
+     "int8h5": {
+      "map50": 80.97999999999999,
+      "map50_95": 50.690000000000005,
+      "NoHelmet": 32.35,
+      "Vest": 57.830000000000005,
+      "sha": "263f7d2acdf45a300f54dd516d087fe617ee116e4ea4ce32a365da68583a4f5a"
+     },
+     "int8": {
+      "map50": 71.16,
+      "map50_95": 37.74,
+      "NoHelmet": 24.54,
+      "Vest": 47.12,
+      "sha": "bb72971fb81307f0661b727f30606639cf2f13320c8255320616828222bcfd1b"
+     },
+     "fp16": {
+      "map50": 81.28999999999999,
+      "map50_95": 51.0,
+      "NoHelmet": 31.36,
+      "Vest": 57.720000000000006,
+      "sha": "cf4a8320a66999bd9afb601b495efec9bb7d117ff4facb8b7868ba55ab83d21f"
+     },
+     "diff_vs_int8": {
+      "map50_95": 12.950000000000003,
+      "NoHelmet": 7.810000000000002,
+      "Vest": 10.710000000000008
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.30999999999999517,
+      "NoHelmet": 0.990000000000002,
+      "Vest": 0.10999999999999943
+     }
+    },
+    "ppe2286_ext": {
+     "int8h5": {
+      "map50": 56.95,
+      "map50_95": 25.540000000000003,
+      "NoHelmet": 0.7799999999999999,
+      "Vest": 40.910000000000004,
+      "sha": "263f7d2acdf45a300f54dd516d087fe617ee116e4ea4ce32a365da68583a4f5a"
+     },
+     "int8": {
+      "map50": 50.88,
+      "map50_95": 22.400000000000002,
+      "NoHelmet": 0.44,
+      "Vest": 37.46,
+      "sha": "bb72971fb81307f0661b727f30606639cf2f13320c8255320616828222bcfd1b"
+     },
+     "fp16": {
+      "map50": 58.379999999999995,
+      "map50_95": 25.790000000000003,
+      "NoHelmet": 0.67,
+      "Vest": 41.29,
+      "sha": "cf4a8320a66999bd9afb601b495efec9bb7d117ff4facb8b7868ba55ab83d21f"
+     },
+     "diff_vs_int8": {
+      "map50_95": 3.1400000000000006,
+      "NoHelmet": 0.3399999999999999,
+      "Vest": 3.450000000000003
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.25,
+      "NoHelmet": 0.10999999999999988,
+      "Vest": -0.37999999999999545
+     }
+    }
+   }
+  },
+  "relu_s0": {
+   "export": {
+    "sha": "c487d1168585166979e81d9ff33c1588d962fe4c0d70e2e407f09b39dddcf05c",
+    "recipe": "h5",
+    "n_float16": 15,
+    "stems_md5": "11d6a5c69414a6eafd8b98f99724b0b2",
+    "png_md5": "6652576adb7608ddf8ff326c57851732"
+   },
+   "sets": {
+    "css_test": {
+     "int8h5": {
+      "map50": 77.36,
+      "map50_95": 46.98,
+      "NoHelmet": 26.32,
+      "Vest": 59.79,
+      "sha": "c487d1168585166979e81d9ff33c1588d962fe4c0d70e2e407f09b39dddcf05c"
+     },
+     "int8": {
+      "map50": 66.19,
+      "map50_95": 33.239999999999995,
+      "NoHelmet": 17.83,
+      "Vest": 47.12,
+      "sha": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+     },
+     "fp16": {
+      "map50": 77.62,
+      "map50_95": 46.489999999999995,
+      "NoHelmet": 25.45,
+      "Vest": 58.10999999999999,
+      "sha": "8b3839305d44054f4157282ef5badaf0d9ec34bd7e5763d17c6abdc8c1cc2319"
+     },
+     "diff_vs_int8": {
+      "map50_95": 13.740000000000002,
+      "NoHelmet": 8.490000000000002,
+      "Vest": 12.670000000000002
+     },
+     "diff_vs_fp16": {
+      "map50_95": 0.490000000000002,
+      "NoHelmet": 0.870000000000001,
+      "Vest": 1.6800000000000068
+     }
+    },
+    "ppe2286_ext": {
+     "int8h5": {
+      "map50": 54.94,
+      "map50_95": 24.33,
+      "NoHelmet": 0.91,
+      "Vest": 39.09,
+      "sha": "c487d1168585166979e81d9ff33c1588d962fe4c0d70e2e407f09b39dddcf05c"
+     },
+     "int8": {
+      "map50": 51.33,
+      "map50_95": 21.83,
+      "NoHelmet": 0.58,
+      "Vest": 38.04,
+      "sha": "c36458b70bfdf4d819078d9dbffd284e9cebf08c7b797d0270748b75a6db0b0f"
+     },
+     "fp16": {
+      "map50": 56.49999999999999,
+      "map50_95": 24.65,
+      "NoHelmet": 0.95,
+      "Vest": 39.47,
+      "sha": "8b3839305d44054f4157282ef5badaf0d9ec34bd7e5763d17c6abdc8c1cc2319"
+     },
+     "diff_vs_int8": {
+      "map50_95": 2.5,
+      "NoHelmet": 0.33000000000000007,
+      "Vest": 1.0500000000000043
+     },
+     "diff_vs_fp16": {
+      "map50_95": -0.3200000000000003,
+      "NoHelmet": -0.039999999999999925,
+      "Vest": -0.37999999999999545
+     }
+    }
+   }
+  }
+ },
+ "v1": {
+  "layers_equal": true,
+  "ap_diff_pp": 0.0,
+  "verdict": "export reproduces h5",
+  "sha_export": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938",
+  "sha_build_recipe": "9658075e443e447408d1ee20da4d147e5df118242bee7b66337880e08ccb4dfa"
+ },
+ "v2": {
+  "sha_default_int8": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+  "unchanged": true
+ },
+ "v3_range": {
+  "int8h5": {
+   "map50_95": 1.1300000000000026,
+   "NoHelmet": 3.700000000000003,
+   "Vest": 3.9799999999999898
+  },
+  "int8": {
+   "map50_95": 1.3500000000000014,
+   "NoHelmet": 1.8499999999999979,
+   "Vest": 2.4000000000000057
+  },
+  "fp16": {
+   "map50_95": 1.25,
+   "NoHelmet": 0.6199999999999974,
+   "Vest": 4.3600000000000065
+  }
+ },
+ "v3_mean": {
+  "int8h5": {
+   "map50_95": 50.38,
+   "NoHelmet": 30.52,
+   "Vest": 58.236666666666665
+  },
+  "int8": {
+   "map50_95": 37.53,
+   "NoHelmet": 23.976666666666667,
+   "Vest": 47.82666666666667
+  },
+  "fp16": {
+   "map50_95": 50.589999999999996,
+   "NoHelmet": 31.076666666666668,
+   "Vest": 58.35333333333333
+  }
+ },
+ "rule": "int8h5 standard export rule, written 2026-10-31T22:54:32+07:00 before any int8h5 export or result exists. Not from a source. Not reviewed by the user as a rule file. User decision of 2026-10-31: make recipe h5 (float16 for 15 box-decode tail tensors) a standard INT8 export, as a new precision label int8h5 next to int8 (option 1, the default int8 and every result obtained with it stay unchanged).\nWhat changes: ai/core/rknn/hybrid.py (shared recipe code), ai/core/rknn/baseline.py and ai/automation/export_npu.py (--recipe h5, writes weights/rknn_int8h5/ and export_int8h5.json), Makefile (make export-npu PREC=int8h5, CALIB_FROM defaults to ppe5_yolov8n_baseline_100ep_s0), evaluate.py and benchmark_npu.py (precision int8h5). What does not change: weights/rknn_int8/ and export_int8.json of every run (sha256 of the seed 0 file stays a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd, checked after the exports), the default export, all earlier results and thresholds.\nRuns exported: ppe5_yolov8n_baseline_100ep_s0, s1, s2 (SiLU) and ppe5_yolov8n_relu_100ep_s0, each with make export-npu PREC=int8h5 (calibration list of baseline seed 0, same identity md5 as in rule.txt of eval_g4), then make evaluate BACKEND=rknn PREC=int8h5 (RKNNLite on the board, css_test and ppe2286_ext).\nStatements:\nV-1 reproduction: for SiLU seed 0 the export_int8h5.json float16_layers list equals the list of weights/rknn_int8_h5/recipe.json (same 15 names), and css_test AP50-95 of the exported int8h5 differs from the h5 of onboard_q2c experiment 2 (49.66) by at most 0.5 pp (new number, unreviewed, the same bound as the rebuild check R-a). 'export reproduces h5' only when both hold, otherwise 'export does not reproduce h5' and the int8h5 results are not used for statements.\nV-2 untouched default: the sha256 of weights/rknn_int8/*.rknn of ppe5_yolov8n_baseline_100ep_s0 before and after the exports are equal.\nV-3 description (css_test, AP50-95, AP NoHelmet, AP Vest, pp), per run: int8h5 minus int8 and int8h5 minus FP16, and for the three SiLU seeds the range (max minus min) of int8h5 against the range of FP16 (rule.txt of eval_g4 gives 1.35 pp for INT8 and 1.12 pp for FP32).\nV-4 latency: if the exported int8h5 .rknn has the same sha256 as weights/rknn_int8_h5/*.rknn the latency and coverage numbers of onboard_q2h apply and are not measured again. If it differs, a P2 interleaved run (as onboard_q2h, SiLU and ReLU seed 0, int8 against int8h5, CORE_0 and CORE_0_1_2) is run once with its own rule.\nLimits: one export per run, one board, 82 images, P2 not approved, the pipeline (ai/automation/pipeline.py) is not changed.\nBudget: experiment 1.\n"
+}

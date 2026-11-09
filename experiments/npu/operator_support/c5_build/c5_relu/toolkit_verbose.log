@@ -1,0 +1,52 @@
+D Save log info to: /tmp/claude-1000/-home-nhat-workspace-prjs-rk3588/d98a5996-660b-48b1-8f49-5240c06786b7/scratchpad/c5_relu/toolkit.log
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     reduce_reshape_op_around_concat: remove node = ['/model.22/Reshape', '/model.22/Concat'], add node = ['/model.22/Concat']
+D     fuse_reshape_transpose: remove node = ['/model.22/dfl/Transpose'], add node = ['/model.22/dfl/Transpose']
+D     replace_parallel_slice_by_split: remove node = ['/model.22/Slice', '/model.22/Slice_1'], add node = ['/model.22/Slice_2sp']
+D     reduce_reshape_op_around_concat: remove node = ['/model.22/Reshape_3', '/model.22/Concat_1'], add node = ['/model.22/Concat_1', '/model.22/Concat_1_output_0-rs']
+D     swap_transpose_softmax: remove node = ['/model.22/dfl/Transpose', '/model.22/dfl/Softmax'], add node = ['/model.22/dfl/Softmax', '/model.22/dfl/Transpose']
+D     swap_reshape_sigmoid: remove node = ['/model.22/Concat_1_output_0-rs', '/model.22/Sigmoid'], add node = ['/model.22/Sigmoid', '/model.22/Concat_1_output_0-rs']
+D     swap_transpose_conv: remove node = ['/model.22/dfl/Transpose', '/model.22/dfl/conv/Conv'], add node = ['/model.22/dfl/conv/Conv', '/model.22/dfl/Transpose']
+D     fuse_transpose_reshape: remove node = ['/model.22/dfl/Transpose']
+D     convert_softmax_to_exsoftmax13: remove node = ['/model.22/dfl/Softmax'], add node = ['/model.22/dfl/Softmax']
+D     unsqueeze_to_4d_split: remove node = [], add node = ['/model.22/dfl/Reshape_1_output_0_rs', '/model.22/Slice_output_0-rs', '/model.22/Slice_1_output_0-rs']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model.22/Slice_output_0_rs', '/model.22/Sub_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model.22/Slice_1_output_0_rs', '/model.22/Add_1_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model.22/Sub_output_0_rs', '/model.22/Add_1_output_0_rs', '/model.22/Add_2_output_0-rs']
+D     convert_div_to_mul: remove node = ['/model.22/Div_1'], add node = ['/model.22/Div_1_2mul']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model.22/Add_1_output_0_rs#1', '/model.22/Sub_output_0_rs#1', '/model.22/Sub_1_output_0-rs']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/model.22/Div_1_output_0_rs', '/model.22/Sub_1_output_0_rs', '/model.22/Concat_2_output_0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model.22/Concat_2_output_0_rs', '/model.22/Mul_2_output_0-rs']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/model.22/Mul_2_output_0_rs', '/model.22/Sigmoid_output_0_rs', 'output0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model.22/Add_2_output_0_rs', '/model.22/Div_1_output_0-rs']
+D     input_align_4D_mul: remove node = ['/model.22/Mul_2'], add node = ['/model.22/Mul_2']
+D     fuse_two_reshape: remove node = ['/model.22/dfl/Reshape_1']
+D     bypass_two_reshape: remove node = ['/model.22/Slice_output_0_rs', '/model.22/Slice_output_0-rs', '/model.22/Sub_output_0_rs#1', '/model.22/Sub_output_0_rs', '/model.22/Sub_output_0-rs', '/model.22/Slice_1_output_0_rs', '/model.22/Slice_1_output_0-rs', '/model.22/Add_1_output_0_rs#1', '/model.22/Add_1_output_0_rs', '/model.22/Add_1_output_0-rs', '/model.22/Add_2_output_0_rs', '/model.22/Add_2_output_0-rs', '/model.22/Div_1_output_0_rs', '/model.22/Div_1_output_0-rs', '/model.22/Concat_2_output_0_rs', '/model.22/Concat_2_output_0-rs', '/model.22/Mul_2_output_0_rs', '/model.22/Mul_2_output_0-rs']
+D     fuse_two_reshape: remove node = ['/model.22/Concat_1_output_0-rs']
+D     bypass_two_reshape: remove node = ['/model.22/Sub_1_output_0_rs', '/model.22/Sub_1_output_0-rs']
+D     convert_reshape_to_transpose: remove node = ['/model.22/dfl/Reshape_1_output_0_rs'], add node = ['/model.22/dfl/Reshape_1_output_0_rs']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...
+D sparse_weight done.
+D 
+D recover_const_share ...
+D recover_const_share done.
+D 
+I rknn building ...
+I rknn building done.

@@ -1,6 +1,6 @@
 """CLI: reference latency of best.pt on the PC GPU (Guide section 6.3, Table H, last row).
 
-Same pre/post-processing (ai/board/common.py), warmup and single pass over sfchd_test as the
+Same pre/post-processing (ai/board/common.py), warmup and single pass over css_test as the
 tier-2 board scripts; only the inference step runs on the GPU (PyTorch FP32, CUDA-synchronized).
 Writes runs/<run_id>/bench/gpu_pt_fp32.json.
 """
@@ -19,8 +19,7 @@ from ai.board.common import WARMUP, list_images, postprocess, preprocess, summar
 from ai.core.dataset import dataset_yaml_path
 from ai.core.evaluator import EVAL_SETS, PROTOCOL_VERSION
 from ai.core.provenance import file_sha256, provenance
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR
 
 
 def main() -> None:
@@ -34,7 +33,7 @@ def main() -> None:
     dev = torch.device(f"cuda:{args.device}")
     model = AutoBackend(str(weights), device=dev, fp16=False, fuse=True, verbose=False).eval()
 
-    dataset, split = EVAL_SETS["sfchd_test"]
+    dataset, split = EVAL_SETS["css_test"]
     data = yaml.safe_load(dataset_yaml_path(dataset).read_text())
     images = list_images(str(Path(data["path"]) / data[split]))
 

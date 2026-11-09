@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_x2",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/latency/onboard_x2/rule.txt",
+ "rule_first_line": "X2 rule, written 2026-10-31T02:39:18+07:00 before any X2 data exists (replaces a draft of the same day that was never run), after the X1 results were seen (X1 showed: moving the NPU interrupt from CPU4 to CPU0 adds about 2.8 ms in part N, and the interrupt CPU was in cpu-sleep when the interrupt arrived; moving the app from CPU4 to CPU1 adds time in C and D). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).",
+ "script": [
+  "ai/npu/latency/analyze_trace_x1.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

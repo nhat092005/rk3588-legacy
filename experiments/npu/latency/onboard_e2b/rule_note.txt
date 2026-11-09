@@ -1,0 +1,5 @@
+Note written 2026-10-30T23:30:16+07:00, after the E2b data existed.
+rule.txt says 'in both orders' but E2b runs ABBA twice, so each half holds two A blocks and the same order. The pairing was therefore chosen after the data:
+the label uses the mean of the two A blocks of each half, and the other pairings are reported next to it (ai/npu/latency/analyze_onboard.py, section 11).
+Per adjacent block, b6 and b7 against b5 alone would shift the slow share by only 0.036 because block 5 (A) had 3.6 percent slow runs.
+Fast share and standard deviation are given as description only and are not part of the label.

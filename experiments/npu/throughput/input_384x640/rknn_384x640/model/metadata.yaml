@@ -1,0 +1,29 @@
+description: Ultralytics best model trained on /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/dataset.yaml
+author: Ultralytics
+date: '2026-11-08T14:34:28.123349+07:00'
+version: 8.4.154
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+head: Detect
+batch: 1
+imgsz:
+- 384
+- 640
+names:
+  0: Helmet
+  1: NoHelmet
+  2: NoVest
+  3: Vest
+  4: Person
+args:
+  data: /tmp/tmpt1yn8om9/calib.yaml
+  batch: 1
+  name: rk3588
+  fraction: 1.0
+  quantize: 8
+  simplify: true
+  opset: null
+channels: 3
+end2end: false

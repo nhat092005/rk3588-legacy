@@ -1,0 +1,11 @@
+# Acceptance profile of the NPU operator-support gate G4 (conditions A, B, C).
+# The numbers are copied from the code that produced the published results:
+#   A and B: ai/npu/operator_support/analyze_g4.py and analyze_g4v.py
+#   C and the seed-noise boundary: ai/npu/operator_support/analyze_g4c.py
+# tests/test_acceptance_profile.py fails when this file and that code disagree.
+name: npu_g4
+a_coverage_min: 0.5        # A: minimum over board sessions of the share of build cycles in layers with a workload split over 2 or more cores
+b_drop_pct_min: 5          # B: latency drop of the mask against CORE_0, in percent, and the drop in ms must also exceed the session gap
+c_max_drop_pp: 1.0         # C: largest allowed drop against the reference model on css_test INT8, in points, for each column below
+c_columns: [map50_95, NoHelmet, Vest]
+seed_noise_range_pp: 1.0   # not a gate: spread between seeds at or above this is called "trong nhiễu seed" in analyze_g4c.py

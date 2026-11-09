@@ -1,0 +1,4 @@
+run_id,model,epochs,seed,eval_set,protocol,precision,recall,map50,map50_95,ap50_95_Helmet,ap50_95_NoHelmet,ap50_95_NoVest,ap50_95_Vest,dataset_fingerprint,git_commit
+ppe2286_yolov8n_baseline_100ep_s0,yolov8n_baseline,100,0,ppe2286_val,v1,0.5392,0.7559,0.6603,0.4732,0.4498,0.5606,0.3386,0.5438,26ab7e6f86a7,3321204
+ppe2286_yolov8n_baseline_100ep_s1,yolov8n_baseline,100,1,ppe2286_val,v1,0.5656,0.7452,0.6717,0.4702,0.4392,0.5549,0.3292,0.5575,26ab7e6f86a7,3321204
+ppe2286_yolov8n_baseline_100ep_s2,yolov8n_baseline,100,2,ppe2286_val,v1,0.597,0.7031,0.6773,0.4716,0.4321,0.5529,0.3562,0.545,26ab7e6f86a7,3321204

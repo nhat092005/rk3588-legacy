@@ -1,0 +1,410 @@
+{
+ "e1": {
+  "conditions": {
+   "int8|T1": {
+    "fps_runs": [
+     54.64,
+     54.69,
+     54.71
+    ],
+    "fps": 54.69,
+    "spread": 0.07000000000000028,
+    "realized": true,
+    "cpu_pct": 23.5,
+    "t_pre": 0.215,
+    "t_npu": 17.151,
+    "t_post": 0.664,
+    "stage_sum": 18.038,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+    ]
+   },
+   "int8h5|T1": {
+    "fps_runs": [
+     54.8,
+     54.86,
+     54.89
+    ],
+    "fps": 54.86,
+    "spread": 0.09000000000000341,
+    "realized": true,
+    "cpu_pct": 24.2,
+    "t_pre": 0.218,
+    "t_npu": 17.182,
+    "t_post": 0.652,
+    "stage_sum": 18.051000000000002,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   },
+   "int8|T3": {
+    "fps_runs": [
+     56.15,
+     56.21,
+     56.17
+    ],
+    "fps": 56.17,
+    "spread": 0.060000000000002274,
+    "realized": true,
+    "cpu_pct": 25.5,
+    "t_pre": 0.23,
+    "t_npu": 16.662,
+    "t_post": 0.663,
+    "stage_sum": 17.546,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+    ]
+   },
+   "int8h5|T3": {
+    "fps_runs": [
+     56.35,
+     56.3,
+     56.29
+    ],
+    "fps": 56.3,
+    "spread": 0.060000000000002274,
+    "realized": true,
+    "cpu_pct": 26.2,
+    "t_pre": 0.231,
+    "t_npu": 16.709,
+    "t_post": 0.652,
+    "stage_sum": 17.59,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   },
+   "int8|T4": {
+    "fps_runs": [
+     101.62,
+     101.9,
+     102.19
+    ],
+    "fps": 101.9,
+    "spread": 0.5699999999999932,
+    "realized": true,
+    "cpu_pct": 46.8,
+    "t_pre": 0.322,
+    "t_npu": 18.258,
+    "t_post": 0.698,
+    "stage_sum": 19.276,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": true,
+    "shas": [
+     "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+    ]
+   },
+   "int8h5|T4": {
+    "fps_runs": [
+     101.71,
+     102.0,
+     101.89
+    ],
+    "fps": 101.89,
+    "spread": 0.29000000000000625,
+    "realized": true,
+    "cpu_pct": 48.5,
+    "t_pre": 0.333,
+    "t_npu": 18.291,
+    "t_post": 0.684,
+    "stage_sum": 19.308,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": true,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   },
+   "int8|T5": {
+    "fps_runs": [
+     141.49,
+     141.04,
+     141.13
+    ],
+    "fps": 141.13,
+    "spread": 0.45000000000001705,
+    "realized": true,
+    "cpu_pct": 67.2,
+    "t_pre": 0.424,
+    "t_npu": 19.522,
+    "t_post": 0.747,
+    "stage_sum": 20.689,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": true,
+    "shas": [
+     "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd"
+    ]
+   },
+   "int8h5|T5": {
+    "fps_runs": [
+     141.86,
+     142.09,
+     142.59
+    ],
+    "fps": 142.09,
+    "spread": 0.7299999999999898,
+    "realized": true,
+    "cpu_pct": 69.2,
+    "t_pre": 0.44,
+    "t_npu": 19.584,
+    "t_post": 0.723,
+    "stage_sum": 20.747,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": true,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   }
+  },
+  "rule": "E1 rule: int8h5 throughput under P3, written 2026-11-01T16:54:23+07:00 before any int8h5 throughput exists. Not from a source. P3 is the protocol approved by the user on 2026-11-01 (page 16), the numeric readings below are new and not covered by that approval (ch\u01b0a duy\u1ec7t). Context: the user set a 60 FPS target (page 11 section 8) and the standard INT8 is int8h5, but page 11 section 8 was measured with the default int8. Advisor reviewed the plan.\nModels of ppe5_yolov8n_baseline_100ep_s0 (sha256): rknn_int8 a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd ; rknn_int8h5 80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938.\nDesign: same harness and protocol as experiments/npu/throughput/onboard_thr (ai/board/bench_throughput_rep.py under taskset -c 4-7, p3_hold.sh, 1238 frames, 20 s rest), configurations T1 (one context CORE_0), T3 (one context CORE_0_1_2), T4 (two contexts CORE_0 and CORE_1), T5 (three contexts, threads), each for int8 and int8h5, 3 repetitions, the same order in every repetition (for each configuration int8 then int8h5). The int8 runs are repeated in this session as the same-session reference, the earlier numbers of onboard_thr are not reused for the comparison.\nStatements: F-1 median FPS of the 3 repetitions and spread (max minus min) per model and configuration. F-2 int8h5 against int8 per configuration: difference in FPS and percent, 'kh\u00e1c' when at least 5 percent and larger than the larger spread of the two, otherwise 'kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c' (the rule of M12). F-3 the 60 FPS check per model and configuration (median at least 60). Realization as in onboard_thr/rule.txt: every fired NPU line at least 99 percent on its CPU (36 on CPU4, 37 on CPU5, 38 on CPU6), process affinity inside CPU4 to CPU7, frequencies locked before and after, helper log irqbalance inactive and affinities unchanged. A run not realized makes its cell 'ch\u01b0a k\u1ebft lu\u1eadn'.\nReading, fixed now: no cause is named. int8h5 is compared only through F-2. A different result from the earlier onboard_thr numbers for int8 is reported as a spread of sessions, not corrected.\nLimits: one board, one seed, cached images, no camera or video decode, no check of output ordering, SiLU only.\nBudget: one run.\n",
+  "driver_log": "16:55:06 r1_int8_T1.json int8 threads CORE_0: 54.64 FPS\n16:55:51 r1_int8h5_T1.json int8h5 threads CORE_0: 54.8 FPS\n16:56:36 r1_int8_T3.json int8 threads CORE_0_1_2: 56.15 FPS\n16:57:21 r1_int8h5_T3.json int8h5 threads CORE_0_1_2: 56.35 FPS\n16:57:56 r1_int8_T4.json int8 threads CORE_0,CORE_1: 101.62 FPS\n16:58:32 r1_int8h5_T4.json int8h5 threads CORE_0,CORE_1: 101.71 FPS\n16:59:04 r1_int8_T5.json int8 threads CORE_0,CORE_1,CORE_2: 141.49 FPS\n16:59:37 r1_int8h5_T5.json int8h5 threads CORE_0,CORE_1,CORE_2: 141.86 FPS\n17:00:22 r2_int8_T1.json int8 threads CORE_0: 54.69 FPS\n17:01:08 r2_int8h5_T1.json int8h5 threads CORE_0: 54.86 FPS\n17:01:52 r2_int8_T3.json int8 threads CORE_0_1_2: 56.21 FPS\n17:02:37 r2_int8h5_T3.json int8h5 threads CORE_0_1_2: 56.3 FPS\n17:03:13 r2_int8_T4.json int8 threads CORE_0,CORE_1: 101.9 FPS\n17:03:48 r2_int8h5_T4.json int8h5 threads CORE_0,CORE_1: 102.0 FPS\n17:04:21 r2_int8_T5.json int8 threads CORE_0,CORE_1,CORE_2: 141.04 FPS\n17:04:53 r2_int8h5_T5.json int8h5 threads CORE_0,CORE_1,CORE_2: 142.09 FPS\n17:05:38 r3_int8_T1.json int8 threads CORE_0: 54.71 FPS\n17:06:24 r3_int8h5_T1.json int8h5 threads CORE_0: 54.89 FPS\n17:07:09 r3_int8_T3.json int8 threads CORE_0_1_2: 56.17 FPS\n17:07:53 r3_int8h5_T3.json int8h5 threads CORE_0_1_2: 56.29 FPS\n17:08:29 r3_int8_T4.json int8 threads CORE_0,CORE_1: 102.19 FPS\n17:09:04 r3_int8h5_T4.json int8h5 threads CORE_0,CORE_1: 101.89 FPS\n17:09:37 r3_int8_T5.json int8 threads CORE_0,CORE_1,CORE_2: 141.13 FPS\n17:10:09 r3_int8h5_T5.json int8h5 threads CORE_0,CORE_1,CORE_2: 142.59 FPS\n",
+  "hold_progress": "17:54:36 state: kernel 6.1.99-rockchip-rk3588 ; up 2 hours, 37 minutes ; irqbalance was active ; saved: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n17:54:36 pinned: irq 36 smp=4 effective=4 irq 37 smp=5 effective=5 irq 38 smp=6 effective=6  irqbalance inactive\n18:10:30 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active\n",
+  "comparisons": {
+   "T1": {
+    "a": "int8h5|T1",
+    "b": "int8|T1",
+    "diff_fps": 0.1700000000000017,
+    "diff_pct": 0.3108429328944994,
+    "larger_spread": 0.09000000000000341,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   },
+   "T3": {
+    "a": "int8h5|T3",
+    "b": "int8|T3",
+    "diff_fps": 0.12999999999999545,
+    "diff_pct": 0.23144027060707753,
+    "larger_spread": 0.060000000000002274,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   },
+   "T4": {
+    "a": "int8h5|T4",
+    "b": "int8|T4",
+    "diff_fps": -0.010000000000005116,
+    "diff_pct": -0.009813542688915716,
+    "larger_spread": 0.5699999999999932,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   },
+   "T5": {
+    "a": "int8h5|T5",
+    "b": "int8|T5",
+    "diff_fps": 0.960000000000008,
+    "diff_pct": 0.6802239070360717,
+    "larger_spread": 0.7299999999999898,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   }
+  },
+  "all_realized": true
+ },
+ "e2": {
+  "conditions": {
+   "A": {
+    "fps_runs": [
+     54.79,
+     54.71,
+     54.8
+    ],
+    "fps": 54.79,
+    "spread": 0.0899999999999963,
+    "realized": true,
+    "cpu_pct": 24.3,
+    "t_pre": 0.231,
+    "t_npu": 17.194,
+    "t_post": 0.657,
+    "stage_sum": 18.082,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   },
+   "B": {
+    "fps_runs": [
+     42.06,
+     42.01,
+     42.05
+    ],
+    "fps": 42.05,
+    "spread": 0.05000000000000426,
+    "realized": true,
+    "cpu_pct": 53.7,
+    "t_pre": 0.29,
+    "t_npu": 14.304,
+    "t_post": 8.936,
+    "stage_sum": 23.53,
+    "e2e_p50": null,
+    "e2e_p95": null,
+    "meets_60": false,
+    "shas": [
+     "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b"
+    ]
+   },
+   "C": {
+    "fps_runs": [
+     65.99,
+     66.0,
+     65.97
+    ],
+    "fps": 65.99,
+    "spread": 0.030000000000001137,
+    "realized": true,
+    "cpu_pct": 99.7,
+    "t_pre": 0.869,
+    "t_npu": 15.041,
+    "t_post": 11.614,
+    "stage_sum": 27.554000000000002,
+    "e2e_p50": 132.559,
+    "e2e_p95": 137.665,
+    "meets_60": true,
+    "shas": [
+     "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b"
+    ]
+   },
+   "D": {
+    "fps_runs": [
+     65.6,
+     65.74,
+     65.81
+    ],
+    "fps": 65.74,
+    "spread": 0.21000000000000796,
+    "realized": true,
+    "cpu_pct": 99.8,
+    "t_pre": 0.713,
+    "t_npu": 15.094,
+    "t_post": 11.699,
+    "stage_sum": 27.429,
+    "e2e_p50": 132.867,
+    "e2e_p95": 138.279,
+    "meets_60": true,
+    "shas": [
+     "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b"
+    ]
+   },
+   "E": {
+    "fps_runs": [
+     68.21,
+     68.57,
+     67.92
+    ],
+    "fps": 68.21,
+    "spread": 0.6499999999999915,
+    "realized": true,
+    "cpu_pct": 105.3,
+    "t_pre": 0.937,
+    "t_npu": 14.614,
+    "t_post": 11.808,
+    "stage_sum": 27.357,
+    "e2e_p50": 128.653,
+    "e2e_p95": 133.547,
+    "meets_60": true,
+    "shas": [
+     "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b"
+    ]
+   },
+   "F": {
+    "fps_runs": [
+     56.56,
+     56.77,
+     56.62
+    ],
+    "fps": 56.62,
+    "spread": 0.21000000000000085,
+    "realized": true,
+    "cpu_pct": 27.7,
+    "t_pre": 0.456,
+    "t_npu": 17.423,
+    "t_post": 0.847,
+    "stage_sum": 18.726,
+    "e2e_p50": 141.62,
+    "e2e_p95": 147.276,
+    "meets_60": false,
+    "shas": [
+     "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938"
+    ]
+   }
+  },
+  "rule": "E2 rule: split-head model (A1) with the CPU decode overlapped with the NPU, single context, written 2026-11-01T16:59:18+07:00 before any split-head throughput exists and before E1 was read. Not from a source. Protocol P3 approved by the user on 2026-11-01 (page 16), the numeric readings below are new and not covered by that approval (ch\u01b0a duy\u1ec7t). Context: user target 60 FPS (page 11 section 8) read by default as throughput of one stream, with the assumptions that frames are independent and output order is not constrained (the harness does not check order). Known before this run: A1 NPU part about 13.07 ms at CORE_0 and 12.56 ms at CORE_0_1_2 (page 15, P2), numpy decode 8.02 ms median (page 15), int8h5 one context 54 to 56 FPS (page 11). Advisor reviewed the plan.\nModels of ppe5_yolov8n_baseline_100ep_s0 (sha256): rknn_int8h5 80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938 ; rknn_int8_split 8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b.\nCorrectness gate (before timing, ai/board/split_gate.py, board, 20 images of data/ppe5/processed/images/test, conf 0.25): detections of the split model through the harness path (postprocess_raw split) against those of the standard int8h5 model, a split detection matches a standard one of the same class with IoU at least 0.5, F1 = 2 matches / (n_standard + n_split). The gate passes when F1 is at least 0.85 (fixed now, new number). If it fails no E2 timing is read.\nDesign: ai/board/bench_throughput_rep.py under taskset -c 4-7 with p3_hold.sh, 1238 frames, 20 s rest, 3 repetitions, the same order in every repetition. Conditions (code: model, mode, core mask, pre workers, post workers): A int8h5 threads CORE_0 1 1 (reference, one context inline), B split threads CORE_0 (decode inline in the post stage), C split pipeline CORE_0 pre 1 post 1 (decode overlapped), D split pipeline CORE_0 pre 1 post 2 (sensitivity), E split pipeline CORE_0_1_2 pre 1 post 1 (one context on three cores), F int8h5 pipeline CORE_0 pre 1 post 1 (pipeline reference of the standard model). The post worker count of C is fixed by the formula ceil(T_post / T_npu) with T_post = 8.02 + 0.67 ms (known decode plus the harness post of int8h5, page 11) and T_npu = 13.07 ms, which gives 1, D is a sensitivity point chosen before data, not from results.\nStatements: G-1 median FPS and spread (max minus min of 3) per condition, CPU percent and the e2e latency p50 and p95 of the pipeline conditions (the harness field e2e_latency_ms, per-frame end to end time including queue waits, not a sum of stage medians) and for the threads conditions only the sum of stage medians, labelled as such. G-2 the 60 FPS check per condition (median at least 60). G-3 differences in FPS and percent with the rule 'kh\u00e1c' when at least 5 percent and larger than the larger spread of the two conditions, otherwise 'kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c': B against A, C against A, C against B, D against C, E against C, F against A. G-4 per-frame time reading: a condition meets the per-frame reading only if its e2e p50 (pipeline) is at most 16.67 ms, threads conditions are not evaluated for it. Realization as in E1 (onboard_q2f_thr/rule.txt).\nE3 trigger (fixed now): E3 (C or NEON decode) runs only if condition C is below 60 FPS and its median t_post_ms is at least its median t_npu_ms. Otherwise E3 is recorded as not needed with the reason.\nReading, fixed now: no cause is named. C at least 60 FPS and realized means one context of the split-head model meets 60 FPS by throughput under P3 on this harness, with the unchecked assumptions above, and says nothing about per-frame time (G-4). The int8h5 model stays the standard INT8, the split-head model is a candidate with accuracy 49.84 AP50-95 (page 15).\nLimits: one board, one seed, cached images, no camera or video decode, no drawing or saving, output order not checked, SiLU A1 model only, numpy decode (a C or NEON decode is not measured here), P3 numbers not comparable with P2 numbers.\nBudget: one run (and the gate).\n",
+  "driver_log": "17:12:00 r1_A.json int8h5 threads CORE_0: 54.79 FPS\n17:12:52 r1_B.json int8_split threads CORE_0: 42.06 FPS\n17:13:34 r1_C.json int8_split pipeline CORE_0: 65.99 FPS\n17:14:16 r1_D.json int8_split pipeline CORE_0: 65.6 FPS\n17:14:57 r1_E.json int8_split pipeline CORE_0_1_2: 68.21 FPS\n17:15:42 r1_F.json int8h5 pipeline CORE_0: 56.56 FPS\n17:16:27 r2_A.json int8h5 threads CORE_0: 54.71 FPS\n17:17:20 r2_B.json int8_split threads CORE_0: 42.01 FPS\n17:18:01 r2_C.json int8_split pipeline CORE_0: 66.0 FPS\n17:18:43 r2_D.json int8_split pipeline CORE_0: 65.74 FPS\n17:19:24 r2_E.json int8_split pipeline CORE_0_1_2: 68.57 FPS\n17:20:09 r2_F.json int8h5 pipeline CORE_0: 56.77 FPS\n17:20:54 r3_A.json int8h5 threads CORE_0: 54.8 FPS\n17:21:47 r3_B.json int8_split threads CORE_0: 42.05 FPS\n17:22:29 r3_C.json int8_split pipeline CORE_0: 65.97 FPS\n17:23:10 r3_D.json int8_split pipeline CORE_0: 65.81 FPS\n17:23:52 r3_E.json int8_split pipeline CORE_0_1_2: 67.92 FPS\n17:24:36 r3_F.json int8h5 pipeline CORE_0: 56.62 FPS\n",
+  "hold_progress": "18:11:30 state: kernel 6.1.99-rockchip-rk3588 ; up 2 hours, 54 minutes ; irqbalance was active ; saved: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n18:11:30 pinned: irq 36 smp=4 effective=4 irq 37 smp=5 effective=5 irq 38 smp=6 effective=6  irqbalance inactive\n18:24:57 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  irqbalance active\n",
+  "comparisons": {
+   "B_vs_A": {
+    "a": "B",
+    "b": "A",
+    "diff_fps": -12.740000000000002,
+    "diff_pct": -23.252418324511776,
+    "larger_spread": 0.0899999999999963,
+    "verdict": "kh\u00e1c"
+   },
+   "C_vs_A": {
+    "a": "C",
+    "b": "A",
+    "diff_fps": 11.199999999999996,
+    "diff_pct": 20.44168643913122,
+    "larger_spread": 0.0899999999999963,
+    "verdict": "kh\u00e1c"
+   },
+   "C_vs_B": {
+    "a": "C",
+    "b": "B",
+    "diff_fps": 23.939999999999998,
+    "diff_pct": 56.93222354340072,
+    "larger_spread": 0.05000000000000426,
+    "verdict": "kh\u00e1c"
+   },
+   "D_vs_C": {
+    "a": "D",
+    "b": "C",
+    "diff_fps": -0.25,
+    "diff_pct": -0.3788452795878164,
+    "larger_spread": 0.21000000000000796,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   },
+   "E_vs_C": {
+    "a": "E",
+    "b": "C",
+    "diff_fps": 2.219999999999999,
+    "diff_pct": 3.3641460827398078,
+    "larger_spread": 0.6499999999999915,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   },
+   "F_vs_A": {
+    "a": "F",
+    "b": "A",
+    "diff_fps": 1.8299999999999983,
+    "diff_pct": 3.3400255521080457,
+    "larger_spread": 0.21000000000000085,
+    "verdict": "kh\u00f4ng ph\u00e2n bi\u1ec7t \u0111\u01b0\u1ee3c"
+   }
+  },
+  "e3_triggered": false,
+  "all_realized": true,
+  "per_frame_reading": {
+   "C": false,
+   "D": false,
+   "E": false,
+   "F": false
+  },
+  "gate": {
+   "images": 20,
+   "n_standard": 136,
+   "n_split": 140,
+   "matched": 135,
+   "f1": 0.9782608695652174
+  }
+ }
+}

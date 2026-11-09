@@ -1,0 +1,940 @@
+table,row,column,value,source
+A,train,images/instances,2605/21989,data/ppe5/processed/labels/train/*.txt
+A,val,images/instances,114/461,data/ppe5/processed/labels/val/*.txt
+A,test,images/instances,82/476,data/ppe5/processed/labels/test/*.txt
+B,ppe5_yolov8n_baseline_100ep_s0,epochs,100,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_baseline_100ep_s0,batch,16,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:batch
+B,ppe5_yolov8n_baseline_100ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_baseline_100ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_baseline_100ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_baseline_100ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_baseline_100ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_baseline_100ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_baseline_100ep_s0,seed,0,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/args.yaml:seed
+B,ppe5_yolov8n_baseline_100ep_s1,epochs,100,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:epochs
+B,ppe5_yolov8n_baseline_100ep_s1,batch,16,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:batch
+B,ppe5_yolov8n_baseline_100ep_s1,imgsz,640,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:imgsz
+B,ppe5_yolov8n_baseline_100ep_s1,optimizer,auto,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:optimizer
+B,ppe5_yolov8n_baseline_100ep_s1,lr0,0.01,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:lr0
+B,ppe5_yolov8n_baseline_100ep_s1,momentum,0.937,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:momentum
+B,ppe5_yolov8n_baseline_100ep_s1,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_baseline_100ep_s1,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:weight_decay
+B,ppe5_yolov8n_baseline_100ep_s1,seed,1,experiments/runs/ppe5_yolov8n_baseline_100ep_s1/args.yaml:seed
+B,ppe5_yolov8n_baseline_100ep_s2,epochs,100,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:epochs
+B,ppe5_yolov8n_baseline_100ep_s2,batch,16,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:batch
+B,ppe5_yolov8n_baseline_100ep_s2,imgsz,640,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:imgsz
+B,ppe5_yolov8n_baseline_100ep_s2,optimizer,auto,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:optimizer
+B,ppe5_yolov8n_baseline_100ep_s2,lr0,0.01,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:lr0
+B,ppe5_yolov8n_baseline_100ep_s2,momentum,0.937,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:momentum
+B,ppe5_yolov8n_baseline_100ep_s2,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_baseline_100ep_s2,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:weight_decay
+B,ppe5_yolov8n_baseline_100ep_s2,seed,2,experiments/runs/ppe5_yolov8n_baseline_100ep_s2/args.yaml:seed
+B,ppe5_yolov8n_baseline_200ep_s0,epochs,200,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_baseline_200ep_s0,batch,16,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:batch
+B,ppe5_yolov8n_baseline_200ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_baseline_200ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_baseline_200ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_baseline_200ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_baseline_200ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_baseline_200ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_baseline_200ep_s0,seed,0,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/args.yaml:seed
+B,ppe5_yolov8n_leakyrelu_100ep_s0,epochs,100,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_leakyrelu_100ep_s0,batch,16,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:batch
+B,ppe5_yolov8n_leakyrelu_100ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_leakyrelu_100ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_leakyrelu_100ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_leakyrelu_100ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_leakyrelu_100ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_leakyrelu_100ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_leakyrelu_100ep_s0,seed,0,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/args.yaml:seed
+B,ppe5_yolov8n_nodfl_100ep_s0,epochs,100,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_nodfl_100ep_s0,batch,16,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:batch
+B,ppe5_yolov8n_nodfl_100ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_nodfl_100ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_nodfl_100ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_nodfl_100ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_nodfl_100ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_nodfl_100ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_nodfl_100ep_s0,seed,0,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/args.yaml:seed
+B,ppe5_yolov8n_relu_100ep_s0,epochs,100,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_relu_100ep_s0,batch,16,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:batch
+B,ppe5_yolov8n_relu_100ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_relu_100ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_relu_100ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_relu_100ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_relu_100ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_relu_100ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_relu_100ep_s0,seed,0,experiments/runs/ppe5_yolov8n_relu_100ep_s0/args.yaml:seed
+B,ppe5_yolov8n_relu_100ep_s1,epochs,100,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:epochs
+B,ppe5_yolov8n_relu_100ep_s1,batch,16,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:batch
+B,ppe5_yolov8n_relu_100ep_s1,imgsz,640,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:imgsz
+B,ppe5_yolov8n_relu_100ep_s1,optimizer,auto,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:optimizer
+B,ppe5_yolov8n_relu_100ep_s1,lr0,0.01,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:lr0
+B,ppe5_yolov8n_relu_100ep_s1,momentum,0.937,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:momentum
+B,ppe5_yolov8n_relu_100ep_s1,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_relu_100ep_s1,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:weight_decay
+B,ppe5_yolov8n_relu_100ep_s1,seed,1,experiments/runs/ppe5_yolov8n_relu_100ep_s1/args.yaml:seed
+B,ppe5_yolov8n_relu_100ep_s2,epochs,100,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:epochs
+B,ppe5_yolov8n_relu_100ep_s2,batch,16,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:batch
+B,ppe5_yolov8n_relu_100ep_s2,imgsz,640,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:imgsz
+B,ppe5_yolov8n_relu_100ep_s2,optimizer,auto,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:optimizer
+B,ppe5_yolov8n_relu_100ep_s2,lr0,0.01,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:lr0
+B,ppe5_yolov8n_relu_100ep_s2,momentum,0.937,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:momentum
+B,ppe5_yolov8n_relu_100ep_s2,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_relu_100ep_s2,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:weight_decay
+B,ppe5_yolov8n_relu_100ep_s2,seed,2,experiments/runs/ppe5_yolov8n_relu_100ep_s2/args.yaml:seed
+B,ppe5_yolov8n_relu6_100ep_s0,epochs,100,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_relu6_100ep_s0,batch,16,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:batch
+B,ppe5_yolov8n_relu6_100ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_relu6_100ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_relu6_100ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_relu6_100ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_relu6_100ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_relu6_100ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_relu6_100ep_s0,seed,0,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/args.yaml:seed
+B,ppe5_yolov8n_relu_200ep_s0,epochs,200,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:epochs
+B,ppe5_yolov8n_relu_200ep_s0,batch,16,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:batch
+B,ppe5_yolov8n_relu_200ep_s0,imgsz,640,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:imgsz
+B,ppe5_yolov8n_relu_200ep_s0,optimizer,auto,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:optimizer
+B,ppe5_yolov8n_relu_200ep_s0,lr0,0.01,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:lr0
+B,ppe5_yolov8n_relu_200ep_s0,momentum,0.937,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:momentum
+B,ppe5_yolov8n_relu_200ep_s0,warmup_bias_lr,0.1,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:warmup_bias_lr
+B,ppe5_yolov8n_relu_200ep_s0,weight_decay,0.0005,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:weight_decay
+B,ppe5_yolov8n_relu_200ep_s0,seed,0,experiments/runs/ppe5_yolov8n_relu_200ep_s0/args.yaml:seed
+C,os,value,Orange Pi 1.2.4 Jammy,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:system.os
+C,kernel,value,6.1.99-rockchip-rk3588,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:system.kernel
+C,python,value,3.10.12,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:system.python
+C,ram_total_mib,value,3916,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:system.ram_total_mib
+C,cpu_count,value,8,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:system.cpu_count
+C,sdk,value,"==============================================
+RKNN VERSION:
+  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+  DRV: 0.9.8
+==============================================
+",experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:sdk_version
+C,policy0,governor,performance,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.policy0.governor
+C,policy4,governor,performance,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.policy4.governor
+C,policy6,governor,performance,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.policy6.governor
+C,npu,governor,userspace,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.npu.governor
+C,ddr,governor,userspace,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.ddr.governor
+C,locked,value,True,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:frequency_before.locked
+C,thermal,value,thermal_zone6,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json:resource.thermal_zone
+D,yolov8n_baseline/css_test,precision,0.8902333333333333 ± 0.01302164864114119,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:precision; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:precision; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:precision
+D,yolov8n_baseline/css_test,recall,0.7554 ± 0.01398713694792466,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:recall; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:recall; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:recall
+D,yolov8n_baseline/css_test,map50,0.8076 ± 0.0064490309349545085,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:map50; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:map50; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:map50
+D,yolov8n_baseline/css_test,map50_95,0.5064 ± 0.005812916651733439,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_baseline/css_test,AP Helmet,0.6010333333333333 ± 0.014096216986600768,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_baseline/css_test,AP NoHelmet,0.3118666666666667 ± 0.0007094598884597654,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_baseline/css_test,AP NoVest,0.5043333333333333 ± 0.011316507117186493,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_baseline/css_test,AP Vest,0.5841666666666667 ± 0.020673735350278014,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_baseline/css_test,AP Person,0.5306000000000001 ± 0.011483901775964471,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_baseline_200ep/css_test,precision,0.9276,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:precision
+D,yolov8n_baseline_200ep/css_test,recall,0.7695,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:recall
+D,yolov8n_baseline_200ep/css_test,map50,0.8305,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:map50
+D,yolov8n_baseline_200ep/css_test,map50_95,0.5378,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_baseline_200ep/css_test,AP Helmet,0.6136,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_baseline_200ep/css_test,AP NoHelmet,0.3724,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_baseline_200ep/css_test,AP NoVest,0.5371,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_baseline_200ep/css_test,AP Vest,0.6036,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_baseline_200ep/css_test,AP Person,0.5622,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_leakyrelu/css_test,precision,0.8968,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:precision
+D,yolov8n_leakyrelu/css_test,recall,0.712,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:recall
+D,yolov8n_leakyrelu/css_test,map50,0.7891,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:map50
+D,yolov8n_leakyrelu/css_test,map50_95,0.484,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_leakyrelu/css_test,AP Helmet,0.5685,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_leakyrelu/css_test,AP NoHelmet,0.2633,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_leakyrelu/css_test,AP NoVest,0.4881,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_leakyrelu/css_test,AP Vest,0.5701,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_leakyrelu/css_test,AP Person,0.5302,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_nodfl/css_test,precision,0.8927,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:precision
+D,yolov8n_nodfl/css_test,recall,0.7729,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:recall
+D,yolov8n_nodfl/css_test,map50,0.8078,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:map50
+D,yolov8n_nodfl/css_test,map50_95,0.4918,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_nodfl/css_test,AP Helmet,0.582,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_nodfl/css_test,AP NoHelmet,0.3048,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_nodfl/css_test,AP NoVest,0.481,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_nodfl/css_test,AP Vest,0.5516,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_nodfl/css_test,AP Person,0.5398,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_relu/css_test,precision,0.8505 ± 0.013715319901482446,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:precision; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:precision; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:precision
+D,yolov8n_relu/css_test,recall,0.7385999999999999 ± 0.004849742261192835,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:recall; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:recall; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:recall
+D,yolov8n_relu/css_test,map50,0.7781666666666667 ± 0.0035232560697930288,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:map50; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:map50; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:map50
+D,yolov8n_relu/css_test,map50_95,0.46113333333333334 ± 0.005200320502943378,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_relu/css_test,AP Helmet,0.5626666666666666 ± 0.009027919657004755,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_relu/css_test,AP NoHelmet,0.26033333333333336 ± 0.01690926767584372,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu/css_test,AP NoVest,0.4429 ± 0.014476187343358047,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_relu/css_test,AP Vest,0.5542333333333334 ± 0.02566755409721258,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_relu/css_test,AP Person,0.4856666666666667 ± 0.021313219684818484,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_relu6/css_test,precision,0.8584,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:precision
+D,yolov8n_relu6/css_test,recall,0.7281,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:recall
+D,yolov8n_relu6/css_test,map50,0.7839,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:map50
+D,yolov8n_relu6/css_test,map50_95,0.4516,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_relu6/css_test,AP Helmet,0.5217,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_relu6/css_test,AP NoHelmet,0.2811,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu6/css_test,AP NoVest,0.4281,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_relu6/css_test,AP Vest,0.5443,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_relu6/css_test,AP Person,0.4828,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_relu_200ep/css_test,precision,0.8982,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:precision
+D,yolov8n_relu_200ep/css_test,recall,0.7491,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:recall
+D,yolov8n_relu_200ep/css_test,map50,0.8053,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:map50
+D,yolov8n_relu_200ep/css_test,map50_95,0.4957,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+D,yolov8n_relu_200ep/css_test,AP Helmet,0.5746,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:per_class.Helmet.ap50_95
+D,yolov8n_relu_200ep/css_test,AP NoHelmet,0.3132,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu_200ep/css_test,AP NoVest,0.4889,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:per_class.NoVest.ap50_95
+D,yolov8n_relu_200ep/css_test,AP Vest,0.5938,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:per_class.Vest.ap50_95
+D,yolov8n_relu_200ep/css_test,AP Person,0.5079,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:per_class.Person.ap50_95
+D,yolov8n_baseline/ppe2286_ext,precision,0.6285 ± 0.022522211259110404,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:precision; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:precision; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_baseline/ppe2286_ext,recall,0.5920333333333333 ± 0.01627708000021297,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:recall; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:recall; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_baseline/ppe2286_ext,map50,0.5748666666666666 ± 0.0076787585802220145,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_baseline/ppe2286_ext,map50_95,0.25966666666666666 ± 0.002400694344004121,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_baseline/ppe2286_ext,AP Helmet,0.09156666666666667 ± 0.011409352888456618,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_baseline/ppe2286_ext,AP NoHelmet,0.0073 ± 0.0014,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_baseline/ppe2286_ext,AP NoVest,0.2831666666666667 ± 0.0023860706890897615,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_baseline/ppe2286_ext,AP Vest,0.4343333333333333 ± 0.01887652863567169,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_baseline/ppe2286_ext,AP Person,0.48203333333333337 ± 0.005558177159225253,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,precision,0.6325,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_baseline_200ep/ppe2286_ext,recall,0.5965,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_baseline_200ep/ppe2286_ext,map50,0.5735,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_baseline_200ep/ppe2286_ext,map50_95,0.2625,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,AP Helmet,0.0984,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,AP NoHelmet,0.0053,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,AP NoVest,0.3059,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,AP Vest,0.4199,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_baseline_200ep/ppe2286_ext,AP Person,0.483,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_leakyrelu/ppe2286_ext,precision,0.6372,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_leakyrelu/ppe2286_ext,recall,0.6045,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_leakyrelu/ppe2286_ext,map50,0.5892,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_leakyrelu/ppe2286_ext,map50_95,0.2625,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_leakyrelu/ppe2286_ext,AP Helmet,0.0896,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_leakyrelu/ppe2286_ext,AP NoHelmet,0.0056,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_leakyrelu/ppe2286_ext,AP NoVest,0.3047,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_leakyrelu/ppe2286_ext,AP Vest,0.4181,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_leakyrelu/ppe2286_ext,AP Person,0.4945,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_nodfl/ppe2286_ext,precision,0.6743,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_nodfl/ppe2286_ext,recall,0.5932,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_nodfl/ppe2286_ext,map50,0.5962,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_nodfl/ppe2286_ext,map50_95,0.2707,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_nodfl/ppe2286_ext,AP Helmet,0.0932,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_nodfl/ppe2286_ext,AP NoHelmet,0.0046,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_nodfl/ppe2286_ext,AP NoVest,0.3184,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_nodfl/ppe2286_ext,AP Vest,0.4521,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_nodfl/ppe2286_ext,AP Person,0.4851,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_relu/ppe2286_ext,precision,0.6421666666666667 ± 0.032632703432803924,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:precision; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:precision; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_relu/ppe2286_ext,recall,0.5756333333333333 ± 0.021696159414360275,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:recall; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:recall; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_relu/ppe2286_ext,map50,0.5714666666666667 ± 0.0060384876693865535,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_relu/ppe2286_ext,map50_95,0.25616666666666665 ± 0.009071567303026159,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_relu/ppe2286_ext,AP Helmet,0.0953 ± 0.002227105745132009,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_relu/ppe2286_ext,AP NoHelmet,0.009633333333333334 ± 0.003910669166949991,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu/ppe2286_ext,AP NoVest,0.2886666666666667 ± 0.013466377884692418,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_relu/ppe2286_ext,AP Vest,0.4140666666666667 ± 0.02367664109060517,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_relu/ppe2286_ext,AP Person,0.47333333333333333 ± 0.014799436926225715,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_relu6/ppe2286_ext,precision,0.6256,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_relu6/ppe2286_ext,recall,0.6062,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_relu6/ppe2286_ext,map50,0.5686,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_relu6/ppe2286_ext,map50_95,0.2572,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_relu6/ppe2286_ext,AP Helmet,0.0849,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_relu6/ppe2286_ext,AP NoHelmet,0.0078,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu6/ppe2286_ext,AP NoVest,0.2997,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_relu6/ppe2286_ext,AP Vest,0.4228,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_relu6/ppe2286_ext,AP Person,0.4706,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+D,yolov8n_relu_200ep/ppe2286_ext,precision,0.6042,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:precision
+D,yolov8n_relu_200ep/ppe2286_ext,recall,0.5901,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:recall
+D,yolov8n_relu_200ep/ppe2286_ext,map50,0.5526,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50
+D,yolov8n_relu_200ep/ppe2286_ext,map50_95,0.2416,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+D,yolov8n_relu_200ep/ppe2286_ext,AP Helmet,0.0877,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Helmet.ap50_95
+D,yolov8n_relu_200ep/ppe2286_ext,AP NoHelmet,0.0048,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoHelmet.ap50_95
+D,yolov8n_relu_200ep/ppe2286_ext,AP NoVest,0.2667,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.NoVest.ap50_95
+D,yolov8n_relu_200ep/ppe2286_ext,AP Vest,0.4014,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Vest.ap50_95
+D,yolov8n_relu_200ep/ppe2286_ext,AP Person,0.4472,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:per_class.Person.ap50_95
+E,yolov8n_baseline,Params (M),,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:params_m
+E,yolov8n_baseline,GFLOPs,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:gflops
+E,yolov8n_baseline,MACs (G),,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:macs_g
+E,yolov8n_baseline,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_baseline,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_baseline,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_baseline_200ep,Params (M),,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:params_m
+E,yolov8n_baseline_200ep,GFLOPs,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:gflops
+E,yolov8n_baseline_200ep,MACs (G),,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:macs_g
+E,yolov8n_baseline_200ep,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_baseline_200ep,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_baseline_200ep,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_leakyrelu,Params (M),,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:params_m
+E,yolov8n_leakyrelu,GFLOPs,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:gflops
+E,yolov8n_leakyrelu,MACs (G),,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:macs_g
+E,yolov8n_leakyrelu,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_leakyrelu,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_leakyrelu,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_nodfl,Params (M),,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:params_m
+E,yolov8n_nodfl,GFLOPs,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:gflops
+E,yolov8n_nodfl,MACs (G),,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:macs_g
+E,yolov8n_nodfl,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_nodfl,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_nodfl,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_relu,Params (M),,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:params_m
+E,yolov8n_relu,GFLOPs,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:gflops
+E,yolov8n_relu,MACs (G),,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:macs_g
+E,yolov8n_relu,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_relu,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_relu,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_relu_100ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_relu6,Params (M),,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:params_m
+E,yolov8n_relu6,GFLOPs,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:gflops
+E,yolov8n_relu6,MACs (G),,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:macs_g
+E,yolov8n_relu6,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_relu6,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_relu6,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/complexity.json:rknn_mb.rknn_int8
+E,yolov8n_relu_200ep,Params (M),,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:params_m
+E,yolov8n_relu_200ep,GFLOPs,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:gflops
+E,yolov8n_relu_200ep,MACs (G),,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:macs_g
+E,yolov8n_relu_200ep,ONNX FP32 (MB),,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:onnx_fp32_mb
+E,yolov8n_relu_200ep,RKNN FP16 (MB),,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:rknn_mb.rknn_fp16
+E,yolov8n_relu_200ep,RKNN INT8 (MB),,experiments/runs/ppe5_yolov8n_relu_200ep_s0/complexity.json:rknn_mb.rknn_int8
+F,yolov8n_baseline/fp32/css_test,map50_95,0.5064 ± 0.005812916651733439,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_baseline/fp16/css_test,map50_95,0.5059 ± 0.0071881847499907885,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_baseline/fp16/css_test,delta_map50_95,0.0005000000000000004 ± 0.00209523268397572,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/fp16/css_test,delta_Helmet,-0.0002666666666666743 ± 0.0059366095823570565,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/fp16/css_test,delta_NoHelmet,0.0010999999999999899 ± 0.002651414716712556,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/fp16/css_test,delta_NoVest,0.0010666666666666786 ± 0.00030550504633038595,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/fp16/css_test,delta_Vest,0.0006333333333333376 ± 0.0020526405757787585,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/fp16/css_test,delta_Person,0.000100000000000063 ± 0.0023065125189341363,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline/int8/css_test,map50_95,0.3753 ± 0.006990708118638634,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_baseline/int8/css_test,delta_map50_95,0.1311 ± 0.0011789826122551757,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8/css_test,delta_Helmet,0.26003333333333334 ± 0.027437990694169474,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8/css_test,delta_NoHelmet,0.07209999999999998 ± 0.009787236586493645,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8/css_test,delta_NoVest,0.10149999999999998 ± 0.009913626985115031,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8/css_test,delta_Vest,0.10590000000000001 ± 0.007801922839915841,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8/css_test,delta_Person,0.11603333333333336 ± 0.016678529111805195,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/int8h5/css_test,map50_95,0.5038 ± 0.006255397669213384,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json:map50_95
+F,yolov8n_baseline/int8h5/css_test,delta_map50_95,0.002599999999999991 ± 0.0011269427669584858,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline/int8h5/css_test,delta_Helmet,0.003133333333333358 ± 0.011214871079657272,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline/int8h5/css_test,delta_NoHelmet,0.006666666666666672 ± 0.01805113108182791,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline/int8h5/css_test,delta_NoVest,0.008133333333333307 ± 0.00787675906279561,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline/int8h5/css_test,delta_Vest,0.0018000000000000238 ± 0.0024269322199023382,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline/int8h5/css_test,delta_Person,-0.006933333333333273 ± 0.003987898360456693,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_css_test.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_css_test.json
+F,yolov8n_baseline_200ep/fp32/css_test,map50_95,0.5378,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_baseline_200ep/fp16/css_test,map50_95,0.5363,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_baseline_200ep/fp16/css_test,delta_map50_95,0.0014999999999999458,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/fp16/css_test,delta_Helmet,0.0040999999999999925,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/fp16/css_test,delta_NoHelmet,0.00040000000000001146,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/fp16/css_test,delta_NoVest,-9.999999999998899e-05,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/fp16/css_test,delta_Vest,0.0028000000000000247,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/fp16/css_test,delta_Person,0.00019999999999997797,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,map50_95,0.3796,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_baseline_200ep/int8/css_test,delta_map50_95,0.15819999999999995,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,delta_Helmet,0.28490000000000004,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,delta_NoHelmet,0.10930000000000001,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,delta_NoVest,0.1371,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,delta_Vest,0.11650000000000005,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline_200ep/int8/css_test,delta_Person,0.14330000000000004,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/fp32/css_test,map50_95,0.484,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_leakyrelu/fp16/css_test,map50_95,0.4792,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_leakyrelu/fp16/css_test,delta_map50_95,0.004799999999999971,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/fp16/css_test,delta_Helmet,0.0010000000000000009,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/fp16/css_test,delta_NoHelmet,0.005199999999999982,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/fp16/css_test,delta_NoVest,0.005199999999999982,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/fp16/css_test,delta_Vest,0.008400000000000074,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/fp16/css_test,delta_Person,0.0045000000000000595,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,map50_95,0.3411,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_leakyrelu/int8/css_test,delta_map50_95,0.14289999999999997,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,delta_Helmet,0.24730000000000002,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,delta_NoHelmet,0.08559999999999998,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,delta_NoVest,0.0817,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,delta_Vest,0.14010000000000006,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_leakyrelu/int8/css_test,delta_Person,0.1598,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/fp32/css_test,map50_95,0.4918,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_nodfl/fp16/css_test,map50_95,0.4933,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_nodfl/fp16/css_test,delta_map50_95,-0.0015000000000000013,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/fp16/css_test,delta_Helmet,0.0015999999999999348,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/fp16/css_test,delta_NoHelmet,-0.007099999999999995,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/fp16/css_test,delta_NoVest,0.0,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/fp16/css_test,delta_Vest,-9.999999999998899e-05,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/fp16/css_test,delta_Person,-0.0014000000000000679,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_nodfl/int8/css_test,map50_95,0.3675,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_nodfl/int8/css_test,delta_map50_95,0.12430000000000002,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/int8/css_test,delta_Helmet,0.20609999999999995,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/int8/css_test,delta_NoHelmet,0.09030000000000002,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/int8/css_test,delta_NoVest,0.08610000000000001,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/int8/css_test,delta_Vest,0.10339999999999999,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_nodfl/int8/css_test,delta_Person,0.13609999999999994,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu/fp32/css_test,map50_95,0.46113333333333334 ± 0.005200320502943378,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_relu/fp16/css_test,map50_95,0.46096666666666664 ± 0.0058858587592069585,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_relu/fp16/css_test,delta_map50_95,0.00016666666666666682 ± 0.0015307950004273293,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/fp16/css_test,delta_Helmet,0.00013333333333328165 ± 0.001301281419729567,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/fp16/css_test,delta_NoHelmet,-0.002366666666666665 ± 0.00315647482697603,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/fp16/css_test,delta_NoVest,0.0013333333333333346 ± 0.00213853532431272,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/fp16/css_test,delta_Vest,0.0010666666666666973 ± 0.0026839026311200665,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/fp16/css_test,delta_Person,0.000833333333333334 ± 0.0019035055380359118,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_css_test.json
+F,yolov8n_relu/int8/css_test,map50_95,0.33663333333333334 ± 0.008663909817936327,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_relu/int8/css_test,delta_map50_95,0.12449999999999999 ± 0.006302380502635521,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu/int8/css_test,delta_Helmet,0.24513333333333331 ± 0.014411916365748635,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu/int8/css_test,delta_NoHelmet,0.07063333333333334 ± 0.007259706146486456,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu/int8/css_test,delta_NoVest,0.07029999999999999 ± 0.00834326075344644,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu/int8/css_test,delta_Vest,0.10356666666666668 ± 0.00995506571215546,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu/int8/css_test,delta_Person,0.13303333333333334 ± 0.022694125524754936,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_css_test.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/fp32/css_test,map50_95,0.4516,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_relu6/fp16/css_test,map50_95,0.4507,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_relu6/fp16/css_test,delta_map50_95,0.0009000000000000119,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/fp16/css_test,delta_Helmet,0.0020000000000000018,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/fp16/css_test,delta_NoHelmet,0.0024000000000000132,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/fp16/css_test,delta_NoVest,-0.0014000000000000123,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/fp16/css_test,delta_Vest,0.0015000000000000568,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/fp16/css_test,delta_Person,-9.999999999998899e-05,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu6/int8/css_test,map50_95,0.3312,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_relu6/int8/css_test,delta_map50_95,0.12040000000000001,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/int8/css_test,delta_Helmet,0.22960000000000003,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/int8/css_test,delta_NoHelmet,0.05700000000000002,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/int8/css_test,delta_NoVest,0.0862,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/int8/css_test,delta_Vest,0.10849999999999999,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu6/int8/css_test,delta_Person,0.12040000000000001,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/fp32/css_test,map50_95,0.4957,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+F,yolov8n_relu_200ep/fp16/css_test,map50_95,0.4906,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json:map50_95
+F,yolov8n_relu_200ep/fp16/css_test,delta_map50_95,0.005099999999999993,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/fp16/css_test,delta_Helmet,0.0012999999999999678,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/fp16/css_test,delta_NoHelmet,0.006500000000000006,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/fp16/css_test,delta_NoVest,0.008199999999999985,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/fp16/css_test,delta_Vest,0.0044999999999999485,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/fp16/css_test,delta_Person,0.0048000000000000265,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,map50_95,0.3618,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json:map50_95
+F,yolov8n_relu_200ep/int8/css_test,delta_map50_95,0.13389999999999996,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,delta_Helmet,0.2558,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,delta_NoHelmet,0.06979999999999997,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,delta_NoVest,0.1053,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,delta_Vest,0.11299999999999999,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_relu_200ep/int8/css_test,delta_Person,0.12560000000000004,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json
+F,yolov8n_baseline/fp32/ppe2286_ext,map50_95,0.25966666666666666 ± 0.002400694344004121,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_baseline/fp16/ppe2286_ext,map50_95,0.2603666666666667 ± 0.0028589042189855426,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_map50_95,-0.000699999999999997 ± 0.0006082762530298188,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_Helmet,-0.00016666666666666682 ± 0.002663331247391762,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_NoHelmet,-0.00016666666666666653 ± 0.00020816659994661347,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_NoVest,-0.0031666666666666696 ± 0.0003511884584284439,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_Vest,-0.0007666666666666933 ± 0.0017214335111567247,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/fp16/ppe2286_ext,delta_Person,0.000733333333333345 ± 0.0005686240703077546,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,map50_95,0.22666666666666668 ± 0.004027819923151149,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_baseline/int8/ppe2286_ext,delta_map50_95,0.033 ± 0.0016462077633154193,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,delta_Helmet,0.012699999999999998 ± 0.00577148161220323,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,delta_NoHelmet,0.0023333333333333335 ± 0.0009291573243177571,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,delta_NoVest,0.034733333333333345 ± 0.003108590248542481,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,delta_Vest,0.036033333333333306 ± 0.007900210967647226,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8/ppe2286_ext,delta_Person,0.07910000000000002 ± 0.003004995840263338,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,map50_95,0.2565 ± 0.002628687885618987,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json:map50_95
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_map50_95,0.0031666666666666696 ± 0.0008326663997864458,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_Helmet,0.004233333333333335 ± 0.0014189197769195097,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_NoHelmet,-0.00046666666666666645 ± 0.00089628864398325,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_NoVest,0.003300000000000025 ± 0.006915923654870714,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_Vest,0.007966666666666622 ± 0.003550117368951809,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline/int8h5/ppe2286_ext,delta_Person,0.0010000000000000193 ± 0.005597320787662613,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s1/eval/rknn_int8h5_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_100ep_s2/eval/rknn_int8h5_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp32/ppe2286_ext,map50_95,0.2625,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,map50_95,0.2639,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_map50_95,-0.0014000000000000123,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_Helmet,-0.00010000000000000286,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_NoHelmet,0.0,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_NoVest,-0.005299999999999971,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_Vest,-0.00030000000000002247,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/fp16/ppe2286_ext,delta_Person,-0.0014000000000000123,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,map50_95,0.2255,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_map50_95,0.037000000000000005,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_Helmet,0.010800000000000004,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_NoHelmet,0.0024000000000000002,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_NoVest,0.04099999999999998,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_Vest,0.03720000000000001,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_baseline_200ep/int8/ppe2286_ext,delta_Person,0.0937,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp32/ppe2286_ext,map50_95,0.2625,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,map50_95,0.2627,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_map50_95,-0.00019999999999997797,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_Helmet,-0.0002999999999999947,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_NoHelmet,-0.00010000000000000026,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_NoVest,-0.0019999999999999463,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_Vest,-0.0006999999999999784,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/fp16/ppe2286_ext,delta_Person,0.0022999999999999687,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,map50_95,0.2278,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_map50_95,0.03470000000000001,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_Helmet,0.0012999999999999956,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_NoHelmet,0.0,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_NoVest,0.03030000000000005,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_Vest,0.052000000000000046,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_leakyrelu/int8/ppe2286_ext,delta_Person,0.0897,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/fp32/ppe2286_ext,map50_95,0.2707,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_nodfl/fp16/ppe2286_ext,map50_95,0.2722,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_map50_95,-0.0015000000000000013,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_Helmet,-0.0002999999999999947,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_NoHelmet,-0.0005000000000000004,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_NoVest,-0.00379999999999997,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_Vest,-0.0018000000000000238,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/fp16/ppe2286_ext,delta_Person,-0.0015000000000000013,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,map50_95,0.2377,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_map50_95,0.033,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_Helmet,-0.0034999999999999892,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_NoHelmet,0.0017000000000000001,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_NoVest,0.040600000000000025,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_Vest,0.028700000000000003,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_nodfl/int8/ppe2286_ext,delta_Person,0.0973,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/fp32/ppe2286_ext,map50_95,0.25616666666666665 ± 0.009071567303026159,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_relu/fp16/ppe2286_ext,map50_95,0.25653333333333334 ± 0.008826286497351727,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_relu/fp16/ppe2286_ext,delta_map50_95,-0.0003666666666666633 ± 0.0003214550253664281,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/fp16/ppe2286_ext,delta_Helmet,-0.000566666666666669 ± 0.001650252505931539,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/fp16/ppe2286_ext,delta_NoHelmet,-0.00026666666666666706 ± 0.00020816659994661333,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/fp16/ppe2286_ext,delta_NoVest,-0.00016666666666666682 ± 0.0017616280348964912,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/fp16/ppe2286_ext,delta_Vest,-0.0012333333333333085 ± 0.00011547005383791243,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/fp16/ppe2286_ext,delta_Person,0.0005333333333333301 ± 0.0004041451884327485,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_fp16_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,map50_95,0.22673333333333334 ± 0.0073241609303273374,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json:map50_95; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_relu/int8/ppe2286_ext,delta_map50_95,0.02943333333333334 ± 0.002020725942163677,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,delta_Helmet,0.004966666666666661 ± 0.004233595792388945,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,delta_NoHelmet,0.0037333333333333333 ± 0.0024583192089989723,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,delta_NoVest,0.024366666666666648 ± 0.010623715608643407,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,delta_Vest,0.032333333333333325 ± 0.01896162791886111,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu/int8/ppe2286_ext,delta_Person,0.08186666666666666 ± 0.00822090830342569,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s1/eval/rknn_int8_ppe2286_ext.json; experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_100ep_s2/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/fp32/ppe2286_ext,map50_95,0.2572,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_relu6/fp16/ppe2286_ext,map50_95,0.2577,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_map50_95,-0.0005000000000000004,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_Helmet,0.0005000000000000004,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_NoHelmet,0.0,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_NoVest,-0.0013999999999999568,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_Vest,-0.0020000000000000018,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/fp16/ppe2286_ext,delta_Person,0.00040000000000001146,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,map50_95,0.2298,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_relu6/int8/ppe2286_ext,delta_map50_95,0.02739999999999998,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,delta_Helmet,-0.0030000000000000027,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,delta_NoHelmet,0.0018999999999999998,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,delta_NoVest,0.017300000000000038,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,delta_Vest,0.029000000000000026,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu6/int8/ppe2286_ext,delta_Person,0.09140000000000004,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp32/ppe2286_ext,map50_95,0.2416,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json:map50_95
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,map50_95,0.2425,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json:map50_95
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_map50_95,-0.0008999999999999841,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_Helmet,-0.00020000000000000573,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_NoHelmet,-0.00020000000000000052,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_NoVest,-0.0012000000000000344,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_Vest,-0.003500000000000003,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/fp16/ppe2286_ext,delta_Person,0.0005000000000000004,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,map50_95,0.224,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json:map50_95
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_map50_95,0.017600000000000005,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_Helmet,-0.0029,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_NoHelmet,0.0015999999999999994,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_NoVest,0.019600000000000006,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_Vest,0.01319999999999999,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+F,yolov8n_relu_200ep/int8/ppe2286_ext,delta_Person,0.056499999999999995,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_ppe2286_ext.json - experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_ppe2286_ext.json
+G,yolov8n_baseline/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_baseline/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_baseline/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_baseline/fp16,post_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_baseline/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_baseline/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_baseline/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_baseline/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_baseline/int8,pre_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_baseline/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_baseline/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_baseline/int8,post_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_baseline/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_baseline/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_baseline/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_baseline/int8,fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_baseline_200ep/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_baseline_200ep/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_baseline_200ep/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_baseline_200ep/fp16,post_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_baseline_200ep/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_baseline_200ep/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_baseline_200ep/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_baseline_200ep/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_baseline_200ep/int8,pre_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_baseline_200ep/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_baseline_200ep/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_baseline_200ep/int8,post_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_baseline_200ep/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_baseline_200ep/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_baseline_200ep/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_baseline_200ep/int8,fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_leakyrelu/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_leakyrelu/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_leakyrelu/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_leakyrelu/fp16,post_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_leakyrelu/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_leakyrelu/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_leakyrelu/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_leakyrelu/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_leakyrelu/int8,pre_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_leakyrelu/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_leakyrelu/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_leakyrelu/int8,post_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_leakyrelu/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_leakyrelu/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_leakyrelu/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_leakyrelu/int8,fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_nodfl/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_nodfl/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_nodfl/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_nodfl/fp16,post_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_nodfl/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_nodfl/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_nodfl/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_nodfl/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_nodfl/int8,pre_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_nodfl/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_nodfl/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_nodfl/int8,post_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_nodfl/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_nodfl/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_nodfl/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_nodfl/int8,fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_relu/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_relu/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu/fp16,post_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_relu/int8,pre_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_relu/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu/int8,post_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu/int8,fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_relu6/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu6/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_relu6/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu6/fp16,post_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu6/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu6/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu6/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu6/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_relu6/int8,pre_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu6/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_relu6/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu6/int8,post_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu6/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu6/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu6/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu6/int8,fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+G,yolov8n_relu_200ep/fp16,pre_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu_200ep/fp16,npu_tier1,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_fp16_AUTO.json:npu_latency_ms
+G,yolov8n_relu_200ep/fp16,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu_200ep/fp16,post_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu_200ep/fp16,e2e_mean,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu_200ep/fp16,e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu_200ep/fp16,e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu_200ep/fp16,fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+G,yolov8n_relu_200ep/int8,pre_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.pre.p50
+G,yolov8n_relu_200ep/int8,npu_tier1,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+G,yolov8n_relu_200ep/int8,npu_tier2_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.npu.p50
+G,yolov8n_relu_200ep/int8,post_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.post.p50
+G,yolov8n_relu_200ep/int8,e2e_mean,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.mean
+G,yolov8n_relu_200ep/int8,e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+G,yolov8n_relu_200ep/int8,e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+G,yolov8n_relu_200ep/int8,fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_baseline/CPU board, ONNX FP32 (4 thread)",map50_95,0.4999,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_baseline/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_baseline/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_baseline/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_baseline/NPU board, RKNN FP16",map50_95,0.4976,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_baseline/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_baseline/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_baseline/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_baseline/NPU board, RKNN INT8",map50_95,0.3675,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_baseline/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_baseline/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_baseline/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_baseline/PC GPU (reference), PyTorch FP32",map50_95,0.4999,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_baseline/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_baseline/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_baseline/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_baseline_200ep/CPU board, ONNX FP32 (4 thread)",map50_95,0.5378,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_baseline_200ep/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_baseline_200ep/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_baseline_200ep/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_baseline_200ep/NPU board, RKNN FP16",map50_95,0.5363,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_baseline_200ep/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_baseline_200ep/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_baseline_200ep/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_baseline_200ep/NPU board, RKNN INT8",map50_95,0.3796,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_baseline_200ep/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_baseline_200ep/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_baseline_200ep/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_baseline_200ep/PC GPU (reference), PyTorch FP32",map50_95,0.5378,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_baseline_200ep/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_baseline_200ep/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_baseline_200ep/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_leakyrelu/CPU board, ONNX FP32 (4 thread)",map50_95,0.484,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_leakyrelu/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_leakyrelu/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_leakyrelu/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_leakyrelu/NPU board, RKNN FP16",map50_95,0.4792,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_leakyrelu/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_leakyrelu/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_leakyrelu/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_leakyrelu/NPU board, RKNN INT8",map50_95,0.3411,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_leakyrelu/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_leakyrelu/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_leakyrelu/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_leakyrelu/PC GPU (reference), PyTorch FP32",map50_95,0.484,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_leakyrelu/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_leakyrelu/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_leakyrelu/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_nodfl/CPU board, ONNX FP32 (4 thread)",map50_95,0.4918,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_nodfl/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_nodfl/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_nodfl/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_nodfl/NPU board, RKNN FP16",map50_95,0.4933,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_nodfl/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_nodfl/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_nodfl/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_nodfl/NPU board, RKNN INT8",map50_95,0.3675,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_nodfl/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_nodfl/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_nodfl/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_nodfl/PC GPU (reference), PyTorch FP32",map50_95,0.4918,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_nodfl/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_nodfl/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_nodfl/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_relu/CPU board, ONNX FP32 (4 thread)",map50_95,0.4633,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_relu/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_relu/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_relu/NPU board, RKNN FP16",map50_95,0.4649,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_relu/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_relu/NPU board, RKNN INT8",map50_95,0.3324,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_relu/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_relu/PC GPU (reference), PyTorch FP32",map50_95,0.4633,experiments/runs/ppe5_yolov8n_relu_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_relu/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_relu/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_relu6/CPU board, ONNX FP32 (4 thread)",map50_95,0.4516,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu6/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_relu6/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_relu6/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_relu6/NPU board, RKNN FP16",map50_95,0.4507,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_relu6/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu6/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu6/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_relu6/NPU board, RKNN INT8",map50_95,0.3312,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_relu6/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu6/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu6/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_relu6/PC GPU (reference), PyTorch FP32",map50_95,0.4516,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu6/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_relu6/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_relu6/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/gpu_pt_fp32.json:fps_latency
+H,"yolov8n_relu_200ep/CPU board, ONNX FP32 (4 thread)",map50_95,0.4957,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu_200ep/CPU board, ONNX FP32 (4 thread)",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p50
+H,"yolov8n_relu_200ep/CPU board, ONNX FP32 (4 thread)",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_cpu_onnx_t4.json:latency_ms.e2e.p95
+H,"yolov8n_relu_200ep/CPU board, ONNX FP32 (4 thread)",fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_cpu_onnx_t4.json:fps_latency
+H,"yolov8n_relu_200ep/NPU board, RKNN FP16",map50_95,0.4906,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_fp16_css_test.json:map50_95
+H,"yolov8n_relu_200ep/NPU board, RKNN FP16",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu_200ep/NPU board, RKNN FP16",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu_200ep/NPU board, RKNN FP16",fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:fps_latency
+H,"yolov8n_relu_200ep/NPU board, RKNN INT8",map50_95,0.3618,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/rknn_int8_css_test.json:map50_95
+H,"yolov8n_relu_200ep/NPU board, RKNN INT8",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p50
+H,"yolov8n_relu_200ep/NPU board, RKNN INT8",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:latency_ms.e2e.p95
+H,"yolov8n_relu_200ep/NPU board, RKNN INT8",fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:fps_latency
+H,"yolov8n_relu_200ep/PC GPU (reference), PyTorch FP32",map50_95,0.4957,experiments/runs/ppe5_yolov8n_relu_200ep_s0/eval/pt_fp32_css_test.json:map50_95
+H,"yolov8n_relu_200ep/PC GPU (reference), PyTorch FP32",e2e_p50,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p50
+H,"yolov8n_relu_200ep/PC GPU (reference), PyTorch FP32",e2e_p95,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/gpu_pt_fp32.json:latency_ms.e2e.p95
+H,"yolov8n_relu_200ep/PC GPU (reference), PyTorch FP32",fps_latency,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/gpu_pt_fp32.json:fps_latency
+I,yolov8n_baseline/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_baseline/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_baseline/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_baseline/CORE_0,npu_ms,19.238,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_baseline/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_baseline/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_baseline/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_baseline/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_baseline/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_baseline/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_baseline/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_baseline/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_baseline/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_baseline/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_baseline/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_baseline_200ep/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_baseline_200ep/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_baseline_200ep/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline_200ep/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_baseline_200ep/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_baseline_200ep/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_baseline_200ep/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline_200ep/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_baseline_200ep/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_baseline_200ep/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_baseline_200ep/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline_200ep/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_baseline_200ep/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_baseline_200ep/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_baseline_200ep/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_baseline_200ep/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_baseline_200ep/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_baseline_200ep/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_baseline_200ep/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_leakyrelu/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_leakyrelu/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_leakyrelu/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_leakyrelu/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_leakyrelu/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_leakyrelu/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_leakyrelu/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_leakyrelu/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_leakyrelu/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_leakyrelu/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_leakyrelu/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_leakyrelu/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_leakyrelu/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_leakyrelu/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_leakyrelu/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_leakyrelu/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_leakyrelu/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_leakyrelu/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_leakyrelu/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_nodfl/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_nodfl/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_nodfl/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_nodfl/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_nodfl/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_nodfl/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_nodfl/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_nodfl/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_nodfl/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_nodfl/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_nodfl/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_nodfl/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_nodfl/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_nodfl/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_nodfl/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_nodfl/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_nodfl/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_nodfl/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_nodfl/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_relu/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_relu/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_relu/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_relu/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_relu/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_relu/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_relu/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_relu/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_relu/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_relu/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_relu/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_relu/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_relu/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_relu/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_relu/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_relu/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_relu/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_relu/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_relu/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_relu6/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_relu6/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_relu6/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_relu6/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_relu6/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_relu6/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_relu6/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_relu6/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_relu6/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_relu6/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_relu6/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_relu6/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_relu6/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_relu6/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_relu6/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_relu6/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_relu6/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_relu6/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_relu6/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+I,yolov8n_relu_200ep/AUTO,npu_ms,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_AUTO.json:npu_latency_ms
+I,yolov8n_relu_200ep/AUTO,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_AUTO.json:throughput_fps
+I,yolov8n_relu_200ep/AUTO,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_AUTO.json:resource.avg_system_cpu_pct
+I,yolov8n_relu_200ep/AUTO,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_AUTO.json:resource.temp_end_c
+I,yolov8n_relu_200ep/CORE_0,npu_ms,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_CORE_0.json:npu_latency_ms
+I,yolov8n_relu_200ep/CORE_0,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0.json:throughput_fps
+I,yolov8n_relu_200ep/CORE_0,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0.json:resource.avg_system_cpu_pct
+I,yolov8n_relu_200ep/CORE_0,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0.json:resource.temp_end_c
+I,yolov8n_relu_200ep/CORE_0_1,npu_ms,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_CORE_0_1.json:npu_latency_ms
+I,yolov8n_relu_200ep/CORE_0_1,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1.json:throughput_fps
+I,yolov8n_relu_200ep/CORE_0_1,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1.json:resource.avg_system_cpu_pct
+I,yolov8n_relu_200ep/CORE_0_1,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1.json:resource.temp_end_c
+I,yolov8n_relu_200ep/CORE_0_1_2,npu_ms,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_CORE_0_1_2.json:npu_latency_ms
+I,yolov8n_relu_200ep/CORE_0_1_2,throughput_fps,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:throughput_fps
+I,yolov8n_relu_200ep/CORE_0_1_2,avg_cpu,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.avg_system_cpu_pct
+I,yolov8n_relu_200ep/CORE_0_1_2,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0_1_2.json:resource.temp_end_c
+I,"yolov8n_relu_200ep/CORE_0,CORE_1,CORE_2",throughput_fps,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:throughput_fps
+I,"yolov8n_relu_200ep/CORE_0,CORE_1,CORE_2",avg_cpu,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.avg_system_cpu_pct
+I,"yolov8n_relu_200ep/CORE_0,CORE_1,CORE_2",temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/throughput_int8_CORE_0-CORE_1-CORE_2.json:resource.temp_end_c
+L,yolov8n_baseline/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_baseline/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_baseline/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_baseline/fp16,temp_start,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_baseline/fp16,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_baseline/int8,peak_rss,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_baseline/int8,npu_mem,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_baseline/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_baseline/int8,temp_start,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_baseline/int8,temp_end,,experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_baseline_200ep/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_baseline_200ep/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_baseline_200ep/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_baseline_200ep/fp16,temp_start,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_baseline_200ep/fp16,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_baseline_200ep/int8,peak_rss,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_baseline_200ep/int8,npu_mem,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_baseline_200ep/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_baseline_200ep/int8,temp_start,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_baseline_200ep/int8,temp_end,,experiments/runs/ppe5_yolov8n_baseline_200ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_leakyrelu/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_leakyrelu/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_leakyrelu/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_leakyrelu/fp16,temp_start,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_leakyrelu/fp16,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_leakyrelu/int8,peak_rss,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_leakyrelu/int8,npu_mem,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_leakyrelu/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_leakyrelu/int8,temp_start,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_leakyrelu/int8,temp_end,,experiments/runs/ppe5_yolov8n_leakyrelu_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_nodfl/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_nodfl/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_nodfl/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_nodfl/fp16,temp_start,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_nodfl/fp16,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_nodfl/int8,peak_rss,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_nodfl/int8,npu_mem,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_nodfl/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_nodfl/int8,temp_start,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_nodfl/int8,temp_end,,experiments/runs/ppe5_yolov8n_nodfl_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_relu/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu/fp16,temp_start,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_relu/fp16,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_relu/int8,peak_rss,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu/int8,npu_mem,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu/int8,temp_start,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_relu/int8,temp_end,,experiments/runs/ppe5_yolov8n_relu_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_relu6/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu6/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu6/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu6/fp16,temp_start,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_relu6/fp16,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_relu6/int8,peak_rss,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu6/int8,npu_mem,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu6/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu6/int8,temp_start,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_relu6/int8,temp_end,,experiments/runs/ppe5_yolov8n_relu6_100ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c
+L,yolov8n_relu_200ep/fp16,peak_rss,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu_200ep/fp16,npu_mem,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_fp16_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu_200ep/fp16,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu_200ep/fp16,temp_start,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_start_c
+L,yolov8n_relu_200ep/fp16,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_fp16_AUTO.json:resource.temp_end_c
+L,yolov8n_relu_200ep/int8,peak_rss,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:resource.peak_rss_mib
+L,yolov8n_relu_200ep/int8,npu_mem,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier1_int8_AUTO.json:npu_memory_mib.total_memory
+L,yolov8n_relu_200ep/int8,avg_cpu_process,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:resource.avg_process_cpu_pct
+L,yolov8n_relu_200ep/int8,temp_start,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:resource.temp_start_c
+L,yolov8n_relu_200ep/int8,temp_end,,experiments/runs/ppe5_yolov8n_relu_200ep_s0/bench/tier2_int8_AUTO.json:resource.temp_end_c

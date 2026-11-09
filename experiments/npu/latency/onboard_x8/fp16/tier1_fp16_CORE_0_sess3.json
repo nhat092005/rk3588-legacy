@@ -1,0 +1,57 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-10-31T05:19:10",
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "tier": 1,
+  "protocol_version": "v1",
+  "precision": "fp16",
+  "core_mask": "CORE_0",
+  "model_file": "weights/rknn_fp16/best-rk3588.rknn",
+  "model_sha256": "bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786",
+  "device_id": "192.168.137.49:5555",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: librknn_api version: 2.3.2 (1842325 build@2025-03-30T09:55:23)\n  DRV: rknn_server: 2.3.2 (1842325 build@2025-03-30T09:54:34)\n       rknnrt: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n==============================================\n",
+  "fix_freq": true,
+  "eval_perf_repeats": 5,
+  "npu_latency_ms": 27.267,
+  "npu_latency_ms_all": [
+    27.262,
+    27.267,
+    27.269,
+    27.265,
+    27.268
+  ],
+  "fps_latency": 36.67,
+  "frequencies_during_eval_perf": {
+    "CPU": [
+      1800000,
+      2256000,
+      2304000
+    ],
+    "NPU": [
+      1000000000
+    ],
+    "DDR": [
+      2112000000
+    ]
+  },
+  "npu_memory_mib": null,
+  "cpu_ops": [
+    "Transpose"
+  ],
+  "n_layers": 119,
+  "debug_total_us": 27432.0,
+  "debug_total_us_all": [
+    27424.0,
+    27432.0,
+    27430.0,
+    27432.0,
+    27433.0
+  ],
+  "layer_repeats": 5,
+  "eval_perf_summary_raw": "CPU Current Frequency List:\n    - 1800000\n    - 2256000\n    - 2304000\nNPU Current Frequency List:\n    - 1000000000\nDDR Current Frequency List:\n    - 2112000000\nTotal Time(us): 27268\nFPS: 36.67\n",
+  "layers_files": [
+    "tier1_fp16_CORE_0_sess3_layers.json",
+    "tier1_fp16_CORE_0_sess3_layers.txt"
+  ]
+}

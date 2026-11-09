@@ -1,0 +1,9 @@
+X7b rule, written 2026-10-31T11:15:36+07:00 before any X7b data exists. Final. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor suggestion).
+Question (U28): is the INT8 accuracy drop of X7 (INT8 on the board through RKNNLite against FP32 in PyTorch) due to quantization or to the inference path (RKNNLite on the board against PyTorch on the PC)?
+Method: make evaluate RUN=ppe5_yolov8n_baseline_100ep_s0 BACKEND=rknn PREC=fp16 BOARD=minhnhat@192.168.137.49 (same RKNNLite path, same scoring code and confidence as X7, FP16 model weights/rknn_fp16/best-rk3588.rknn sha256 bd4a8c8a). Primary set css_test (82 images, one seed). ppe2286_ext (180 images) is descriptive only.
+Statement, on css_test mAP50-95: D8 = INT8 minus FP32 (X7), D16 = FP16 on RKNNLite minus FP32 (this run).
+  If |D16| <= 0.25 x |D8|: 'mức giảm của INT8 chủ yếu đi theo lượng tử hóa'.
+  If |D16| >= 0.75 x |D8|: 'mức giảm chủ yếu đi theo đường suy luận (RKNNLite trên board so với PyTorch trên PC)'.
+  Otherwise 'chưa kết luận'.
+  The numbers 0.25 and 0.75 are new, not user approved. css_test has 82 images and one seed, so small differences are noise. No threshold on mAP and no keep or drop statement (the 1.0 pp mAP threshold belongs to gate G4, phase 2).
+Budget: experiment 1 for U28.

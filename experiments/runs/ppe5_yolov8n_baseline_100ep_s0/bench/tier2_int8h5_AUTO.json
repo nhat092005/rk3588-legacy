@@ -1,0 +1,116 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-11-01T16:29:42",
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "tier": 2,
+  "protocol_version": "v1",
+  "model_file": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8h5/best-rk3588.rknn",
+  "model_sha256": "80be7f5d6adaa091b5b706f24052f97218dbbcda39e28d3ab2034e812cc24938",
+  "runtime": "rknnlite",
+  "model": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8h5",
+  "normalized_boxes": true,
+  "core_mask": "AUTO",
+  "contexts": 1,
+  "images": "data/ppe5/processed/images/test",
+  "n_images": 82,
+  "warmup": 20,
+  "measured_at": "2026-11-01T16:29:42.603105",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "system": {
+    "kernel": "6.1.99-rockchip-rk3588",
+    "os": "Orange Pi 1.2.4 Jammy",
+    "python": "3.10.12",
+    "ram_total_mib": 3916,
+    "cpu_count": 8
+  },
+  "frequency_before": {
+    "policy0": {
+      "governor": "performance",
+      "cur_khz": "1800000"
+    },
+    "policy4": {
+      "governor": "performance",
+      "cur_khz": "2256000"
+    },
+    "policy6": {
+      "governor": "performance",
+      "cur_khz": "2304000"
+    },
+    "npu": {
+      "governor": "userspace",
+      "cur_hz": "1000000000"
+    },
+    "ddr": {
+      "governor": "userspace",
+      "cur_hz": "2112000000"
+    },
+    "locked": true
+  },
+  "frequency_after": {
+    "policy0": {
+      "governor": "performance",
+      "cur_khz": "1800000"
+    },
+    "policy4": {
+      "governor": "performance",
+      "cur_khz": "2256000"
+    },
+    "policy6": {
+      "governor": "performance",
+      "cur_khz": "2304000"
+    },
+    "npu": {
+      "governor": "userspace",
+      "cur_hz": "1000000000"
+    },
+    "ddr": {
+      "governor": "userspace",
+      "cur_hz": "2112000000"
+    },
+    "locked": true
+  },
+  "latency_ms": {
+    "pre": {
+      "mean": 0.321,
+      "p50": 0.236,
+      "p95": 0.71,
+      "std": 0.174,
+      "n": 82
+    },
+    "npu": {
+      "mean": 19.709,
+      "p50": 19.798,
+      "p95": 20.277,
+      "std": 0.503,
+      "n": 82
+    },
+    "post": {
+      "mean": 1.363,
+      "p50": 0.724,
+      "p95": 2.404,
+      "std": 2.283,
+      "n": 82
+    },
+    "e2e": {
+      "mean": 21.394,
+      "p50": 20.837,
+      "p95": 23.811,
+      "std": 2.371,
+      "n": 82
+    }
+  },
+  "fps_latency": 46.74,
+  "detections_per_image_mean": 5.51,
+  "resource": {
+    "peak_rss_mib": 138.8,
+    "avg_process_cpu_pct": 46.2,
+    "avg_system_cpu_pct": 5.6,
+    "thermal_zone": "thermal_zone6",
+    "temp_start_c": 45.3,
+    "temp_end_c": 45.3,
+    "temp_max_c": 45.3,
+    "duration_s": 2.0,
+    "samples": 20
+  }
+}

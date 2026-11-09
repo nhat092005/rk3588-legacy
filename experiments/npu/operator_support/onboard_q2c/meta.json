@@ -1,0 +1,27 @@
+{
+ "exp_id": "onboard_q2c",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_q2c/rule_diag.txt",
+ "rule_first_line": "Quantization diagnosis rule (2c-b, per-layer INT8 error), written 2026-10-31T18:07:51+07:00 before any diagnosis data of SiLU and ReLU exists (one probe build of SiLU on one image was run only to check the tool, its numbers are not used). Not from a source. Not reviewed by the user (user approval of 2026-10-31 for phase 2c). Sources of the tool: rknn.accuracy_analysis (API p22, UG p8 and p30 to 31), results/notes/phase2c_source_facts.md.",
+ "script": [
+  "ai/npu/operator_support/analyze_int8h5.py",
+  "ai/npu/operator_support/analyze_q2c_diag.py",
+  "ai/npu/operator_support/analyze_q2c_recipes.py",
+  "ai/npu/operator_support/analyze_q2e_board.py",
+  "ai/npu/operator_support/analyze_q2e_pc.py",
+  "ai/npu/operator_support/analyze_q2h.py",
+  "ai/npu/operator_support/analyze_q2i.py",
+  "ai/npu/operator_support/analyze_q2j.py",
+  "ai/npu/operator_support/analyze_q2kl.py",
+  "ai/npu/operator_support/build_batch_probe.py",
+  "ai/npu/operator_support/build_recipe.py",
+  "ai/npu/operator_support/build_split.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

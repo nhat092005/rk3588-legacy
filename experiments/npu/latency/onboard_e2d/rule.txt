@@ -1,0 +1,28 @@
+E2d rule, written 2026-10-31T00:00:07+07:00 before any E2d data exists. Final: do not edit after the run starts. Not from a source.
+Approved by the user on 2026-10-30: the two validity checks, the thresholds 0.05 and 0.95 (taken from E2c data, so chosen after seeing E2c), and the three same-core big cells (5, 5), (6, 6), (7, 7).
+Question 1: with which app CPUs does the slow level appear, with the NPU interrupts on CPU0 and on CPU4. Question 2: with which (app, interrupt) pairs does the fast level (16.3 ms, std about 0.01 ms in B) appear. Mechanism is out of scope.
+Setup: irqbalance stopped, 1000 runs per block after 50 warm-up runs, 20 s rest between blocks, app pinned with taskset, NPU interrupts 36, 37, 38 all set to the target CPU. 20 conditions: A (no pin, default interrupts), the 16 cells (app CPU 0 to 7) x (interrupt CPU 0 or 4), and (5, 5), (6, 6), (7, 7).
+Order: half 1 is the fixed list L = A, (0,0) to (7,0), (0,4) to (7,4), (5,5), (6,6), (7,7). Half 2 is L reversed. 40 blocks, each condition has exactly one block per half.
+Mức chậm: một lần chạy từ 20.0 ms trở lên (cùng ngưỡng E2, E2b, E2c). Mức nhanh: dưới 17.0 ms.
+Khối thực hiện đúng: ứng dụng chạy ở CPU đã ghim trong ít nhất 99% số lần (A được miễn) và ít nhất 99% ngắt NPU rơi vào CPU đích (A: CPU0). Khối không thực hiện đúng bị loại và được báo.
+Kết quả chính theo ô, chỉ từ các khối thực hiện đúng và cần cả hai khối, nếu không là 'chưa kết luận (khối không thực hiện đúng)'.
+  'mất mức chậm' khi tỉ lệ mức chậm không quá 0.05 ở cả hai khối.
+  'còn mức chậm' khi tỉ lệ mức chậm từ 0.20 trở lên ở cả hai khối.
+  'lẫn lộn' trong các trường hợp còn lại.
+Kết quả nhanh theo ô, chỉ từ khối thực hiện đúng: 'đạt mức nhanh' khi tỉ lệ mức nhanh từ 0.95 trở lên ở cả hai khối, ngược lại 'không đạt mức nhanh'.
+Nguồn gốc ngưỡng: 0.05 gấp bốn lần giá trị lớn nhất (0.012) trong các ô đã thấy mất mức chậm ở E2c. 0.20 là ngưỡng của E2. 0.95 nằm giữa 0.279 (giá trị mức nhanh lớn nhất ngoài B ở E2c, E khối 4) và 1.000 (B). Hai ngưỡng 0.05 và 0.95 do người viết quy tắc chọn sau khi đã thấy dữ liệu E2c.
+Kiểm tra hợp lệ, chỉ có hai.
+  1. A có tỉ lệ mức chậm từ 0.20 trở lên ở ít nhất một khối.
+  2. Ô (4, 4) 'mất mức chậm' và 'đạt mức nhanh' (tái hiện B của E2b và E2c).
+  Nếu một trong hai không đạt, mọi phát biểu bên dưới là 'không đọc được'.
+Các ô (0, 0) và (1, 0) là ô thường. Nếu kết quả khác E2c (ví dụ (1, 0) không 'còn mức chậm' hoặc (0, 0) không 'mất mức chậm') thì báo là 'không tái hiện E2c', và vẫn báo ô đó như các ô khác.
+Phát biểu cho phép, chỉ nói vị trí, không nói cơ chế hay nguyên nhân, và không được viết thành hiệu ứng của cụm CPU hay của tần số (CPU0 đến 3 chạy 1.8 GHz, CPU4 đến 5 chạy 2.256 GHz, CPU6 đến 7 chạy 2.304 GHz nên mọi mẫu theo cụm cũng là mẫu theo xung nhịp).
+  S0: tập CPU ứng dụng có ô (CPU, ngắt CPU0) 'còn mức chậm'. S4: tập tương ứng khi ngắt ở CPU4. Báo S0 và S4, kèm danh sách CPU 'lẫn lộn' hoặc 'chưa kết luận' của từng hàng.
+  So sánh S0 với S4 chỉ trên các CPU có kết quả rõ ràng ('mất' hoặc 'còn') ở cả hai hàng. 'Mức chậm không đổi giữa hai CPU ngắt' chỉ được viết khi cả 8 CPU đều rõ ràng ở cả hai hàng và S0 = S4. Nếu không, viết 'không đổi trên các CPU {danh sách}' và nêu riêng các CPU còn lại.
+  F: tập các ô 'đạt mức nhanh' (gồm cả (5, 5), (6, 6), (7, 7)). Báo F như đo được. Nếu F chỉ gồm (4, 4) thì viết đúng như vậy, không suy ra lý do.
+  Nếu S0 = {1, 2, 3} thì được viết 'với ngắt ở CPU0, mức chậm chỉ có khi ứng dụng ghim ở CPU1 đến CPU3 trong các CPU đã thử'. Nếu S0 khác thì báo đúng tập đó, không giải thích.
+  Nếu S4 khác tập rỗng thì báo S4, không giải thích.
+Mô tả, không phải kết quả và không viết như kết quả: trung vị, độ lệch chuẩn, tỉ lệ ba mức theo khối.
+Không ghép khối, không so với A ngoài kiểm tra hợp lệ 1, không có kết quả phụ theo độ lệch.
+Mỗi ô chỉ có hai khối và các khối kề nhau theo thời gian, nên mọi phát biểu chỉ áp cho lần chạy này trên một board và một lần khởi động.
+Ngoài phạm vi: cơ chế, lý do một CPU chậm, ảnh hưởng của cụm CPU hay xung nhịp, tải CPU khác.

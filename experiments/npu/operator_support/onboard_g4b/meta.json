@@ -1,0 +1,18 @@
+{
+ "exp_id": "onboard_g4b",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0",
+  "ppe5_yolov8n_relu_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_g4b/ppe5_yolov8n_baseline_100ep_s0/rule.txt",
+ "rule_first_line": "G4 A, B and S1 latency rule (onboard_g4b), written 2026-10-31T12:08:57+07:00 before any G4 latency or workload data of the ReLU model exists. Not from a source. Not reviewed by the user (goal of 2026-10-31, phase 2). Reviewed by the advisor (design). Approved numbers used: 5 percent latency drop and the 2 session gap rule (page 01-operator-support section 2, condition B), 50 percent cycles (condition A), approved 2026-10-25. Protocol P2 is the one of phase 1 (X4), not approved as the main protocol.",
+ "script": [
+  "ai/npu/operator_support/analyze_g4.py",
+  "ai/npu/operator_support/analyze_q2e_pc.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

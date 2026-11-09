@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.9099,
+  "recall": 0.7344,
+  "map50": 0.8028,
+  "map50_95": 0.4984,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.9878,
+      "recall": 0.8182,
+      "ap50": 0.928,
+      "ap50_95": 0.5955,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.7888,
+      "recall": 0.5466,
+      "ap50": 0.5588,
+      "ap50_95": 0.2951,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.9146,
+      "recall": 0.7136,
+      "ap50": 0.7926,
+      "ap50_95": 0.4944,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.925,
+      "recall": 0.8525,
+      "ap50": 0.8881,
+      "ap50_95": 0.5691,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.9333,
+      "recall": 0.7414,
+      "ap50": 0.8468,
+      "ap50_95": 0.5381,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "model_file": "weights/rknn_int8_split/best-rk3588.rknn",
+  "model_sha256": "8b0a753198b82f1a7ce2e8c2569dbf3b32d40c71ea19d1c999ae02a42390e26b",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-11-01T00:58:21",
+    "kept_anchors": 14805,
+    "normalized_boxes": false
+  }
+}

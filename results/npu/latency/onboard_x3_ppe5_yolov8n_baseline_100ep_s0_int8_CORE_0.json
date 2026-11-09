@@ -1,0 +1,389 @@
+{
+ "blocks": [
+  {
+   "block": 1,
+   "cell": "a4i4",
+   "gap": 0,
+   "n": 300,
+   "median": 16.293,
+   "std": 0.017471934320185817,
+   "slow": 0.0,
+   "fast": 1.0,
+   "realized": true
+  },
+  {
+   "block": 2,
+   "cell": "a4i4",
+   "gap": 220,
+   "n": 300,
+   "median": 16.305,
+   "std": 0.0988126510119023,
+   "slow": 0.0,
+   "fast": 0.9933333333333333,
+   "realized": true
+  },
+  {
+   "block": 3,
+   "cell": "a0i0",
+   "gap": 0,
+   "n": 300,
+   "median": 18.904,
+   "std": 0.4736092332527124,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 4,
+   "cell": "a0i0",
+   "gap": 220,
+   "n": 300,
+   "median": 19.085,
+   "std": 0.5135899351190165,
+   "slow": 0.006666666666666667,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 5,
+   "cell": "a4i0",
+   "gap": 0,
+   "n": 300,
+   "median": 18.539499999999997,
+   "std": 1.0837676014513238,
+   "slow": 0.0033333333333333335,
+   "fast": 0.4066666666666667,
+   "realized": true
+  },
+  {
+   "block": 6,
+   "cell": "a4i0",
+   "gap": 220,
+   "n": 300,
+   "median": 18.84,
+   "std": 0.8890650123147475,
+   "slow": 0.0,
+   "fast": 0.17666666666666667,
+   "realized": true
+  },
+  {
+   "block": 7,
+   "cell": "a0i4",
+   "gap": 0,
+   "n": 300,
+   "median": 18.808,
+   "std": 0.44440556552170524,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 8,
+   "cell": "a0i4",
+   "gap": 220,
+   "n": 300,
+   "median": 19.006999999999998,
+   "std": 0.44493506971991614,
+   "slow": 0.0033333333333333335,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 9,
+   "cell": "a1i0",
+   "gap": 0,
+   "n": 300,
+   "median": 21.6555,
+   "std": 0.8744276636113983,
+   "slow": 0.92,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 10,
+   "cell": "a1i0",
+   "gap": 220,
+   "n": 300,
+   "median": 21.8555,
+   "std": 0.7351639605784096,
+   "slow": 0.9166666666666666,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 11,
+   "cell": "a1i4",
+   "gap": 0,
+   "n": 300,
+   "median": 19.073999999999998,
+   "std": 0.25817429943526315,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 12,
+   "cell": "a1i4",
+   "gap": 220,
+   "n": 300,
+   "median": 19.234,
+   "std": 0.41501623497025864,
+   "slow": 0.01,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 13,
+   "cell": "a1i4",
+   "gap": 220,
+   "n": 300,
+   "median": 19.304000000000002,
+   "std": 0.3802629975717098,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 14,
+   "cell": "a1i4",
+   "gap": 0,
+   "n": 300,
+   "median": 19.0355,
+   "std": 0.3215080524998125,
+   "slow": 0.0033333333333333335,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 15,
+   "cell": "a1i0",
+   "gap": 220,
+   "n": 300,
+   "median": 21.7905,
+   "std": 0.6819410037695506,
+   "slow": 0.9533333333333334,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 16,
+   "cell": "a1i0",
+   "gap": 0,
+   "n": 300,
+   "median": 21.499000000000002,
+   "std": 0.8488092570117792,
+   "slow": 0.9066666666666666,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 17,
+   "cell": "a0i4",
+   "gap": 220,
+   "n": 300,
+   "median": 19.011499999999998,
+   "std": 0.46896675877223254,
+   "slow": 0.0033333333333333335,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 18,
+   "cell": "a0i4",
+   "gap": 0,
+   "n": 300,
+   "median": 18.771,
+   "std": 0.4677240600919403,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 19,
+   "cell": "a4i0",
+   "gap": 220,
+   "n": 300,
+   "median": 18.884,
+   "std": 0.4415049918429261,
+   "slow": 0.0033333333333333335,
+   "fast": 0.03666666666666667,
+   "realized": true
+  },
+  {
+   "block": 20,
+   "cell": "a4i0",
+   "gap": 0,
+   "n": 300,
+   "median": 18.882,
+   "std": 0.49748177064312843,
+   "slow": 0.0,
+   "fast": 0.03,
+   "realized": true
+  },
+  {
+   "block": 21,
+   "cell": "a0i0",
+   "gap": 220,
+   "n": 300,
+   "median": 19.076500000000003,
+   "std": 0.46199645033508896,
+   "slow": 0.0033333333333333335,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 22,
+   "cell": "a0i0",
+   "gap": 0,
+   "n": 300,
+   "median": 18.9115,
+   "std": 0.493898981337952,
+   "slow": 0.0,
+   "fast": 0.0,
+   "realized": true
+  },
+  {
+   "block": 23,
+   "cell": "a4i4",
+   "gap": 220,
+   "n": 300,
+   "median": 16.341,
+   "std": 0.05976919264043054,
+   "slow": 0.0,
+   "fast": 0.9966666666666667,
+   "realized": true
+  },
+  {
+   "block": 24,
+   "cell": "a4i4",
+   "gap": 0,
+   "n": 300,
+   "median": 16.332,
+   "std": 0.014387624311655335,
+   "slow": 0.0,
+   "fast": 1.0,
+   "realized": true
+  }
+ ],
+ "cells": {
+  "a4i4": {
+   "B": 16.3125,
+   "G": 16.323,
+   "E": 16.5875,
+   "R": 16.308500000000002,
+   "comparable": true,
+   "judged": true,
+   "f": 0.03818181818181983,
+   "realized": true,
+   "slow_gap220": [
+    0.0,
+    0.0
+   ],
+   "fast_gap220": [
+    0.9933333333333333,
+    0.9966666666666667
+   ]
+  },
+  "a0i0": {
+   "B": 18.90775,
+   "G": 19.080750000000002,
+   "E": 17.852,
+   "R": 18.817500000000003,
+   "comparable": true,
+   "judged": true,
+   "f": -0.16386455126687366,
+   "realized": true,
+   "slow_gap220": [
+    0.006666666666666667,
+    0.0033333333333333335
+   ],
+   "fast_gap220": [
+    0.0,
+    0.0
+   ]
+  },
+  "a4i0": {
+   "B": 18.710749999999997,
+   "G": 18.862000000000002,
+   "E": 19.15,
+   "R": 18.8625,
+   "comparable": true,
+   "judged": true,
+   "f": 0.34433693796244536,
+   "realized": true,
+   "slow_gap220": [
+    0.0,
+    0.0033333333333333335
+   ],
+   "fast_gap220": [
+    0.17666666666666667,
+    0.03666666666666667
+   ]
+  },
+  "a0i4": {
+   "B": 18.7895,
+   "G": 19.009249999999998,
+   "E": 17.874499999999998,
+   "R": 18.743499999999997,
+   "comparable": true,
+   "judged": true,
+   "f": -0.24016393442622624,
+   "realized": true,
+   "slow_gap220": [
+    0.0033333333333333335,
+    0.0033333333333333335
+   ],
+   "fast_gap220": [
+    0.0,
+    0.0
+   ]
+  },
+  "a1i0": {
+   "B": 21.57725,
+   "G": 21.823,
+   "E": 20.34275,
+   "R": 21.544249999999998,
+   "comparable": true,
+   "judged": true,
+   "f": -0.1990684487646828,
+   "realized": true,
+   "slow_gap220": [
+    0.9166666666666666,
+    0.9533333333333334
+   ],
+   "fast_gap220": [
+    0.0,
+    0.0
+   ]
+  },
+  "a1i4": {
+   "B": 19.05475,
+   "G": 19.269000000000002,
+   "E": 17.85125,
+   "R": 19.042749999999998,
+   "comparable": true,
+   "judged": true,
+   "f": -0.17802243456585268,
+   "realized": true,
+   "slow_gap220": [
+    0.01,
+    0.0
+   ],
+   "fast_gap220": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "judged": [
+  "a4i4",
+  "a0i0",
+  "a4i0",
+  "a0i4",
+  "a1i0",
+  "a1i4"
+ ],
+ "verdict": "ch\u01b0a k\u1ebft lu\u1eadn",
+ "progress": "npu irqs: 36\n37\n38 ; irqbalance was: active\nstate: kernel 6.1.99-rockchip-rk3588 ; up 5 hours, 23 minutes ; rknn_server pid '10380' ; adbd pid '11257' ; adb port 5555 listeners 1\npolicy0: performance 1800000 kHz\npolicy4: performance 2256000 kHz\npolicy6: performance 2304000 kHz\nnpu: userspace 1000000000 Hz\nddr: userspace 2112000000 Hz\n9285f251d6870ab67d60d79f16bade69  best-rk3588.rknn\nd22a17c2723475ea95e2b620c089d63c  rknn_perf_bench\nsaved irq 36 affinity 0-7\nsaved irq 37 affinity 0-7\nsaved irq 38 affinity 0-7\nirqbalance now: inactive\ncells: 12\nblock 1 cond a4i4 gap 0 05:02:10 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 1 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 2 cond a4i4 gap 220 05:02:16 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 2 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 3 cond a0i0 gap 0 05:03:59 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 3 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 4 cond a0i0 gap 220 05:04:06 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 4 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 5 cond a4i0 gap 0 05:05:50 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 5 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 6 cond a4i0 gap 220 05:05:56 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 6 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 7 cond a0i4 gap 0 05:07:40 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 7 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 8 cond a0i4 gap 220 05:07:46 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 8 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 9 cond a1i0 gap 0 05:09:30 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 9 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 10 cond a1i0 gap 220 05:09:38 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 10 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 11 cond a1i4 gap 0 05:11:23 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 11 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 12 cond a1i4 gap 220 05:11:29 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 12 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 13 cond a1i4 gap 220 05:13:13 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 13 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 14 cond a1i4 gap 0 05:14:37 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 14 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 15 cond a1i0 gap 220 05:15:04 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 15 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 16 cond a1i0 gap 0 05:16:29 pin='taskset -c 1' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 16 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 17 cond a0i4 gap 220 05:16:56 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 17 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 18 cond a0i4 gap 0 05:18:20 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 18 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 19 cond a4i0 gap 220 05:18:47 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 19 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 20 cond a4i0 gap 0 05:20:11 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 20 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 21 cond a0i0 gap 220 05:20:37 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 21 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 22 cond a0i0 gap 0 05:22:01 pin='taskset -c 0' irqbalance=inactive readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 22 post readback: irq 36 smp=0 effective=0 irq 37 smp=0 effective=0 irq 38 smp=0 effective=0 \nblock 23 cond a4i4 gap 220 05:22:28 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 23 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 24 cond a4i4 gap 0 05:23:51 pin='taskset -c 4' irqbalance=inactive readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nblock 24 post readback: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4 \nrestored (read before irqbalance restarts): irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  idle_state1_disable=0\nirqbalance now: active ; readback after restart: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0 \n",
+ "rule": "X3 rule, written 2026-10-31T03:59:39+07:00 before any X3 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).\nQuestion (U5 of tmp/2026-10-31_latency-unknowns-tracker.md): the eval_perf path (E2e) and the C API path (E2d) differ by -1.20 to +0.29 ms per cell. eval_perf calls come about 0.22 s apart, C API runs back to back. Does pacing the C API runs 0.22 s apart move its times toward the eval_perf times? Timing only, no mechanism claim.\nSetup: C API (rknn_perf_bench, CORE_0, zero UINT8 input), irqbalance stopped, frequencies locked, no tracing. gap_ms argument of rknn_perf_bench: 0 (back to back) or 220 (sleep 220 ms after every run). Cells (app CPU / NPU interrupt CPU) are the six E2e cells: a4i4, a0i0, a4i0, a0i4, a1i0, a1i4. For each cell a block pair of 300 timed runs each after 50 warm-up runs: in half 1 gap 0 then gap 220, in half 2 (cells in reversed order) gap 220 then gap 0, so 24 blocks. A run plus 220 ms of sleep gives a cycle of about 240 ms, close to the 0.21 to 0.23 s between eval_perf calls. 20 s rest between pairs.\nPer cell (mean of the two block medians): B = median at gap 0, G = median at gap 220, E = eval_perf median of the same cell in E2e, R = E2d median of the same cell (reference only).\nStatements allowed (need all four blocks of a cell realized: app on its pinned CPU in at least 99 percent of runs, at least 99 percent of irq 36 interrupts on the target CPU):\n  Comparability with E2e (measured hours earlier): a cell is judged only if |B - R| <= 0.25 ms (the in-run back-to-back time still matches E2d), otherwise it is 'kh\u00f4ng so \u0111\u01b0\u1ee3c (l\u1ec7ch theo th\u1eddi gian)'. X1, X2, X3 and E2e ran with NPU and DDR governors reading userspace, E2d with performance (same frequencies), so B against R also carries that difference.\n  Among comparable cells, only cells with |E - B| >= 0.25 ms are judged. f = (G - B) / (E - B).\n  If 0.5 <= f <= 1.5 for every judged cell: 'nh\u1ecbp g\u1ecdi 220 ms \u0111\u01b0a th\u1eddi gian C API v\u1ec1 g\u1ea7n th\u1eddi gian eval_perf \u1edf m\u1ecdi \u00f4 \u0111\u01b0\u1ee3c x\u00e9t'.\n  If |f| <= 0.25 for every judged cell: 'nh\u1ecbp g\u1ecdi 220 ms kh\u00f4ng gi\u1ea3i th\u00edch ch\u00eanh l\u1ec7ch gi\u1eefa hai \u0111\u01b0\u1eddng'.\n  Otherwise: 'ch\u01b0a k\u1ebft lu\u1eadn', and list f per cell.\n  0.25 ms, 0.5, 1.5 and 0.25 are new numbers chosen for this rule, not user approved.\nDescriptive only: B against R (in-run back to back against E2d), slow, mid and fast shares at gap 220, the cell (1, 0) slow share at gap 220.\nNot allowed: any statement on why pacing changes the time, about clusters or clock.\nBudget: experiment 1 of at most 2 for U5.\n"
+}

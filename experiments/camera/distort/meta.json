@@ -1,0 +1,18 @@
+{
+ "exp_id": "distort",
+ "domain": "camera",
+ "topic": "preprocess",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-08",
+ "rule_file": "none",
+ "script": [
+  "experiments/camera/distort/distort_eval.py"
+ ],
+ "result_file": [
+  "experiments/camera/distort/results.json"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

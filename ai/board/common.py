@@ -8,12 +8,15 @@ from __future__ import annotations
 
 import math
 import threading
+from array import array
 import time
 from pathlib import Path
 
 import cv2
 import numpy as np
 import psutil
+
+from ai.board.split_decode import decode_split
 
 PROTOCOL_VERSION = "v1"  # must equal ai/core/evaluator.py PROTOCOL_VERSION (checked by make tables)
 IMGSZ = 640
@@ -121,6 +124,14 @@ def postprocess(pred: np.ndarray, meta: tuple, normalized: bool, conf_thres: flo
     return np.concatenate([boxes, conf[:, None], cls[:, None].astype(np.float32)], axis=1)
 
 
+def postprocess_raw(outs, meta: tuple, normalized: bool, split: bool = False, conf_thres: float = CONF) -> np.ndarray:
+    """outs is the list returned by RKNNLite.inference. split: the model has two raw outputs (boxes, scores), decoded in numpy first
+    (split-head models of phase 2d, boxes in pixels), then the usual postprocess."""
+    if split:
+        return postprocess(decode_split(np.asarray(outs[0], dtype=np.float32), np.asarray(outs[1], dtype=np.float32)), meta, False, conf_thres)
+    return postprocess(outs[0], meta, normalized, conf_thres)
+
+
 def summarize(values_ms: list[float]) -> dict:
     a = np.asarray(values_ms)
     return {
@@ -188,7 +199,8 @@ class ResourceMonitor:
         self.interval = interval
         self.proc = psutil.Process()
         self.zone = thermal_zone()
-        self.rss_mib, self.proc_cpu, self.sys_cpu, self.temps = [], [], [], []
+        # array, not list: the samples of a long run must not be walked by the cyclic collector (camera.py measured 40 ns per list item)
+        self.rss_mib, self.proc_cpu, self.sys_cpu, self.temps = array("d"), array("d"), array("d"), array("d")
         self._stop = threading.Event()
         self._thread = threading.Thread(target=self._run, daemon=True)
 
@@ -199,7 +211,9 @@ class ResourceMonitor:
             self.rss_mib.append(self.proc.memory_info().rss / 2**20)  # = VmRSS in /proc/self/status
             self.proc_cpu.append(self.proc.cpu_percent(None))  # 100 = one full core
             self.sys_cpu.append(psutil.cpu_percent(None))  # 100 = all cores
-            self.temps.append(temperature_c(self.zone))
+            temp = temperature_c(self.zone)
+            if temp is not None:
+                self.temps.append(temp)
 
     def __enter__(self):
         self.temp_start = temperature_c(self.zone)
@@ -214,7 +228,6 @@ class ResourceMonitor:
         self.temp_end = temperature_c(self.zone)
 
     def result(self) -> dict:
-        temps = [t for t in self.temps if t is not None]
         return {
             "peak_rss_mib": round(max(self.rss_mib), 1) if self.rss_mib else None,
             "avg_process_cpu_pct": round(float(np.mean(self.proc_cpu)), 1) if self.proc_cpu else None,
@@ -222,7 +235,7 @@ class ResourceMonitor:
             "thermal_zone": self.zone.name if self.zone else None,
             "temp_start_c": self.temp_start,
             "temp_end_c": self.temp_end,
-            "temp_max_c": max(temps) if temps else None,
+            "temp_max_c": max(self.temps) if self.temps else None,
             "duration_s": round(self.duration_s, 1),
             "samples": len(self.rss_mib),
         }

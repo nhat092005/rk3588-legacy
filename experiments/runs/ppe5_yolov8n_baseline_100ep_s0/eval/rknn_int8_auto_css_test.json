@@ -1,0 +1,77 @@
+{
+  "protocol_version": "v1",
+  "protocol": {
+    "input": "LetterBox 640x640, rect=False, scaleup=False, center, pad 114",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "multi_label": true
+  },
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "ultralytics_version": "8.4.154",
+  "torch_version": "2.4.0+cu124",
+  "eval_set": "css_test",
+  "dataset": "ppe5",
+  "split": "test",
+  "n_images": 82,
+  "classes": [
+    "Helmet",
+    "NoHelmet",
+    "NoVest",
+    "Vest",
+    "Person"
+  ],
+  "dataset_fingerprint": "480dd0fabae6ac1f5ebfa5e171fe4ce650ba30624ddedf93cad4f86d32bd1f12",
+  "precision": 0.764,
+  "recall": 0.6699,
+  "map50": 0.6924,
+  "map50_95": 0.366,
+  "per_class": {
+    "Helmet": {
+      "precision": 0.6207,
+      "recall": 0.7455,
+      "ap50": 0.7232,
+      "ap50_95": 0.3411,
+      "instances": 110
+    },
+    "NoHelmet": {
+      "precision": 0.6868,
+      "recall": 0.5366,
+      "ap50": 0.4571,
+      "ap50_95": 0.2234,
+      "instances": 41
+    },
+    "NoVest": {
+      "precision": 0.8431,
+      "recall": 0.6567,
+      "ap50": 0.7079,
+      "ap50_95": 0.3786,
+      "instances": 90
+    },
+    "Vest": {
+      "precision": 0.875,
+      "recall": 0.7213,
+      "ap50": 0.825,
+      "ap50_95": 0.475,
+      "instances": 61
+    },
+    "Person": {
+      "precision": 0.7944,
+      "recall": 0.6897,
+      "ap50": 0.7486,
+      "ap50_95": 0.4121,
+      "instances": 174
+    }
+  },
+  "run_id": "ppe5_yolov8n_baseline_100ep_s0",
+  "model_file": "weights/rknn_int8_auto/best-rk3588.rknn",
+  "model_sha256": "36c3d6cfc7f9fd901f258f6bb44ef85b4c85d287eadfb311c7de3b6088a1198e",
+  "backend": "rknnlite-on-board",
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "board_dump": {
+    "created_at": "2026-10-31T20:19:12",
+    "kept_anchors": 11248,
+    "normalized_boxes": true
+  }
+}

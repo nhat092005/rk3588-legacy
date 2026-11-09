@@ -1,0 +1,23 @@
+{
+ "exp_id": "ab_runs",
+ "domain": "camera",
+ "topic": "pipeline",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-08",
+ "rule_file": "none",
+ "script": [
+  "experiments/camera/ab_runs/ab_run.sh",
+  "experiments/camera/ab_runs/ab_wrap.py"
+ ],
+ "result_file": [
+  "experiments/camera/ab_runs/ab_v0_none.json",
+  "experiments/camera/ab_runs/ab_v0b_none.json",
+  "experiments/camera/ab_runs/ab_v1_pin_only.json",
+  "experiments/camera/ab_runs/ab_v2_gc_only.json",
+  "experiments/camera/ab_runs/ab_v3_pin_gc.json"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

@@ -1,0 +1,727 @@
+D Save log info to: /tmp/claude-1000/-home-nhat-workspace-prjs-rk3588/d98a5996-660b-48b1-8f49-5240c06786b7/scratchpad/c5_resize_hp/toolkit.log
+/home/nhat/workspace/prjs/rk3588/.venv/lib/python3.12/site-packages/rknn/api/rknn.py:51: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  self.rknn_base = RKNNBase(cur_path, verbose)
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                           | 0/144 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████| 144/144 [00:00<00:00, 61902.20it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     replace_exswish: remove node = ['/model.0/act/Sigmoid', '/model.0/act/Mul'], add node = ['/model.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.1/act/Sigmoid', '/model.1/act/Mul'], add node = ['/model.1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.2/cv1/act/Sigmoid', '/model.2/cv1/act/Mul'], add node = ['/model.2/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.2/m.0/cv1/act/Sigmoid', '/model.2/m.0/cv1/act/Mul'], add node = ['/model.2/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.2/m.0/cv2/act/Sigmoid', '/model.2/m.0/cv2/act/Mul'], add node = ['/model.2/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.2/cv2/act/Sigmoid', '/model.2/cv2/act/Mul'], add node = ['/model.2/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.3/act/Sigmoid', '/model.3/act/Mul'], add node = ['/model.3/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/cv1/act/Sigmoid', '/model.4/cv1/act/Mul'], add node = ['/model.4/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/m.0/cv1/act/Sigmoid', '/model.4/m.0/cv1/act/Mul'], add node = ['/model.4/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/m.0/cv2/act/Sigmoid', '/model.4/m.0/cv2/act/Mul'], add node = ['/model.4/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/m.1/cv1/act/Sigmoid', '/model.4/m.1/cv1/act/Mul'], add node = ['/model.4/m.1/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/m.1/cv2/act/Sigmoid', '/model.4/m.1/cv2/act/Mul'], add node = ['/model.4/m.1/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.4/cv2/act/Sigmoid', '/model.4/cv2/act/Mul'], add node = ['/model.4/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.5/act/Sigmoid', '/model.5/act/Mul'], add node = ['/model.5/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/cv1/act/Sigmoid', '/model.6/cv1/act/Mul'], add node = ['/model.6/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/m.0/cv1/act/Sigmoid', '/model.6/m.0/cv1/act/Mul'], add node = ['/model.6/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/m.0/cv2/act/Sigmoid', '/model.6/m.0/cv2/act/Mul'], add node = ['/model.6/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/m.1/cv1/act/Sigmoid', '/model.6/m.1/cv1/act/Mul'], add node = ['/model.6/m.1/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/m.1/cv2/act/Sigmoid', '/model.6/m.1/cv2/act/Mul'], add node = ['/model.6/m.1/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.6/cv2/act/Sigmoid', '/model.6/cv2/act/Mul'], add node = ['/model.6/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.7/act/Sigmoid', '/model.7/act/Mul'], add node = ['/model.7/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.8/cv1/act/Sigmoid', '/model.8/cv1/act/Mul'], add node = ['/model.8/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.8/m.0/cv1/act/Sigmoid', '/model.8/m.0/cv1/act/Mul'], add node = ['/model.8/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.8/m.0/cv2/act/Sigmoid', '/model.8/m.0/cv2/act/Mul'], add node = ['/model.8/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.8/cv2/act/Sigmoid', '/model.8/cv2/act/Mul'], add node = ['/model.8/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.9/cv1/act/Sigmoid', '/model.9/cv1/act/Mul'], add node = ['/model.9/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.9/cv2/act/Sigmoid', '/model.9/cv2/act/Mul'], add node = ['/model.9/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.12/cv1/act/Sigmoid', '/model.12/cv1/act/Mul'], add node = ['/model.12/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.12/m.0/cv1/act/Sigmoid', '/model.12/m.0/cv1/act/Mul'], add node = ['/model.12/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.12/m.0/cv2/act/Sigmoid', '/model.12/m.0/cv2/act/Mul'], add node = ['/model.12/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.12/cv2/act/Sigmoid', '/model.12/cv2/act/Mul'], add node = ['/model.12/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.15/cv1/act/Sigmoid', '/model.15/cv1/act/Mul'], add node = ['/model.15/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.15/m.0/cv1/act/Sigmoid', '/model.15/m.0/cv1/act/Mul'], add node = ['/model.15/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.15/m.0/cv2/act/Sigmoid', '/model.15/m.0/cv2/act/Mul'], add node = ['/model.15/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.15/cv2/act/Sigmoid', '/model.15/cv2/act/Mul'], add node = ['/model.15/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.16/act/Sigmoid', '/model.16/act/Mul'], add node = ['/model.16/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.18/cv1/act/Sigmoid', '/model.18/cv1/act/Mul'], add node = ['/model.18/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.18/m.0/cv1/act/Sigmoid', '/model.18/m.0/cv1/act/Mul'], add node = ['/model.18/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.18/m.0/cv2/act/Sigmoid', '/model.18/m.0/cv2/act/Mul'], add node = ['/model.18/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.18/cv2/act/Sigmoid', '/model.18/cv2/act/Mul'], add node = ['/model.18/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.19/act/Sigmoid', '/model.19/act/Mul'], add node = ['/model.19/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.21/cv1/act/Sigmoid', '/model.21/cv1/act/Mul'], add node = ['/model.21/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.21/m.0/cv1/act/Sigmoid', '/model.21/m.0/cv1/act/Mul'], add node = ['/model.21/m.0/cv1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.21/m.0/cv2/act/Sigmoid', '/model.21/m.0/cv2/act/Mul'], add node = ['/model.21/m.0/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.21/cv2/act/Sigmoid', '/model.21/cv2/act/Mul'], add node = ['/model.21/cv2/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.2/cv2.2.0/act/Sigmoid', '/model.22/cv2.2/cv2.2.0/act/Mul'], add node = ['/model.22/cv2.2/cv2.2.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.2/cv2.2.1/act/Sigmoid', '/model.22/cv2.2/cv2.2.1/act/Mul'], add node = ['/model.22/cv2.2/cv2.2.1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv3.2/cv3.2.0/act/Sigmoid', '/model.22/cv3.2/cv3.2.0/act/Mul'], add node = ['/model.22/cv3.2/cv3.2.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv3.2/cv3.2.1/act/Sigmoid', '/model.22/cv3.2/cv3.2.1/act/Mul'], add node = ['/model.22/cv3.2/cv3.2.1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.1/cv2.1.0/act/Sigmoid', '/model.22/cv2.1/cv2.1.0/act/Mul'], add node = ['/model.22/cv2.1/cv2.1.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.1/cv2.1.1/act/Sigmoid', '/model.22/cv2.1/cv2.1.1/act/Mul'], add node = ['/model.22/cv2.1/cv2.1.1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv3.1/cv3.1.0/act/Sigmoid', '/model.22/cv3.1/cv3.1.0/act/Mul'], add node = ['/model.22/cv3.1/cv3.1.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv3.1/cv3.1.1/act/Sigmoid', '/model.22/cv3.1/cv3.1.1/act/Mul'], add node = ['/model.22/cv3.1/cv3.1.1/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.0/cv2.0.0/act/Sigmoid', '/model.22/cv2.0/cv2.0.0/act/Mul'], add node = ['/model.22/cv2.0/cv2.0.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv2.0/cv2.0.1/act/Sigmoid', '/model.22/cv2.0/cv2.0.1/act/Mul'], add node = ['/model.22/cv2.0/cv2.0.1/act/Sigmoid_2swish']
+D     reduce_reshape_op_around_concat: remove node = ['/model.22/Reshape', '/model.22/Concat'], add node = ['/model.22/Concat']
+D     fuse_reshape_transpose: remove node = ['/model.22/dfl/Transpose'], add node = ['/model.22/dfl/Transpose']
+D     replace_parallel_slice_by_split: remove node = ['/model.22/Slice', '/model.22/Slice_1'], add node = ['/model.22/Slice_2sp']
+D     replace_exswish: remove node = ['/model.22/cv3.0/cv3.0.0/act/Sigmoid', '/model.22/cv3.0/cv3.0.0/act/Mul'], add node = ['/model.22/cv3.0/cv3.0.0/act/Sigmoid_2swish']
+D     replace_exswish: remove node = ['/model.22/cv3.0/cv3.0.1/act/Sigmoid', '/model.22/cv3.0/cv3.0.1/act/Mul'], add node = ['/model.22/cv3.0/cv3.0.1/act/Sigmoid_2swish']
+D     reduce_reshape_op_around_concat: remove node = ['/model.22/Reshape_3', '/model.22/Concat_1'], add node = ['/model.22/Concat_1', '/model.22/Concat_1_output_0-rs']
+D     swap_transpose_softmax: remove node = ['/model.22/dfl/Transpose', '/model.22/dfl/Softmax'], add node = ['/model.22/dfl/Softmax', '/model.22/dfl/Transpose']
+D     swap_reshape_sigmoid: remove node = ['/model.22/Concat_1_output_0-rs', '/model.22/Sigmoid'], add node = ['/model.22/Sigmoid', '/model.22/Concat_1_output_0-rs']
+D     swap_transpose_conv: remove node = ['/model.22/dfl/Transpose', '/model.22/dfl/conv/Conv'], add node = ['/model.22/dfl/conv/Conv', '/model.22/dfl/Transpose']
+D     fuse_transpose_reshape: remove node = ['/model.22/dfl/Transpose']
+D     convert_softmax_to_exsoftmax13: remove node = ['/model.22/dfl/Softmax'], add node = ['/model.22/dfl/Softmax']
+D     unsqueeze_to_4d_split: remove node = [], add node = ['/model.22/dfl/Reshape_1_output_0_rs', '/model.22/Slice_output_0-rs', '/model.22/Slice_1_output_0-rs']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model.22/Slice_output_0_rs', '/model.22/Sub_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model.22/Slice_1_output_0_rs', '/model.22/Add_1_output_0-rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/model.22/Sub_output_0_rs', '/model.22/Add_1_output_0_rs', '/model.22/Add_2_output_0-rs']
+D     convert_div_to_mul: remove node = ['/model.22/Div_1'], add node = ['/model.22/Div_1_2mul']
+D     unsqueeze_to_4d_sub: remove node = [], add node = ['/model.22/Add_1_output_0_rs#1', '/model.22/Sub_output_0_rs#1', '/model.22/Sub_1_output_0-rs']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/model.22/Div_1_output_0_rs', '/model.22/Sub_1_output_0_rs', '/model.22/Concat_2_output_0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model.22/Concat_2_output_0_rs', '/model.22/Mul_2_output_0-rs']
+D     unsqueeze_to_4d_concat: remove node = [], add node = ['/model.22/Mul_2_output_0_rs', '/model.22/Sigmoid_output_0_rs', 'output0-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/model.22/Add_2_output_0_rs', '/model.22/Div_1_output_0-rs']
+D     input_align_4D_mul: remove node = ['/model.22/Mul_2'], add node = ['/model.22/Mul_2']
+D     fuse_two_reshape: remove node = ['/model.22/dfl/Reshape_1']
+D     bypass_two_reshape: remove node = ['/model.22/Slice_output_0_rs', '/model.22/Slice_output_0-rs', '/model.22/Sub_output_0_rs#1', '/model.22/Sub_output_0_rs', '/model.22/Sub_output_0-rs', '/model.22/Slice_1_output_0_rs', '/model.22/Slice_1_output_0-rs', '/model.22/Add_1_output_0_rs#1', '/model.22/Add_1_output_0_rs', '/model.22/Add_1_output_0-rs', '/model.22/Add_2_output_0_rs', '/model.22/Add_2_output_0-rs', '/model.22/Div_1_output_0_rs', '/model.22/Div_1_output_0-rs', '/model.22/Concat_2_output_0_rs', '/model.22/Concat_2_output_0-rs', '/model.22/Mul_2_output_0_rs', '/model.22/Mul_2_output_0-rs']
+D     fuse_two_reshape: remove node = ['/model.22/Concat_1_output_0-rs']
+D     bypass_two_reshape: remove node = ['/model.22/Sub_1_output_0_rs', '/model.22/Sub_1_output_0-rs']
+D     convert_reshape_to_transpose: remove node = ['/model.22/dfl/Reshape_1_output_0_rs'], add node = ['/model.22/dfl/Reshape_1_output_0_rs']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...
+D sparse_weight done.
+D 
+D recover_const_share ...
+D recover_const_share done.
+D 
+I rknn building ...
+I RKNN: [02:21:14.973] compress = 0, conv_eltwise_activation_fuse = 1, global_fuse = 1, multi-core-model-mode = 7, output_optimize = 1, layout_match = 1, enable_argb_group = 0, op_group_sram_opt = 0, enable_flash_attention = 0, op_group_nbuf_opt = 0, safe_fuse = 0
+I RKNN: librknnc version: 2.3.2 (e045de294f@2025-04-07T19:48:25)
+D RKNN: [02:21:14.993] RKNN is invoked
+W RKNN: [02:21:15.080] Model initializer tensor data is empty, name: empty_placeholder_0
+D RKNN: [02:21:15.082] >>>>>> start: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [02:21:15.082] <<<<<<<< end: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [02:21:15.082] >>>>>> start: rknn::RKNNSetOpTargetPass
+D RKNN: [02:21:15.082] <<<<<<<< end: rknn::RKNNSetOpTargetPass
+D RKNN: [02:21:15.082] >>>>>> start: rknn::RKNNBindNorm
+D RKNN: [02:21:15.082] <<<<<<<< end: rknn::RKNNBindNorm
+D RKNN: [02:21:15.082] >>>>>> start: rknn::RKNNEliminateQATDataConvert
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNEliminateQATDataConvert
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNConvStrideFixPass
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNConvStrideFixPass
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNTileGroupConv
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNTileGroupConv
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNAddConvBias
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNAddConvBias
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNTileChannel
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNTileChannel
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNDuplicateWeightPass
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNDuplicateWeightPass
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNInitRNNConst
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNInitRNNConst
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNPerChannelPrep
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNPerChannelPrep
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNBnQuant
+D RKNN: [02:21:15.083] <<<<<<<< end: rknn::RKNNBnQuant
+D RKNN: [02:21:15.083] >>>>>> start: rknn::RKNNFuseOptimizerPass
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNFuseOptimizerPass
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNTurnAutoPad
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNTurnAutoPad
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNInitCastConst
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNInitCastConst
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNMultiSurfacePass
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNMultiSurfacePass
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [02:21:15.099] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [02:21:15.099] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [02:21:15.099] >>>>>> start: OpEmit
+W RKNN: [02:21:15.100] emitAB_BA_regtasks: channel overflow
+D RKNN: [02:21:15.100] <<<<<<<< end: OpEmit
+D RKNN: [02:21:15.100] >>>>>> start: rknn::RKNNAddFirstConv
+D RKNN: [02:21:15.100] <<<<<<<< end: rknn::RKNNAddFirstConv
+D RKNN: [02:21:15.100] >>>>>> start: rknn::RKNNTilingPass
+D RKNN: [02:21:15.102] <<<<<<<< end: rknn::RKNNTilingPass
+D RKNN: [02:21:15.102] >>>>>> start: rknn::RKNNLayoutMatchPass
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+W RKNN: [02:21:15.102] LayoutMatchManager: recursion_depth=3, Logic is Dangerous, Will Force layout to native.
+D RKNN: [02:21:15.102] <<<<<<<< end: rknn::RKNNLayoutMatchPass
+D RKNN: [02:21:15.102] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [02:21:15.102] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [02:21:15.102] >>>>>> start: rknn::RKNNAllocateConvCachePass
+D RKNN: [02:21:15.102] <<<<<<<< end: rknn::RKNNAllocateConvCachePass
+D RKNN: [02:21:15.102] >>>>>> start: OpEmit
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.128] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.129] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.129] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.132] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.132] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.133] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.133] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.134] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.134] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.134] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.134] finish initComputeZoneMapByStepsVector
+D RKNN: [02:21:15.134] <<<<<<<< end: OpEmit
+D RKNN: [02:21:15.134] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [02:21:15.134] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [02:21:15.134] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [02:21:15.134] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [02:21:15.134] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [02:21:15.135] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [02:21:15.135] >>>>>> start: rknn::RKNNProfileAnalysisPass
+D RKNN: [02:21:15.135] <<<<<<<< end: rknn::RKNNProfileAnalysisPass
+D RKNN: [02:21:15.136] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [02:21:15.136] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [02:21:15.136] >>>>>> start: rknn::RKNNWeightTransposePass
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_137 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_137 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_157 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_157 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_157 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.136] Warning: Tensor onnx::Split_157 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.137] Warning: Tensor onnx::Split_184 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.139] Warning: Tensor onnx::Split_211 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.139] Warning: Tensor onnx::Split_211 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.139] Warning: Tensor onnx::Split_211 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.139] Warning: Tensor onnx::Split_211 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.142] Warning: Tensor /model.10/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.142] Warning: Tensor empty_placeholder_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.142] Warning: Tensor /model.10/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.142] Warning: Tensor empty_placeholder_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/dfl/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/dfl/Constant_output_0 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_3_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_3_output_0_1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_3_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Constant_3_output_0_2 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Sigmoid_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor /model.22/Sigmoid_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor output0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [02:21:15.149] Warning: Tensor output0-rs_i1 need parameter qtype, type is set to float16 by default!
+D RKNN: [02:21:15.149] <<<<<<<< end: rknn::RKNNWeightTransposePass
+D RKNN: [02:21:15.149] >>>>>> start: rknn::RKNNCPUWeightTransposePass
+D RKNN: [02:21:15.149] <<<<<<<< end: rknn::RKNNCPUWeightTransposePass
+D RKNN: [02:21:15.149] >>>>>> start: rknn::RKNNModelBuildPass
+D RKNN: [02:21:15.182] <<<<<<<< end: rknn::RKNNModelBuildPass
+D RKNN: [02:21:15.182] >>>>>> start: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [02:21:15.196] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.196]                                                         Network Layer Information Table                                                      
+D RKNN: [02:21:15.196] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.196] ID   OpType             DataType Target InputShape                               OutputShape            Cycles(DDR/NPU/Total)    RW(KB)       FullName        
+D RKNN: [02:21:15.196] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.196] 0    InputOperator      FLOAT16  CPU    \                                        (1,3,640,640)          0/0/0                    0            InputOperator:images
+D RKNN: [02:21:15.196] 1    ConvExSwish        FLOAT16  NPU    (1,3,640,640),(16,3,3,3),(16)            (1,16,320,320)         242529/921600/921600     2402         Conv:/model.0/conv/Conv
+D RKNN: [02:21:15.196] 2    ConvExSwish        FLOAT16  NPU    (1,16,320,320),(32,16,3,3),(32)          (1,32,160,160)         208191/460800/460800     3209         Conv:/model.1/conv/Conv
+D RKNN: [02:21:15.196] 3    ConvExSwish        FLOAT16  NPU    (1,32,160,160),(32,32,1,1),(32)          (1,32,160,160)         138623/102400/138623     1602         Conv:/model.2/cv1/conv/Conv
+D RKNN: [02:21:15.196] 4    Split              FLOAT16  NPU    (1,32,160,160),(2)                       (1,16,160,160),...     0/0/0                    1600         Split:/model.2/Split
+D RKNN: [02:21:15.196] 5    ConvExSwish        FLOAT16  NPU    (1,16,160,160),(16,16,3,3),(16)          (1,16,160,160)         69463/230400/230400      804          Conv:/model.2/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 6    ConvExSwish        FLOAT16  NPU    (1,16,160,160),(16,16,3,3),(16)          (1,16,160,160)         69463/230400/230400      804          Conv:/model.2/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 7    Add                FLOAT16  NPU    (1,16,160,160),(1,16,160,160)            (1,16,160,160)         0/0/0                    1600         Add:/model.2/m.0/Add
+D RKNN: [02:21:15.196] 8    Concat             FLOAT16  NPU    (1,16,160,160),(1,16,160,160),...        (1,48,160,160)         0/0/0                    2400         Concat:/model.2/Concat
+D RKNN: [02:21:15.196] 9    ConvExSwish        FLOAT16  NPU    (1,48,160,160),(32,48,1,1),(32)          (1,32,160,160)         173299/102400/173299     2403         Conv:/model.2/cv2/conv/Conv
+D RKNN: [02:21:15.196] 10   ConvExSwish        FLOAT16  NPU    (1,32,160,160),(64,32,3,3),(64)          (1,64,80,80)           105468/230400/230400     1636         Conv:/model.3/conv/Conv
+D RKNN: [02:21:15.196] 11   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,1,1),(64)            (1,64,80,80)           69623/51200/69623        808          Conv:/model.4/cv1/conv/Conv
+D RKNN: [02:21:15.196] 12   Split              FLOAT16  NPU    (1,64,80,80),(2)                         (1,32,80,80),...       0/0/0                    800          Split:/model.4/Split
+D RKNN: [02:21:15.196] 13   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.4/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 14   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.4/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 15   Add                FLOAT16  NPU    (1,32,80,80),(1,32,80,80)                (1,32,80,80)           0/0/0                    800          Add:/model.4/m.0/Add
+D RKNN: [02:21:15.196] 16   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.4/m.1/cv1/conv/Conv
+D RKNN: [02:21:15.196] 17   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.4/m.1/cv2/conv/Conv
+D RKNN: [02:21:15.196] 18   Add                FLOAT16  NPU    (1,32,80,80),(1,32,80,80)                (1,32,80,80)           0/0/0                    800          Add:/model.4/m.1/Add
+D RKNN: [02:21:15.196] 19   Concat             FLOAT16  NPU    (1,32,80,80),(1,32,80,80),...            (1,128,80,80)          0/0/0                    1600         Concat:/model.4/Concat
+D RKNN: [02:21:15.196] 20   ConvExSwish        FLOAT16  NPU    (1,128,80,80),(64,128,1,1),(64)          (1,64,80,80)           104602/102400/104602     1616         Conv:/model.4/cv2/conv/Conv
+D RKNN: [02:21:15.196] 21   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(128,64,3,3),(128)          (1,128,40,40)          58205/230400/230400      944          Conv:/model.5/conv/Conv
+D RKNN: [02:21:15.196] 22   ConvExSwish        FLOAT16  NPU    (1,128,40,40),(128,128,1,1),(128)        (1,128,40,40)          36040/51200/51200        432          Conv:/model.6/cv1/conv/Conv
+D RKNN: [02:21:15.196] 23   Split              FLOAT16  NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    400          Split:/model.6/Split
+D RKNN: [02:21:15.196] 24   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.6/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 25   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.6/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 26   Add                FLOAT16  NPU    (1,64,40,40),(1,64,40,40)                (1,64,40,40)           0/0/0                    400          Add:/model.6/m.0/Add
+D RKNN: [02:21:15.196] 27   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.6/m.1/cv1/conv/Conv
+D RKNN: [02:21:15.196] 28   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.6/m.1/cv2/conv/Conv
+D RKNN: [02:21:15.196] 29   Add                FLOAT16  NPU    (1,64,40,40),(1,64,40,40)                (1,64,40,40)           0/0/0                    400          Add:/model.6/m.1/Add
+D RKNN: [02:21:15.196] 30   Concat             FLOAT16  NPU    (1,64,40,40),(1,64,40,40),...            (1,256,40,40)          0/0/0                    800          Concat:/model.6/Concat
+D RKNN: [02:21:15.196] 31   ConvExSwish        FLOAT16  NPU    (1,256,40,40),(128,256,1,1),(128)        (1,128,40,40)          54742/102400/102400      864          Conv:/model.6/cv2/conv/Conv
+D RKNN: [02:21:15.196] 32   ConvExSwish        FLOAT16  NPU    (1,128,40,40),(256,128,3,3),(256)        (1,256,20,20)          50954/230400/230400      977          Conv:/model.7/conv/Conv
+D RKNN: [02:21:15.196] 33   ConvExSwish        FLOAT16  NPU    (1,256,20,20),(256,256,1,1),(256)        (1,256,20,20)          22901/51200/51200        329          Conv:/model.8/cv1/conv/Conv
+D RKNN: [02:21:15.196] 34   Split              FLOAT16  NPU    (1,256,20,20),(2)                        (1,128,20,20),...      0/0/0                    200          Split:/model.8/Split
+D RKNN: [02:21:15.196] 35   ConvExSwish        FLOAT16  NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          21148/115200/115200      388          Conv:/model.8/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 36   ConvExSwish        FLOAT16  NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          21148/115200/115200      388          Conv:/model.8/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 37   Add                FLOAT16  NPU    (1,128,20,20),(1,128,20,20)              (1,128,20,20)          0/0/0                    200          Add:/model.8/m.0/Add
+D RKNN: [02:21:15.196] 38   Concat             FLOAT16  NPU    (1,128,20,20),(1,128,20,20),...          (1,384,20,20)          0/0/0                    300          Concat:/model.8/Concat
+D RKNN: [02:21:15.196] 39   ConvExSwish        FLOAT16  NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          30001/76800/76800        493          Conv:/model.8/cv2/conv/Conv
+D RKNN: [02:21:15.196] 40   ConvExSwish        FLOAT16  NPU    (1,256,20,20),(128,256,1,1),(128)        (1,128,20,20)          15780/25600/25600        264          Conv:/model.9/cv1/conv/Conv
+D RKNN: [02:21:15.196] 41   MaxPool            FLOAT16  NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    100          MaxPool:/model.9/m/MaxPool
+D RKNN: [02:21:15.196] 42   MaxPool            FLOAT16  NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    100          MaxPool:/model.9/m_1/MaxPool
+D RKNN: [02:21:15.196] 43   MaxPool            FLOAT16  NPU    (1,128,20,20)                            (1,128,20,20)          0/0/0                    100          MaxPool:/model.9/m_2/MaxPool
+D RKNN: [02:21:15.196] 44   Concat             FLOAT16  NPU    (1,128,20,20),(1,128,20,20),...          (1,512,20,20)          0/0/0                    400          Concat:/model.9/Concat
+D RKNN: [02:21:15.196] 45   ConvExSwish        FLOAT16  NPU    (1,512,20,20),(256,512,1,1),(256)        (1,256,20,20)          37101/102400/102400      657          Conv:/model.9/cv2/conv/Conv
+D RKNN: [02:21:15.196] 46   Resize             FLOAT16  NPU    (1,256,20,20),(1),(4)                    (1,256,40,40)          0/0/0                    200          Resize:/model.10/Resize
+D RKNN: [02:21:15.196] 47   Concat             FLOAT16  NPU    (1,256,40,40),(1,128,40,40)              (1,384,40,40)          0/0/0                    1200         Concat:/model.11/Concat
+D RKNN: [02:21:15.196] 48   ConvExSwish        FLOAT16  NPU    (1,384,40,40),(128,384,1,1),(128)        (1,128,40,40)          73443/153600/153600      1296         Conv:/model.12/cv1/conv/Conv
+D RKNN: [02:21:15.196] 49   Split              FLOAT16  NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    400          Split:/model.12/Split
+D RKNN: [02:21:15.196] 50   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.12/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 51   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.12/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 52   Concat             FLOAT16  NPU    (1,64,40,40),(1,64,40,40),...            (1,192,40,40)          0/0/0                    600          Concat:/model.12/Concat
+D RKNN: [02:21:15.196] 53   ConvExSwish        FLOAT16  NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          45391/76800/76800        648          Conv:/model.12/cv2/conv/Conv
+D RKNN: [02:21:15.196] 54   Resize             FLOAT16  NPU    (1,128,40,40),(1),(4)                    (1,128,80,80)          0/0/0                    400          Resize:/model.13/Resize
+D RKNN: [02:21:15.196] 55   Concat             FLOAT16  NPU    (1,128,80,80),(1,64,80,80)               (1,192,80,80)          0/0/0                    2400         Concat:/model.14/Concat
+D RKNN: [02:21:15.196] 56   ConvExSwish        FLOAT16  NPU    (1,192,80,80),(64,192,1,1),(64)          (1,64,80,80)           139581/153600/153600     2424         Conv:/model.15/cv1/conv/Conv
+D RKNN: [02:21:15.196] 57   Split              FLOAT16  NPU    (1,64,80,80),(2)                         (1,32,80,80),...       0/0/0                    800          Split:/model.15/Split
+D RKNN: [02:21:15.196] 58   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.15/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 59   ConvExSwish        FLOAT16  NPU    (1,32,80,80),(32,32,3,3),(32)            (1,32,80,80)           35418/115200/115200      418          Conv:/model.15/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 60   Concat             FLOAT16  NPU    (1,32,80,80),(1,32,80,80),...            (1,96,80,80)           0/0/0                    1200         Concat:/model.15/Concat
+D RKNN: [02:21:15.196] 61   ConvExSwish        FLOAT16  NPU    (1,96,80,80),(64,96,1,1),(64)            (1,64,80,80)           87112/76800/87112        1212         Conv:/model.15/cv2/conv/Conv
+D RKNN: [02:21:15.196] 62   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,40,40)           46419/115200/115200      872          Conv:/model.16/conv/Conv
+D RKNN: [02:21:15.196] 63   Concat             FLOAT16  NPU    (1,64,40,40),(1,128,40,40)               (1,192,40,40)          0/0/0                    600          Concat:/model.17/Concat
+D RKNN: [02:21:15.196] 64   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           72393/460800/460800      872          Conv:/model.22/cv2.0/cv2.0.0/conv/Conv
+D RKNN: [02:21:15.196] 65   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           72393/460800/460800      872          Conv:/model.22/cv3.0/cv3.0.0/conv/Conv
+D RKNN: [02:21:15.196] 66   ConvExSwish        FLOAT16  NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          45391/76800/76800        648          Conv:/model.18/cv1/conv/Conv
+D RKNN: [02:21:15.196] 67   Split              FLOAT16  NPU    (1,128,40,40),(2)                        (1,64,40,40),...       0/0/0                    400          Split:/model.18/Split
+D RKNN: [02:21:15.196] 68   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           72393/460800/460800      872          Conv:/model.22/cv2.0/cv2.0.1/conv/Conv
+D RKNN: [02:21:15.196] 69   Conv               FLOAT16  NPU    (1,64,80,80),(64,64,1,1),(64)            (1,64,80,80)           69623/51200/69623        808          Conv:/model.22/cv2.0/cv2.0.2/Conv
+D RKNN: [02:21:15.196] 70   ConvExSwish        FLOAT16  NPU    (1,64,80,80),(64,64,3,3),(64)            (1,64,80,80)           72393/460800/460800      872          Conv:/model.22/cv3.0/cv3.0.1/conv/Conv
+D RKNN: [02:21:15.196] 71   Conv               FLOAT16  NPU    (1,64,80,80),(5,64,1,1),(5)              (1,5,80,80)            38992/12800/38992        800          Conv:/model.22/cv3.0/cv3.0.2/Conv
+D RKNN: [02:21:15.196] 72   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.18/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 73   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.18/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 74   Concat             FLOAT16  NPU    (1,64,40,40),(1,64,40,40),...            (1,192,40,40)          0/0/0                    600          Concat:/model.18/Concat
+D RKNN: [02:21:15.196] 75   ConvExSwish        FLOAT16  NPU    (1,192,40,40),(128,192,1,1),(128)        (1,128,40,40)          45391/76800/76800        648          Conv:/model.18/cv2/conv/Conv
+D RKNN: [02:21:15.196] 76   ConvExSwish        FLOAT16  NPU    (1,128,40,40),(128,128,3,3),(128)        (1,128,20,20)          34135/115200/115200      688          Conv:/model.19/conv/Conv
+D RKNN: [02:21:15.196] 77   Concat             FLOAT16  NPU    (1,128,20,20),(1,256,20,20)              (1,384,20,20)          0/0/0                    300          Concat:/model.20/Concat
+D RKNN: [02:21:15.196] 78   ConvExSwish        FLOAT16  NPU    (1,128,40,40),(64,128,3,3),(64)          (1,64,40,40)           32220/230400/230400      544          Conv:/model.22/cv2.1/cv2.1.0/conv/Conv
+D RKNN: [02:21:15.196] 79   ConvExSwish        FLOAT16  NPU    (1,128,40,40),(64,128,3,3),(64)          (1,64,40,40)           32220/230400/230400      544          Conv:/model.22/cv3.1/cv3.1.0/conv/Conv
+D RKNN: [02:21:15.196] 80   ConvExSwish        FLOAT16  NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          30001/76800/76800        493          Conv:/model.21/cv1/conv/Conv
+D RKNN: [02:21:15.196] 81   Split              FLOAT16  NPU    (1,256,20,20),(2)                        (1,128,20,20),...      0/0/0                    200          Split:/model.21/Split
+D RKNN: [02:21:15.196] 82   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.22/cv2.1/cv2.1.1/conv/Conv
+D RKNN: [02:21:15.196] 83   Conv               FLOAT16  NPU    (1,64,40,40),(64,64,1,1),(64)            (1,64,40,40)           17674/12800/17674        208          Conv:/model.22/cv2.1/cv2.1.2/Conv
+D RKNN: [02:21:15.196] 84   ConvExSwish        FLOAT16  NPU    (1,64,40,40),(64,64,3,3),(64)            (1,64,40,40)           20445/115200/115200      272          Conv:/model.22/cv3.1/cv3.1.1/conv/Conv
+D RKNN: [02:21:15.196] 85   Conv               FLOAT16  NPU    (1,64,40,40),(5,64,1,1),(5)              (1,5,40,40)            9771/3200/9771           200          Conv:/model.22/cv3.1/cv3.1.2/Conv
+D RKNN: [02:21:15.196] 86   ConvExSwish        FLOAT16  NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          21148/115200/115200      388          Conv:/model.21/m.0/cv1/conv/Conv
+D RKNN: [02:21:15.196] 87   ConvExSwish        FLOAT16  NPU    (1,128,20,20),(128,128,3,3),(128)        (1,128,20,20)          21148/115200/115200      388          Conv:/model.21/m.0/cv2/conv/Conv
+D RKNN: [02:21:15.196] 88   Concat             FLOAT16  NPU    (1,128,20,20),(1,128,20,20),...          (1,384,20,20)          0/0/0                    300          Concat:/model.21/Concat
+D RKNN: [02:21:15.196] 89   ConvExSwish        FLOAT16  NPU    (1,384,20,20),(256,384,1,1),(256)        (1,256,20,20)          30001/76800/76800        493          Conv:/model.21/cv2/conv/Conv
+D RKNN: [02:21:15.196] 90   ConvExSwish        FLOAT16  NPU    (1,256,20,20),(64,256,3,3),(64)          (1,64,20,20)           23302/115200/115200      488          Conv:/model.22/cv2.2/cv2.2.0/conv/Conv
+D RKNN: [02:21:15.196] 91   ConvExSwish        FLOAT16  NPU    (1,256,20,20),(64,256,3,3),(64)          (1,64,20,20)           23302/115200/115200      488          Conv:/model.22/cv3.2/cv3.2.0/conv/Conv
+D RKNN: [02:21:15.196] 92   ConvExSwish        FLOAT16  NPU    (1,64,20,20),(64,64,3,3),(64)            (1,64,20,20)           7457/28800/28800         122          Conv:/model.22/cv2.2/cv2.2.1/conv/Conv
+D RKNN: [02:21:15.196] 93   Conv               FLOAT16  NPU    (1,64,20,20),(64,64,1,1),(64)            (1,64,20,20)           4687/3200/4687           58           Conv:/model.22/cv2.2/cv2.2.2/Conv
+D RKNN: [02:21:15.196] 94   ConvExSwish        FLOAT16  NPU    (1,64,20,20),(64,64,3,3),(64)            (1,64,20,20)           7457/28800/28800         122          Conv:/model.22/cv3.2/cv3.2.1/conv/Conv
+D RKNN: [02:21:15.196] 95   Conv               FLOAT16  NPU    (1,64,20,20),(5,64,1,1),(5)              (1,5,20,20)            2465/800/2465            50           Conv:/model.22/cv3.2/cv3.2.2/Conv
+D RKNN: [02:21:15.196] 96   Reshape            FLOAT16  NPU    (1,64,40,40),(4)                         (1,64,20,80)           0/0/0                    200          Reshape:/model.22/Reshape_1
+D RKNN: [02:21:15.196] 97   Reshape            FLOAT16  NPU    (1,5,40,40),(4)                          (1,5,20,80)            0/0/0                    25           Reshape:/model.22/Reshape_4
+D RKNN: [02:21:15.196] 98   Reshape            FLOAT16  NPU    (1,64,20,20),(4)                         (1,64,5,80)            0/0/0                    50           Reshape:/model.22/Reshape_2
+D RKNN: [02:21:15.196] 99   Concat             FLOAT16  NPU    (1,64,80,80),(1,64,20,80),...            (1,64,105,80)          0/0/0                    1050         Concat:/model.22/Concat
+D RKNN: [02:21:15.196] 100  Reshape            FLOAT16  NPU    (1,64,105,80),(4)                        (4,16,1,8400)          0/0/0                    1050         Reshape:/model.22/dfl/Reshape
+D RKNN: [02:21:15.196] 101  exSoftmax13        FLOAT16  NPU    (4,16,1,8400),(1,16,1,1)                 (4,16,1,8400)          0/0/0                    1050         exSoftmax13:/model.22/dfl/Softmax
+D RKNN: [02:21:15.196] 102  Conv               FLOAT16  NPU    (4,16,1,8400),(1,16,1,1)                 (4,1,1,8400)           68185/67200/68185        1050         Conv:/model.22/dfl/conv/Conv
+D RKNN: [02:21:15.196] 103  Transpose          FLOAT16  CPU    (4,1,1,8400)                             (1,4,1,8400)           0/0/0                    525          Transpose:/model.22/dfl/Reshape_1_output_0_rs
+D RKNN: [02:21:15.196] 104  Split              FLOAT16  NPU    (1,4,1,8400),(2)                         (1,2,1,8400),...       0/0/0                    131          Split:/model.22/Slice_2sp
+D RKNN: [02:21:15.196] 105  Sub                FLOAT16  NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Sub:/model.22/Sub
+D RKNN: [02:21:15.196] 106  Add                FLOAT16  NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Add:/model.22/Add_1
+D RKNN: [02:21:15.196] 107  Sub                FLOAT16  NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Sub:/model.22/Sub_1
+D RKNN: [02:21:15.196] 108  Add                FLOAT16  NPU    (1,2,1,8400),(1,2,1,8400)                (1,2,1,8400)           0/0/0                    262          Add:/model.22/Add_2
+D RKNN: [02:21:15.196] 109  Mul                FLOAT16  NPU    (1,2,1,8400),(1,1,1,1)                   (1,2,1,8400)           0/0/0                    131          Mul:/model.22/Div_1_2mul
+D RKNN: [02:21:15.196] 110  Concat             FLOAT16  NPU    (1,2,1,8400),(1,2,1,8400),(4,16,1,1)     (1,4,1,8400)           0/0/0                    262          Concat:/model.22/Concat_2
+D RKNN: [02:21:15.196] 111  Mul                FLOAT16  NPU    (1,4,1,8400),(1,1,1,8400)                (1,4,1,8400)           0/0/0                    262          Mul:/model.22/Mul_2
+D RKNN: [02:21:15.196] 112  Reshape            FLOAT16  NPU    (1,5,20,20),(4)                          (1,5,5,80)             0/0/0                    6            Reshape:/model.22/Reshape_5
+D RKNN: [02:21:15.196] 113  Concat             FLOAT16  NPU    (1,5,80,80),(1,5,20,80),(1,5,5,80)       (1,5,105,80)           0/0/0                    131          Concat:/model.22/Concat_1
+D RKNN: [02:21:15.196] 114  Sigmoid            FLOAT16  NPU    (1,5,105,80)                             (1,5,105,80)           0/0/0                    131          Sigmoid:/model.22/Sigmoid
+D RKNN: [02:21:15.196] 115  Reshape            FLOAT16  NPU    (1,5,105,80),(4)                         (1,5,1,8400)           0/0/0                    131          Reshape:/model.22/Sigmoid_output_0_rs
+D RKNN: [02:21:15.196] 116  Concat             FLOAT16  NPU    (1,4,1,8400),(1,5,1,8400),(9,16,1,1)     (1,9,1,8400)           0/0/0                    262          Concat:/model.22/Concat_3
+D RKNN: [02:21:15.196] 117  Reshape            FLOAT16  NPU    (1,9,1,8400),(3)                         (1,9,8400)             0/0/0                    262          Reshape:output0-rs
+D RKNN: [02:21:15.196] 118  OutputOperator     FLOAT16  CPU    (1,9,8400)                               \                      0/0/0                    147          OutputOperator:output0
+D RKNN: [02:21:15.196] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.196] <<<<<<<< end: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [02:21:15.196] >>>>>> start: rknn::RKNNModelExportPass
+D RKNN: [02:21:15.196] Export RKNN model to /tmp/tmpxb4mku03/check.rknn
+D RKNN: [02:21:15.207] <<<<<<<< end: rknn::RKNNModelExportPass
+D RKNN: [02:21:15.207] >>>>>> start: rknn::RKNNMemStatisticsPass
+D RKNN: [02:21:15.208] -------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.208]                                                     Feature Tensor Information Table                                              
+D RKNN: [02:21:15.208] ---------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] ID  User           Tensor                                            DataType  DataFormat   OrigShape      NativeShape     |     [Start       End)       Size
+D RKNN: [02:21:15.208] ---------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] 1   ConvExSwish    images                                            FLOAT16   NC1HWC2      (1,3,640,640)  (1,4,640,640,3) | 0x00000000 0x00258000 0x00258000
+D RKNN: [02:21:15.208] 2   ConvExSwish    /model.0/act/Mul_output_0                         FLOAT16   NC1HWC2      (1,16,320,320) (1,24,320,320,8) | 0x00258000 0x00bb8000 0x00960000
+D RKNN: [02:21:15.208] 3   ConvExSwish    /model.1/act/Mul_output_0                         FLOAT16   NC1HWC2      (1,32,160,160) (1,48,160,160,8) | 0x00bb8000*0x01068000 0x004b0000
+D RKNN: [02:21:15.208] 4   Split          /model.2/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,32,160,160) (1,48,160,160,8) | 0x00000000 0x004b0000 0x004b0000
+D RKNN: [02:21:15.208] 5   ConvExSwish    /model.2/Split_output_1                           FLOAT16   NC1HWC2      (1,16,160,160) (1,8,160,160,8) | 0x004b0000 0x00578000 0x000c8000
+D RKNN: [02:21:15.208] 6   ConvExSwish    /model.2/m.0/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,16,160,160) (1,24,160,160,8) | 0x00000000 0x00258000 0x00258000
+D RKNN: [02:21:15.208] 7   Add            /model.2/Split_output_1                           FLOAT16   NC1HWC2      (1,16,160,160) (1,8,160,160,8) | 0x004b0000 0x00578000 0x000c8000
+D RKNN: [02:21:15.208] 7   Add            /model.2/m.0/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,16,160,160) (1,24,160,160,8) | 0x00258000 0x004b0000 0x00258000
+D RKNN: [02:21:15.208] 8   Concat         /model.2/Split_output_0                           FLOAT16   NC1HWC2      (1,16,160,160) (1,8,160,160,8) | 0x00578000 0x00640000 0x000c8000
+D RKNN: [02:21:15.208] 8   Concat         /model.2/Split_output_1                           FLOAT16   NC1HWC2      (1,16,160,160) (1,8,160,160,8) | 0x004b0000 0x00578000 0x000c8000
+D RKNN: [02:21:15.208] 8   Concat         /model.2/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,16,160,160) (1,8,160,160,8) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [02:21:15.208] 9   ConvExSwish    /model.2/Concat_output_0                          FLOAT16   NC1HWC2      (1,48,160,160) (1,24,160,160,8) | 0x000c8000 0x00320000 0x00258000
+D RKNN: [02:21:15.208] 10  ConvExSwish    /model.2/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,32,160,160) (1,48,160,160,8) | 0x00320000 0x007d0000 0x004b0000
+D RKNN: [02:21:15.208] 11  ConvExSwish    /model.3/act/Mul_output_0                         FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x00000000 0x00258000 0x00258000
+D RKNN: [02:21:15.208] 12  Split          /model.4/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x00258000 0x004b0000 0x00258000
+D RKNN: [02:21:15.208] 13  ConvExSwish    /model.4/Split_output_1                           FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x00000000 0x00064000 0x00064000
+D RKNN: [02:21:15.208] 14  ConvExSwish    /model.4/m.0/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x000c8000 0x001f4000 0x0012c000
+D RKNN: [02:21:15.208] 15  Add            /model.4/Split_output_1                           FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x00000000 0x00064000 0x00064000
+D RKNN: [02:21:15.208] 15  Add            /model.4/m.0/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x001f4000 0x00320000 0x0012c000
+D RKNN: [02:21:15.208] 16  ConvExSwish    /model.4/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x000c8000 0x0012c000 0x00064000
+D RKNN: [02:21:15.208] 17  ConvExSwish    /model.4/m.1/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x0012c000 0x00258000 0x0012c000
+D RKNN: [02:21:15.208] 18  Add            /model.4/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x000c8000 0x0012c000 0x00064000
+D RKNN: [02:21:15.208] 18  Add            /model.4/m.1/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x00258000 0x00384000 0x0012c000
+D RKNN: [02:21:15.208] 19  Concat         /model.4/Split_output_0                           FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x00064000 0x000c8000 0x00064000
+D RKNN: [02:21:15.208] 19  Concat         /model.4/Split_output_1                           FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x00000000 0x00064000 0x00064000
+D RKNN: [02:21:15.208] 19  Concat         /model.4/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x000c8000 0x0012c000 0x00064000
+D RKNN: [02:21:15.208] 19  Concat         /model.4/m.1/Add_output_0                         FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x0012c000 0x00190000 0x00064000
+D RKNN: [02:21:15.208] 20  ConvExSwish    /model.4/Concat_output_0                          FLOAT16   NC1HWC2      (1,128,80,80)  (1,64,80,80,8)  | 0x00190000 0x00320000 0x00190000
+D RKNN: [02:21:15.208] 21  ConvExSwish    /model.4/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x00320000 0x00578000 0x00258000
+D RKNN: [02:21:15.208] 22  ConvExSwish    /model.5/act/Mul_output_0                         FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00000000 0x0012c000 0x0012c000
+D RKNN: [02:21:15.208] 23  Split          /model.6/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x0012c000 0x00258000 0x0012c000
+D RKNN: [02:21:15.208] 24  ConvExSwish    /model.6/Split_output_1                           FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x00258000 0x0028a000 0x00032000
+D RKNN: [02:21:15.208] 25  ConvExSwish    /model.6/m.0/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 26  Add            /model.6/Split_output_1                           FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x00258000 0x0028a000 0x00032000
+D RKNN: [02:21:15.208] 26  Add            /model.6/m.0/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00096000 0x0012c000 0x00096000
+D RKNN: [02:21:15.208] 27  ConvExSwish    /model.6/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x002bc000 0x002ee000 0x00032000
+D RKNN: [02:21:15.208] 28  ConvExSwish    /model.6/m.1/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 29  Add            /model.6/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x002bc000 0x002ee000 0x00032000
+D RKNN: [02:21:15.208] 29  Add            /model.6/m.1/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00096000 0x0012c000 0x00096000
+D RKNN: [02:21:15.208] 30  Concat         /model.6/Split_output_0                           FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0028a000 0x002bc000 0x00032000
+D RKNN: [02:21:15.208] 30  Concat         /model.6/Split_output_1                           FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x00258000 0x0028a000 0x00032000
+D RKNN: [02:21:15.208] 30  Concat         /model.6/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x002bc000 0x002ee000 0x00032000
+D RKNN: [02:21:15.208] 30  Concat         /model.6/m.1/Add_output_0                         FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x002ee000 0x00320000 0x00032000
+D RKNN: [02:21:15.208] 31  ConvExSwish    /model.6/Concat_output_0                          FLOAT16   NC1HWC2      (1,256,40,40)  (1,128,40,40,8) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [02:21:15.208] 32  ConvExSwish    /model.6/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x000c8000 0x001f4000 0x0012c000
+D RKNN: [02:21:15.208] 33  ConvExSwish    /model.7/act/Mul_output_0                         FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 34  Split          /model.8/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x001f4000 0x0028a000 0x00096000
+D RKNN: [02:21:15.208] 35  ConvExSwish    /model.8/Split_output_1                           FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x0028a000 0x002a3000 0x00019000
+D RKNN: [02:21:15.208] 36  ConvExSwish    /model.8/m.0/cv1/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x002bc000 0x00307000 0x0004b000
+D RKNN: [02:21:15.208] 37  Add            /model.8/Split_output_1                           FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x0028a000 0x002a3000 0x00019000
+D RKNN: [02:21:15.208] 37  Add            /model.8/m.0/cv2/act/Mul_output_0                 FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x001f4000 0x0023f000 0x0004b000
+D RKNN: [02:21:15.208] 38  Concat         /model.8/Split_output_0                           FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x002a3000 0x002bc000 0x00019000
+D RKNN: [02:21:15.208] 38  Concat         /model.8/Split_output_1                           FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x0028a000 0x002a3000 0x00019000
+D RKNN: [02:21:15.208] 38  Concat         /model.8/m.0/Add_output_0                         FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x0023f000 0x00258000 0x00019000
+D RKNN: [02:21:15.208] 39  ConvExSwish    /model.8/Concat_output_0                          FLOAT16   NC1HWC2      (1,384,20,20)  (1,192,20,20,8) | 0x001f4000 0x0023f000 0x0004b000
+D RKNN: [02:21:15.208] 40  ConvExSwish    /model.8/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 41  MaxPool        /model.9/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x001f4000 0x0023f000 0x0004b000
+D RKNN: [02:21:15.208] 42  MaxPool        /model.9/m/MaxPool_output_0                       FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x00000000 0x00019000 0x00019000
+D RKNN: [02:21:15.208] 43  MaxPool        /model.9/m_1/MaxPool_output_0                     FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x00019000 0x00032000 0x00019000
+D RKNN: [02:21:15.208] 44  Concat         /model.9/cv1/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x001f4000 0x0023f000 0x0004b000
+D RKNN: [02:21:15.208] 44  Concat         /model.9/m/MaxPool_output_0                       FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x00000000 0x00019000 0x00019000
+D RKNN: [02:21:15.208] 44  Concat         /model.9/m_1/MaxPool_output_0                     FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x00019000 0x00032000 0x00019000
+D RKNN: [02:21:15.208] 44  Concat         /model.9/m_2/MaxPool_output_0                     FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x00032000 0x0004b000 0x00019000
+D RKNN: [02:21:15.208] 45  ConvExSwish    /model.9/Concat_output_0                          FLOAT16   NC1HWC2      (1,512,20,20)  (1,256,20,20,8) | 0x0004b000 0x000af000 0x00064000
+D RKNN: [02:21:15.208] 46  Resize         /model.9/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x001f4000 0x0028a000 0x00096000
+D RKNN: [02:21:15.208] 47  Concat         /model.10/Resize_output_0                         FLOAT16   NC1HWC2      (1,256,40,40)  (1,128,40,40,8) | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [02:21:15.208] 47  Concat         /model.6/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x000c8000 0x001f4000 0x0012c000
+D RKNN: [02:21:15.208] 48  ConvExSwish    /model.11/Concat_output_0                         FLOAT16   NC1HWC2      (1,384,40,40)  (1,192,40,40,8) | 0x00578000 0x006a4000 0x0012c000
+D RKNN: [02:21:15.208] 49  Split          /model.12/cv1/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00000000 0x0012c000 0x0012c000
+D RKNN: [02:21:15.208] 50  ConvExSwish    /model.12/Split_output_1                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0028a000 0x002bc000 0x00032000
+D RKNN: [02:21:15.208] 51  ConvExSwish    /model.12/m.0/cv1/act/Mul_output_0                FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 52  Concat         /model.12/Split_output_0                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x002bc000 0x002ee000 0x00032000
+D RKNN: [02:21:15.208] 52  Concat         /model.12/Split_output_1                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0028a000 0x002bc000 0x00032000
+D RKNN: [02:21:15.208] 52  Concat         /model.12/m.0/cv2/act/Mul_output_0                FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00096000 0x0012c000 0x00096000
+D RKNN: [02:21:15.208] 53  ConvExSwish    /model.12/Concat_output_0                         FLOAT16   NC1HWC2      (1,192,40,40)  (1,96,40,40,8)  | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 54  Resize         /model.12/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00096000 0x001c2000 0x0012c000
+D RKNN: [02:21:15.208] 55  Concat         /model.13/Resize_output_0                         FLOAT16   NC1HWC2      (1,128,80,80)  (1,64,80,80,8)  | 0x00578000 0x00708000 0x00190000
+D RKNN: [02:21:15.208] 55  Concat         /model.4/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x00320000 0x00578000 0x00258000
+D RKNN: [02:21:15.208] 56  ConvExSwish    /model.14/Concat_output_0                         FLOAT16   NC1HWC2      (1,192,80,80)  (1,96,80,80,8)  | 0x00708000 0x00960000 0x00258000
+D RKNN: [02:21:15.208] 57  Split          /model.15/cv1/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x0028a000 0x004e2000 0x00258000
+D RKNN: [02:21:15.208] 58  ConvExSwish    /model.15/Split_output_1                          FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x004e2000 0x00546000 0x00064000
+D RKNN: [02:21:15.208] 59  ConvExSwish    /model.15/m.0/cv1/act/Mul_output_0                FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x0028a000 0x003b6000 0x0012c000
+D RKNN: [02:21:15.208] 60  Concat         /model.15/Split_output_0                          FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x00000000 0x00064000 0x00064000
+D RKNN: [02:21:15.208] 60  Concat         /model.15/Split_output_1                          FLOAT16   NC1HWC2      (1,32,80,80)   (1,16,80,80,8)  | 0x004e2000 0x00546000 0x00064000
+D RKNN: [02:21:15.208] 60  Concat         /model.15/m.0/cv2/act/Mul_output_0                FLOAT16   NC1HWC2      (1,32,80,80)   (1,48,80,80,8)  | 0x003b6000 0x004e2000 0x0012c000
+D RKNN: [02:21:15.208] 61  ConvExSwish    /model.15/Concat_output_0                         FLOAT16   NC1HWC2      (1,96,80,80)   (1,48,80,80,8)  | 0x0028a000 0x003b6000 0x0012c000
+D RKNN: [02:21:15.208] 62  ConvExSwish    /model.15/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x003b6000 0x0060e000 0x00258000
+D RKNN: [02:21:15.208] 63  Concat         /model.16/act/Mul_output_0                        FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00000000 0x00096000 0x00096000
+D RKNN: [02:21:15.208] 63  Concat         /model.12/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00096000 0x001c2000 0x0012c000
+D RKNN: [02:21:15.208] 64  ConvExSwish    /model.15/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x003b6000 0x0060e000 0x00258000
+D RKNN: [02:21:15.208] 65  ConvExSwish    /model.15/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x003b6000 0x0060e000 0x00258000
+D RKNN: [02:21:15.208] 66  ConvExSwish    /model.17/Concat_output_0                         FLOAT16   NC1HWC2      (1,192,40,40)  (1,96,40,40,8)  | 0x0028a000 0x00320000 0x00096000
+D RKNN: [02:21:15.208] 67  Split          /model.18/cv1/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00000000 0x0012c000 0x0012c000
+D RKNN: [02:21:15.208] 68  ConvExSwish    /model.22/cv2.0/cv2.0.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x0060e000 0x00866000 0x00258000
+D RKNN: [02:21:15.208] 69  Conv           /model.22/cv2.0/cv2.0.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x0028a000 0x004e2000 0x00258000
+D RKNN: [02:21:15.208] 70  ConvExSwish    /model.22/cv3.0/cv3.0.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x00866000 0x00abe000 0x00258000
+D RKNN: [02:21:15.208] 71  Conv           /model.22/cv3.0/cv3.0.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,80,80)   (1,96,80,80,8)  | 0x0028a000 0x004e2000 0x00258000
+D RKNN: [02:21:15.208] 72  ConvExSwish    /model.18/Split_output_1                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0015e000 0x00190000 0x00032000
+D RKNN: [02:21:15.208] 73  ConvExSwish    /model.18/m.0/cv1/act/Mul_output_0                FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x0028a000 0x00320000 0x00096000
+D RKNN: [02:21:15.208] 74  Concat         /model.18/Split_output_0                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0012c000 0x0015e000 0x00032000
+D RKNN: [02:21:15.208] 74  Concat         /model.18/Split_output_1                          FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x0015e000 0x00190000 0x00032000
+D RKNN: [02:21:15.208] 74  Concat         /model.18/m.0/cv2/act/Mul_output_0                FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00320000 0x003b6000 0x00096000
+D RKNN: [02:21:15.208] 75  ConvExSwish    /model.18/Concat_output_0                         FLOAT16   NC1HWC2      (1,192,40,40)  (1,96,40,40,8)  | 0x0028a000 0x00320000 0x00096000
+D RKNN: [02:21:15.208] 76  ConvExSwish    /model.18/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00320000 0x0044c000 0x0012c000
+D RKNN: [02:21:15.208] 77  Concat         /model.19/act/Mul_output_0                        FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x0028a000 0x002d5000 0x0004b000
+D RKNN: [02:21:15.208] 77  Concat         /model.9/cv2/act/Mul_output_0                     FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x001f4000 0x0028a000 0x00096000
+D RKNN: [02:21:15.208] 78  ConvExSwish    /model.18/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00320000 0x0044c000 0x0012c000
+D RKNN: [02:21:15.208] 79  ConvExSwish    /model.18/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,128,40,40)  (1,192,40,40,8) | 0x00320000 0x0044c000 0x0012c000
+D RKNN: [02:21:15.208] 80  ConvExSwish    /model.20/Concat_output_0                         FLOAT16   NC1HWC2      (1,384,20,20)  (1,192,20,20,8) | 0x002d5000 0x00320000 0x0004b000
+D RKNN: [02:21:15.208] 81  Split          /model.21/cv1/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x00226000 0x002bc000 0x00096000
+D RKNN: [02:21:15.208] 82  ConvExSwish    /model.22/cv2.1/cv2.1.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x000fa000 0x00190000 0x00096000
+D RKNN: [02:21:15.208] 83  Conv           /model.22/cv2.1/cv2.1.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00226000 0x002bc000 0x00096000
+D RKNN: [02:21:15.208] 84  ConvExSwish    /model.22/cv3.1/cv3.1.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00190000 0x00226000 0x00096000
+D RKNN: [02:21:15.208] 85  Conv           /model.22/cv3.1/cv3.1.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,40,40)   (1,96,40,40,8)  | 0x00226000 0x002bc000 0x00096000
+D RKNN: [02:21:15.208] 86  ConvExSwish    /model.21/Split_output_1                          FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x002bc000 0x002d5000 0x00019000
+D RKNN: [02:21:15.208] 87  ConvExSwish    /model.21/m.0/cv1/act/Mul_output_0                FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x00138800 0x00183800 0x0004b000
+D RKNN: [02:21:15.208] 88  Concat         /model.21/Split_output_0                          FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x002d5000 0x002ee000 0x00019000
+D RKNN: [02:21:15.208] 88  Concat         /model.21/Split_output_1                          FLOAT16   NC1HWC2      (1,128,20,20)  (1,64,20,20,8)  | 0x002bc000 0x002d5000 0x00019000
+D RKNN: [02:21:15.208] 88  Concat         /model.21/m.0/cv2/act/Mul_output_0                FLOAT16   NC1HWC2      (1,128,20,20)  (1,192,20,20,8) | 0x00183800 0x001ce800 0x0004b000
+D RKNN: [02:21:15.208] 89  ConvExSwish    /model.21/Concat_output_0                         FLOAT16   NC1HWC2      (1,384,20,20)  (1,192,20,20,8) | 0x00138800 0x00183800 0x0004b000
+D RKNN: [02:21:15.208] 90  ConvExSwish    /model.21/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x00183800 0x00219800 0x00096000
+D RKNN: [02:21:15.208] 91  ConvExSwish    /model.21/cv2/act/Mul_output_0                    FLOAT16   NC1HWC2      (1,256,20,20)  (1,384,20,20,8) | 0x00183800 0x00219800 0x00096000
+D RKNN: [02:21:15.208] 92  ConvExSwish    /model.22/cv2.2/cv2.2.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,20,20)   (1,96,20,20,8)  | 0x00138800 0x0015e000 0x00025800
+D RKNN: [02:21:15.208] 93  Conv           /model.22/cv2.2/cv2.2.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,20,20)   (1,96,20,20,8)  | 0x00183800 0x001a9000 0x00025800
+D RKNN: [02:21:15.208] 94  ConvExSwish    /model.22/cv3.2/cv3.2.0/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,20,20)   (1,96,20,20,8)  | 0x0015e000 0x00183800 0x00025800
+D RKNN: [02:21:15.208] 95  Conv           /model.22/cv3.2/cv3.2.1/act/Mul_output_0          FLOAT16   NC1HWC2      (1,64,20,20)   (1,96,20,20,8)  | 0x00183800 0x001a9000 0x00025800
+D RKNN: [02:21:15.208] 96  Reshape        /model.22/cv2.1/cv2.1.2/Conv_output_0             FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x000fa000 0x0012c000 0x00032000
+D RKNN: [02:21:15.208] 96  Reshape        /model.22/cv2.1/cv2.1.2/Conv_output_0_exSecondary FLOAT16   NC1HWC2      (1,64,40,40)   (1,32,40,40,8)  | 0x00148200 0x0017a200 0x00032000
+D RKNN: [02:21:15.208] 97  Reshape        /model.22/cv3.1/cv3.1.2/Conv_output_0             FLOAT16   NC1HWC2      (1,5,40,40)    (1,8,40,40,8)   | 0x0012c000 0x00138800 0x0000c800
+D RKNN: [02:21:15.208] 97  Reshape        /model.22/cv3.1/cv3.1.2/Conv_output_0_exSecondary FLOAT16   NC1HWC2      (1,5,40,40)    (1,8,40,40,8)   | 0x00148200 0x00154a00 0x0000c800
+D RKNN: [02:21:15.208] 98  Reshape        /model.22/cv2.2/cv2.2.2/Conv_output_0             FLOAT16   NC1HWC2      (1,64,20,20)   (1,32,20,20,8)  | 0x00138800 0x00145000 0x0000c800
+D RKNN: [02:21:15.208] 98  Reshape        /model.22/cv2.2/cv2.2.2/Conv_output_0_exSecondary FLOAT16   NC1HWC2      (1,64,20,20)   (1,32,20,20,8)  | 0x0012c000 0x00138800 0x0000c800
+D RKNN: [02:21:15.208] 99  Concat         /model.22/cv2.0/cv2.0.2/Conv_output_0             FLOAT16   NC1HWC2      (1,64,80,80)   (1,32,80,80,8)  | 0x00000000 0x000c8000 0x000c8000
+D RKNN: [02:21:15.208] 99  Concat         /model.22/Reshape_1_output_0                      FLOAT16   NC1HWC2      (1,64,20,80)   (1,32,20,80,8)  | 0x000fa000 0x0012c000 0x00032000
+D RKNN: [02:21:15.208] 99  Concat         /model.22/Reshape_2_output_0                      FLOAT16   NC1HWC2      (1,64,5,80)    (1,32,5,80,8)   | 0x00138800 0x00145000 0x0000c800
+D RKNN: [02:21:15.208] 100 Reshape        /model.22/Concat_output_0                         FLOAT16   NC1HWC2      (1,64,105,80)  (1,32,105,80,8) | 0x0015ae00 0x00261600 0x00106800
+D RKNN: [02:21:15.208] 100 Reshape        /model.22/Concat_output_0_exSecondary             FLOAT16   NC1HWC2      (1,64,105,80)  (1,32,105,80,8) | 0x00261600 0x00367e00 0x00106800
+D RKNN: [02:21:15.208] 101 exSoftmax13    /model.22/dfl/Reshape_output_0                    FLOAT16   NC1HWC2      (4,16,1,8400)  (4,8,1,8400,8)  | 0x0015ae00 0x00261600 0x00106800
+D RKNN: [02:21:15.208] 101 exSoftmax13    /model.22/dfl/Reshape_output_0_exSecondary        FLOAT16   NC1HWC2      (4,16,1,8400)  (4,44,1,8400,8) | 0x00261600 0x00805240 0x005a3c40
+D RKNN: [02:21:15.208] 102 Conv           /model.22/dfl/Transpose_output_0_sw               FLOAT16   NC1HWC2      (4,16,1,8400)  (4,8,1,8400,8)  | 0x00805240 0x0090ba40 0x00106800
+D RKNN: [02:21:15.208] 103 Transpose      /model.22/dfl/Softmax_output_0_sw                 FLOAT16   NC1HWC2      (4,1,1,8400)   (4,8,1,8400,8)  | 0x0015ae00 0x00261600 0x00106800
+D RKNN: [02:21:15.208] 104 Split          /model.22/dfl/Reshape_1_output_0_rs               FLOAT16   NC1HWC2      (1,4,1,8400)   (1,4,1,8400,8)  | 0x000fa000 0x0011ad00 0x00020d00
+D RKNN: [02:21:15.208] 105 Sub            /model.22/Slice_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x0011ad00 0x0013ba00 0x00020d00
+D RKNN: [02:21:15.208] 106 Add            /model.22/Slice_1_output_0-rs                     FLOAT16   NC1HWC2      (1,2,1,8400)   (1,8,1,8400,8)  | 0x00000000 0x00041a00 0x00041a00
+D RKNN: [02:21:15.208] 107 Sub            /model.22/Add_1_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x0011ad00 0x0013ba00 0x00020d00
+D RKNN: [02:21:15.208] 107 Sub            /model.22/Sub_output_0-rs                         FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x000fa000 0x0011ad00 0x00020d00
+D RKNN: [02:21:15.208] 108 Add            /model.22/Sub_output_0-rs                         FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x000fa000 0x0011ad00 0x00020d00
+D RKNN: [02:21:15.208] 108 Add            /model.22/Add_1_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x0011ad00 0x0013ba00 0x00020d00
+D RKNN: [02:21:15.208] 109 Mul            /model.22/Add_2_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x00020d00 0x00041a00 0x00020d00
+D RKNN: [02:21:15.208] 110 Concat         /model.22/Div_1_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x000fa000 0x0011ad00 0x00020d00
+D RKNN: [02:21:15.208] 110 Concat         /model.22/Sub_1_output_0-rs                       FLOAT16   NC1HWC2      (1,2,1,8400)   (1,4,1,8400,8)  | 0x00000000 0x00020d00 0x00020d00
+D RKNN: [02:21:15.208] 110 Concat         /model.22/Div_1_output_0-rs_exSecondary           FLOAT16   NC1HWC2      (1,4,1,8400)   (1,8,1,8400,8)  | 0x00020d00 0x00062700 0x00041a00
+D RKNN: [02:21:15.208] 111 Mul            /model.22/Concat_2_output_0-rs                    FLOAT16   NC1HWC2      (1,4,1,8400)   (1,8,1,8400,8)  | 0x00062700 0x000a4100 0x00041a00
+D RKNN: [02:21:15.208] 111 Mul            /model.22/Concat_2_output_0-rs_exSecondary        FLOAT16   NC1HWC2      (1,4,1,8400)   (1,16,1,8400,8) | 0x0015ae00 0x001de200 0x00083400
+D RKNN: [02:21:15.208] 112 Reshape        /model.22/cv3.2/cv3.2.2/Conv_output_0             FLOAT16   NC1HWC2      (1,5,20,20)    (1,8,20,20,8)   | 0x00145000 0x00148200 0x00003200
+D RKNN: [02:21:15.208] 112 Reshape        /model.22/cv3.2/cv3.2.2/Conv_output_0_exSecondary FLOAT16   NC1HWC2      (1,5,20,20)    (1,8,20,20,8)   | 0x000c4e00 0x000c8000 0x00003200
+D RKNN: [02:21:15.208] 113 Concat         /model.22/cv3.0/cv3.0.2/Conv_output_0             FLOAT16   NC1HWC2      (1,5,80,80)    (1,8,80,80,8)   | 0x000c8000 0x000fa000 0x00032000
+D RKNN: [02:21:15.208] 113 Concat         /model.22/Reshape_4_output_0                      FLOAT16   NC1HWC2      (1,5,20,80)    (1,4,20,80,8)   | 0x00154a00 0x0015ae00 0x00006400
+D RKNN: [02:21:15.208] 113 Concat         /model.22/Reshape_5_output_0                      FLOAT16   NC1HWC2      (1,5,5,80)     (1,4,5,80,8)    | 0x00148200 0x00149b00 0x00001900
+D RKNN: [02:21:15.208] 114 Sigmoid        /model.22/Concat_1_output_0-rs                    FLOAT16   NC1HWC2      (1,5,105,80)   (1,4,105,80,8)  | 0x000fa000 0x0011ad00 0x00020d00
+D RKNN: [02:21:15.208] 115 Reshape        /model.22/Concat_1_output_0_sw                    FLOAT16   NC1HWC2      (1,5,105,80)   (1,8,105,80,8)  | 0x00000000 0x00041a00 0x00041a00
+D RKNN: [02:21:15.208] 115 Reshape        /model.22/Concat_1_output_0_sw_exSecondary        FLOAT16   NC1HWC2      (1,5,105,80)   (1,8,105,80,8)  | 0x00041a00 0x00083400 0x00041a00
+D RKNN: [02:21:15.208] 116 Concat         /model.22/Mul_2_output_0-rs                       FLOAT16   NC1HWC2      (1,4,1,8400)   (1,4,1,8400,8)  | 0x000a4100 0x000c4e00 0x00020d00
+D RKNN: [02:21:15.208] 116 Concat         /model.22/Sigmoid_output_0_rs                     FLOAT16   NC1HWC2      (1,5,1,8400)   (1,4,1,8400,8)  | 0x00083400 0x000a4100 0x00020d00
+D RKNN: [02:21:15.208] 116 Concat         /model.22/Mul_2_output_0-rs_exSecondary           FLOAT16   NC1HWC2      (1,9,1,8400)   (1,8,1,8400,8)  | 0x00000000 0x00041a00 0x00041a00
+D RKNN: [02:21:15.208] 117 Reshape        output0-rs                                        FLOAT16   NC1HWC2      (1,9,1,8400)   (1,8,1,8400,8)  | 0x00041a00 0x00083400 0x00041a00
+D RKNN: [02:21:15.208] 117 Reshape        output0-rs_exSecondary                            FLOAT16   NC1HWC2      (1,9,1,8400)   (1,12,1,8400,8) | 0x00083400 0x000e9ca0 0x000668a0
+D RKNN: [02:21:15.208] 118 OutputOperator output0                                           FLOAT16   UNDEFINED    (1,9,8400)     (1,9,8400)      | 0x00000000 0x00041a00 0x00041a00
+D RKNN: [02:21:15.208] ---------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] -----------------------------------------------------------------------------------------------------------
+D RKNN: [02:21:15.208]                                    Const Tensor Information Table                       
+D RKNN: [02:21:15.208] -------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] ID  User        Tensor                           DataType  OrigShape     |     [Start       End)       Size
+D RKNN: [02:21:15.208] -------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] 1   ConvExSwish model.0.conv.weight              FLOAT16   (16,3,3,3)    | 0x00000000 0x00000900 0x00000900
+D RKNN: [02:21:15.208] 1   ConvExSwish model.0.conv.bias                FLOAT     (16)          | 0x00000900 0x00000940 0x00000040
+D RKNN: [02:21:15.208] 2   ConvExSwish model.1.conv.weight              FLOAT16   (32,16,3,3)   | 0x00000940 0x00002d40 0x00002400
+D RKNN: [02:21:15.208] 2   ConvExSwish model.1.conv.bias                FLOAT     (32)          | 0x00002d40 0x00002dc0 0x00000080
+D RKNN: [02:21:15.208] 3   ConvExSwish model.2.cv1.conv.weight          FLOAT16   (32,32,1,1)   | 0x00002dc0 0x000035c0 0x00000800
+D RKNN: [02:21:15.208] 3   ConvExSwish model.2.cv1.conv.bias            FLOAT     (32)          | 0x000035c0 0x00003640 0x00000080
+D RKNN: [02:21:15.208] 4   Split       onnx::Split_137                  INT64     (2)           | 0x00003640 0x00003650 0x00000010
+D RKNN: [02:21:15.208] 5   ConvExSwish model.2.m.0.cv1.conv.weight      FLOAT16   (16,16,3,3)   | 0x00003680 0x00004880 0x00001200
+D RKNN: [02:21:15.208] 5   ConvExSwish model.2.m.0.cv1.conv.bias        FLOAT     (16)          | 0x00004880 0x000048c0 0x00000040
+D RKNN: [02:21:15.208] 6   ConvExSwish model.2.m.0.cv2.conv.weight      FLOAT16   (16,16,3,3)   | 0x000048c0 0x00005ac0 0x00001200
+D RKNN: [02:21:15.208] 6   ConvExSwish model.2.m.0.cv2.conv.bias        FLOAT     (16)          | 0x00005ac0 0x00005b00 0x00000040
+D RKNN: [02:21:15.208] 9   ConvExSwish model.2.cv2.conv.weight          FLOAT16   (32,48,1,1)   | 0x00005b00 0x00006700 0x00000c00
+D RKNN: [02:21:15.208] 9   ConvExSwish model.2.cv2.conv.bias            FLOAT     (32)          | 0x00006700 0x00006780 0x00000080
+D RKNN: [02:21:15.208] 10  ConvExSwish model.3.conv.weight              FLOAT16   (64,32,3,3)   | 0x00006780 0x0000f780 0x00009000
+D RKNN: [02:21:15.208] 10  ConvExSwish model.3.conv.bias                FLOAT     (64)          | 0x0000f780 0x0000f880 0x00000100
+D RKNN: [02:21:15.208] 11  ConvExSwish model.4.cv1.conv.weight          FLOAT16   (64,64,1,1)   | 0x0000f880 0x00011880 0x00002000
+D RKNN: [02:21:15.208] 11  ConvExSwish model.4.cv1.conv.bias            FLOAT     (64)          | 0x00011880 0x00011980 0x00000100
+D RKNN: [02:21:15.208] 12  Split       onnx::Split_157                  INT64     (2)           | 0x00011980 0x00011990 0x00000010
+D RKNN: [02:21:15.208] 13  ConvExSwish model.4.m.0.cv1.conv.weight      FLOAT16   (32,32,3,3)   | 0x000119c0 0x000161c0 0x00004800
+D RKNN: [02:21:15.208] 13  ConvExSwish model.4.m.0.cv1.conv.bias        FLOAT     (32)          | 0x000161c0 0x00016240 0x00000080
+D RKNN: [02:21:15.208] 14  ConvExSwish model.4.m.0.cv2.conv.weight      FLOAT16   (32,32,3,3)   | 0x00016240 0x0001aa40 0x00004800
+D RKNN: [02:21:15.208] 14  ConvExSwish model.4.m.0.cv2.conv.bias        FLOAT     (32)          | 0x0001aa40 0x0001aac0 0x00000080
+D RKNN: [02:21:15.208] 16  ConvExSwish model.4.m.1.cv1.conv.weight      FLOAT16   (32,32,3,3)   | 0x0001aac0 0x0001f2c0 0x00004800
+D RKNN: [02:21:15.208] 16  ConvExSwish model.4.m.1.cv1.conv.bias        FLOAT     (32)          | 0x0001f2c0 0x0001f340 0x00000080
+D RKNN: [02:21:15.208] 17  ConvExSwish model.4.m.1.cv2.conv.weight      FLOAT16   (32,32,3,3)   | 0x0001f340 0x00023b40 0x00004800
+D RKNN: [02:21:15.208] 17  ConvExSwish model.4.m.1.cv2.conv.bias        FLOAT     (32)          | 0x00023b40 0x00023bc0 0x00000080
+D RKNN: [02:21:15.208] 20  ConvExSwish model.4.cv2.conv.weight          FLOAT16   (64,128,1,1)  | 0x00023bc0 0x00027bc0 0x00004000
+D RKNN: [02:21:15.208] 20  ConvExSwish model.4.cv2.conv.bias            FLOAT     (64)          | 0x00027bc0 0x00027cc0 0x00000100
+D RKNN: [02:21:15.208] 21  ConvExSwish model.5.conv.weight              FLOAT16   (128,64,3,3)  | 0x00027cc0 0x0004bcc0 0x00024000
+D RKNN: [02:21:15.208] 21  ConvExSwish model.5.conv.bias                FLOAT     (128)         | 0x0004bcc0 0x0004bec0 0x00000200
+D RKNN: [02:21:15.208] 22  ConvExSwish model.6.cv1.conv.weight          FLOAT16   (128,128,1,1) | 0x0004bec0 0x00053ec0 0x00008000
+D RKNN: [02:21:15.208] 22  ConvExSwish model.6.cv1.conv.bias            FLOAT     (128)         | 0x00053ec0 0x000540c0 0x00000200
+D RKNN: [02:21:15.208] 23  Split       onnx::Split_184                  INT64     (2)           | 0x000540c0 0x000540d0 0x00000010
+D RKNN: [02:21:15.208] 24  ConvExSwish model.6.m.0.cv1.conv.weight      FLOAT16   (64,64,3,3)   | 0x00054100 0x00066100 0x00012000
+D RKNN: [02:21:15.208] 24  ConvExSwish model.6.m.0.cv1.conv.bias        FLOAT     (64)          | 0x00066100 0x00066200 0x00000100
+D RKNN: [02:21:15.208] 25  ConvExSwish model.6.m.0.cv2.conv.weight      FLOAT16   (64,64,3,3)   | 0x00066200 0x00078200 0x00012000
+D RKNN: [02:21:15.208] 25  ConvExSwish model.6.m.0.cv2.conv.bias        FLOAT     (64)          | 0x00078200 0x00078300 0x00000100
+D RKNN: [02:21:15.208] 27  ConvExSwish model.6.m.1.cv1.conv.weight      FLOAT16   (64,64,3,3)   | 0x00078300 0x0008a300 0x00012000
+D RKNN: [02:21:15.208] 27  ConvExSwish model.6.m.1.cv1.conv.bias        FLOAT     (64)          | 0x0008a300 0x0008a400 0x00000100
+D RKNN: [02:21:15.208] 28  ConvExSwish model.6.m.1.cv2.conv.weight      FLOAT16   (64,64,3,3)   | 0x0008a400 0x0009c400 0x00012000
+D RKNN: [02:21:15.208] 28  ConvExSwish model.6.m.1.cv2.conv.bias        FLOAT     (64)          | 0x0009c400 0x0009c500 0x00000100
+D RKNN: [02:21:15.208] 31  ConvExSwish model.6.cv2.conv.weight          FLOAT16   (128,256,1,1) | 0x0009c500 0x000ac500 0x00010000
+D RKNN: [02:21:15.208] 31  ConvExSwish model.6.cv2.conv.bias            FLOAT     (128)         | 0x000ac500 0x000ac700 0x00000200
+D RKNN: [02:21:15.208] 32  ConvExSwish model.7.conv.weight              FLOAT16   (256,128,3,3) | 0x000ac700 0x0013c700 0x00090000
+D RKNN: [02:21:15.208] 32  ConvExSwish model.7.conv.bias                FLOAT     (256)         | 0x0013c700 0x0013cb00 0x00000400
+D RKNN: [02:21:15.208] 33  ConvExSwish model.8.cv1.conv.weight          FLOAT16   (256,256,1,1) | 0x0013cb00 0x0015cb00 0x00020000
+D RKNN: [02:21:15.208] 33  ConvExSwish model.8.cv1.conv.bias            FLOAT     (256)         | 0x0015cb00 0x0015cf00 0x00000400
+D RKNN: [02:21:15.208] 34  Split       onnx::Split_211                  INT64     (2)           | 0x0015cf00 0x0015cf10 0x00000010
+D RKNN: [02:21:15.208] 35  ConvExSwish model.8.m.0.cv1.conv.weight      FLOAT16   (128,128,3,3) | 0x0015cf40 0x001a4f40 0x00048000
+D RKNN: [02:21:15.208] 35  ConvExSwish model.8.m.0.cv1.conv.bias        FLOAT     (128)         | 0x001a4f40 0x001a5140 0x00000200
+D RKNN: [02:21:15.208] 36  ConvExSwish model.8.m.0.cv2.conv.weight      FLOAT16   (128,128,3,3) | 0x001a5140 0x001ed140 0x00048000
+D RKNN: [02:21:15.208] 36  ConvExSwish model.8.m.0.cv2.conv.bias        FLOAT     (128)         | 0x001ed140 0x001ed340 0x00000200
+D RKNN: [02:21:15.208] 39  ConvExSwish model.8.cv2.conv.weight          FLOAT16   (256,384,1,1) | 0x001ed340 0x0021d340 0x00030000
+D RKNN: [02:21:15.208] 39  ConvExSwish model.8.cv2.conv.bias            FLOAT     (256)         | 0x0021d340 0x0021d740 0x00000400
+D RKNN: [02:21:15.208] 40  ConvExSwish model.9.cv1.conv.weight          FLOAT16   (128,256,1,1) | 0x0021d740 0x0022d740 0x00010000
+D RKNN: [02:21:15.208] 40  ConvExSwish model.9.cv1.conv.bias            FLOAT     (128)         | 0x0022d740 0x0022d940 0x00000200
+D RKNN: [02:21:15.208] 45  ConvExSwish model.9.cv2.conv.weight          FLOAT16   (256,512,1,1) | 0x0022d940 0x0026d940 0x00040000
+D RKNN: [02:21:15.208] 45  ConvExSwish model.9.cv2.conv.bias            FLOAT     (256)         | 0x0026d940 0x0026dd40 0x00000400
+D RKNN: [02:21:15.208] 46  Resize      empty_placeholder_0              FLOAT     (1)           | 0x00684380 0x00684400 0x00000080
+D RKNN: [02:21:15.208] 46  Resize      /model.10/Constant_output_0      FLOAT     (4)           | 0x0026dd40 0x0026ddc0 0x00000080
+D RKNN: [02:21:15.208] 48  ConvExSwish model.12.cv1.conv.weight         FLOAT16   (128,384,1,1) | 0x0026ddc0 0x00285dc0 0x00018000
+D RKNN: [02:21:15.208] 48  ConvExSwish model.12.cv1.conv.bias           FLOAT     (128)         | 0x00285dc0 0x00285fc0 0x00000200
+D RKNN: [02:21:15.208] 49  Split       onnx::Split_184                  INT64     (2)           | 0x000540c0 0x000540d0 0x00000010
+D RKNN: [02:21:15.208] 50  ConvExSwish model.12.m.0.cv1.conv.weight     FLOAT16   (64,64,3,3)   | 0x00285fc0 0x00297fc0 0x00012000
+D RKNN: [02:21:15.208] 50  ConvExSwish model.12.m.0.cv1.conv.bias       FLOAT     (64)          | 0x00297fc0 0x002980c0 0x00000100
+D RKNN: [02:21:15.208] 51  ConvExSwish model.12.m.0.cv2.conv.weight     FLOAT16   (64,64,3,3)   | 0x002980c0 0x002aa0c0 0x00012000
+D RKNN: [02:21:15.208] 51  ConvExSwish model.12.m.0.cv2.conv.bias       FLOAT     (64)          | 0x002aa0c0 0x002aa1c0 0x00000100
+D RKNN: [02:21:15.208] 53  ConvExSwish model.12.cv2.conv.weight         FLOAT16   (128,192,1,1) | 0x002aa1c0 0x002b61c0 0x0000c000
+D RKNN: [02:21:15.208] 53  ConvExSwish model.12.cv2.conv.bias           FLOAT     (128)         | 0x002b61c0 0x002b63c0 0x00000200
+D RKNN: [02:21:15.208] 54  Resize      empty_placeholder_0              FLOAT     (1)           | 0x00684380 0x00684400 0x00000080
+D RKNN: [02:21:15.208] 54  Resize      /model.10/Constant_output_0      FLOAT     (4)           | 0x0026dd40 0x0026ddc0 0x00000080
+D RKNN: [02:21:15.208] 56  ConvExSwish model.15.cv1.conv.weight         FLOAT16   (64,192,1,1)  | 0x002b63c0 0x002bc3c0 0x00006000
+D RKNN: [02:21:15.208] 56  ConvExSwish model.15.cv1.conv.bias           FLOAT     (64)          | 0x002bc3c0 0x002bc4c0 0x00000100
+D RKNN: [02:21:15.208] 57  Split       onnx::Split_157                  INT64     (2)           | 0x00011980 0x00011990 0x00000010
+D RKNN: [02:21:15.208] 58  ConvExSwish model.15.m.0.cv1.conv.weight     FLOAT16   (32,32,3,3)   | 0x002bc4c0 0x002c0cc0 0x00004800
+D RKNN: [02:21:15.208] 58  ConvExSwish model.15.m.0.cv1.conv.bias       FLOAT     (32)          | 0x002c0cc0 0x002c0d40 0x00000080
+D RKNN: [02:21:15.208] 59  ConvExSwish model.15.m.0.cv2.conv.weight     FLOAT16   (32,32,3,3)   | 0x002c0d40 0x002c5540 0x00004800
+D RKNN: [02:21:15.208] 59  ConvExSwish model.15.m.0.cv2.conv.bias       FLOAT     (32)          | 0x002c5540 0x002c55c0 0x00000080
+D RKNN: [02:21:15.208] 61  ConvExSwish model.15.cv2.conv.weight         FLOAT16   (64,96,1,1)   | 0x002c55c0 0x002c85c0 0x00003000
+D RKNN: [02:21:15.208] 61  ConvExSwish model.15.cv2.conv.bias           FLOAT     (64)          | 0x002c85c0 0x002c86c0 0x00000100
+D RKNN: [02:21:15.208] 62  ConvExSwish model.16.conv.weight             FLOAT16   (64,64,3,3)   | 0x002c86c0 0x002da6c0 0x00012000
+D RKNN: [02:21:15.208] 62  ConvExSwish model.16.conv.bias               FLOAT     (64)          | 0x002da6c0 0x002da7c0 0x00000100
+D RKNN: [02:21:15.208] 64  ConvExSwish model.22.cv2.0.0.conv.weight     FLOAT16   (64,64,3,3)   | 0x002da7c0 0x002ec7c0 0x00012000
+D RKNN: [02:21:15.208] 64  ConvExSwish model.22.cv2.0.0.conv.bias       FLOAT     (64)          | 0x002ec7c0 0x002ec8c0 0x00000100
+D RKNN: [02:21:15.208] 65  ConvExSwish model.22.cv3.0.0.conv.weight     FLOAT16   (64,64,3,3)   | 0x002ec8c0 0x002fe8c0 0x00012000
+D RKNN: [02:21:15.208] 65  ConvExSwish model.22.cv3.0.0.conv.bias       FLOAT     (64)          | 0x002fe8c0 0x002fe9c0 0x00000100
+D RKNN: [02:21:15.208] 66  ConvExSwish model.18.cv1.conv.weight         FLOAT16   (128,192,1,1) | 0x00322bc0 0x0032ebc0 0x0000c000
+D RKNN: [02:21:15.208] 66  ConvExSwish model.18.cv1.conv.bias           FLOAT     (128)         | 0x0032ebc0 0x0032edc0 0x00000200
+D RKNN: [02:21:15.208] 67  Split       onnx::Split_184                  INT64     (2)           | 0x000540c0 0x000540d0 0x00000010
+D RKNN: [02:21:15.208] 68  ConvExSwish model.22.cv2.0.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x002fe9c0 0x003109c0 0x00012000
+D RKNN: [02:21:15.208] 68  ConvExSwish model.22.cv2.0.1.conv.bias       FLOAT     (64)          | 0x003109c0 0x00310ac0 0x00000100
+D RKNN: [02:21:15.208] 69  Conv        model.22.cv2.0.2.weight          FLOAT16   (64,64,1,1)   | 0x0032edc0 0x00330dc0 0x00002000
+D RKNN: [02:21:15.208] 69  Conv        model.22.cv2.0.2.bias            FLOAT     (64)          | 0x00330dc0 0x00330ec0 0x00000100
+D RKNN: [02:21:15.208] 70  ConvExSwish model.22.cv3.0.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x00310ac0 0x00322ac0 0x00012000
+D RKNN: [02:21:15.208] 70  ConvExSwish model.22.cv3.0.1.conv.bias       FLOAT     (64)          | 0x00322ac0 0x00322bc0 0x00000100
+D RKNN: [02:21:15.208] 71  Conv        model.22.cv3.0.2.weight          FLOAT16   (5,64,1,1)    | 0x00330ec0 0x00331140 0x00000280
+D RKNN: [02:21:15.208] 71  Conv        model.22.cv3.0.2.bias            FLOAT     (5)           | 0x00331140 0x00331180 0x00000040
+D RKNN: [02:21:15.208] 72  ConvExSwish model.18.m.0.cv1.conv.weight     FLOAT16   (64,64,3,3)   | 0x00331180 0x00343180 0x00012000
+D RKNN: [02:21:15.208] 72  ConvExSwish model.18.m.0.cv1.conv.bias       FLOAT     (64)          | 0x00343180 0x00343280 0x00000100
+D RKNN: [02:21:15.208] 73  ConvExSwish model.18.m.0.cv2.conv.weight     FLOAT16   (64,64,3,3)   | 0x00343280 0x00355280 0x00012000
+D RKNN: [02:21:15.208] 73  ConvExSwish model.18.m.0.cv2.conv.bias       FLOAT     (64)          | 0x00355280 0x00355380 0x00000100
+D RKNN: [02:21:15.208] 75  ConvExSwish model.18.cv2.conv.weight         FLOAT16   (128,192,1,1) | 0x00355380 0x00361380 0x0000c000
+D RKNN: [02:21:15.208] 75  ConvExSwish model.18.cv2.conv.bias           FLOAT     (128)         | 0x00361380 0x00361580 0x00000200
+D RKNN: [02:21:15.208] 76  ConvExSwish model.19.conv.weight             FLOAT16   (128,128,3,3) | 0x00361580 0x003a9580 0x00048000
+D RKNN: [02:21:15.208] 76  ConvExSwish model.19.conv.bias               FLOAT     (128)         | 0x003a9580 0x003a9780 0x00000200
+D RKNN: [02:21:15.208] 78  ConvExSwish model.22.cv2.1.0.conv.weight     FLOAT16   (64,128,3,3)  | 0x003a9780 0x003cd780 0x00024000
+D RKNN: [02:21:15.208] 78  ConvExSwish model.22.cv2.1.0.conv.bias       FLOAT     (64)          | 0x003cd780 0x003cd880 0x00000100
+D RKNN: [02:21:15.208] 79  ConvExSwish model.22.cv3.1.0.conv.weight     FLOAT16   (64,128,3,3)  | 0x003cd880 0x003f1880 0x00024000
+D RKNN: [02:21:15.208] 79  ConvExSwish model.22.cv3.1.0.conv.bias       FLOAT     (64)          | 0x003f1880 0x003f1980 0x00000100
+D RKNN: [02:21:15.208] 80  ConvExSwish model.21.cv1.conv.weight         FLOAT16   (256,384,1,1) | 0x00415b80 0x00445b80 0x00030000
+D RKNN: [02:21:15.208] 80  ConvExSwish model.21.cv1.conv.bias           FLOAT     (256)         | 0x00445b80 0x00445f80 0x00000400
+D RKNN: [02:21:15.208] 81  Split       onnx::Split_211                  INT64     (2)           | 0x0015cf00 0x0015cf10 0x00000010
+D RKNN: [02:21:15.208] 82  ConvExSwish model.22.cv2.1.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x003f1980 0x00403980 0x00012000
+D RKNN: [02:21:15.208] 82  ConvExSwish model.22.cv2.1.1.conv.bias       FLOAT     (64)          | 0x00403980 0x00403a80 0x00000100
+D RKNN: [02:21:15.208] 83  Conv        model.22.cv2.1.2.weight          FLOAT16   (64,64,1,1)   | 0x00445f80 0x00447f80 0x00002000
+D RKNN: [02:21:15.208] 83  Conv        model.22.cv2.1.2.bias            FLOAT     (64)          | 0x00447f80 0x00448080 0x00000100
+D RKNN: [02:21:15.208] 84  ConvExSwish model.22.cv3.1.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x00403a80 0x00415a80 0x00012000
+D RKNN: [02:21:15.208] 84  ConvExSwish model.22.cv3.1.1.conv.bias       FLOAT     (64)          | 0x00415a80 0x00415b80 0x00000100
+D RKNN: [02:21:15.208] 85  Conv        model.22.cv3.1.2.weight          FLOAT16   (5,64,1,1)    | 0x00448080 0x00448300 0x00000280
+D RKNN: [02:21:15.208] 85  Conv        model.22.cv3.1.2.bias            FLOAT     (5)           | 0x00448300 0x00448340 0x00000040
+D RKNN: [02:21:15.208] 86  ConvExSwish model.21.m.0.cv1.conv.weight     FLOAT16   (128,128,3,3) | 0x00448340 0x00490340 0x00048000
+D RKNN: [02:21:15.208] 86  ConvExSwish model.21.m.0.cv1.conv.bias       FLOAT     (128)         | 0x00490340 0x00490540 0x00000200
+D RKNN: [02:21:15.208] 87  ConvExSwish model.21.m.0.cv2.conv.weight     FLOAT16   (128,128,3,3) | 0x00490540 0x004d8540 0x00048000
+D RKNN: [02:21:15.208] 87  ConvExSwish model.21.m.0.cv2.conv.bias       FLOAT     (128)         | 0x004d8540 0x004d8740 0x00000200
+D RKNN: [02:21:15.208] 89  ConvExSwish model.21.cv2.conv.weight         FLOAT16   (256,384,1,1) | 0x004d8740 0x00508740 0x00030000
+D RKNN: [02:21:15.208] 89  ConvExSwish model.21.cv2.conv.bias           FLOAT     (256)         | 0x00508740 0x00508b40 0x00000400
+D RKNN: [02:21:15.208] 90  ConvExSwish model.22.cv2.2.0.conv.weight     FLOAT16   (64,256,3,3)  | 0x00508b40 0x00550b40 0x00048000
+D RKNN: [02:21:15.208] 90  ConvExSwish model.22.cv2.2.0.conv.bias       FLOAT     (64)          | 0x00550b40 0x00550c40 0x00000100
+D RKNN: [02:21:15.208] 91  ConvExSwish model.22.cv3.2.0.conv.weight     FLOAT16   (64,256,3,3)  | 0x00550c40 0x00I rknn building done.
+598c40 0x00048000
+D RKNN: [02:21:15.208] 91  ConvExSwish model.22.cv3.2.0.conv.bias       FLOAT     (64)          | 0x00598c40 0x00598d40 0x00000100
+D RKNN: [02:21:15.208] 92  ConvExSwish model.22.cv2.2.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x00598d40 0x005aad40 0x00012000
+D RKNN: [02:21:15.208] 92  ConvExSwish model.22.cv2.2.1.conv.bias       FLOAT     (64)          | 0x005aad40 0x005aae40 0x00000100
+D RKNN: [02:21:15.208] 93  Conv        model.22.cv2.2.2.weight          FLOAT16   (64,64,1,1)   | 0x005bcf40 0x005bef40 0x00002000
+D RKNN: [02:21:15.208] 93  Conv        model.22.cv2.2.2.bias            FLOAT     (64)          | 0x005bef40 0x005bf040 0x00000100
+D RKNN: [02:21:15.208] 94  ConvExSwish model.22.cv3.2.1.conv.weight     FLOAT16   (64,64,3,3)   | 0x005aae40 0x005bce40 0x00012000
+D RKNN: [02:21:15.208] 94  ConvExSwish model.22.cv3.2.1.conv.bias       FLOAT     (64)          | 0x005bce40 0x005bcf40 0x00000100
+D RKNN: [02:21:15.208] 95  Conv        model.22.cv3.2.2.weight          FLOAT16   (5,64,1,1)    | 0x005bf040 0x005bf2c0 0x00000280
+D RKNN: [02:21:15.208] 95  Conv        model.22.cv3.2.2.bias            FLOAT     (5)           | 0x005bf2c0 0x005bf300 0x00000040
+D RKNN: [02:21:15.208] 96  Reshape     /model.22/Constant_output_0_1    INT64     (4)           | 0x00684180 0x006841a0 0x00000020
+D RKNN: [02:21:15.208] 97  Reshape     /model.22/Constant_3_output_0_1  INT64     (4)           | 0x006841c0 0x006841e0 0x00000020
+D RKNN: [02:21:15.208] 98  Reshape     /model.22/Constant_output_0_2    INT64     (4)           | 0x00684200 0x00684220 0x00000020
+D RKNN: [02:21:15.208] 100 Reshape     /model.22/dfl/Constant_output_0  INT64     (4)           | 0x005bf300 0x005bf320 0x00000020
+D RKNN: [02:21:15.208] 102 Conv        model.22.dfl.conv.weight         FLOAT16   (1,16,1,1)    | 0x005bf340 0x005bf360 0x00000020
+D RKNN: [02:21:15.208] 104 Split       /model.22/Slice_2sp_split        INT64     (2)           | 0x00684280 0x00684290 0x00000010
+D RKNN: [02:21:15.208] 105 Sub         /model.22/Constant_12_output_0   FLOAT16   (1,2,1,8400)  | 0x005bf380 0x00642780 0x00083400
+D RKNN: [02:21:15.208] 106 Add         /model.22/Constant_13_output_0   FLOAT16   (1,2,1,8400)  | 0x00642780 0x00663480 0x00020d00
+D RKNN: [02:21:15.208] 109 Mul         /model.22/Div_1_2mul_i1          FLOAT     (1,1,1,1)     | 0x006842c0 0x00684300 0x00000040
+D RKNN: [02:21:15.208] 111 Mul         /model.22/Constant_15_output_0   FLOAT16   (1,1,1,8400)  | 0x00663480 0x00684180 0x00020d00
+D RKNN: [02:21:15.208] 112 Reshape     /model.22/Constant_3_output_0_2  INT64     (4)           | 0x00684240 0x00684260 0x00000020
+D RKNN: [02:21:15.208] 115 Reshape     /model.22/Sigmoid_output_0_rs_i1 INT64     (4)           | 0x00684300 0x00684320 0x00000020
+D RKNN: [02:21:15.208] 117 Reshape     output0-rs_i1                    INT64     (3)           | 0x00684340 0x00684358 0x00000018
+D RKNN: [02:21:15.208] -------------------------------------------------------------------------+---------------------------------
+D RKNN: [02:21:15.208] ----------------------------------------
+D RKNN: [02:21:15.208] Total Internal Memory Size: 16800KB
+D RKNN: [02:21:15.208] Total Weight Memory Size: 6675KB
+D RKNN: [02:21:15.208] ----------------------------------------
+D RKNN: [02:21:15.208] <<<<<<<< end: rknn::RKNNMemStatisticsPass

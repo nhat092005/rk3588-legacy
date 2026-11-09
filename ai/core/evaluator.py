@@ -28,18 +28,27 @@ IMGSZ = 640
 CONF = 0.001
 IOU = 0.7
 MAX_DET = 300
+MAX_TIME_IMG = 60.0  # Ultralytics NMS stops early after 2 + 0.05 s per image, which would silently truncate outputs with thousands of boxes above CONF (hybrid recipes h3 and h4)
 IOU_THRESHOLDS = torch.linspace(0.5, 0.95, 10)
 
 # eval set name -> (prepared dataset, split key in its dataset.yaml)
 EVAL_SETS = {
-    "sfchd_test": ("sfchd_5class", "test"),  # common test set for every model (1,238 images)
-    "shel5k_test": ("sfchd_shel5k", "test_shel5k"),  # extra test set for Option 2 models (500 images)
+    "css_test": ("ppe5", "test"),  # common test set for every model (82 images, CSS v28 test split)
+    "ppe2286_ext": ("ppe5", "test_ext"),  # external test set (180 ppe2286 images, Person is a pseudo-label)
+    "ppe2286_val": ("ppe2286", "val"),  # the authors' valid folder (457 images), no held-out test exists
+    "ppe2286_heldout": ("ppe2286", "heldout"),  # valid minus ppe5 test_ext (407 images), unseen by ppe5, ppe5_plus, ppe4
+    "ppe4_test": ("ppe4", "test"),  # same images as css_test, Person labels removed
 }
 # Eval sets reported for a model trained on each dataset (Guide section 7, general rules)
 EVAL_SETS_BY_DATASET = {
-    "sfchd_5class": ["sfchd_test"],
-    "sfchd_shel5k": ["sfchd_test", "shel5k_test"],
+    "ppe5": ["css_test", "ppe2286_ext"],
+    "ppe5_plus": ["css_test"],  # ppe2286_ext images are in its train split
+    "ppe2286": ["ppe2286_val"],
+    "ppe4": ["ppe4_test"],
 }
+# Cross-training-set comparison (ai/automation/compare_train_sets.py): common test sets for every ppe* model.
+# Written to runs/<run_id>/eval/ only, never to a leaderboard (a leaderboard's columns follow the trained classes).
+CROSS_EVAL_SETS = ["css_test", "ppe2286_heldout"]
 
 # A backend maps a uint8 RGB NCHW batch (1, 3, IMGSZ, IMGSZ) and its image path to raw predictions
 # (1, 4 + nc, anchors) with xywh boxes in input pixels.
@@ -102,7 +111,7 @@ def evaluate(backend: Backend, eval_set: str, limit: int | None = None) -> dict:
         img = batch["img"]
         preds = backend(img, im_file=batch["im_file"][0])
         det = nms.non_max_suppression(
-            preds, CONF, IOU, nc=0, multi_label=True, agnostic=False, max_det=MAX_DET
+            preds, CONF, IOU, nc=0, multi_label=True, agnostic=False, max_det=MAX_DET, max_time_img=MAX_TIME_IMG
         )[0].cpu()
 
         cls = batch["cls"].squeeze(-1)

@@ -14,11 +14,8 @@ from ai.core.evaluator import EVAL_SETS_BY_DATASET
 from ai.core.evaluator import evaluate as evaluate_v1
 from ai.core.provenance import file_sha256, git_dirty
 from ai.core.trainer import TrainConfig, evaluate, train
+from ai.paths import REPO_ROOT, LEADERBOARDS_DIR, RUNS_DIR
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-AUTOMATION_DIR = Path(__file__).resolve().parent
-RUNS_DIR = AUTOMATION_DIR / "runs"
-LEADERBOARDS_DIR = AUTOMATION_DIR / "leaderboards"
 
 
 def git_commit() -> str:

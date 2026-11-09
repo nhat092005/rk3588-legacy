@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_x8",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/latency/onboard_x8/rule.txt",
+ "rule_first_line": "X8 rule, written 2026-10-31T05:03:26+07:00 before any X8 data exists (replaces a draft of the same day written before the X4 result; no X8 data existed then either). Final. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review of the design).",
+ "script": [
+  "ai/npu/latency/analyze_x8.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

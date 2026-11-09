@@ -7,7 +7,7 @@ CORE_MASK    ?= AUTO
 
 # Paths & logtee
 comma   := ,
-RUN_DIR  = ai/automation/runs/$(RUN)
+RUN_DIR  = experiments/runs/$(RUN)
 LOGTEE   = .venv/bin/python scripts/logtee.py
 # Ultralytics must not pip-install into .venv (it silently changed onnx/onnxslim before); only make sync changes it
 export YOLO_AUTOINSTALL = False
@@ -42,15 +42,15 @@ help:
 	@echo "  make train CONFIG=<path> [SEED=<n>]    - train + protocol v1 eval + leaderboard, e.g. CONFIG=ai/automation/configs/ppe5_yolov8n_baseline.yaml SEED=1"
 	@echo "  make evaluate RUN=<id> BACKEND=pt|onnx|rknn [PREC=fp16|int8|int8h5]"
 	@echo "                                         - protocol v1 AI Quality (rknn runs on the board via DEVICE)"
-	@echo "  make golden-test                       - evaluator must reproduce ai/automation/golden/evaluator_v1.json"
+	@echo "  make golden-test                       - evaluator must reproduce experiments/golden/evaluator_v1.json"
 	@echo "  make golden-update                     - rewrite the golden file (only when the protocol version changes)"
 	@echo "  make test-parsers                      - eval_perf parsers vs real RKNN 2.3.2 output (tests/fixtures/)"
 	@echo "  make crosscheck [WEIGHTS=<pt>]         - evaluator vs Ultralytics model.val() on the same weights"
 	@echo ""
 	@echo "Model Export & Tier 1 Benchmark:"
-	@echo "  make export-npu RUN=<id> PREC=fp16|int8|int8h5 - export to RKNN (int8h5 = hybrid INT8, float16 box-decode tail, calibration of CALIB_FROM) + FP32 ONNX, build log -> runs/<id>/logs/export_<prec>_*.log"
-	@echo "  make complexity RUN=<id>                - Params/GFLOPs/MACs/file sizes -> runs/<id>/complexity.json"
-	@echo "  make bench-gpu RUN=<id>                 - PC GPU reference latency (Table H) -> runs/<id>/bench/gpu_pt_fp32.json"
+	@echo "  make export-npu RUN=<id> PREC=fp16|int8|int8h5 - export to RKNN (int8h5 = hybrid INT8, float16 box-decode tail, calibration of CALIB_FROM) + FP32 ONNX, build log -> experiments/runs/<id>/logs/export_<prec>_*.log"
+	@echo "  make complexity RUN=<id>                - Params/GFLOPs/MACs/file sizes -> experiments/runs/<id>/complexity.json"
+	@echo "  make bench-gpu RUN=<id>                 - PC GPU reference latency (Table H) -> experiments/runs/<id>/bench/gpu_pt_fp32.json"
 	@echo "  make tables DATASET=<name>              - build all tables from result files -> results/<name>/ (exit 1 on inconsistency)"
 	@echo "  make benchmark-npu RUN=<id> PREC=<p> [CORE_MASK=AUTO] [SESSION=<n>] [SKIP_MEMORY=1]"
 	@echo "                                          - tier 1: eval_perf/eval_memory from the PC"
@@ -103,22 +103,22 @@ docs:
 train:
 	$(eval RID := $(shell .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id 2>/dev/null | tail -n 1))
 	@test -n "$(RID)" || .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED)) --print-run-id
-	$(LOGTEE) ai/automation/runs/$(RID)/logs/train -- .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED))
+	$(LOGTEE) experiments/runs/$(RID)/logs/train -- .venv/bin/python -m ai.automation.run $(CONFIG) $(if $(SEED),--seed $(SEED))
 
 evaluate:
 	$(LOGTEE) $(RUN_DIR)/logs/evaluate_$(BACKEND)$(if $(PREC),_$(PREC)) -- .venv/bin/python -m ai.automation.evaluate $(RUN) --backend $(BACKEND) $(if $(PREC),--precision $(PREC) --board $(BOARD) --board-repo $(BOARD_REPO))
 
 golden-test:
-	$(LOGTEE) ai/automation/golden/logs/golden_test -- .venv/bin/python -m ai.automation.check_evaluator golden
+	$(LOGTEE) experiments/golden/logs/golden_test -- .venv/bin/python -m ai.automation.check_evaluator golden
 
 test-parsers:
 	.venv/bin/python -m tests.test_parsers
 
 golden-update:
-	$(LOGTEE) ai/automation/golden/logs/golden_update -- .venv/bin/python -m ai.automation.check_evaluator golden --update
+	$(LOGTEE) experiments/golden/logs/golden_update -- .venv/bin/python -m ai.automation.check_evaluator golden --update
 
 crosscheck:
-	$(LOGTEE) $(if $(RUN),$(RUN_DIR)/logs/crosscheck,ai/automation/golden/logs/crosscheck) -- .venv/bin/python -m ai.automation.check_evaluator crosscheck $(if $(WEIGHTS),--weights $(WEIGHTS)) $(if $(RUN),--run-id $(RUN))
+	$(LOGTEE) $(if $(RUN),$(RUN_DIR)/logs/crosscheck,experiments/golden/logs/crosscheck) -- .venv/bin/python -m ai.automation.check_evaluator crosscheck $(if $(WEIGHTS),--weights $(WEIGHTS)) $(if $(RUN),--run-id $(RUN))
 
 # Model export and tier 1 benchmark
 .PHONY: export-npu complexity tables benchmark-npu bench-gpu
@@ -209,10 +209,10 @@ compare-train-sets:
 	.venv/bin/python -m ai.automation.compare_train_sets
 
 leaderboard:
-	cat ai/automation/leaderboards/$(DATASET).csv
+	cat experiments/leaderboards/$(DATASET).csv
 
 tail:
-	tail -f ai/automation/runs/$(RUN)/results.csv
+	tail -f experiments/runs/$(RUN)/results.csv
 
 prepare-data:
 	.venv/bin/python scripts/data/prepare_$(DATASET).py

@@ -1,0 +1,168 @@
+{
+ "rule": "Phase 2e board micro-model rule (G7b, G11), written 2026-11-01T15:48:26+07:00 before any micro-model result exists (the PC-only results of rule_pc.txt are known: in onnxruntime, (half_pixel, round_prefer_floor) equals (asymmetric, floor) at scales 1.5, 2 and 3, and (half_pixel, floor) differs from it by 6.57 on the random input). Not from a source. Not reviewed by the user (request of 2026-11-01). Reviewed by the advisor (inventory traps). Script ai/npu/operator_support/micro_ops.py.\nMethod (both): tiny ONNX models (opset 19) built with onnx.helper, FP16 RKNN build (do_quantization False, target rk3588, rknn-toolkit2 2.3.2), run on the board over the PC adb and rknn_server path, tier-1 style (rknn.init_runtime target rk3588, device_id, core_mask), frequencies locked, no P2 or P3 helper (functional, not timing).\nG7b (does the NPU honour coordinate_transformation_mode and nearest_mode). Models: A (asymmetric, floor), B (half_pixel, floor), C (half_pixel, round_prefer_floor), all mode nearest, input 1x256x20x20 float32 random normal seed 0, scales 1,1,2,2. For each model the NPU output (rknn.inference) is compared with onnxruntime of the same model (own) and with onnxruntime of A (ref). 'match' means max abs difference below 0.01 (a float16 rounding of values up to about 7 is at most about 0.004). The row Target (NPU or CPU) of the Resize in the perf_debug table at CORE_0 is reported.\nReading, fixed now: B matches own and does not match ref -> the compiler or runtime honours the coordinate mode and nearest_mode of B. B matches ref and not own -> B is run as A (attribute ignored). B matches neither -> reported as unexplained. C is read the same way: C matches own (equal to A in onnxruntime) tells nothing about the attribute. The result says what toolkit and runtime 2.3.2 compute for these attribute sets, not why the Resize of the YOLO graph is placed on the NPU, which stays unknown without text.\nG11 (standalone Relu, page 01 section 6.1, the two guides and the Operator List disagree). Model: input 1x64x80x80 float32 random normal seed 0, one Relu node, output. Runs: core_mask CORE_0 and CORE_0_1_2 with perf_debug True, one eval_perf each. Report the layer table rows (op, Target, WorkLoad per core) and the output check against onnxruntime (max abs diff below 0.01). Reading: the WorkLoad of the Relu row(s) at CORE_0_1_2 says whether this toolkit and runtime split a standalone Relu in a micro model. It does not say which document is right and it is not the Relu fused into ConvRelu of the YOLO ReLU model (those 51 rows were measured split). If the Relu is removed or fused by the compiler the table shows no Relu row and that is the result.\nLimits: micro models are not the ops inside the YOLO graph, one toolkit version, one run per model (3 builds for G7b, 1 for G11), no repetition. Budget: this script once. A crash may be fixed and rerun, a result is not rerun.\n",
+ "device": "192.168.137.49:5555",
+ "g7b": {
+  "A": {
+   "attrs": [
+    "asymmetric",
+    "floor"
+   ],
+   "ort_own_vs_ref": 0.0,
+   "npu_vs_own": 0.0019297599792480469,
+   "npu_vs_ref": 0.0019297599792480469,
+   "table": [
+    {
+     "op": "InputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "InputOperator:x"
+    },
+    {
+     "op": "Resize",
+     "target": "NPU",
+     "dtype": "FLOAT16",
+     "workload": "100.0%/0.0%/0.0%",
+     "name": "Resize:y"
+    },
+    {
+     "op": "OutputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "OutputOperator:y"
+    }
+   ],
+   "match_own": true,
+   "match_ref": true
+  },
+  "B": {
+   "attrs": [
+    "half_pixel",
+    "floor"
+   ],
+   "ort_own_vs_ref": 6.5704450607299805,
+   "npu_vs_own": 6.571284294128418,
+   "npu_vs_ref": 0.0019297599792480469,
+   "table": [
+    {
+     "op": "InputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "InputOperator:x"
+    },
+    {
+     "op": "Resize",
+     "target": "NPU",
+     "dtype": "FLOAT16",
+     "workload": "100.0%/0.0%/0.0%",
+     "name": "Resize:y"
+    },
+    {
+     "op": "OutputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "OutputOperator:y"
+    }
+   ],
+   "match_own": false,
+   "match_ref": true
+  },
+  "C": {
+   "attrs": [
+    "half_pixel",
+    "round_prefer_floor"
+   ],
+   "ort_own_vs_ref": 0.0,
+   "npu_vs_own": 0.0019297599792480469,
+   "npu_vs_ref": 0.0019297599792480469,
+   "table": [
+    {
+     "op": "InputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "InputOperator:x"
+    },
+    {
+     "op": "Resize",
+     "target": "NPU",
+     "dtype": "FLOAT16",
+     "workload": "100.0%/0.0%/0.0%",
+     "name": "Resize:y"
+    },
+    {
+     "op": "OutputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "OutputOperator:y"
+    }
+   ],
+   "match_own": true,
+   "match_ref": true
+  }
+ },
+ "g11": {
+  "CORE_0": {
+   "max_abs_vs_ort": 0.0018529891967773438,
+   "table": [
+    {
+     "op": "InputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "InputOperator:x",
+     "time_us": 10
+    },
+    {
+     "op": "Relu",
+     "target": "NPU",
+     "dtype": "FLOAT16",
+     "workload": "100.0%/0.0%/0.0%",
+     "name": "Relu:y",
+     "time_us": 196
+    },
+    {
+     "op": "OutputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "OutputOperator:y",
+     "time_us": 48
+    }
+   ]
+  },
+  "CORE_0_1_2": {
+   "max_abs_vs_ort": 0.0018529891967773438,
+   "table": [
+    {
+     "op": "InputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "InputOperator:x",
+     "time_us": 9
+    },
+    {
+     "op": "Relu",
+     "target": "NPU",
+     "dtype": "FLOAT16",
+     "workload": "33.8%/33.8%/32.5%",
+     "name": "Relu:y",
+     "time_us": 184
+    },
+    {
+     "op": "OutputOperator",
+     "target": "CPU",
+     "dtype": "FLOAT16",
+     "workload": "0.0%/0.0%/0.0%",
+     "name": "OutputOperator:y",
+     "time_us": 59
+    }
+   ]
+  }
+ }
+}

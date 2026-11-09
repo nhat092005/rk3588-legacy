@@ -12,10 +12,9 @@ import sys
 from pathlib import Path
 
 from ai.core.evaluator import EVAL_SETS_BY_DATASET, PROTOCOL_VERSION
+from ai.paths import REPO_ROOT, LEADERBOARDS_DIR, RUNS_DIR
 
 AUTOMATION_DIR = Path(__file__).resolve().parent
-REPO_ROOT = AUTOMATION_DIR.parents[1]
-RUNS_DIR = AUTOMATION_DIR / "runs"
 MODELS = ["yolov8n_baseline", "yolov8s_baseline"]
 SEED = 0  # every phase trains one seed (Guide section 7)
 MASKS_1CTX = ["AUTO", "CORE_0", "CORE_0_1", "CORE_0_1_2"]
@@ -43,7 +42,7 @@ def run_id(dataset: str, model: str, seed: int) -> str:
 
 
 def leaderboard_runs(dataset: str) -> list[str]:
-    path = AUTOMATION_DIR / "leaderboards" / f"{dataset}.csv"
+    path = LEADERBOARDS_DIR / f"{dataset}.csv"
     if not path.exists():
         return []
     with path.open() as fh:

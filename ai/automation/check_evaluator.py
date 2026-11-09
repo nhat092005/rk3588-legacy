@@ -18,8 +18,9 @@ from ai.core.backends import UltralyticsBackend
 from ai.core.dataset import dataset_yaml_path
 from ai.core.evaluator import EVAL_SETS, PROTOCOL_VERSION, evaluate
 from ai.core.provenance import provenance
+from ai.paths import GOLDEN_DIR, RUNS_DIR
 
-GOLDEN_PATH = Path(__file__).resolve().parent / "golden" / f"evaluator_{PROTOCOL_VERSION}.json"
+GOLDEN_PATH = GOLDEN_DIR / f"evaluator_{PROTOCOL_VERSION}.json"
 GOLDEN_WEIGHTS = "yolov8n.pt"
 GOLDEN_EVAL_SET = "css_test"
 GOLDEN_DEVICE = "cpu"  # CPU kernels are deterministic; GPU results may differ in the 4th decimal between machines
@@ -126,7 +127,7 @@ def main() -> None:
         sys.exit(golden(args.update))
     out = None
     if args.run_id:
-        run_dir = Path(__file__).resolve().parent / "runs" / args.run_id
+        run_dir = RUNS_DIR / args.run_id
         args.weights, out = str(run_dir / "weights" / "best.pt"), run_dir / "eval" / f"crosscheck_{args.eval_set}.json"
     sys.exit(crosscheck(args.weights, args.eval_set, args.device, out))
 

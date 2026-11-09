@@ -1,0 +1,20 @@
+{
+ "exp_id": "onboard_g4v",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0",
+  "ppe5_yolov8n_leakyrelu_100ep_s0",
+  "ppe5_yolov8n_relu6_100ep_s0",
+  "ppe5_yolov8n_relu_100ep_s0",
+  "ppe5_yolov8n_relu_200ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_g4v/ppe5_yolov8n_baseline_100ep_s0/rule.txt",
+ "rule_first_line": "Variants latency rule (onboard_g4v), written 2026-10-31T16:47:11+07:00 before any latency or workload data of the variants exists. Not from a source. Not reviewed by the user (user approval of 2026-10-31 for the variants), design reviewed by the advisor (tmp/2026-10-31_phase2b-variants-design.md). Same statements and approved numbers as experiments/npu/operator_support/onboard_g4b/ppe5_yolov8n_baseline_100ep_s0/rule.txt (5 percent latency drop and the 2 session gap rule, 50 percent cycles), protocol P2 as there (not approved as the main protocol). Kept apart so the results of onboard_g4b are untouched.",
+ "script": [
+  "ai/npu/operator_support/analyze_g4v.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

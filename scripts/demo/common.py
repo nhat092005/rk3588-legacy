@@ -22,8 +22,8 @@ from ultralytics.utils.plotting import colors
 from ai.board.common import preprocess, postprocess, IMGSZ, IOU
 from ai.core.backends import UltralyticsBackend
 from ai.core.provenance import REPO_ROOT, file_sha256, git_commit, git_dirty
+from ai.paths import REPO_ROOT, RUNS_DIR
 
-RUNS_DIR = REPO_ROOT / "ai" / "automation" / "runs"
 OUTPUTS_DIR = REPO_ROOT / "data" / "demo" / "outputs"
 DET_CONF = 0.1
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".jfif"}

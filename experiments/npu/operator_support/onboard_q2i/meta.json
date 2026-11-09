@@ -1,0 +1,17 @@
+{
+ "exp_id": "onboard_q2i",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0",
+  "ppe5_yolov8n_relu_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_q2i/ppe5_yolov8n_baseline_100ep_s0/rule.txt",
+ "rule_first_line": "int8h5 latency rule (V-4 of onboard_q2c/rule_int8h5.txt), written 2026-10-31T23:01:44+07:00 before any latency data of the exported int8h5 files exists. Not from a source. Not reviewed by the user. Condition of V-4: the sha256 of the exported int8h5 file differs from the build_recipe h5 file (80be7f5d against 9658075e for SiLU seed 0), so the latency of onboard_q2h is not reused. Same statements, approved numbers (5 percent, 2 session gap rule, 50 percent cycles) and protocol P2 (not approved as the main protocol) as onboard_q2h/rule.txt, with precision int8h5 in place of the variant h5.",
+ "script": [
+  "ai/npu/operator_support/analyze_q2i.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

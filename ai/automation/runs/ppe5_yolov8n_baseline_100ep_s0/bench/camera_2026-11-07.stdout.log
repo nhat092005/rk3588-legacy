@@ -1,7 +1,0 @@
-W rknn-toolkit-lite2 version: 2.3.2
-W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
-Done: ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/bench/camera_2026-11-07.json fps=29.95 e2e_p50=19.017 e2e_p95=19.172 ms frames=80865 overwritten=0 late_intervals=0 isp_frames=80894 read=80895 isp_frameloss=0
-I RKNN: [21:23:38.596] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
-I RKNN: [21:23:38.596] RKNN Driver Information, version: 0.9.8
-I RKNN: [21:23:38.596] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
-W RKNN: [21:23:38.605] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

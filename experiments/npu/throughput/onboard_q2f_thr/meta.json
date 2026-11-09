@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_q2f_thr",
+ "domain": "npu",
+ "topic": "throughput",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-01",
+ "rule_file": "experiments/npu/throughput/onboard_q2f_thr/rule.txt",
+ "rule_first_line": "E1 rule: int8h5 throughput under P3, written 2026-11-01T16:54:23+07:00 before any int8h5 throughput exists. Not from a source. P3 is the protocol approved by the user on 2026-11-01 (page 16), the numeric readings below are new and not covered by that approval (chưa duyệt). Context: the user set a 60 FPS target (page 11 section 8) and the standard INT8 is int8h5, but page 11 section 8 was measured with the default int8. Advisor reviewed the plan.",
+ "script": [
+  "ai/npu/throughput/analyze_q2f.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

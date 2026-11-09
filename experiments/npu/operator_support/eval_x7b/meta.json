@@ -1,0 +1,16 @@
+{
+ "exp_id": "eval_x7b",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/eval_x7b/rule.txt",
+ "rule_first_line": "X7b rule, written 2026-10-31T11:15:36+07:00 before any X7b data exists. Final. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor suggestion).",
+ "script": [
+  "ai/npu/operator_support/analyze_x7.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

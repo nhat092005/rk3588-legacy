@@ -1,0 +1,17 @@
+{
+ "exp_id": "onboard_q2h",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0",
+  "ppe5_yolov8n_relu_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/operator_support/onboard_q2h/ppe5_yolov8n_baseline_100ep_s0/rule.txt",
+ "rule_first_line": "Hybrid cost rule (2c-c, latency of recipe h5), written 2026-10-31T19:33:31+07:00 before any latency or workload data of h5 models exists. Not from a source. Not reviewed by the user (user approval of 2026-10-31 for phase 2c). Same statements and approved numbers as experiments/npu/operator_support/onboard_g4b/ppe5_yolov8n_baseline_100ep_s0/rule.txt (5 percent, 2 session gap rule, 50 percent cycles), protocol P2 as there (not approved as the main protocol). The recipe h5 (float16 for the 15 box-decode tail tensors) recovered the INT8 accuracy in rule_recipes.txt experiment 2: SiLU css_test AP50-95 36.75 to 49.66 (FP16 49.76), ReLU 33.24 to 46.98 (FP16 46.49).",
+ "script": [
+  "ai/npu/operator_support/analyze_q2h.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

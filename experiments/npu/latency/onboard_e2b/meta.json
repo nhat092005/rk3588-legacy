@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_e2b",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-30",
+ "rule_file": "experiments/npu/latency/onboard_e2b/rule.txt",
+ "rule_first_line": "E2b rule, written 2026-10-30T23:05:22+07:00 before any E2b data exists. Not from a source.",
+ "script": [
+  "ai/npu/latency/analyze_onboard.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

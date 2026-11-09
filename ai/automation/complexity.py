@@ -12,8 +12,7 @@ from ultralytics import YOLO
 from ultralytics.utils.torch_utils import get_flops, get_num_params
 
 from ai.core.evaluator import IMGSZ, PROTOCOL_VERSION, git_commit
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR
 
 
 def size_mb(path: Path) -> float | None:

@@ -1,0 +1,7 @@
+X6 rule, written 2026-10-31T04:06:48+07:00 before any X6 data exists. Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).
+Question (U26): E2e compared the eval_perf path with the C API path (E2d) in six cells only. Do the big-core cells give the same position result on the eval_perf path?
+Setup: same as E2e (experiments/npu/latency/onboard_e2e/rule.txt): rknn_server pinned with taskset -a -p, NPU interrupts 36, 37, 38 on the target CPU, irqbalance stopped, each block a new session (load_rknn, init_runtime CORE_0), 50 warm-up and 500 timed eval_perf calls, 20 s rest. The root helper runs on CPU3 (not in any cell) instead of CPU7.
+Cells (rknn_server CPU, interrupt CPU): s4i4 (control, as E2e), s5i4, s6i4, s7i4, s5i5, s6i6, s7i7. Order: list then reversed, 14 blocks.
+Realized block, primary outcome, fast outcome, thresholds (0.05, 0.20, 0.95, 17.0 and 20.0 ms) and the comparison with the same cell of E2d (a5i4, a6i4, a7i4, a5i5, a6i6, a7i7, a4i4): exactly as in the E2e rule, including the uniform-offset exception with 1.25 ms over the seven cells. The E2d results of these cells: all 'mất mức chậm' and 'đạt mức nhanh'.
+Statements: if all seven cells give 'cùng kết quả': 'trong bảy ô CPU lớn đã thử, đường eval_perf cho cùng kết quả vị trí với đường C API'. Otherwise list the cells that differ, no explanation. U26 label: ĐO in both cases.
+Budget: experiment 1 for U26.

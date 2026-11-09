@@ -75,7 +75,7 @@ def detect_board(source: Path, model_dir: Path, out_dir: Path, args: argparse.Na
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", required=True, help="run_id under ai/automation/runs/")
+    parser.add_argument("--run", required=True, help="run_id under experiments/runs/")
     parser.add_argument("--source", required=True, help="video file")
     parser.add_argument("--backend", choices=["pt", "onnx", "rknn"], default="pt")
     parser.add_argument("--precision", choices=["fp16", "int8"], help="rknn only")

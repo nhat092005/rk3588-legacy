@@ -17,8 +17,7 @@ from ai.core.dataset import dataset_yaml_path
 from ai.core.provenance import file_sha256, provenance
 from ai.core.rknn.baseline import ExportConfig, export_onnx, export_rknn
 from ai.core.rknn.calibration import sample_calibration_images, write_letterboxed_calib
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR
 
 # Calibration set (protocol v1): 300 train images, >=20/class, seed 0.
 # 300 avoids Ultralytics' ">300 images recommended" INT8 warning (exporter.py get_int8_calibration_dataloader).
@@ -54,7 +53,7 @@ def reuse_calibration(src_run: str, out_dir: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("run_id", help="an existing directory under ai/automation/runs/")
+    parser.add_argument("run_id", help="an existing directory under experiments/runs/")
     parser.add_argument("--quantize", type=int, choices=[8, 16], default=8, help="8 = INT8 (w8a8), 16 = FP16")
     parser.add_argument("--calib-from", help="INT8 only: run id whose calibration images are reused instead of sampling")
     parser.add_argument("--recipe", choices=["h5"], help="INT8 only: hybrid recipe, written as precision int8h5 (float16 box-decode tail, the standard INT8 of phase 2c)")

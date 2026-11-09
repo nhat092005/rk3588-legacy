@@ -15,8 +15,7 @@ import yaml
 from ai.core.backends import RknnDumpBackend, UltralyticsBackend
 from ai.core.evaluator import CONF, EVAL_SETS, EVAL_SETS_BY_DATASET, build_eval_loader, evaluate
 from ai.core.provenance import REPO_ROOT, file_sha256, git_commit, git_dirty
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import REPO_ROOT, RUNS_DIR
 
 
 def sh(cmd: list[str]) -> None:

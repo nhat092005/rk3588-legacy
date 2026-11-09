@@ -1,6 +1,0 @@
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3593.9±899.2 MB/s, size: 43.5 KB)
-[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test.cache... 82 images, 22 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 82/82 34.4Mit/s 0.0s
-/home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_h3_css_test.json: mAP50-95 0.3648
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2771.0±1348.8 MB/s, size: 38.1 KB)
-[K[34m[1mval: [0mScanning /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/labels/test_ext.cache... 180 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 180/180 39.7Mit/s 0.0s
-/home/nhat/workspace/prjs/rk3588/ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/eval/rknn_int8_h3_ppe2286_ext.json: mAP50-95 0.2305

@@ -11,14 +11,11 @@ from __future__ import annotations
 import json
 import statistics
 import sys
-from pathlib import Path
 
 from ai.core.evaluator import CROSS_EVAL_SETS, PROTOCOL_VERSION
+from ai.paths import REPO_ROOT, RESULTS_DIR, RUNS_DIR
 
-AUTOMATION_DIR = Path(__file__).resolve().parent
-REPO_ROOT = AUTOMATION_DIR.parents[1]
-RUNS_DIR = AUTOMATION_DIR / "runs"
-OUT = REPO_ROOT / "results" / "train_set_comparison.md"
+OUT = RESULTS_DIR / "train_set_comparison.md"
 
 TRAIN_SETS = ["ppe5", "ppe5_plus", "ppe4", "ppe2286"]
 MODEL = "yolov8n_baseline_100ep"

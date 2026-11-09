@@ -1,0 +1,20 @@
+{
+ "exp_id": "onboard_q2e",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-01",
+ "rule_file": "experiments/npu/operator_support/onboard_q2e/rule_core_all.txt",
+ "rule_first_line": "M2 ALL core-mask rule, written 2026-11-01T16:26:50+07:00 before any ALL measurement exists. Not from a source. Not reviewed by the user (request of 2026-11-01). Corrects the inventory (results/notes/phase2e_unknowns_inventory.md classed M2 as 'budget spent'): page 02 section 6.1 itself names an unused path, 'đo ALL (giá trị 0xffff) trên board' (rknn.py:25-31 defines NPU_CORE_ALL = 0xffff). The source search for what the EDGE paper means by its column ALL stays spent and unchanged.",
+ "script": [
+  "ai/npu/operator_support/analyze_q2e_board.py",
+  "ai/npu/operator_support/analyze_q2e_pc.py",
+  "ai/npu/operator_support/build_batch_probe.py",
+  "ai/npu/operator_support/micro_ops.py",
+  "ai/npu/operator_support/probe_core_all.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_q2e_qat",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-01",
+ "rule_file": "experiments/npu/operator_support/onboard_q2e_qat/rule.txt",
+ "rule_first_line": "QAT NPU time and coverage rule (item 'Thời gian NPU và độ phủ đa nhân của bản QAT' of results/notes/phase2e_unknowns_inventory.md, left outside the budget of rule_qat.txt), written 2026-11-01T16:09:41+07:00 before any QAT latency exists. Not from a source. Not reviewed by the user (request of 2026-11-01). Reviewed by the advisor (inventory). Same statements, approved numbers (5 percent, 2 session gap rule) and protocol P2 (NOT approved, page 16) as onboard_q2j/rule.txt. Models of ppe5_yolov8n_baseline_100ep_s0 (sha256):",
+ "script": [
+  "ai/npu/operator_support/analyze_q2e_board.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

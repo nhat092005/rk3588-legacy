@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_e2",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "unknown",
+ "rule_file": "unknown",
+ "rule_first_line": "unknown",
+ "script": [
+  "ai/npu/latency/analyze_onboard.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

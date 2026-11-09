@@ -1,6 +1,6 @@
 # Table C. Hardware / Software Environment
 
-From `ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json` (latest tier-2 measurement). Fixed rows (board, camera): Table C in the Guide.
+From `experiments/runs/ppe5_yolov8n_baseline_100ep_s0/bench/tier2_int8h5_AUTO.json` (latest tier-2 measurement). Fixed rows (board, camera): Table C in the Guide.
 
 | Item | Value |
 |---|---|

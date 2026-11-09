@@ -1,0 +1,29 @@
+X2 rule, written 2026-10-31T02:39:18+07:00 before any X2 data exists (replaces a draft of the same day that was never run), after the X1 results were seen (X1 showed: moving the NPU interrupt from CPU4 to CPU0 adds about 2.8 ms in part N, and the interrupt CPU was in cpu-sleep when the interrupt arrived; moving the app from CPU4 to CPU1 adds time in C and D). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).
+Question (U1, U2, U3): are the X1 differences removed by switching off cpu-sleep on one CPU, and is the C part difference between CPU1 and CPU4 explained by the clock? Interventions on one factor at a time. No claim beyond what each intervention changes.
+Setup: same as X1 (C API, CORE_0, zero UINT8 input, irqbalance stopped, ftrace with the same events and filters, trace_clock mono, buffer at least 32768 KB, 50 warm-up and 300 timed runs per block, 20 s rest). Same decomposition C, N, D, P and realized-block test as X1 (experiments/npu/latency/onboard_x1/rule.txt), same parser ai/npu/latency/analyze_trace_x1.py logic.
+Realized block (stricter than X1): the X1 test, plus manipulation checks. For the s cells, the state1/disable files of the target CPUs read 1 before and after the block, and in the trace the share of sleeping intervals with the target CPU in state 1 is at most 0.01 (irq_idle for a4i0s, app_idle for a1i4s, both for a1i0s). For a4i4f, policy4 reads governor userspace and scaling_cur_freq 1800000 before and after the block. For every other cell, all state1/disable files read their saved value and policy4 reads performance. A block that fails is not realized.
+Conditions:
+  a4i4  app CPU4, interrupt CPU4 (control)
+  a4i0  app CPU4, interrupt CPU0 (control)
+  a4i0s app CPU4, interrupt CPU0, cpuidle state1 (cpu-sleep) disabled on CPU0 only
+  a1i4  app CPU1, interrupt CPU4 (control)
+  a1i4s app CPU1, interrupt CPU4, cpu-sleep disabled on CPU1 only
+  a4i4f app CPU4, interrupt CPU4, CPU4 and CPU5 (policy4) set to 1.8 GHz with the userspace governor
+  a1i0  app CPU1, interrupt CPU0 (control)
+  a1i0s app CPU1, interrupt CPU0, cpu-sleep disabled on CPU0 and CPU1
+Order: the list then reversed, 16 blocks. Every change is restored after its block and on exit (state1 disable values, policy4 governor back to performance), and read back.
+Statements (need all compared blocks realized; per half, X = median of the part):
+  Small-gap guard: if the control gap g is below 1.25 ms (approved number) in a half, S1 or S2 is 'không áp dụng' for that half and cannot reach a verdict.
+  S1 (interrupt CPU sleep): g = N(a4i0) - N(a4i4), gs = N(a4i0s) - N(a4i4). If gs <= 0.2 g in both halves: 'tắt cpu-sleep ở CPU nhận ngắt làm mất phần tăng ở N'. If gs >= 0.8 g in both halves: 'tắt cpu-sleep ở CPU nhận ngắt không làm mất phần tăng ở N'. Otherwise 'chưa kết luận'.
+  S2 (app CPU sleep): same test on D with a1i4, a1i4s against a4i4: 'tắt cpu-sleep ở CPU của ứng dụng làm mất (hoặc không làm mất) phần tăng ở D'.
+  S3 (clock): r = C(a4i4f) / C(a4i4), c1 = C(a1i4) / C(a4i4). If |r - c1| <= 0.1 c1 in both halves: 'phần C chênh giữa CPU1 và CPU4 bằng với phần do hạ CPU4 về 1.8 GHz'. If |r - 2.256/1.8| <= 0.1 x 2.256/1.8 and |r - c1| > 0.1 c1 in both halves: 'hạ xung nhịp chỉ giải thích một phần chênh lệch C giữa CPU1 và CPU4'. Otherwise 'chưa kết luận'. This separates clock from position in one direction only (little cores cannot reach 2.256 GHz).
+  S4 (both, descriptive): T(a1i0s) against T(a1i0) and T(a4i4).
+  The numbers 0.2, 0.8 and 0.1 are new, chosen for this rule, not user approved.
+Tracker labels decided before the data (tmp/2026-10-31_latency-unknowns-tracker.md):
+  U1a (delay per interrupt, never measured before): ĐO from X1 (D and N per interrupt).
+  U1b (why the slow level exists): ĐO only in the form 'the added time disappears when cpu-sleep is off on the corresponding CPU', and only if S1 and S2 both say 'làm mất'. Any other outcome: CHƯA BIẾT with paper search keywords. The hardware mechanism stays CHƯA BIẾT in every case.
+  U2: ĐO for where the time goes in each cell (X1 decomposition and S4). The hardware reason stays CHƯA BIẾT.
+  U3: ĐO only if S3 gives one of its two statements, always with the one-direction caveat. Otherwise CHƯA BIẾT.
+Description to add in the docs, not a statement: in a4i4f the interrupt CPU is also slowed, so N and D may change too, S3 reads only C.
+Not allowed: any claim about why cpu-sleep exit adds time beyond what S1 and S2 show, or about clusters beyond S3.
+Budget: experiment 2 of 2 for U1 and U2 (last), experiment 1 for U3.

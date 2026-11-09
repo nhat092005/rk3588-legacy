@@ -1,5 +1,5 @@
 """Correctness gate of experiment E2 (run ON THE BOARD): the harness path of a split-head model (two raw outputs, numpy decode, postprocess_raw)
-must give the same detections as the standard int8h5 model on the same images. Rule: bench/onboard_q2f_split/rule.txt.
+must give the same detections as the standard int8h5 model on the same images. Rule: experiments/npu/throughput/onboard_q2f_split/rule.txt.
 
 Usage: .venv-board/bin/python -m ai.board.split_gate --standard <rknn_int8h5 dir> --split <rknn_int8_split dir> --images <dir> --out <json> [--n 20]
 Detections at conf 0.25 (deployment default). A split detection matches a standard detection of the same class with IoU >= 0.5 (greedy by score).

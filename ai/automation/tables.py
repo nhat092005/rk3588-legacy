@@ -19,11 +19,8 @@ import yaml
 
 from ai.core.dataset import dataset_yaml_path
 from ai.core.evaluator import EVAL_SETS, EVAL_SETS_BY_DATASET, PROTOCOL_VERSION
+from ai.paths import REPO_ROOT, LEADERBOARDS_DIR, RESULTS_DIR, RUNS_DIR
 
-AUTOMATION_DIR = Path(__file__).resolve().parent
-REPO_ROOT = AUTOMATION_DIR.parents[1]
-RUNS_DIR = AUTOMATION_DIR / "runs"
-LEADERBOARDS_DIR = AUTOMATION_DIR / "leaderboards"
 CLASSES: list[str] = []  # set in main() from the class names of the dataset yaml
 HW_SEED = "0"
 MASKS_1CTX = ["AUTO", "CORE_0", "CORE_0_1", "CORE_0_1_2"]
@@ -391,7 +388,7 @@ def main() -> None:
             flag = RUNS_DIR / run_id / "git_dirty.txt"
             if flag.exists() and flag.read_text().split()[0] == "true":
                 b.warnings.append(f"{flag.relative_to(REPO_ROOT)}: produced with uncommitted code (git_dirty)")
-    out_dir = REPO_ROOT / "results" / args.dataset
+    out_dir = RESULTS_DIR / args.dataset
     out_dir.mkdir(parents=True, exist_ok=True)
     tables = {
         "table_A_dataset.md": table_a(b), "table_B_training.md": table_b(b, runs), "table_C_environment.md": table_c(b, runs),

@@ -19,8 +19,7 @@ from ai.board.common import WARMUP, list_images, postprocess, preprocess, summar
 from ai.core.dataset import dataset_yaml_path
 from ai.core.evaluator import EVAL_SETS, PROTOCOL_VERSION
 from ai.core.provenance import file_sha256, provenance
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR
 
 
 def main() -> None:

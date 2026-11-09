@@ -1,4 +1,4 @@
-# YOLOv8n without DFL (reg_max 1, direct ltrb regression), SiLU kept (phase 2d candidate A2, results/phase2d_design.md).
+# YOLOv8n without DFL (reg_max 1, direct ltrb regression), SiLU kept (phase 2d candidate A2, results/notes/phase2d_design.md).
 # Copied from ultralytics 8.4.154 cfg/models/v8/yolov8.yaml; only `scale` and `reg_max` are added. reg_max: 1 follows cfg/models/26/yolo26.yaml:10, end2end is NOT borrowed.
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 

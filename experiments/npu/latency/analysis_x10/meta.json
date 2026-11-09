@@ -1,0 +1,16 @@
+{
+ "exp_id": "analysis_x10",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/latency/analysis_x10/rule.txt",
+ "rule_first_line": "X10 rule, written 2026-10-31T04:02:49+07:00 before the X10 numbers are computed. Analysis of existing data only (B3 per-layer sessions, results/layer_analysis_* and results/latency_per_block_*), no new measurement. Not from a source. Not reviewed by the user.",
+ "script": [
+  "ai/npu/latency/analyze_x10.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

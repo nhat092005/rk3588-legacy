@@ -1,0 +1,17 @@
+{
+ "exp_id": "onboard_x4",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/latency/onboard_x4/rule.txt",
+ "rule_first_line": "X4 rule, written 2026-10-31T04:00:12+07:00 before any X4 data exists (replaces a draft of the same day that was never run). Final: do not edit after the run starts. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review before launch).",
+ "script": [
+  "ai/npu/latency/aggregate_layers.py",
+  "ai/npu/latency/analyze_x4.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

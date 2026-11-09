@@ -1,6 +1,6 @@
 """RKNNLite functional probes (M4 shared context, M6 async_mode, M7 batch size, M16 context count), run ON THE BOARD.
 
-Statements and reading rules: ai/automation/runs/ppe5_yolov8n_baseline_100ep_s0/bench/onboard_q2e/rule_probe.txt (written before any result).
+Statements and reading rules: experiments/npu/operator_support/onboard_q2e/rule_probe.txt (written before any result).
 Usage: .venv-board/bin/python -m ai.board.probe_runtime <m4|m6|m7|m16> --model <rknn_int8 dir> --out <json> [--b1 <rknn> --b4 <rknn>]
 Inputs are 8 fixed random uint8 640x640x3 arrays (seed 0). Timings are descriptive only.
 """

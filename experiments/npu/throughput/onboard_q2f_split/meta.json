@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_q2f_split",
+ "domain": "npu",
+ "topic": "throughput",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-01",
+ "rule_file": "experiments/npu/throughput/onboard_q2f_split/rule.txt",
+ "rule_first_line": "E2 rule: split-head model (A1) with the CPU decode overlapped with the NPU, single context, written 2026-11-01T16:59:18+07:00 before any split-head throughput exists and before E1 was read. Not from a source. Protocol P3 approved by the user on 2026-11-01 (page 16), the numeric readings below are new and not covered by that approval (chưa duyệt). Context: user target 60 FPS (page 11 section 8) read by default as throughput of one stream, with the assumptions that frames are independent and output order is not constrained (the harness does not check order). Known before this run: A1 NPU part about 13.07 ms at CORE_0 and 12.56 ms at CORE_0_1_2 (page 15, P2), numpy decode 8.02 ms median (page 15), int8h5 one context 54 to 56 FPS (page 11). Advisor reviewed the plan.",
+ "script": [
+  "ai/npu/throughput/analyze_q2f.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

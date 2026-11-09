@@ -1,7 +1,7 @@
 """Resolve dataset.yaml paths produced by scripts/data/prepare_<name>.py."""
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+from ai.paths import REPO_ROOT
 
 
 def dataset_yaml_path(name: str) -> Path:

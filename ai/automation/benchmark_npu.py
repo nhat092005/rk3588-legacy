@@ -6,18 +6,16 @@ Writes runs/<run_id>/bench/tier1_<precision>_<core_mask>.json (+ _layers.json/.t
 """
 import argparse
 import json
-from pathlib import Path
 
 from ai.core.evaluator import PROTOCOL_VERSION
 from ai.core.provenance import file_sha256, provenance
 from ai.core.rknn.benchmark import CORE_MASK, PERF_REPEATS, connect_board, measure_latency, measure_layers, measure_memory
-
-RUNS_DIR = Path(__file__).resolve().parent / "runs"
+from ai.paths import RUNS_DIR, bench_path
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("run_id", help="an existing directory under ai/automation/runs/")
+    parser.add_argument("run_id", help="an existing directory under experiments/runs/")
     parser.add_argument("device_id", help="board adb address, e.g. 100.67.251.37:5555")
     parser.add_argument("--precision", choices=["fp16", "int8", "int8h5"], required=True)
     parser.add_argument("--core-mask", default="AUTO", choices=list(CORE_MASK))
@@ -30,7 +28,7 @@ def main() -> None:
     run_dir = RUNS_DIR / args.run_id
     vs = f"_{args.variant}" if args.variant else ""
     rknn_path = next((run_dir / "weights" / f"rknn_{args.precision}{vs}").glob("*.rknn"))
-    out_dir = run_dir / "bench" / args.out_subdir if args.out_subdir else run_dir / "bench"
+    out_dir = bench_path(run_dir, args.out_subdir)
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = f"tier1_{args.precision}{vs}_{args.core_mask}" + (f"_sess{args.session}" if args.session else "")
     connect = lambda **kw: connect_board(str(rknn_path), args.device_id, core_mask=args.core_mask, **kw)  # noqa: E731

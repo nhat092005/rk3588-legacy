@@ -8,8 +8,9 @@ from pathlib import Path
 import numpy as np
 
 from ai.core.rknn.split_head import decode_split, split_model
+from ai.paths import RUNS_DIR
 
-WEIGHTS = Path(__file__).resolve().parents[1] / "ai" / "automation" / "runs" / "ppe5_yolov8n_baseline_100ep_s0" / "weights" / "best.pt"
+WEIGHTS = RUNS_DIR / "ppe5_yolov8n_baseline_100ep_s0" / "weights" / "best.pt"
 
 
 @unittest.skipUnless(WEIGHTS.exists(), "trained weights not present")

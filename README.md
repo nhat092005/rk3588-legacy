@@ -51,8 +51,10 @@ of sync when the Makefile changes.
 
 ## Key locations
 
-- Training configs: `ai/automation/configs/*.yaml`
-- Per-run results & weights: `ai/automation/runs/<run_id>/`
+- Training configs and acceptance profiles: `ai/automation/configs/*.yaml`, `ai/automation/profiles/*.yaml`
+- Per-run results & weights: `experiments/runs/<run_id>/`
+- NPU build, probe and analysis scripts: `ai/npu/<topic>/`. Their measurements: `experiments/npu/<topic>/`, their output: `results/npu/<topic>/`
+- Experiment index: `experiments/index.csv`. All paths come from `ai/paths.py`
 - Documentation site sources (git submodule `docs/`, repo `rk3588-docs`): start at `docs/guide.rst`
 - Runbook and Phase 0-10: `docs/quy-trinh/`; evaluation protocol and result tables A-M: `docs/thi-nghiem/`
 - Papers (one page per paper, PDFs in `docs/_assets/pdf/papers/`): `docs/bai-bao/`

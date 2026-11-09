@@ -1,0 +1,16 @@
+{
+ "exp_id": "onboard_thr",
+ "domain": "npu",
+ "topic": "throughput",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-10-31",
+ "rule_file": "experiments/npu/throughput/onboard_thr/rule.txt",
+ "rule_first_line": "Throughput rule (S2, S3, S1 throughput form, diagnostic), written 2026-10-31T11:45:58+07:00 before any throughput data exists. Not from a source. Not reviewed by the user (goal of 2026-10-31, phase 2). Reviewed by the advisor (design). The thresholds 5% (approved 2026-10-25, page 02-multi-core section 5.2) and the 3 independent runs per configuration (same page) are the only approved numbers. Protocol P3, the S3 worker formula and the realization checks are new and unreviewed.",
+ "script": [
+  "ai/npu/throughput/analyze_thr.py"
+ ],
+ "git_commit": "unknown",
+ "note": "backfilled from existing files, rule_first_line is copied verbatim"
+}

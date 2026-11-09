@@ -1,0 +1,226 @@
+{
+ "sessions": [
+  {
+   "precision": "int8",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 16.536,
+   "latency_all": [
+    16.536,
+    16.546,
+    16.54,
+    16.532,
+    16.534
+   ],
+   "debug_total_ms": 16.722,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "precision": "fp16",
+   "session": 1,
+   "realized": true,
+   "latency_ms": 27.284,
+   "latency_all": [
+    27.336,
+    27.31,
+    27.277,
+    27.284,
+    27.28
+   ],
+   "debug_total_ms": 27.389,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "precision": "int8",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 16.539,
+   "latency_all": [
+    16.535,
+    16.538,
+    16.539,
+    16.546,
+    16.543
+   ],
+   "debug_total_ms": 16.755,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "precision": "fp16",
+   "session": 2,
+   "realized": true,
+   "latency_ms": 27.282,
+   "latency_all": [
+    27.288,
+    27.27,
+    27.282,
+    27.274,
+    27.283
+   ],
+   "debug_total_ms": 27.327,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "precision": "int8",
+   "session": 3,
+   "realized": true,
+   "latency_ms": 16.502,
+   "latency_all": [
+    16.482,
+    16.502,
+    16.524,
+    16.506,
+    16.49
+   ],
+   "debug_total_ms": 16.661,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "precision": "fp16",
+   "session": 3,
+   "realized": true,
+   "latency_ms": 27.267,
+   "latency_all": [
+    27.262,
+    27.267,
+    27.269,
+    27.265,
+    27.268
+   ],
+   "debug_total_ms": 27.432,
+   "irq_per_cpu": [
+    0,
+    0,
+    0,
+    0,
+    880,
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "all_realized": true,
+ "gates": {
+  "int8": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "A4": true,
+   "A5": true,
+   "A6": true,
+   "A8": true,
+   "A7": true
+  },
+  "fp16": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "A4": true,
+   "A5": true,
+   "A6": true,
+   "A8": true,
+   "A7": true
+  }
+ },
+ "latency_ms": {
+  "int8": 16.536,
+  "fp16": 27.282
+ },
+ "fp16_minus_int8_ms": 10.745999999999999,
+ "fp16_over_int8": 1.649854862119013,
+ "block_shares": {
+  "L0": {
+   "int8": 0.11047448522829006,
+   "fp16": 0.06951695936324802
+  },
+  "L1": {
+   "int8": 0.03052386356848456,
+   "fp16": 0.039126312718786464
+  },
+  "L2": {
+   "int8": 0.13398556344329773,
+   "fp16": 0.1300741715079104
+  },
+  "L4": {
+   "int8": 0.07648504465623689,
+   "fp16": 0.09124047679801699
+  },
+  "L6": {
+   "int8": 0.04315467258868015,
+   "fp16": 0.055183518132250156
+  },
+  "L8": {
+   "int8": 0.02158487865959096,
+   "fp16": 0.025871848355106673
+  },
+  "L12": {
+   "int8": 0.031393613846612954,
+   "fp16": 0.041241248541423574
+  },
+  "L15": {
+   "int8": 0.056746908786810824,
+   "fp16": 0.06980904742779948
+  },
+  "L18": {
+   "int8": 0.0297224709042077,
+   "fp16": 0.037256191102344946
+  },
+  "L21": {
+   "int8": 0.02077080081642454,
+   "fp16": 0.025978296612956264
+  },
+  "L22": {
+   "int8": 0.33701690460545963,
+   "fp16": 0.29475336814049435
+  }
+ },
+ "rule": "X8 rule, written 2026-10-31T05:03:26+07:00 before any X8 data exists (replaces a draft of the same day written before the X4 result; no X8 data existed then either). Final. Not from a source. Not reviewed by the user (goal of 2026-10-31, advisor review of the design).\nCondition met: in X4, A8 of protocol P2 passed (results/onboard_x4_*: gate reading 'tr\u00ean LAN, ghim l\u00f5i l\u00e0m c\u1ed5ng \u0111\u1ea1t'), so FP16 runs as a P2 result. The original A5 and A8 (relay) stay 'kh\u00f4ng \u0111\u1ea1t'.\nQuestion (U23): FP16 latency and per-block shares of the same model under P2, interleaved with INT8.\nModels: INT8 weights/rknn_int8/best-rk3588.rknn (sha256 prefix a501f94e, as in all earlier runs) and FP16 weights/rknn_fp16/best-rk3588.rknn (sha256 bd4a8c8a33ab289877507a83c30259e2565c0e1e5b899980d3f9c58d7d2a5786, exported 2026-10-31 with make export-npu PREC=fp16, toolkit 2.3.2, log logs/export_fp16_20261031-042838.log).\nProtocol: P2 (rknn_server and NPU interrupts 36, 37, 38 on CPU4, irqbalance stopped, x4_hold.sh helper in pin mode, thread affinity logged every second), benchmark_npu.py sessions (5 latency calls, 5 per-layer calls, --skip-memory), order A B A B A B (A = INT8 session, B = FP16 session), 45 s rest. Per-session realization exactly as X4 (helper log in pin mode with zero threads off CPU4 inside the session window, at least 99 percent of NPU interrupts on CPU4). INT8 sessions go to experiments/npu/latency/onboard_x8/int8 (sessions 1 to 3), FP16 to experiments/npu/latency/onboard_x8/fp16.\nGates: aggregate_layers.py unchanged, --precision int8 or fp16, --bench-subdir onboard_x8/int8 or onboard_x8/fp16, --tag x8. A1 for FP16 compares the board table with the FP16 build table of the same export log. Stability is read from A5 and A8 only (approved 5 percent and 10 percent). A1 to A4, A6 and A7 are reported as they come out; if A4 fails for FP16 the odd rows are listed (the block rules of ai/core/rknn/blocks.py were written from the INT8 table).\nStatements (only if every session used is realized, otherwise 'ch\u01b0a k\u1ebft lu\u1eadn (P2 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u00fang)'): FP16 latency = median of its 3 session medians, against INT8 of the same run, difference in ms and percent. Block shares of FP16 against INT8 for blocks of at least 2 percent (descriptive). No keep or drop decision (that belongs to gate G4, phase 2).\nLimit: the helper samples thread affinity once per second, a shorter violation may not be seen.\nBudget: experiment 1 for U23.\n",
+ "driver_log": "05:14:41 int8 session 1 -> onboard_x8/int8\n05:15:35 fp16 session 1 -> onboard_x8/fp16\n05:16:29 int8 session 2 -> onboard_x8/int8\n05:17:25 fp16 session 2 -> onboard_x8/fp16\n05:18:17 int8 session 3 -> onboard_x8/int8\n05:19:11 fp16 session 3 -> onboard_x8/fp16\n",
+ "hold_progress": "06:14:23 state: kernel 6.1.99-rockchip-rk3588 ; up 6 hours, 35 minutes ; rknn_server pid 10380 ; adbd pid 11257 ; irqbalance was active ; frequencies: policy0: performance 1800000 kHz;policy4: performance 2256000 kHz;policy6: performance 2304000 kHz;npu: userspace 1000000000 Hz;ddr: userspace 2112000000 Hz;\n06:14:32 mode pin: irq 36 smp=4 effective=4 irq 37 smp=4 effective=4 irq 38 smp=4 effective=4  irqbalance inactive rknn_server allowed:       9 4 \n06:19:57 restored: irq 36 smp=0-7 effective=0 irq 37 smp=0-7 effective=0 irq 38 smp=0-7 effective=0  rknn_server allowed:       9 0-7  irqbalance active\n"
+}

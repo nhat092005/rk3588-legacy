@@ -1,0 +1,23 @@
+{
+ "exp_id": "input_384x640",
+ "domain": "npu",
+ "topic": "throughput",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-08",
+ "rule_file": "none",
+ "script": [
+  "experiments/npu/throughput/input_384x640/export_hw.py",
+  "experiments/npu/throughput/input_384x640/band_eval.py",
+  "experiments/npu/throughput/input_384x640/band_dump.py",
+  "experiments/npu/throughput/input_384x640/band_int8_eval.py"
+ ],
+ "result_file": [
+  "experiments/npu/throughput/input_384x640/dump_A640.npz",
+  "experiments/npu/throughput/input_384x640/dump_B384.npz",
+  "experiments/npu/throughput/input_384x640/dump_B384_012.npz"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

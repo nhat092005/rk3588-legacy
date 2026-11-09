@@ -1,0 +1,12 @@
+names:
+- Helmet
+- NoHelmet
+- NoVest
+- Vest
+- Person
+nc: 5
+path: /home/nhat/workspace/prjs/rk3588/experiments/camera/distort/isp_640x360/css_test
+test: images/x
+test_ext: images/test_ext
+train: images/train
+val: images/val

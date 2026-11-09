@@ -1,0 +1,20 @@
+== two RGA3 in parallel (place) ==
+fails=0 place RGA3_0 640x360 N=1 iters=14795 median=0.202 p95=0.207 ms rate=4930.5/s ran:RGA3_0 RGA3_1 
+fails=0 place RGA3_1 640x360 N=1 iters=14881 median=0.202 p95=0.206 ms rate=4959.1/s ran:RGA3_0 RGA3_1 
+== two processes on same RGA3_0 ==
+fails=0 place RGA3_0 640x360 N=1 iters=8876 median=0.338 p95=0.340 ms rate=2958.0/s ran:RGA3_0 
+fails=0 place RGA3_0 640x360 N=1 iters=8875 median=0.338 p95=0.340 ms rate=2957.6/s ran:RGA3_0 
+== RGA2 draw 34 boxes 640x360 with RGA3 place in parallel ==
+fails=0 place RGA3_0 640x360 N=1 iters=16113 median=0.183 p95=0.198 ms rate=5369.9/s ran:RGA3_0 RGA2 
+fails=0 rect RGA2 640x360 N=34 iters=974 median=3.059 p95=3.116 ms rate=324.1/s ran:RGA3_0 RGA2 
+fails=0 place RGA3_1 640x360 N=1 iters=16836 median=0.178 p95=0.183 ms rate=5610.7/s ran:RGA3_1 RGA2 
+fails=0 rect RGA2 640x360 N=34 iters=253 median=11.885 p95=12.119 ms rate=84.2/s ran:RGA3_1 RGA2 
+== RGA2 draw + RGA2 place (same core) ==
+fails=0 place RGA2 640x360 N=1 iters=15745 median=0.190 p95=0.195 ms rate=5247.3/s ran:RGA2 
+fails=0 rect RGA2 640x360 N=34 iters=130 median=25.906 p95=25.954 ms rate=43.2/s ran:RGA2 
+== RGA2 draw + labels on RGA3_0 ==
+fails=0 label RGA3_0 640x360 N=34 iters=2068 median=1.439 p95=1.545 ms rate=689.1/s ran:RGA3_0 RGA2 
+fails=0 rect RGA2 640x360 N=34 iters=627 median=4.703 p95=5.209 ms rate=208.8/s ran:RGA3_0 RGA2 
+== RGA2 draw + labels on RGA2 ==
+fails=0 label RGA2 640x360 N=34 iters=3215 median=0.930 p95=0.982 ms rate=1071.4/s ran:RGA2 
+fails=0 rect RGA2 640x360 N=34 iters=799 median=3.722 p95=3.860 ms rate=265.4/s ran:RGA2 

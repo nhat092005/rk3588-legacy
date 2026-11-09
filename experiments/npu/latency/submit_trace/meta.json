@@ -1,0 +1,20 @@
+{
+ "exp_id": "submit_trace",
+ "domain": "npu",
+ "topic": "latency",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-08",
+ "rule_file": "none",
+ "script": [
+  "experiments/npu/latency/submit_trace/npu_trace.c",
+  "experiments/npu/latency/submit_trace/summarize.py"
+ ],
+ "result_file": [
+  "experiments/npu/latency/submit_trace/trace_c012.log",
+  "experiments/npu/latency/submit_trace/trace_384x640_c012.log"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

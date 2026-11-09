@@ -1,0 +1,21 @@
+{
+ "exp_id": "camera_runs",
+ "domain": "camera",
+ "topic": "pipeline",
+ "run_id": [
+  "ppe5_yolov8n_baseline_100ep_s0"
+ ],
+ "date": "2026-11-07",
+ "rule_file": "none",
+ "script": [
+  "ai/board/camera.py"
+ ],
+ "result_file": [
+  "experiments/camera/camera_runs/cam_A.json",
+  "experiments/camera/camera_runs/cam_B.json",
+  "experiments/camera/camera_runs/cam_C.json",
+  "experiments/camera/camera_runs/with_person/cam_P.json"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

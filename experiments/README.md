@@ -8,6 +8,7 @@ All experiment data, kept apart from the code in `ai/`. Paths come from `ai/path
 | `leaderboards/<dataset>.csv` | Protocol v1 FP32 result of every run | `make train` |
 | `golden/` | Logs of golden and crosscheck runs of the evaluator | `make golden-test`, `make crosscheck` |
 | `npu/<topic>/<exp_id>/` | Board and analysis experiments: rule files written before the data, drivers, raw measurements, board logs. Topics: `operator_support`, `latency`, `throughput` | `ai/npu/`, board drivers |
+| `camera/<exp_id>/` | Camera pipeline experiments on the board (frame rate runs, GC and pinning A/B, encoder and RGA probes, preprocessing evaluations). Path constant `CAMERA_DIR` in `ai/paths.py`. Not registered in `_EXPERIMENTS`, no script reads them through `experiment_dir` | board drivers, `ai/board/camera.py` |
 | `research/<topic>/<exp_id>/` | Architecture experiments (none yet) | `ai/research/` scripts |
 | `index.csv` | One row per experiment, see below | `log_experiment()` |
 
@@ -35,3 +36,10 @@ The 30 rows present on 2026-11-09 were backfilled from existing files:
 
 On 2026-11-09 the locations changed (`ai/automation/runs` to `experiments/runs`, `runs/<id>/bench/<exp>` to `experiments/npu/<topic>/<exp>`, `results/<file>` to `results/npu/<topic>/<file>`).
 Path strings inside tracked text files (rule files, drivers, session records, logs of results) were updated to match. No number was changed.
+
+## Moved from tmp/ on 2026-11-10
+
+Nine experiments that the documentation cites as board or PC measurements were kept in the git-ignored `tmp/` and now live here with a `meta.json` and an `index.csv` row (`date` is the file modification time, `git_commit` is `unknown`):
+`camera/{ab_runs,camera_runs,cam_fps_2026-11-08,enc_rga_2026-11-08,distort,stretch}`, `npu/throughput/input_384x640`, `npu/latency/submit_trace`, `npu/operator_support/c5_build`.
+Scripts without a result file were moved next to them: `camera/pipeline_2026-11-07` (measurement scripts and README), `camera/rga_caps` (RGA capability probe), `camera/isp_record` (ISP recording scripts and field-of-view images).
+Files that can be regenerated were deleted, the command is in `npu/throughput/input_384x640/README.md`. Path strings in moved scripts, YAML and JSON were updated (`tmp/...` and `ai/automation/runs` to the new locations). `dataset.txt` and `export_*.log` of `input_384x640` keep their old paths verbatim.

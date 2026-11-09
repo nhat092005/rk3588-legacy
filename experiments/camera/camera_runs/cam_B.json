@@ -1,0 +1,182 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-11-07T18:29:31",
+  "run_id": "harness-check",
+  "tier": 2,
+  "protocol_version": "v1",
+  "model_file": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8/best-rk3588.rknn",
+  "model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+  "tag": "rknn_int8",
+  "backend": "rknnlite-on-board",
+  "camera": {
+    "device": "/dev/video12",
+    "frame": "640x360 NV12",
+    "crop_ltwh": [
+      0,
+      380,
+      4224,
+      2376
+    ],
+    "sensor_mode": "4224x3136 @30",
+    "isp_output_line": "Output rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:3624 rate:33ms delay:29ms frameloss:0 bufcnt:4)",
+    "isp_frames": 3624,
+    "isp_frameloss": 0,
+    "frames_isp_minus_read": -1,
+    "period_ms": 33.388,
+    "late_intervals": 0,
+    "interval_ms": {
+      "mean": 33.39,
+      "p50": 33.388,
+      "p95": 33.427,
+      "std": 0.061,
+      "n": 3624
+    }
+  },
+  "conditions": {
+    "affinity": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "openblas_num_threads": "1",
+    "cv2_threads": 4,
+    "core_mask": "CORE_0",
+    "tracker": false,
+    "freq_before": {
+      "policy0": {
+        "governor": "performance",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "performance",
+        "cur_khz": "2256000"
+      },
+      "policy6": {
+        "governor": "performance",
+        "cur_khz": "2304000"
+      },
+      "npu": {
+        "governor": "performance",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "performance",
+        "cur_hz": "2112000000"
+      },
+      "locked": true
+    },
+    "freq_after": {
+      "policy0": {
+        "governor": "performance",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "performance",
+        "cur_khz": "2256000"
+      },
+      "policy6": {
+        "governor": "performance",
+        "cur_khz": "2304000"
+      },
+      "npu": {
+        "governor": "performance",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "performance",
+        "cur_hz": "2112000000"
+      },
+      "locked": true
+    }
+  },
+  "frames": {
+    "read_from_pipe": 3625,
+    "processed_measured": 3595,
+    "warmup": 30,
+    "overwritten_in_slot": 0
+  },
+  "window_s": 120.0,
+  "fps": 29.95,
+  "latency_ms": {
+    "cvt": {
+      "mean": 0.167,
+      "p50": 0.166,
+      "p95": 0.175,
+      "std": 0.018,
+      "n": 3595
+    },
+    "pre": {
+      "mean": 0.293,
+      "p50": 0.297,
+      "p95": 0.317,
+      "std": 0.038,
+      "n": 3595
+    },
+    "npu": {
+      "mean": 18.0,
+      "p50": 17.973,
+      "p95": 18.18,
+      "std": 0.298,
+      "n": 3595
+    },
+    "post": {
+      "mean": 0.484,
+      "p50": 0.482,
+      "p95": 0.497,
+      "std": 0.013,
+      "n": 3595
+    },
+    "e2e": {
+      "mean": 19.005,
+      "p50": 18.974,
+      "p95": 19.207,
+      "std": 0.318,
+      "n": 3595
+    }
+  },
+  "n_det_mean": 0.0,
+  "per_minute": [
+    {
+      "minute": 0,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 19.02,
+      "temp_c": 56.4,
+      "process_cpu_pct": 16.2,
+      "system_cpu_pct": 14.9
+    },
+    {
+      "minute": 1,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 18.99,
+      "temp_c": 56.4,
+      "process_cpu_pct": 16.0,
+      "system_cpu_pct": 14.9
+    }
+  ],
+  "resources": {
+    "peak_rss_mib": 138.4,
+    "avg_process_cpu_pct": 16.1,
+    "avg_system_cpu_pct": 14.8,
+    "thermal_zone": "thermal_zone6",
+    "temp_start_c": 54.5,
+    "temp_end_c": 56.4,
+    "temp_max_c": 57.3,
+    "duration_s": 121.2,
+    "samples": 1205
+  },
+  "system": {
+    "kernel": "6.1.99-rockchip-rk3588",
+    "os": "Orange Pi 1.2.4 Jammy",
+    "python": "3.10.12",
+    "ram_total_mib": 3916,
+    "cpu_count": 8
+  },
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "created_note": "2026-11-07"
+}

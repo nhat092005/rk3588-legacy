@@ -1,0 +1,172 @@
+{
+  "git_commit": "d84836b09d07bbd07e1ebc20172b24ef40347d5d",
+  "git_dirty": true,
+  "created_at": "2026-11-07T18:27:29",
+  "run_id": "harness-check",
+  "tier": 2,
+  "protocol_version": "v1",
+  "model_file": "experiments/runs/ppe5_yolov8n_baseline_100ep_s0/weights/rknn_int8/best-rk3588.rknn",
+  "model_sha256": "a501f94ee391bab370c141bbc4853eb78c062635b0a01597fe3a9efb0d99e7dd",
+  "tag": "rknn_int8",
+  "backend": "rknnlite-on-board",
+  "camera": {
+    "device": "/dev/video12",
+    "frame": "640x360 NV12",
+    "crop_ltwh": [
+      0,
+      380,
+      4224,
+      2376
+    ],
+    "sensor_mode": "4224x3136 @30",
+    "isp_output_line": "Output rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:1827 rate:33ms delay:29ms frameloss:0 bufcnt:4)",
+    "isp_frames": 1827,
+    "isp_frameloss": 0,
+    "frames_isp_minus_read": -1,
+    "period_ms": 33.388,
+    "late_intervals": 0,
+    "interval_ms": {
+      "mean": 33.389,
+      "p50": 33.388,
+      "p95": 34.099,
+      "std": 0.658,
+      "n": 1827
+    }
+  },
+  "conditions": {
+    "affinity": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "openblas_num_threads": "1",
+    "cv2_threads": 4,
+    "core_mask": "CORE_0",
+    "tracker": false,
+    "freq_before": {
+      "policy0": {
+        "governor": "ondemand",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "ondemand",
+        "cur_khz": "408000"
+      },
+      "policy6": {
+        "governor": "ondemand",
+        "cur_khz": "1608000"
+      },
+      "npu": {
+        "governor": "rknpu_ondemand",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "dmc_ondemand",
+        "cur_hz": "528000000"
+      },
+      "locked": false
+    },
+    "freq_after": {
+      "policy0": {
+        "governor": "ondemand",
+        "cur_khz": "1800000"
+      },
+      "policy4": {
+        "governor": "ondemand",
+        "cur_khz": "600000"
+      },
+      "policy6": {
+        "governor": "ondemand",
+        "cur_khz": "600000"
+      },
+      "npu": {
+        "governor": "rknpu_ondemand",
+        "cur_hz": "1000000000"
+      },
+      "ddr": {
+        "governor": "dmc_ondemand",
+        "cur_hz": "2112000000"
+      },
+      "locked": false
+    }
+  },
+  "frames": {
+    "read_from_pipe": 1828,
+    "processed_measured": 1798,
+    "warmup": 30,
+    "overwritten_in_slot": 0
+  },
+  "window_s": 60.0,
+  "fps": 29.95,
+  "latency_ms": {
+    "cvt": {
+      "mean": 0.426,
+      "p50": 0.391,
+      "p95": 0.645,
+      "std": 0.088,
+      "n": 1798
+    },
+    "pre": {
+      "mean": 0.377,
+      "p50": 0.353,
+      "p95": 0.488,
+      "std": 0.098,
+      "n": 1798
+    },
+    "npu": {
+      "mean": 23.48,
+      "p50": 23.647,
+      "p95": 24.886,
+      "std": 1.151,
+      "n": 1798
+    },
+    "post": {
+      "mean": 1.455,
+      "p50": 1.502,
+      "p95": 1.532,
+      "std": 0.205,
+      "n": 1798
+    },
+    "e2e": {
+      "mean": 25.913,
+      "p50": 26.101,
+      "p95": 27.333,
+      "std": 1.217,
+      "n": 1798
+    }
+  },
+  "n_det_mean": 0.0,
+  "per_minute": [
+    {
+      "minute": 0,
+      "frames": 1797,
+      "window_s": 60.0,
+      "fps": 29.95,
+      "e2e_ms_mean": 25.913,
+      "temp_c": 54.5,
+      "process_cpu_pct": 40.9,
+      "system_cpu_pct": 18.8
+    }
+  ],
+  "resources": {
+    "peak_rss_mib": 138.8,
+    "avg_process_cpu_pct": 41.0,
+    "avg_system_cpu_pct": 18.8,
+    "thermal_zone": "thermal_zone6",
+    "temp_start_c": 49.0,
+    "temp_end_c": 54.5,
+    "temp_max_c": 54.5,
+    "duration_s": 61.2,
+    "samples": 605
+  },
+  "system": {
+    "kernel": "6.1.99-rockchip-rk3588",
+    "os": "Orange Pi 1.2.4 Jammy",
+    "python": "3.10.12",
+    "ram_total_mib": 3916,
+    "cpu_count": 8
+  },
+  "sdk_version": "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+  "created_note": "2026-11-07"
+}

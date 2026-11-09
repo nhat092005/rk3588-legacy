@@ -1,0 +1,19 @@
+{
+ "exp_id": "c5_build",
+ "domain": "npu",
+ "topic": "operator_support",
+ "run_id": [
+  "unknown"
+ ],
+ "date": "2026-10-25",
+ "rule_file": "none",
+ "script": [
+  "experiments/npu/operator_support/c5_build/export_int8.py",
+  "experiments/npu/operator_support/c5_build/build_fp16.py"
+ ],
+ "result_file": [
+  "experiments/npu/operator_support/c5_build/c5_baseline/int8_build_stdout.txt"
+ ],
+ "git_commit": "unknown",
+ "note": "moved from tmp/ on 2026-11-10, date is the file modification time, no hypothesis recorded"
+}

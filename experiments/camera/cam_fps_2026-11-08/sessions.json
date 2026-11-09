@@ -1,0 +1,60 @@
+[
+ {
+  "rep": 1,
+  "cond": "C0",
+  "t": "T1",
+  "file": "r1_C0_T1.json",
+  "epoch_start": 1794148591,
+  "epoch_end": 1794148616,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "cond": "C1",
+  "t": "T1",
+  "file": "r1_C1_T1.json",
+  "epoch_start": 1794148637,
+  "epoch_end": 1794148662,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "cond": "C2",
+  "t": "T1",
+  "file": "r1_C2_T1.json",
+  "isp_before": "Isp online frame:182 state:working time:33ms v-blank:175us\nOutput     rkisp_mainpath Format:NM12 Size:3840x2160 Dcrop(0,380|4224x2376) (frame:182 rate:33ms delay:29ms frameloss:0 bufcnt:4)\nOutput     rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:182 rate:33ms delay:29ms frameloss:0 bufcnt:4)",
+  "epoch_start": 1794148690,
+  "epoch_end": 1794148717,
+  "returncode": 0,
+  "isp_after": "Isp online frame:1035 state:working time:33ms v-blank:169us\nOutput     rkisp_mainpath Format:NM12 Size:3840x2160 Dcrop(0,380|4224x2376) (frame:1035 rate:33ms delay:29ms frameloss:0 bufcnt:4)\nOutput     rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:1035 rate:33ms delay:29ms frameloss:0 bufcnt:4)"
+ },
+ {
+  "rep": 1,
+  "cond": "C0",
+  "t": "T5",
+  "file": "r1_C0_T5.json",
+  "epoch_start": 1794148741,
+  "epoch_end": 1794148753,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "cond": "C1",
+  "t": "T5",
+  "file": "r1_C1_T5.json",
+  "epoch_start": 1794148774,
+  "epoch_end": 1794148786,
+  "returncode": 0
+ },
+ {
+  "rep": 1,
+  "cond": "C2",
+  "t": "T5",
+  "file": "r1_C2_T5.json",
+  "isp_before": "Isp online frame:183 state:working time:33ms v-blank:167us\nOutput     rkisp_mainpath Format:NM12 Size:3840x2160 Dcrop(0,380|4224x2376) (frame:183 rate:33ms delay:29ms frameloss:0 bufcnt:3)\nOutput     rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:183 rate:33ms delay:29ms frameloss:0 bufcnt:4)",
+  "epoch_start": 1794148814,
+  "epoch_end": 1794148827,
+  "returncode": 0,
+  "isp_after": "Isp online frame:625 state:working time:33ms v-blank:169us\nOutput     rkisp_mainpath Format:NM12 Size:3840x2160 Dcrop(0,380|4224x2376) (frame:625 rate:33ms delay:29ms frameloss:53 bufcnt:3)\nOutput     rkisp_selfpath Format:NV12 Size:640x360 Dcrop(0,380|4224x2376) (frame:625 rate:33ms delay:29ms frameloss:0 bufcnt:4)"
+ }
+]

@@ -1,0 +1,12 @@
+names:
+- Helmet
+- NoHelmet
+- NoVest
+- Vest
+- Person
+nc: 5
+path: /home/nhat/workspace/prjs/rk3588/experiments/camera/stretch/letterbox/ppe2286_ext
+test: images/test
+test_ext: images/x
+train: images/train
+val: images/val

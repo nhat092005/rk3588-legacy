@@ -12,6 +12,7 @@ OPERATOR_SUPPORT_RESULTS_DIR = RESULTS_DIR / "npu" / "operator_support"
 LATENCY_RESULTS_DIR = RESULTS_DIR / "npu" / "latency"
 THROUGHPUT_RESULTS_DIR = RESULTS_DIR / "npu" / "throughput"
 NPU_DIR = EXPERIMENTS_DIR / "npu"
+CAMERA_DIR = EXPERIMENTS_DIR / "camera"
 
 BASELINE_RUN = "ppe5_yolov8n_baseline_100ep_s0"
 

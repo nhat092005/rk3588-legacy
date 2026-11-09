@@ -1,0 +1,11 @@
+heldout: images/x
+names:
+- Helmet
+- NoHelmet
+- NoVest
+- Vest
+nc: 4
+path: /home/nhat/workspace/prjs/rk3588/experiments/camera/stretch/stretch/ppe2286_heldout
+test: images/val
+train: images/train
+val: images/val

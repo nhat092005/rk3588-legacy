@@ -43,3 +43,10 @@ Nine experiments that the documentation cites as board or PC measurements were k
 `camera/{ab_runs,camera_runs,cam_fps_2026-11-08,enc_rga_2026-11-08,distort,stretch}`, `npu/throughput/input_384x640`, `npu/latency/submit_trace`, `npu/operator_support/c5_build`.
 Scripts without a result file were moved next to them: `camera/pipeline_2026-11-07` (measurement scripts and README), `camera/rga_caps` (RGA capability probe), `camera/isp_record` (ISP recording scripts and field-of-view images).
 Files that can be regenerated were deleted, the command is in `npu/throughput/input_384x640/README.md`. Path strings in moved scripts, YAML and JSON were updated (`tmp/...` and `ai/automation/runs` to the new locations). `dataset.txt` and `export_*.log` of `input_384x640` keep their old paths verbatim.
+
+## Git history rewritten on 2026-11-10
+
+The history of `main` and `dev/model-architecture` was rewritten with `git filter-repo` to drop blobs that are heavy and regenerable. Every commit hash changed, no commit was squashed or dropped (82 commits before and after).
+Removed from all history: `docs/papers/` (the PDFs live in the `docs` submodule under `_assets/pdf/papers`), `runs/*/plots/sample_predictions/`, and seven `*.onnx` intermediates of `onboard_q2c` that no script reads. Kept on purpose: raw board traces (`*.gz`), measured `.rknn` builds and `onboard_q2c/diag/ppe5_yolov8n_baseline_100ep_s0/int8_input.onnx`, which `analyze_q2e_pc.py` reads.
+The tree of the branch tip is byte-identical before and after (tree hash `6797779638372389f07550c7cf5f4e6b9afd6642` at the commit that records the nine experiments), so only history changed.
+`commit_map.tsv` maps old hashes to new ones. The `git_commit` values stored inside result JSON files were not edited and are old hashes, so look them up in this map (for example `d84836b` is `44a0d80`). The 40 files that record `33212040b359cc514ecbc1aef3aae5ef4017ea3e` point to a commit that was already unreachable before this rewrite and cannot be resolved.

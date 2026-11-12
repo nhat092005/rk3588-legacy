@@ -1,0 +1,27 @@
+# all-core detector, mbconv family (inverted residual: pw expand x4, dw3x3, pw linear, Add last), ReLU everywhere, same neck and head as allcore_dense.
+# MBConvU args: [channels, activation name, dw kernel, expansion]. ReLU (not ReLU6) so the only change against allcore_dense is the block type.
+# Needs ai.research.all_core.ultra imported (ai/models/allcore_mbconv/allcore_mbconv.py does it). Graph audited by ai/research/all_core/audit/trainable_audit.py.
+nc: 5 # number of classes (overridden by the dataset)
+reg_max: 1 # direct ltrb regression, Detect.dfl is Identity
+activation: nn.ReLU() # Conv default activation (also the DWConv of the cls branch)
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [32, 3, 2]] # 0 stem /2
+  - [-1, 1, Conv, [32, 3, 2]] # 1 /4
+  - [-1, 1, MBConvU, [32, "relu", 3, 4]] # 2 block s4
+  - [-1, 1, Conv, [64, 3, 2]] # 3 /8
+  - [-1, 1, MBConvU, [64, "relu", 3, 4]] # 4 P3
+  - [-1, 1, Conv, [128, 3, 2]] # 5 /16
+  - [-1, 1, MBConvU, [128, "relu", 3, 4]] # 6 P4
+  - [-1, 1, Conv, [256, 3, 2]] # 7 /32
+  - [-1, 1, MBConvU, [256, "relu", 3, 4]] # 8 P5
+
+head:
+  - [4, 1, Conv, [64, 3, 2]] # 9 down P3 to /16
+  - [[-1, 6], 1, Concat, [1]] # 10 cat P4 (64 + 128)
+  - [-1, 1, Conv, [128, 3, 1]] # 11 n4
+  - [-1, 1, Conv, [128, 3, 2]] # 12 down n4 to /32
+  - [[-1, 8], 1, Concat, [1]] # 13 cat P5 (128 + 256)
+  - [-1, 1, Conv, [256, 3, 1]] # 14 n5
+  - [[4, 11, 14], 1, Detect, [nc]] # 15 Detect(n3 = P3, n4, n5)

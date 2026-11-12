@@ -1,0 +1,4 @@
+Statements measured by a9 (descriptive, no threshold). Same setup as a4 (on-board C bench, CPU 6, clock locked, masks rotated, INT8, random weights).
+S1. The width x depth grid of scale_grid.py (dense all-core detector, 640x640): layers that split over 2 or more cores at CORE_0_1_2 and unsplit ops.
+S2. NPU run duration at the three core masks and the ratios, with YOLOv8n ReLU and SiLU as references in the same session: the project exports (yolov8n_*_int8, DFL and decode included) and the raw-head cuts of raw_refs.py (yolov8n_*_raw, same graph end as the grid).
+The budget of the study is the same-session ms of the YOLOv8n ReLU reference, not a stored number. 10.82 ms (a4) is context only. Sanity check of the references: the project exports should show about 111 (ReLU, 80 split) and 117 (SiLU, 29 split) layers as in a4.

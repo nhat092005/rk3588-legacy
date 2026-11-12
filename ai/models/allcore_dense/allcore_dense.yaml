@@ -1,0 +1,27 @@
+# all-core detector, dense family (Conv3x3 + BN + ReLU only), bottom-up neck without upsample, stock Detect head with reg_max 1 (no DFL).
+# Designed and measured in ai/research/all_core (a3, a4, a6): every compiled layer splits over the 3 NPU cores. Needs ai.research.all_core.ultra imported (ai/models/allcore_dense/allcore_dense.py does it).
+# No scales: channels are as written. Graph audited by ai/research/all_core/audit/trainable_audit.py.
+nc: 5 # number of classes (overridden by the dataset)
+reg_max: 1 # direct ltrb regression, Detect.dfl is Identity
+activation: nn.ReLU() # Conv default activation (also the DWConv of the cls branch)
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [32, 3, 2]] # 0 stem /2
+  - [-1, 1, Conv, [32, 3, 2]] # 1 /4
+  - [-1, 2, Conv, [32, 3, 1]] # 2 block s4 (two Conv3x3)
+  - [-1, 1, Conv, [64, 3, 2]] # 3 /8
+  - [-1, 2, Conv, [64, 3, 1]] # 4 P3
+  - [-1, 1, Conv, [128, 3, 2]] # 5 /16
+  - [-1, 2, Conv, [128, 3, 1]] # 6 P4
+  - [-1, 1, Conv, [256, 3, 2]] # 7 /32
+  - [-1, 2, Conv, [256, 3, 1]] # 8 P5
+
+head:
+  - [4, 1, Conv, [64, 3, 2]] # 9 down P3 to /16
+  - [[-1, 6], 1, Concat, [1]] # 10 cat P4 (64 + 128)
+  - [-1, 1, Conv, [128, 3, 1]] # 11 n4
+  - [-1, 1, Conv, [128, 3, 2]] # 12 down n4 to /32
+  - [[-1, 8], 1, Concat, [1]] # 13 cat P5 (128 + 256)
+  - [-1, 1, Conv, [256, 3, 1]] # 14 n5
+  - [[4, 11, 14], 1, Detect, [nc]] # 15 Detect(n3 = P3, n4, n5)

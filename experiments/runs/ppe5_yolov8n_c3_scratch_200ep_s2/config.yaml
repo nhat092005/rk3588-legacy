@@ -1,0 +1,4 @@
+dataset: ppe5
+model: yolov8n_c3_scratch
+epochs: 200
+seed: 2

@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: /home/nhat/workspace/prjs/rk3588/ai/models/yolov8n_nodfl.yaml
+model: /home/nhat/workspace/prjs/rk3588/ai/models/yolov8n_nodfl/yolov8n_nodfl.yaml
 data: /home/nhat/workspace/prjs/rk3588/data/ppe5/processed/dataset.yaml
 epochs: 100
 time: null

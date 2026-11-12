@@ -71,7 +71,7 @@ def main() -> None:
     cfg = yaml.safe_load(args.config.read_text())
     if args.seed is not None:
         cfg["seed"] = args.seed
-    model_module = importlib.import_module(f"ai.models.{cfg['model']}")
+    model_module = importlib.import_module(f"ai.models.{cfg['model']}.{cfg['model']}")
     model_weights = model_module.WEIGHTS
 
     # No date: the same config + seed always maps to the same run, so make phase2 can skip finished runs

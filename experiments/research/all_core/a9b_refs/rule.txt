@@ -1,0 +1,3 @@
+Statements measured by a9b (descriptive, no threshold). Same setup as a4 (on-board C bench, CPU 6, clock locked, masks rotated, INT8, random weights).
+S1. YOLOv8n ReLU and SiLU with nc=5 cut at the raw head tensors (raw_refs.py, no DFL, no decode) against the project exports (DFL and decode included), plus dense (1.0, 2) as a drift check against a9.
+The raw cuts measured in a9 were built with nc=80 (stock yaml default) and are superseded by these.

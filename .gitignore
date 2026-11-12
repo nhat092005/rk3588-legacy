@@ -17,6 +17,9 @@ experiments/runs/*/plots/sample_predictions/
 experiments/**/*.onnx
 !experiments/npu/operator_support/onboard_q2c/diag/ppe5_yolov8n_baseline_100ep_s0/int8_input.onnx
 
+# Raw per-run board dumps of research experiments (about 2000 files). Aggregated results.json, notes.md and yamls stay tracked.
+experiments/research/**/board_out/
+
 # Secrets and local tool config, none exist today
 .env*
 *.pem

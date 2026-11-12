@@ -1,0 +1,2 @@
+Statements measured by a9d (descriptive, no threshold). Same setup as a4 (on-board C bench, CPU 6, clock locked, masks rotated, INT8, random weights).
+S1. Dense (1.0, 10) (depth is cheap at nano width in a9c) with (1.5, 2) and the YOLOv8n ReLU raw cut (nc=5) in the same session. Layers that split, ms at the three core masks.

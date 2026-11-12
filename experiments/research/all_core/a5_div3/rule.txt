@@ -1,0 +1,4 @@
+Statements measured by a5 (descriptive, no threshold). Same setup as a4 (on-board C bench, CPU 6, clock locked, masks rotated, INT8 and FP16, random weights).
+S1. Share of each layer over the 3 cores at CORE_0_1_2 for dense and mbconv ReLU nets with output height divisible by 3 at every stage (input 576 and 768) and with output channels in multiples of 96, against the 640 input and 32/64/128/256 widths (v0_640).
+S2. Whether the largest share per layer falls toward 33.3 percent, the balance-limited speedup, and the measured CORE_0 / CORE_0_1_2 ratio.
+Variants: v0_640 control, v1_640_w96 (widths 96/96/192/384), v2_576 and v2_768 (input only), v3_576_w96 (both). Nets differ in compute, so compare shares first, speedups with that in mind.

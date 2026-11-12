@@ -1,0 +1,4 @@
+dataset: ppe5
+model: allcore_dense_w150_d2
+epochs: 200
+seed: 0

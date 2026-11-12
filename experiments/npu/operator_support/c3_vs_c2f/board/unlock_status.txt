@@ -1,0 +1,5 @@
+policy0: ondemand 1800000 kHz
+policy4: ondemand 600000 kHz
+policy6: ondemand 600000 kHz
+npu: rknpu_ondemand 1000000000 Hz
+ddr: dmc_ondemand 2112000000 Hz

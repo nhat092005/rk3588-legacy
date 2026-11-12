@@ -1,0 +1,628 @@
+{
+ "measured_table": {
+  "InputOperator": [
+   5,
+   0
+  ],
+  "ConvExSwish": [
+   57,
+   0
+  ],
+  "Split": [
+   45,
+   0
+  ],
+  "Add": [
+   22,
+   22
+  ],
+  "Concat": [
+   85,
+   75
+  ],
+  "MaxPool": [
+   15,
+   0
+  ],
+  "Resize": [
+   10,
+   0
+  ],
+  "Conv": [
+   35,
+   30
+  ],
+  "Reshape": [
+   35,
+   0
+  ],
+  "exSoftmax13": [
+   5,
+   0
+  ],
+  "Transpose": [
+   5,
+   0
+  ],
+  "Sub": [
+   10,
+   0
+  ],
+  "Mul": [
+   10,
+   0
+  ],
+  "Sigmoid": [
+   5,
+   0
+  ],
+  "OutputOperator": [
+   5,
+   0
+  ],
+  "ConvRelu": [
+   102,
+   102
+  ],
+  "ConvReluAdd": [
+   12,
+   12
+  ],
+  "ConvLeakyRelu": [
+   51,
+   51
+  ],
+  "ConvLeakyReluAdd": [
+   6,
+   6
+  ],
+  "ConvClip": [
+   57,
+   57
+  ],
+  "exSDPAttention": [
+   2,
+   0
+  ],
+  "ConvAdd": [
+   4,
+   4
+  ]
+ },
+ "results": [
+  {
+   "block": "act_pwl_slope25",
+   "act": null,
+   "c": 128,
+   "hw": 40,
+   "precision": "int8",
+   "inputs": [
+    [
+     1,
+     128,
+     40,
+     40
+    ]
+   ],
+   "layers": 5,
+   "cycle_share": {
+    "multi": 0.0,
+    "partial": 1.0,
+    "single": 0.0,
+    "cpu": 0.0,
+    "unmeasured": 0.0
+   },
+   "ops": {
+    "Conv": 2,
+    "BatchNormalization": 1,
+    "Clip": 1,
+    "Mul": 1
+   },
+   "by_class": {
+    "partial": {
+     "Conv": 2
+    },
+    "unmeasured": {
+     "BatchNormalization": 1,
+     "Clip": 1
+    },
+    "single": {
+     "Mul": 1
+    }
+   },
+   "blockers": {
+    "Mul": 1,
+    "BatchNormalization": 1,
+    "Clip": 1
+   },
+   "cpu_ops": [],
+   "unmeasured_ops": [
+    "BatchNormalization",
+    "Clip"
+   ],
+   "total_cycles": 256000,
+   "rows": [
+    {
+     "id": 0,
+     "op": "InputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "\\",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "InputOperator:x0",
+     "class": "io"
+    },
+    {
+     "id": 2,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,3,3),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 23594,
+     "npu": 230400,
+     "total": 230400,
+     "name": "Conv:/block/f/f.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 3,
+     "op": "BatchNormalization",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128),(128),(128),...",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "BatchNormalization:/block/Mul_2bn",
+     "class": "unmeasured"
+    },
+    {
+     "id": 4,
+     "op": "Clip",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1),(1)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Clip:/block/Clip",
+     "class": "unmeasured"
+    },
+    {
+     "id": 5,
+     "op": "Mul",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1,128,40,40)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Mul:/block/Mul_1",
+     "class": "single"
+    },
+    {
+     "id": 6,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,1,1),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 18053,
+     "npu": 25600,
+     "total": 25600,
+     "name": "Conv:/block/g/g.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 7,
+     "op": "OutputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "(1,128,40,40)",
+     "out": "\\",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "OutputOperator:42",
+     "class": "io"
+    }
+   ],
+   "size": "s40"
+  },
+  {
+   "block": "act_hs_noscale",
+   "act": null,
+   "c": 128,
+   "hw": 40,
+   "precision": "int8",
+   "inputs": [
+    [
+     1,
+     128,
+     40,
+     40
+    ]
+   ],
+   "layers": 5,
+   "cycle_share": {
+    "multi": 0.0,
+    "partial": 1.0,
+    "single": 0.0,
+    "cpu": 0.0,
+    "unmeasured": 0.0
+   },
+   "ops": {
+    "Conv": 2,
+    "Add": 1,
+    "Clip": 1,
+    "Mul": 1
+   },
+   "by_class": {
+    "partial": {
+     "Conv": 2
+    },
+    "multi": {
+     "Add": 1
+    },
+    "unmeasured": {
+     "Clip": 1
+    },
+    "single": {
+     "Mul": 1
+    }
+   },
+   "blockers": {
+    "Mul": 1,
+    "Clip": 1
+   },
+   "cpu_ops": [],
+   "unmeasured_ops": [
+    "Clip"
+   ],
+   "total_cycles": 256000,
+   "rows": [
+    {
+     "id": 0,
+     "op": "InputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "\\",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "InputOperator:x0",
+     "class": "io"
+    },
+    {
+     "id": 2,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,3,3),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 23594,
+     "npu": 230400,
+     "total": 230400,
+     "name": "Conv:/block/f/f.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 3,
+     "op": "Add",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1,1,1,1)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Add:/block/Add",
+     "class": "multi"
+    },
+    {
+     "id": 4,
+     "op": "Clip",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1),(1)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Clip:/block/Clip",
+     "class": "unmeasured"
+    },
+    {
+     "id": 5,
+     "op": "Mul",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1,128,40,40)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Mul:/block/Mul",
+     "class": "single"
+    },
+    {
+     "id": 6,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,1,1),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 18053,
+     "npu": 25600,
+     "total": 25600,
+     "name": "Conv:/block/g/g.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 7,
+     "op": "OutputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "(1,128,40,40)",
+     "out": "\\",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "OutputOperator:40",
+     "class": "io"
+    }
+   ],
+   "size": "s40"
+  },
+  {
+   "block": "act_relu_sq",
+   "act": null,
+   "c": 128,
+   "hw": 40,
+   "precision": "int8",
+   "inputs": [
+    [
+     1,
+     128,
+     40,
+     40
+    ]
+   ],
+   "layers": 3,
+   "cycle_share": {
+    "multi": 0.9,
+    "partial": 0.1,
+    "single": 0.0,
+    "cpu": 0.0,
+    "unmeasured": 0.0
+   },
+   "ops": {
+    "ConvRelu": 1,
+    "Mul": 1,
+    "Conv": 1
+   },
+   "by_class": {
+    "multi": {
+     "ConvRelu": 1
+    },
+    "single": {
+     "Mul": 1
+    },
+    "partial": {
+     "Conv": 1
+    }
+   },
+   "blockers": {
+    "Mul": 1
+   },
+   "cpu_ops": [],
+   "unmeasured_ops": [],
+   "total_cycles": 256000,
+   "rows": [
+    {
+     "id": 0,
+     "op": "InputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "\\",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "InputOperator:x0",
+     "class": "io"
+    },
+    {
+     "id": 2,
+     "op": "ConvRelu",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,3,3),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 23594,
+     "npu": 230400,
+     "total": 230400,
+     "name": "Conv:/block/f/f.0/Conv",
+     "class": "multi"
+    },
+    {
+     "id": 3,
+     "op": "Mul",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1,128,40,40)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Mul:/block/Mul",
+     "class": "single"
+    },
+    {
+     "id": 4,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,1,1),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 18053,
+     "npu": 25600,
+     "total": 25600,
+     "name": "Conv:/block/g/g.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 5,
+     "op": "OutputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "(1,128,40,40)",
+     "out": "\\",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "OutputOperator:34",
+     "class": "io"
+    }
+   ],
+   "size": "s40"
+  },
+  {
+   "block": "act_relu_gate",
+   "act": null,
+   "c": 128,
+   "hw": 40,
+   "precision": "int8",
+   "inputs": [
+    [
+     1,
+     128,
+     40,
+     40
+    ]
+   ],
+   "layers": 4,
+   "cycle_share": {
+    "multi": 0.0,
+    "partial": 1.0,
+    "single": 0.0,
+    "cpu": 0.0,
+    "unmeasured": 0.0
+   },
+   "ops": {
+    "Conv": 2,
+    "Clip": 1,
+    "Mul": 1
+   },
+   "by_class": {
+    "partial": {
+     "Conv": 2
+    },
+    "unmeasured": {
+     "Clip": 1
+    },
+    "single": {
+     "Mul": 1
+    }
+   },
+   "blockers": {
+    "Mul": 1,
+    "Clip": 1
+   },
+   "cpu_ops": [],
+   "unmeasured_ops": [
+    "Clip"
+   ],
+   "total_cycles": 256000,
+   "rows": [
+    {
+     "id": 0,
+     "op": "InputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "\\",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "InputOperator:x0",
+     "class": "io"
+    },
+    {
+     "id": 2,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,3,3),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 23594,
+     "npu": 230400,
+     "total": 230400,
+     "name": "Conv:/block/f/f.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 3,
+     "op": "Clip",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1),(1)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Clip:/block/Clip",
+     "class": "unmeasured"
+    },
+    {
+     "id": 4,
+     "op": "Mul",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(1,128,40,40)",
+     "out": "(1,128,40,40)",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "Mul:/block/Mul",
+     "class": "single"
+    },
+    {
+     "id": 5,
+     "op": "Conv",
+     "dtype": "INT8",
+     "target": "NPU",
+     "inp": "(1,128,40,40),(128,128,1,1),(128)",
+     "out": "(1,128,40,40)",
+     "ddr": 18053,
+     "npu": 25600,
+     "total": 25600,
+     "name": "Conv:/block/g/g.0/Conv",
+     "class": "partial"
+    },
+    {
+     "id": 6,
+     "op": "OutputOperator",
+     "dtype": "INT8",
+     "target": "CPU",
+     "inp": "(1,128,40,40)",
+     "out": "\\",
+     "ddr": 0,
+     "npu": 0,
+     "total": 0,
+     "name": "OutputOperator:38",
+     "class": "io"
+    }
+   ],
+   "size": "s40"
+  }
+ ]
+}

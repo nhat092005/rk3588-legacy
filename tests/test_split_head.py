@@ -53,7 +53,7 @@ class SplitHeadNoDfl(unittest.TestCase):
         import yaml
         from ultralytics.nn.tasks import DetectionModel
 
-        cfg = yaml.safe_load((Path(__file__).resolve().parents[1] / "ai" / "models" / "yolov8n_nodfl.yaml").read_text())
+        cfg = yaml.safe_load((Path(__file__).resolve().parents[1] / "ai" / "models" / "yolov8n_nodfl" / "yolov8n_nodfl.yaml").read_text())
         cfg["nc"] = 5
         head = DetectionModel(cfg, verbose=False).eval().model[-1]
         self.assertEqual(head.reg_max, 1)

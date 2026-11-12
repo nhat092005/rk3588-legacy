@@ -1,0 +1,5 @@
+policy0: performance 1800000 kHz
+policy4: performance 2256000 kHz
+policy6: performance 2304000 kHz
+npu: performance 1000000000 Hz
+ddr: performance 2112000000 Hz

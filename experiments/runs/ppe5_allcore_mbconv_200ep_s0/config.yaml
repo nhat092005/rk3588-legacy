@@ -1,0 +1,4 @@
+dataset: ppe5
+model: allcore_mbconv
+epochs: 200
+seed: 0

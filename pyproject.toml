@@ -16,6 +16,11 @@ dependencies = [
     "onnxslim==0.1.96",  # graph slimming before .rknn; version of every existing export
 ]
 
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
 [tool.uv]
 environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
 

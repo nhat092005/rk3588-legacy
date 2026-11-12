@@ -1,0 +1,3 @@
+Statements measured by a6 (descriptive, no threshold). Same setup as a4 (on-board C bench, CPU 6, clock locked, masks rotated, INT8 and FP16, random weights).
+S1. Same dense bottom-up ReLU backbone and neck at 640x640, three heads: v6 (HeadV6), stock (Ultralytics Detect reg_max=1, DWConv cls branch), stock_legacy (Conv3, Conv3 cls branch).
+S2. For each: layers that split over 2 or more cores at CORE_0_1_2, unsplit ops, NPU run duration at the three core masks and the ratios.

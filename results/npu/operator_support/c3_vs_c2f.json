@@ -1,0 +1,1004 @@
+{
+ "accuracy": {
+  "css_test": {
+   "arms": {
+    "A": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "ap50_95": [
+      41.04,
+      40.339999999999996,
+      42.3
+     ],
+     "nohelmet": [
+      22.98,
+      23.3,
+      28.810000000000002
+     ],
+     "vest": [
+      49.32,
+      48.32,
+      51.580000000000005
+     ]
+    },
+    "B": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "ap50_95": [
+      35.82,
+      35.22,
+      35.370000000000005
+     ],
+     "nohelmet": [
+      19.02,
+      22.650000000000002,
+      19.509999999999998
+     ],
+     "vest": [
+      44.3,
+      41.010000000000005,
+      44.21
+     ]
+    }
+   },
+   "D": -5.756666666666668,
+   "S": 1.9600000000000009,
+   "mean_A": 41.22666666666667,
+   "mean_B": 35.47,
+   "D_nohelmet": -4.636666666666667,
+   "D_vest": -6.56666666666667,
+   "reading": "C3 loses accuracy"
+  },
+  "ppe2286_ext": {
+   "arms": {
+    "A": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "ap50_95": [
+      16.919999999999998,
+      18.05,
+      18.459999999999997
+     ],
+     "nohelmet": [
+      0.45999999999999996,
+      0.22999999999999998,
+      0.22
+     ],
+     "vest": [
+      29.520000000000003,
+      33.23,
+      35.0
+     ]
+    },
+    "B": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "ap50_95": [
+      17.32,
+      14.78,
+      16.470000000000002
+     ],
+     "nohelmet": [
+      0.27,
+      0.27999999999999997,
+      0.27999999999999997
+     ],
+     "vest": [
+      30.12,
+      25.130000000000003,
+      27.77
+     ]
+    }
+   },
+   "D": -1.6199999999999974,
+   "S": 2.540000000000001,
+   "mean_A": 17.81,
+   "mean_B": 16.19,
+   "D_nohelmet": -0.026666666666666672,
+   "D_vest": -4.91,
+   "reading": "not distinguishable with three seeds"
+  }
+ },
+ "complexity": {
+  "A": {
+   "params": 3011823,
+   "gflops": 8.1959936
+  },
+  "B": {
+   "params": 2487023,
+   "gflops": 6.8852736
+  }
+ },
+ "latency_core0": {
+  "rounds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "A_ms": [
+   16.296,
+   16.302,
+   16.298,
+   16.296,
+   16.305,
+   16.294,
+   16.303,
+   16.287
+  ],
+  "B_ms": [
+   16.068,
+   16.064,
+   16.065,
+   16.065,
+   16.069,
+   16.068,
+   16.079,
+   16.091
+  ],
+  "ratio": [
+   0.9860088365243006,
+   0.9854005643479328,
+   0.9857037673334154,
+   0.9858247422680414,
+   0.9855259122968414,
+   0.986129863753529,
+   0.9862601975096608,
+   0.987965862344201
+  ],
+  "median_A": 16.296999999999997,
+  "median_B": 16.068,
+  "median_ratio": 0.985916789396171,
+  "ratio_min": 0.9854005643479328,
+  "ratio_max": 0.987965862344201,
+  "noise_floor": 0.0016807768924302913,
+  "reading": "C3 faster",
+  "wall_A": [
+   16.296,
+   16.302,
+   16.299,
+   16.296,
+   16.305,
+   16.295,
+   16.303,
+   16.287
+  ],
+  "wall_B": [
+   16.068,
+   16.065,
+   16.065,
+   16.066,
+   16.07,
+   16.068,
+   16.079,
+   16.092
+  ]
+ },
+ "latency_core012": {
+  "rounds": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "A_ms": [
+   15.865,
+   15.848,
+   15.8725,
+   15.867
+  ],
+  "B_ms": [
+   15.742,
+   15.751,
+   15.765,
+   15.767
+  ],
+  "ratio": [
+   0.9922470847778129,
+   0.9938793538616859,
+   0.9932272798865963,
+   0.9936976113947185
+  ],
+  "median_A": 15.866,
+  "median_B": 15.758,
+  "median_ratio": 0.9934624456406573,
+  "ratio_min": 0.9922470847778129,
+  "ratio_max": 0.9938793538616859,
+  "noise_floor": 0.0015881082454578532,
+  "reading": "C3 faster",
+  "wall_A": [
+   15.865,
+   15.848,
+   15.873,
+   15.8675
+  ],
+  "wall_B": [
+   15.743,
+   15.751,
+   15.765,
+   15.767
+  ]
+ },
+ "detail_core0": {
+  "A": {
+   "files": [
+    {
+     "file": "c0_A_d1_detail.txt",
+     "runs": 200,
+     "total_us": 16568.0,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 57,
+       "us": 10380.0
+      },
+      "Split": {
+       "count": 9,
+       "us": 532.0
+      },
+      "Add": {
+       "count": 8,
+       "us": 325.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 1425.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 178.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 488.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 307.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2052.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 540.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 72.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 119.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 76.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Split|single core": 1800,
+      "Add|single core": 1600,
+      "Concat|single core": 3400
+     }
+    },
+    {
+     "file": "c0_A_d2_detail.txt",
+     "runs": 200,
+     "total_us": 16580.0,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 57,
+       "us": 10381.0
+      },
+      "Split": {
+       "count": 9,
+       "us": 532.0
+      },
+      "Add": {
+       "count": 8,
+       "us": 330.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 1427.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 179.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 489.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 308.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2055.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 540.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 72.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 118.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 76.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Split|single core": 1800,
+      "Add|single core": 1600,
+      "Concat|single core": 3400
+     }
+    }
+   ],
+   "total_us": 16574.0,
+   "ops": {
+    "ConvExSwish": {
+     "count": 57,
+     "us": 10380.5,
+     "share": 0.6263122963678049
+    },
+    "Concat": {
+     "count": 17,
+     "us": 1426.0,
+     "share": 0.08603837335585858
+    },
+    "Add": {
+     "count": 8,
+     "us": 327.5,
+     "share": 0.019759864848557983
+    },
+    "Reshape": {
+     "count": 7,
+     "us": 307.5,
+     "share": 0.01855315554482925
+    },
+    "exSoftmax13": {
+     "count": 1,
+     "us": 2053.5,
+     "share": 0.12389887776034753
+    },
+    "Resize": {
+     "count": 2,
+     "us": 178.5,
+     "share": 0.01076988053577893
+    },
+    "Sub": {
+     "count": 2,
+     "us": 72.0,
+     "share": 0.004344153493423434
+    },
+    "MaxPool": {
+     "count": 3,
+     "us": 69.0,
+     "share": 0.004163147097864125
+    },
+    "Mul": {
+     "count": 2,
+     "us": 118.5,
+     "share": 0.007149752624592736
+    },
+    "InputOperator": {
+     "count": 1,
+     "us": 1.0,
+     "share": 6.033546518643659e-05
+    },
+    "Conv": {
+     "count": 7,
+     "us": 488.5,
+     "share": 0.029473874743574272
+    },
+    "OutputOperator": {
+     "count": 1,
+     "us": 3.0,
+     "share": 0.00018100639555930978
+    },
+    "Split": {
+     "count": 9,
+     "us": 532.0,
+     "share": 0.03209846747918427
+    },
+    "Sigmoid": {
+     "count": 1,
+     "us": 76.0,
+     "share": 0.00458549535416918
+    },
+    "Transpose": {
+     "count": 1,
+     "us": 540.0,
+     "share": 0.032581151200675756
+    }
+   }
+  },
+  "B": {
+   "files": [
+    {
+     "file": "c0_B_d1_detail.txt",
+     "runs": 200,
+     "total_us": 16446.0,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 65,
+       "us": 10907.5
+      },
+      "Add": {
+       "count": 8,
+       "us": 328.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 1190.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 179.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 488.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 307.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2053.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 539.0
+      },
+      "Split": {
+       "count": 1,
+       "us": 117.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 70.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 118.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 76.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Add|single core": 1600,
+      "Concat|single core": 3400,
+      "Split|single core": 200
+     }
+    },
+    {
+     "file": "c0_B_d2_detail.txt",
+     "runs": 200,
+     "total_us": 16455.0,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 65,
+       "us": 10910.0
+      },
+      "Add": {
+       "count": 8,
+       "us": 328.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 1193.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 178.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 489.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 305.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2056.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 540.0
+      },
+      "Split": {
+       "count": 1,
+       "us": 117.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 69.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 119.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 76.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Add|single core": 1600,
+      "Concat|single core": 3400,
+      "Split|single core": 200
+     }
+    }
+   ],
+   "total_us": 16450.5,
+   "ops": {
+    "ConvExSwish": {
+     "count": 65,
+     "us": 10908.75,
+     "share": 0.6631257408589405
+    },
+    "Concat": {
+     "count": 17,
+     "us": 1191.5,
+     "share": 0.07242940944044254
+    },
+    "Add": {
+     "count": 8,
+     "us": 328.0,
+     "share": 0.01993860368985745
+    },
+    "Reshape": {
+     "count": 7,
+     "us": 306.0,
+     "share": 0.018601258320415794
+    },
+    "exSoftmax13": {
+     "count": 1,
+     "us": 2054.5,
+     "share": 0.12488982097808578
+    },
+    "Resize": {
+     "count": 2,
+     "us": 178.5,
+     "share": 0.010850734020242546
+    },
+    "Sub": {
+     "count": 2,
+     "us": 69.5,
+     "share": 0.004224795598917966
+    },
+    "MaxPool": {
+     "count": 3,
+     "us": 69.0,
+     "share": 0.00419440138597611
+    },
+    "Mul": {
+     "count": 2,
+     "us": 118.5,
+     "share": 0.007203428467219841
+    },
+    "InputOperator": {
+     "count": 1,
+     "us": 1.0,
+     "share": 6.078842588371174e-05
+    },
+    "Conv": {
+     "count": 7,
+     "us": 488.5,
+     "share": 0.029695146044193186
+    },
+    "OutputOperator": {
+     "count": 1,
+     "us": 3.0,
+     "share": 0.00018236527765113522
+    },
+    "Split": {
+     "count": 1,
+     "us": 117.0,
+     "share": 0.007112245828394274
+    },
+    "Sigmoid": {
+     "count": 1,
+     "us": 76.0,
+     "share": 0.004619920367162092
+    },
+    "Transpose": {
+     "count": 1,
+     "us": 539.5,
+     "share": 0.032795355764262485
+    }
+   }
+  }
+ },
+ "detail_core012": {
+  "A": {
+   "files": [
+    {
+     "file": "c7_A_d1_detail.txt",
+     "runs": 200,
+     "total_us": 16046.5,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 57,
+       "us": 10395.0
+      },
+      "Split": {
+       "count": 9,
+       "us": 534.0
+      },
+      "Add": {
+       "count": 8,
+       "us": 242.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 1014.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 179.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 430.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 314.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2055.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 540.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 72.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 119.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 77.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Split|single core": 1800,
+      "Add|split over cores": 1600,
+      "Concat|split over cores": 3000,
+      "Concat|single core": 400
+     }
+    }
+   ],
+   "total_us": 16046.5,
+   "ops": {
+    "ConvExSwish": {
+     "count": 57,
+     "us": 10395.0,
+     "share": 0.6478048172498676
+    },
+    "Concat": {
+     "count": 17,
+     "us": 1014.0,
+     "share": 0.06319135013865952
+    },
+    "Add": {
+     "count": 8,
+     "us": 242.0,
+     "share": 0.015081170348674166
+    },
+    "Reshape": {
+     "count": 7,
+     "us": 314.0,
+     "share": 0.01956813012183342
+    },
+    "exSoftmax13": {
+     "count": 1,
+     "us": 2055.0,
+     "share": 0.12806531019225376
+    },
+    "Resize": {
+     "count": 2,
+     "us": 179.0,
+     "share": 0.011155080547159817
+    },
+    "Sub": {
+     "count": 2,
+     "us": 72.0,
+     "share": 0.004486959773159256
+    },
+    "MaxPool": {
+     "count": 3,
+     "us": 69.0,
+     "share": 0.004300003115944287
+    },
+    "Mul": {
+     "count": 2,
+     "us": 119.0,
+     "share": 0.007415947402860437
+    },
+    "InputOperator": {
+     "count": 1,
+     "us": 1.0,
+     "share": 6.2318885738323e-05
+    },
+    "Conv": {
+     "count": 7,
+     "us": 430.0,
+     "share": 0.026797120867478888
+    },
+    "OutputOperator": {
+     "count": 1,
+     "us": 3.0,
+     "share": 0.000186956657214969
+    },
+    "Split": {
+     "count": 9,
+     "us": 534.0,
+     "share": 0.03327828498426448
+    },
+    "Sigmoid": {
+     "count": 1,
+     "us": 77.0,
+     "share": 0.004798554201850871
+    },
+    "Transpose": {
+     "count": 1,
+     "us": 540.0,
+     "share": 0.03365219829869442
+    }
+   }
+  },
+  "B": {
+   "files": [
+    {
+     "file": "c7_B_d1_detail.txt",
+     "runs": 200,
+     "total_us": 16021.0,
+     "ops": {
+      "InputOperator": {
+       "count": 1,
+       "us": 1.0
+      },
+      "ConvExSwish": {
+       "count": 65,
+       "us": 10924.5
+      },
+      "Add": {
+       "count": 8,
+       "us": 239.0
+      },
+      "Concat": {
+       "count": 17,
+       "us": 886.0
+      },
+      "MaxPool": {
+       "count": 3,
+       "us": 69.0
+      },
+      "Resize": {
+       "count": 2,
+       "us": 178.0
+      },
+      "Conv": {
+       "count": 7,
+       "us": 431.0
+      },
+      "Reshape": {
+       "count": 7,
+       "us": 312.0
+      },
+      "exSoftmax13": {
+       "count": 1,
+       "us": 2053.0
+      },
+      "Transpose": {
+       "count": 1,
+       "us": 540.0
+      },
+      "Split": {
+       "count": 1,
+       "us": 117.0
+      },
+      "Sub": {
+       "count": 2,
+       "us": 69.0
+      },
+      "Mul": {
+       "count": 2,
+       "us": 119.0
+      },
+      "Sigmoid": {
+       "count": 1,
+       "us": 77.0
+      },
+      "OutputOperator": {
+       "count": 1,
+       "us": 3.0
+      }
+     },
+     "workload": {
+      "Add|split over cores": 1600,
+      "Concat|split over cores": 3000,
+      "Split|single core": 200,
+      "Concat|single core": 400
+     }
+    }
+   ],
+   "total_us": 16021.0,
+   "ops": {
+    "ConvExSwish": {
+     "count": 65,
+     "us": 10924.5,
+     "share": 0.6818862742650271
+    },
+    "Concat": {
+     "count": 17,
+     "us": 886.0,
+     "share": 0.05530241557955184
+    },
+    "Add": {
+     "count": 8,
+     "us": 239.0,
+     "share": 0.01491792022969852
+    },
+    "Reshape": {
+     "count": 7,
+     "us": 312.0,
+     "share": 0.019474439797765433
+    },
+    "exSoftmax13": {
+     "count": 1,
+     "us": 2053.0,
+     "share": 0.12814431059234754
+    },
+    "Resize": {
+     "count": 2,
+     "us": 178.0,
+     "share": 0.011110417576930279
+    },
+    "Sub": {
+     "count": 2,
+     "us": 69.0,
+     "share": 0.004306847262967355
+    },
+    "MaxPool": {
+     "count": 3,
+     "us": 69.0,
+     "share": 0.004306847262967355
+    },
+    "Mul": {
+     "count": 2,
+     "us": 119.0,
+     "share": 0.0074277510767118155
+    },
+    "InputOperator": {
+     "count": 1,
+     "us": 1.0,
+     "share": 6.241807627488921e-05
+    },
+    "Conv": {
+     "count": 7,
+     "us": 431.0,
+     "share": 0.026902190874477247
+    },
+    "OutputOperator": {
+     "count": 1,
+     "us": 3.0,
+     "share": 0.00018725422882466764
+    },
+    "Split": {
+     "count": 1,
+     "us": 117.0,
+     "share": 0.0073029149241620375
+    },
+    "Sigmoid": {
+     "count": 1,
+     "us": 77.0,
+     "share": 0.004806191873166469
+    },
+    "Transpose": {
+     "count": 1,
+     "us": 540.0,
+     "share": 0.033705761188440174
+    }
+   }
+  }
+ }
+}
